@@ -15,7 +15,7 @@ first — it explains how to run these. This file is the catalogue.
 - **Network** — external hosts the skill needs. Blank means it works fully offline.
 
 
-**19 skills.**
+**25 skills.**
 
 ## Foundation — always loaded
 
@@ -63,6 +63,19 @@ One per recurring Medical Affairs job. Each produces a named deliverable and run
 | [`medical-information-response`](skills/medical-information-response/SKILL.md) | Draft responses to unsolicited medical enquiries from healthcare professionals, patients and payers, and build the standard response documents and FAQ library behind them. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`citation-integrity`<br>`regulatory-label-intelligence`<br>`pubmed-search`<br>`deliverable-quality-review` | Standard response document or scientific response letter | `eutils.ncbi.nlm.nih.gov`<br>`api.fda.gov` |
 | [`medical-strategy-plan`](skills/medical-strategy-plan/SKILL.md) | Build or challenge a medical plan — the scientific priorities, the choices behind them, and the activities that trace to them. | `medical-affairs-foundations`<br>`strategic-analysis`<br>`evidence-synthesis`<br>`insight-generation`<br>`clinical-trials-search`<br>`deliverable-quality-review` | Medical plan with prioritised scientific objectives | `eutils.ncbi.nlm.nih.gov`<br>`clinicaltrials.gov` |
 | [`scientific-communication-strategy`](skills/scientific-communication-strategy/SKILL.md) | Decide what the scientific communication and publication strategy should be — which questions to answer, for which audiences, in what sequence — rather than listing papers by data availability. | `medical-affairs-foundations`<br>`evidence-synthesis`<br>`strategic-analysis`<br>`pubmed-search`<br>`citation-integrity`<br>`deliverable-quality-review` | Scientific communication strategy and prioritised publication plan | `eutils.ncbi.nlm.nih.gov` |
+
+## Content generation — the deliverables
+
+Turn analysis into the artefact somebody actually receives: a deck, a manuscript, an abstract, a poster, a lay summary, a review pack.
+
+| Skill | What it does | Requires | Produces | Network |
+| --- | --- | --- | --- | --- |
+| [`congress-abstract-and-poster`](skills/congress-abstract-and-poster/SKILL.md) | Write congress abstracts that fit the submission rules and build the posters that follow them. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`citation-integrity`<br>`deliverable-quality-review` | Congress abstract and poster (.pptx) | — |
+| [`data-visualization-for-medical`](skills/data-visualization-for-medical/SKILL.md) | Produce clinical trial figures that are honest and interpretable — Kaplan-Meier curves with numbers at risk, forest plots, waterfall and spider plots, adverse event tables, and PRISMA flow diagrams. | `evidence-appraisal`<br>`medical-affairs-foundations` | Publication-quality clinical figures | — |
+| [`medical-slide-deck`](skills/medical-slide-deck/SKILL.md) | Build non-promotional medical slide decks — advisory board decks, MSL scientific presentations, congress readouts, medical-to-medical (M2M) presentations, internal data reviews, and training material. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`citation-integrity`<br>`deliverable-quality-review` | Non-promotional medical slide deck (.pptx) | — |
+| [`mlr-review-readiness`](skills/mlr-review-readiness/SKILL.md) | Prepare Medical Affairs content for Medical/Legal/Regulatory review, and pre-check it against what reviewers actually reject. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`citation-integrity`<br>`deliverable-quality-review` | Claim-evidence matrix and MLR submission pack | — |
+| [`plain-language-summary`](skills/plain-language-summary/SKILL.md) | Write plain language summaries of clinical research for patients and the public — trial results lay summaries, plain language summaries of publications, visual abstracts, and patient-facing scientific material. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`deliverable-quality-review` | Plain language summary | — |
+| [`scientific-manuscript`](skills/scientific-manuscript/SKILL.md) | Draft, structure and prepare a scientific manuscript for journal submission — primary trial reports, secondary analyses, real-world evidence papers, reviews and case reports. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`citation-integrity`<br>`evidence-synthesis`<br>`deliverable-quality-review` | Manuscript draft (.docx) with reporting-guideline checklist | — |
 
 
 ---
