@@ -15,7 +15,7 @@ first — it explains how to run these. This file is the catalogue.
 - **Network** — external hosts the skill needs. Blank means it works fully offline.
 
 
-**7 skills.**
+**12 skills.**
 
 ## Foundation — always loaded
 
@@ -37,6 +37,18 @@ Not usually invoked directly. The workflow skills call these to do the actual th
 | [`evidence-synthesis`](skills/evidence-synthesis/SKILL.md) | Turn a body of clinical evidence into a defensible narrative that states what the totality supports, what it does not, and where it disagrees with itself. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`citation-integrity` | Evidence narrative with stated certainty and open questions | — |
 | [`insight-generation`](skills/insight-generation/SKILL.md) | Turn raw observations into insights that change a decision. | `medical-affairs-foundations` | Insight set with implications and actions | — |
 | [`strategic-analysis`](skills/strategic-analysis/SKILL.md) | Reason about Medical Affairs strategy rather than generating activity lists. | `medical-affairs-foundations` | Prioritised strategic choices with stated assumptions and trade-offs | — |
+
+## Data and search — live external evidence
+
+These reach the public literature, trial registry, and label/safety databases. They need network access; see docs/api-setup.md.
+
+| Skill | What it does | Requires | Produces | Network |
+| --- | --- | --- | --- | --- |
+| [`clinical-trials-search`](skills/clinical-trials-search/SKILL.md) | Search ClinicalTrials.gov via the v2 API to map the trial landscape — what is running, who is running it, in which populations, with what endpoints, and what is about to read out. | `citation-integrity`<br>`evidence-appraisal` | Trial landscape with sponsors, phases, endpoints and timelines | `clinicaltrials.gov` |
+| [`medical-terminology-mapping`](skills/medical-terminology-mapping/SKILL.md) | Resolve free-text clinical language to controlled vocabulary so that insights, adverse events, conditions and interventions can be counted, compared and aggregated consistently. | `medical-affairs-foundations` | Concept-to-code mappings with confidence and unresolved list | `eutils.ncbi.nlm.nih.gov` |
+| [`pubmed-search`](skills/pubmed-search/SKILL.md) | Search PubMed properly and retrieve real, verifiable literature via the NCBI E-utilities API. | `citation-integrity`<br>`evidence-appraisal` | Verified literature result set with search strategy recorded | `eutils.ncbi.nlm.nih.gov` |
+| [`regulatory-label-intelligence`](skills/regulatory-label-intelligence/SKILL.md) | Retrieve approved US label content and post-marketing safety data via openFDA, and interpret both correctly. | `medical-affairs-foundations`<br>`evidence-appraisal` | Label-grounded product facts and correctly-caveated safety context | `api.fda.gov` |
+| [`systematic-literature-review`](skills/systematic-literature-review/SKILL.md) | Run a reproducible, PRISMA-aligned systematic literature review — protocol first, documented search strategy, screening funnel with recorded exclusion reasons, structured extraction, and risk-of-bias assessment. | `pubmed-search`<br>`evidence-appraisal`<br>`citation-integrity`<br>`evidence-synthesis` | PRISMA-aligned systematic review with flow diagram and evidence tables | `eutils.ncbi.nlm.nih.gov`<br>`clinicaltrials.gov` |
 
 
 ---
