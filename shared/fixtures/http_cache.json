@@ -1,0 +1,10 @@
+{
+ "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=36001231&retmode=json&tool=medical-affairs-skills": {
+  "status": 200,
+  "body": "{\"result\": {\"uids\": [\"36001231\"], \"36001231\": {\"uid\": \"36001231\", \"pubdate\": \"2022 Aug 11\", \"source\": \"N Engl J Med\", \"authors\": [{\"name\": \"Moreau P\", \"authtype\": \"Author\"}, {\"name\": \"Garfall AL\", \"authtype\": \"Author\"}], \"title\": \"Teclistamab in Relapsed or Refractory Multiple Myeloma.\", \"volume\": \"387\", \"issue\": \"6\", \"pages\": \"495-505\", \"articleids\": [{\"idtype\": \"pubmed\", \"value\": \"36001231\"}, {\"idtype\": \"doi\", \"value\": \"10.1056/NEJMoa2203478\"}], \"pubtype\": [\"Journal Article\", \"Clinical Trial, Phase I\"]}}}"
+ },
+ "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=99999999&retmode=json&tool=medical-affairs-skills": {
+  "status": 200,
+  "body": "{\"result\": {\"uids\": [], \"99999999\": {\"uid\": \"99999999\", \"error\": \"cannot get document summary\"}}}"
+ }
+}
