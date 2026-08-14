@@ -15,7 +15,7 @@ first — it explains how to run these. This file is the catalogue.
 - **Network** — external hosts the skill needs. Blank means it works fully offline.
 
 
-**12 skills.**
+**19 skills.**
 
 ## Foundation — always loaded
 
@@ -49,6 +49,20 @@ These reach the public literature, trial registry, and label/safety databases. T
 | [`pubmed-search`](skills/pubmed-search/SKILL.md) | Search PubMed properly and retrieve real, verifiable literature via the NCBI E-utilities API. | `citation-integrity`<br>`evidence-appraisal` | Verified literature result set with search strategy recorded | `eutils.ncbi.nlm.nih.gov` |
 | [`regulatory-label-intelligence`](skills/regulatory-label-intelligence/SKILL.md) | Retrieve approved US label content and post-marketing safety data via openFDA, and interpret both correctly. | `medical-affairs-foundations`<br>`evidence-appraisal` | Label-grounded product facts and correctly-caveated safety context | `api.fda.gov` |
 | [`systematic-literature-review`](skills/systematic-literature-review/SKILL.md) | Run a reproducible, PRISMA-aligned systematic literature review — protocol first, documented search strategy, screening funnel with recorded exclusion reasons, structured extraction, and risk-of-bias assessment. | `pubmed-search`<br>`evidence-appraisal`<br>`citation-integrity`<br>`evidence-synthesis` | PRISMA-aligned systematic review with flow diagram and evidence tables | `eutils.ncbi.nlm.nih.gov`<br>`clinicaltrials.gov` |
+
+## Workflows — the jobs
+
+One per recurring Medical Affairs job. Each produces a named deliverable and runs the six-stage execution contract in AGENTS.md.
+
+| Skill | What it does | Requires | Produces | Network |
+| --- | --- | --- | --- | --- |
+| [`congress-intelligence`](skills/congress-intelligence/SKILL.md) | Analyse what changed at a medical congress and what the organisation should do about it — not summarise what was presented. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`evidence-synthesis`<br>`strategic-analysis`<br>`citation-integrity`<br>`clinical-trials-search`<br>`deliverable-quality-review` | Congress intelligence readout | `eutils.ncbi.nlm.nih.gov`<br>`clinicaltrials.gov` |
+| [`evidence-gap-analysis`](skills/evidence-gap-analysis/SKILL.md) | Identify what we still do not know, decide which gaps are worth closing, and propose how. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`evidence-synthesis`<br>`strategic-analysis`<br>`pubmed-search`<br>`clinical-trials-search`<br>`deliverable-quality-review` | Prioritised evidence gap analysis with research proposals | `eutils.ncbi.nlm.nih.gov`<br>`clinicaltrials.gov` |
+| [`field-insight-synthesis`](skills/field-insight-synthesis/SKILL.md) | Turn a body of field medical observations into insights leadership can act on. | `medical-affairs-foundations`<br>`insight-generation`<br>`strategic-analysis`<br>`medical-terminology-mapping`<br>`deliverable-quality-review` | Field insight report with ranked insights and actions | — |
+| [`kol-engagement-brief`](skills/kol-engagement-brief/SKILL.md) | Prepare an MSL or medical lead for a specific scientific exchange with a named external expert. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`citation-integrity`<br>`pubmed-search`<br>`clinical-trials-search`<br>`deliverable-quality-review` | KOL engagement brief | `eutils.ncbi.nlm.nih.gov`<br>`clinicaltrials.gov` |
+| [`medical-information-response`](skills/medical-information-response/SKILL.md) | Draft responses to unsolicited medical enquiries from healthcare professionals, patients and payers, and build the standard response documents and FAQ library behind them. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`citation-integrity`<br>`regulatory-label-intelligence`<br>`pubmed-search`<br>`deliverable-quality-review` | Standard response document or scientific response letter | `eutils.ncbi.nlm.nih.gov`<br>`api.fda.gov` |
+| [`medical-strategy-plan`](skills/medical-strategy-plan/SKILL.md) | Build or challenge a medical plan — the scientific priorities, the choices behind them, and the activities that trace to them. | `medical-affairs-foundations`<br>`strategic-analysis`<br>`evidence-synthesis`<br>`insight-generation`<br>`clinical-trials-search`<br>`deliverable-quality-review` | Medical plan with prioritised scientific objectives | `eutils.ncbi.nlm.nih.gov`<br>`clinicaltrials.gov` |
+| [`scientific-communication-strategy`](skills/scientific-communication-strategy/SKILL.md) | Decide what the scientific communication and publication strategy should be — which questions to answer, for which audiences, in what sequence — rather than listing papers by data availability. | `medical-affairs-foundations`<br>`evidence-synthesis`<br>`strategic-analysis`<br>`pubmed-search`<br>`citation-integrity`<br>`deliverable-quality-review` | Scientific communication strategy and prioritised publication plan | `eutils.ncbi.nlm.nih.gov` |
 
 
 ---
