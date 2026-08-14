@@ -1,0 +1,78 @@
+name: Propose a new skill
+description: A recurring Medical Affairs job that nothing in the library covers
+title: "[skill] "
+labels: ["new-skill"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before filing, check [SKILLS-INDEX.md](../../SKILLS-INDEX.md). If something
+        close already exists, extending it is usually better than adding a
+        near-duplicate — two skills with overlapping descriptions compete for
+        selection and both end up triggering less reliably.
+
+        If your idea is a *rule* rather than a *job* ("always state approval
+        status"), it probably belongs in an existing skill or in `house-rules/`.
+
+  - type: input
+    id: job
+    attributes:
+      label: The job, in one line
+      description: A job with a named deliverable, not a topic.
+      placeholder: "Prepare a payer-facing scientific dossier (AMCP format)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: What comes out at the end
+      description: The artefact a human actually receives, and roughly what is in it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: inputs
+    attributes:
+      label: What the agent needs to do it
+      description: Materials the user supplies, plus anything it should retrieve itself.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expertise
+    attributes:
+      label: What does an experienced person know here that a generic agent does not?
+      description: |
+        This is the heart of the skill. The failure modes, the unwritten standards,
+        the thing reviewers always send back, the shortcut that looks fine and is not.
+    validations:
+      required: true
+
+  - type: textarea
+    id: triggers
+    attributes:
+      label: How would someone ask for this?
+      description: Two or three realistic phrasings — and one near-miss that should load a *different* skill.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does your team do this?
+      options:
+        - Weekly or more
+        - Monthly
+        - Quarterly
+        - A few times a year
+        - Rarely, but it is high-stakes when it happens
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Would you like to write it?
+      options:
+        - label: I would be willing to draft this skill with guidance

@@ -1,0 +1,68 @@
+name: A skill got it wrong
+description: The agent produced output an experienced Medical Affairs person would not accept
+title: "[output] "
+labels: ["output-quality"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the most useful issue you can file. Concrete examples of an agent
+        reasoning badly are what actually improve these skills — much more than
+        feature requests.
+
+        **Redact anything confidential.** A paraphrase of your prompt is fine.
+
+  - type: input
+    id: skill
+    attributes:
+      label: Which skill
+      placeholder: field-insight-synthesis
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Is this a safety issue?
+      description: Fabricated citations, promotional claims, missed AEs, and overclaiming are handled as safety issues and jump the queue.
+      options:
+        - "No — quality problem"
+        - "Yes — fabricated or unverifiable citation"
+        - "Yes — promotional drift or off-label claim"
+        - "Yes — missed adverse event or product complaint"
+        - "Yes — overclaimed from weak evidence"
+    validations:
+      required: true
+
+  - type: textarea
+    id: prompt
+    attributes:
+      label: What you asked for
+      description: The prompt or mission, and what materials the agent had.
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: What it produced
+      description: Paste the relevant part. Trim aggressively — the failing section is enough.
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What an experienced colleague would have done instead
+      description: This is the part we cannot work out on our own. Be specific about the professional judgement that was missing.
+    validations:
+      required: true
+
+  - type: input
+    id: runtime
+    attributes:
+      label: Agent and model
+      placeholder: "Claude Code / claude-opus-5, or Grok 4, or ChatGPT..."
+    validations:
+      required: true

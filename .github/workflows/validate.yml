@@ -1,0 +1,66 @@
+name: validate
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  skills:
+    name: Skill structure and sample data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install validator dependencies
+        run: pip install --quiet pyyaml
+
+      - name: Check the generated index is current
+        run: python3 scripts/build_index.py --check
+
+      - name: Validate all skills
+        run: python3 scripts/validate_skills.py
+
+  apis:
+    name: API clients (offline fixtures)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Deliberately no network here. These tests run against checked-in
+      # fixtures so that a PubMed outage or an NCBI rate limit can never turn
+      # CI red for a reason unrelated to the change under review.
+      - name: Run offline API client tests
+        run: python3 scripts/selftest_apis.py
+
+  live-apis:
+    name: API clients (live — manual only)
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Run this by hand when you want to know whether the upstream APIs have
+      # changed shape. It is allowed to fail without blocking anyone, because
+      # a third-party outage is not a defect in this repository.
+      - name: Smoke-test against real APIs
+        env:
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+        run: python3 scripts/selftest_apis.py --live

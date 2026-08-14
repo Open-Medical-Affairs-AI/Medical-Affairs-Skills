@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Generated deliverables — the whole point is that these are produced fresh.
+# If you want to keep one, move it out of the repo.
+output/
+out/
+*.pptx
+*.docx
+*.pdf
+!shared/templates/**/*.docx
+!shared/templates/**/*.pptx
+
+# Local API keys. Never commit these.
+.env
+.env.*
+!.env.example
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Workshop participant work — teams generate a lot of this and none of it
+# belongs in the upstream repository.
+workshop/participant-output/

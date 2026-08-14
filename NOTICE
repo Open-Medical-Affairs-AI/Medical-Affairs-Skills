@@ -1,0 +1,18 @@
+Medical Affairs Agent Skills
+Copyright 2026 Open Medical Affairs AI and contributors
+
+This product includes software and documentation developed by
+Open Medical Affairs AI (https://github.com/Open-Medical-Affairs-AI).
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+Portions of this work are architecturally derived from MIT-licensed skills
+in the K-Dense-AI/scientific-agent-skills project. See THIRD-PARTY-NOTICES.md
+for the full attribution and the original MIT license text.
+
+--------------------------------------------------------------------------
+IMPORTANT: This project produces DRAFT scientific and medical content for
+review by qualified professionals. It is not a medical device, not clinical
+decision support, and not a regulatory system of record. See DISCLAIMER.md
+before any use in a regulated environment.
+--------------------------------------------------------------------------
