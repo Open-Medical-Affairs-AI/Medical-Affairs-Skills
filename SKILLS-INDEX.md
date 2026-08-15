@@ -15,7 +15,7 @@ first — it explains how to run these. This file is the catalogue.
 - **Network** — external hosts the skill needs. Blank means it works fully offline.
 
 
-**27 skills.**
+**34 skills.**
 
 ## Orchestrator
 
@@ -81,10 +81,17 @@ Turn analysis into the artefact somebody actually receives: a deck, a manuscript
 | --- | --- | --- | --- | --- |
 | [`congress-abstract-and-poster`](skills/congress-abstract-and-poster/SKILL.md) | Write congress abstracts that fit the submission rules and build the posters that follow them. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`citation-integrity`<br>`deliverable-quality-review` | Congress abstract and poster (.pptx) | — |
 | [`data-visualization-for-medical`](skills/data-visualization-for-medical/SKILL.md) | Produce clinical trial figures that are honest and interpretable — Kaplan-Meier curves with numbers at risk, forest plots, waterfall and spider plots, adverse event tables, and PRISMA flow diagrams. | `evidence-appraisal`<br>`medical-affairs-foundations` | Publication-quality clinical figures | — |
+| [`diagram-and-schema`](skills/diagram-and-schema/SKILL.md) | Draw the diagrams Medical Affairs actually needs — treatment pathways, study schemas, PRISMA flow diagrams, patient journeys, evidence maps, decision trees, mechanism-of-action schematics, and governance or process flows. | `capability-detection` | Diagram (Mermaid, SVG or ASCII) | — |
+| [`document-ingestion`](skills/document-ingestion/SKILL.md) | Read documents someone has given you — PDFs, Word files, PowerPoint decks, Excel workbooks, CSVs. | `medical-affairs-foundations`<br>`capability-detection` | Extracted document text, tables and structure | — |
+| [`interactive-html-report`](skills/interactive-html-report/SKILL.md) | Build a self-contained HTML report that opens in any browser with no dependencies — evidence dashboards, insight reports with filterable tables, congress readouts, competitive landscapes, evidence gap trackers. | `capability-detection`<br>`medical-affairs-foundations`<br>`citation-integrity` | Self-contained interactive HTML report | — |
+| [`medical-correspondence`](skills/medical-correspondence/SKILL.md) | Write the formal correspondence Medical Affairs sends — Dear Healthcare Professional letters, responses to investigators and institutions, agency and vendor briefs, advisory board invitations, author correspondence, and letters accompanying scientific responses. | `medical-affairs-foundations`<br>`citation-integrity`<br>`deliverable-quality-review`<br>`capability-detection` | Formal medical correspondence | — |
 | [`medical-slide-deck`](skills/medical-slide-deck/SKILL.md) | Build non-promotional medical slide decks — advisory board decks, MSL scientific presentations, congress readouts, medical-to-medical (M2M) presentations, internal data reviews, and training material. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`citation-integrity`<br>`deliverable-quality-review` | Non-promotional medical slide deck (.pptx) | — |
 | [`mlr-review-readiness`](skills/mlr-review-readiness/SKILL.md) | Prepare Medical Affairs content for Medical/Legal/Regulatory review, and pre-check it against what reviewers actually reject. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`citation-integrity`<br>`deliverable-quality-review` | Claim-evidence matrix and MLR submission pack | — |
+| [`pdf-generation`](skills/pdf-generation/SKILL.md) | Produce PDF deliverables — briefs, reports, standard response documents, one-pagers, evidence summaries, anything that must look the same for every reader and print predictably. | `capability-detection`<br>`medical-affairs-foundations`<br>`citation-integrity` | PDF deliverable (or print-ready HTML) | — |
 | [`plain-language-summary`](skills/plain-language-summary/SKILL.md) | Write plain language summaries of clinical research for patients and the public — trial results lay summaries, plain language summaries of publications, visual abstracts, and patient-facing scientific material. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`deliverable-quality-review` | Plain language summary | — |
 | [`scientific-manuscript`](skills/scientific-manuscript/SKILL.md) | Draft, structure and prepare a scientific manuscript for journal submission — primary trial reports, secondary analyses, real-world evidence papers, reviews and case reports. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`citation-integrity`<br>`evidence-synthesis`<br>`deliverable-quality-review` | Manuscript draft (.docx) with reporting-guideline checklist | — |
+| [`spreadsheet-analysis`](skills/spreadsheet-analysis/SKILL.md) | Analyse and produce spreadsheets — field insight exports, enquiry logs, publication trackers, evidence tables, budget allocations, congress abstract lists. | `capability-detection`<br>`medical-affairs-foundations` | Spreadsheet analysis or a generated workbook | — |
+| [`visual-abstract`](skills/visual-abstract/SKILL.md) | Create visual abstracts and infographics that summarise a study or a body of evidence honestly. | `evidence-appraisal`<br>`medical-affairs-foundations`<br>`capability-detection` | Visual abstract or infographic (SVG) | — |
 
 
 ---
