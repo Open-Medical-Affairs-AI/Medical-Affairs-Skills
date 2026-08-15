@@ -1,0 +1,58 @@
+# SYNTHETIC DATA - WORKSHOP USE ONLY. Fictional company, products, experts
+# and institutions. Contains deliberately seeded adverse events, a product
+# quality complaint and an off-label use. Not real data.
+record_id,date,msl,contact_id,setting,country,channel,observation
+OBS-001,2026-04-06,MSL-05,HCP-104,Community,DE,Virtual,Says EASI underestimates severity in her patients with darker skin and she does not trust the trial numbers as a result.
+OBS-002,2026-04-03,MSL-03,HCP-129,Regional centre,US,Face-to-face,Asked whether the trials reported outcomes by Fitzpatrick skin type. Said the answer 'not pre-specified' is inadequate.
+OBS-003,2026-05-02,MSL-02,HCP-113,Community,DE,Congress,Reports that patients prioritise itch relief over clearance and the trials led on EASI.
+OBS-004,2026-06-11,MSL-05,HCP-118,Academic,ES,Virtual,"Says the every-4-week dosing is a genuine advantage over the JAK inhibitors' daily oral, for adherence."
+OBS-005,2026-05-06,MSL-07,HCP-125,Academic,US,Face-to-face,Two patients developed conjunctivitis severe enough to need ophthalmology referral.
+OBS-006,2026-05-05,MSL-04,HCP-132,Community,IT,Face-to-face,A patient reported a severe injection site reaction with swelling extending beyond the injection area; treated with antihistamines.
+OBS-007,2026-04-01,MSL-04,HCP-137,Academic,ES,Virtual,Thinks the JAK boxed warning is over-weighted by prescribers relative to the actual event rates.
+OBS-008,2026-05-14,MSL-06,HCP-128,Community,ES,Face-to-face,Asked directly for a head-to-head against the JAK inhibitor. Said 'that is the comparison I make every clinic'.
+OBS-009,2026-06-17,MSL-02,HCP-124,Academic,ES,Face-to-face,Says patients ask about the speed of itch relief and the JAK is faster.
+OBS-010,2026-05-23,MSL-01,HCP-106,Community,JP,Congress,"Reports a patient who became pregnant on treatment; treatment was stopped, asked what data exist."
+OBS-011,2026-05-10,MSL-05,HCP-130,Academic,US,Face-to-face,Says the formulary threshold in her region is stricter than the label and that is what determines who gets treated.
+OBS-012,2026-04-25,MSL-01,HCP-102,Academic,US,Face-to-face,Notes that adolescents drop off treatment more than adults and nobody has studied why.
+OBS-013,2026-05-19,MSL-07,HCP-111,Academic,DE,Virtual,Asked whether there is any signal on asthma outcomes in patients with both conditions.
+OBS-014,2026-05-11,MSL-02,HCP-112,Academic,US,Face-to-face,Reports a patient hospitalised with eczema herpeticum eight weeks after starting; unclear relationship.
+OBS-015,2026-04-13,MSL-01,HCP-117,Community,UK,Face-to-face,Says the pre-filled pen is difficult for patients with hand eczema to operate.
+OBS-016,2026-05-14,MSL-03,HCP-120,Regional centre,ES,Face-to-face,Two of the pens in a recent batch leaked on injection; patients unsure whether they got the full dose.
+OBS-017,2026-05-12,MSL-03,HCP-101,Academic,FR,Congress,Thinks the 52-week extension data is not long enough for a chronic disease people take lifelong.
+OBS-018,2026-06-07,MSL-05,HCP-126,Regional centre,US,Face-to-face,"Reports using it in a patient with concurrent severe asthma already on a biologic; both continued, no issues so far."
+OBS-019,2026-06-18,MSL-02,HCP-134,Community,US,Congress,Says the competitor's field team have been running better educational meetings.
+OBS-020,2026-05-16,MSL-06,HCP-116,Academic,ES,Phone,Asked whether early itch response predicts who will still be responding at a year.
+OBS-021,2026-05-27,MSL-04,HCP-124,Academic,ES,Face-to-face,Reports one patient whose disease flared badly on stopping and asks whether there is rebound.
+OBS-022,2026-04-22,MSL-07,HCP-118,Academic,ES,Phone,Says the trials excluded exactly the patients she struggles with — those with prior biologic failure.
+OBS-023,2026-06-03,MSL-05,HCP-102,Academic,US,Virtual,Notes that GP referral thresholds vary enormously and many patients arrive far too late.
+OBS-024,2026-04-13,MSL-01,HCP-119,Academic,FR,Phone,Asked whether we have any data in patients who failed a JAK inhibitor.
+OBS-025,2026-05-12,MSL-01,HCP-130,Academic,US,Virtual,Says the conjunctivitis rate in practice feels higher than the label but she has not counted.
+OBS-026,2026-05-17,MSL-04,HCP-104,Community,DE,Phone,Reports a patient who stopped responding after seven months with no clear explanation.
+OBS-027,2026-06-22,MSL-03,HCP-102,Academic,US,Virtual,Thinks the whole field over-measures clearance and under-measures sleep.
+OBS-028,2026-05-16,MSL-05,HCP-135,Academic,US,Congress,"Says her nurses find the injection training straightforward, which is not true of the competitor device."
+OBS-029,2026-06-25,MSL-07,HCP-122,Academic,FR,Face-to-face,Asked whether the adolescent data are strong enough to justify use at 12 rather than 16.
+OBS-030,2026-05-11,MSL-05,HCP-128,Community,ES,Face-to-face,Reports that a patient used it every two weeks instead of four having misunderstood the schedule; no adverse effects.
+OBS-031,2026-04-19,MSL-02,HCP-131,Academic,US,Face-to-face,"Says the biggest practical barrier is the wait for funding approval, not the clinical decision."
+OBS-032,2026-05-21,MSL-07,HCP-136,Academic,IT,Face-to-face,Notes that patients in her clinic with skin of colour are under-represented in every dataset she has seen.
+OBS-033,2026-04-05,MSL-03,HCP-107,Academic,IT,Congress,Asked whether there is any biomarker to predict response.
+OBS-034,2026-04-22,MSL-06,HCP-103,Community,US,Congress,Reports a cluster of three patients with worsening after an initial good response at around month five.
+OBS-035,2026-05-03,MSL-06,HCP-119,Academic,FR,Face-to-face,Says the itch NRS is the outcome patients actually care about and it is buried as a secondary.
+OBS-036,2026-06-11,MSL-05,HCP-126,Regional centre,US,Phone,Thinks the competitor's positioning on itch is effective even though their EASI data are weaker.
+OBS-037,2026-05-28,MSL-05,HCP-135,Academic,US,Phone,"Asked what happens to patients who fail this — 'what's next, and is there anything?'"
+OBS-038,2026-06-01,MSL-07,HCP-127,Community,JP,Virtual,Reports that the storage requirements are a problem for patients without reliable refrigeration.
+OBS-039,2026-04-10,MSL-06,HCP-111,Academic,DE,Phone,Says adherence in adolescents is the single biggest determinant of outcome in her practice.
+OBS-040,2026-06-08,MSL-05,HCP-136,Academic,IT,Congress,Notes she has stopped using the competitor's IL-31 agent because the EASI response was disappointing.
+OBS-041,2026-04-14,MSL-02,HCP-116,Academic,ES,Face-to-face,Asked whether we would support an investigator-initiated study on airway outcomes.
+OBS-042,2026-05-04,MSL-05,HCP-106,Community,JP,Congress,"Reports a patient with a herpes zoster reactivation; recovered, unclear attribution."
+OBS-043,2026-06-04,MSL-05,HCP-128,Community,ES,Congress,Says guideline positioning is what will determine uptake and the guidelines lag by two years.
+OBS-044,2026-04-07,MSL-01,HCP-110,Academic,US,Virtual,Thinks combination with topical therapy is under-studied and everyone does it anyway.
+OBS-045,2026-06-25,MSL-03,HCP-101,Academic,FR,Virtual,Reports two patients who describe the injection as considerably more painful than their previous biologic.
+OBS-046,2026-04-07,MSL-02,HCP-131,Academic,US,Phone,Says the trial population's mean baseline EASI was higher than most of her clinic.
+OBS-047,2026-04-14,MSL-03,HCP-126,Regional centre,US,Face-to-face,Asked whether the effect holds in patients with predominantly head-and-neck disease.
+OBS-048,2026-05-05,MSL-06,HCP-139,Academic,IT,Virtual,Notes that quality-of-life improvement in her patients seems larger than the EASI change would suggest.
+OBS-049,2026-05-08,MSL-04,HCP-116,Academic,ES,Face-to-face,Reports a patient who developed a persistent facial redness that did not respond to treatment.
+OBS-050,2026-04-16,MSL-07,HCP-124,Academic,ES,Virtual,"Says the every-4-week schedule means patients forget, and asks whether reminder support exists."
+OBS-051,2026-06-09,MSL-02,HCP-104,Community,DE,Face-to-face,"Thinks the real competitor is not another biologic, it is patients giving up and self-managing."
+OBS-052,2026-05-28,MSL-02,HCP-130,Academic,US,Face-to-face,Asked for real-world persistence data — 'how many are still on it at two years?'
+OBS-053,2026-06-11,MSL-05,HCP-133,Community,US,Face-to-face,Reports one patient who had no response at all by week 24 and asks whether that is expected.
+OBS-054,2026-06-12,MSL-07,HCP-121,Community,ES,Face-to-face,Says her department cannot absorb more biologic monitoring without more nursing time.
