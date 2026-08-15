@@ -229,13 +229,80 @@ def checklist(guideline: str, spec: dict) -> list[tuple[str, bool]]:
     return out
 
 
-def build(spec: dict, out: Path) -> None:
+def _have(module: str) -> bool:
+    """Inline capability check, kept small so a copied directory still works."""
     try:
-        from docx import Document
-        from docx.shared import Pt, RGBColor
-        from docx.enum.text import WD_ALIGN_PARAGRAPH
+        __import__(module)
+        return True
     except ImportError:
-        raise SystemExit("python-docx is required.\n  pip install python-docx")
+        return False
+
+
+def render_markdown(spec: dict) -> str:
+    """Tier 3: the full manuscript as markdown.
+
+    Every element a journal requires survives — title page, authorship with
+    affiliations, structured abstract, IMRaD body, the statements block, and
+    references. Only Word styling is lost, and most journals accept a plain
+    submission anyway.
+    """
+    out = [f"**{DRAFT}**", "", f"# {spec['title']}", ""]
+    if spec.get("short_title"):
+        out += [f"*Running head: {spec['short_title']}*", ""]
+
+    out += ["## Authors", ""]
+    for a in spec.get("authors", []):
+        crit = ", ".join(a.get("icmje", []))
+        out.append(f"- **{a['name']}** — {a.get('affiliation', '')}"
+                   + (f"  <sub>ICMJE: {crit}</sub>" if crit else ""))
+    if spec.get("corresponding"):
+        out += ["", f"Corresponding author: {spec['corresponding']}"]
+    out += ["", f"**Reporting guideline:** {GUIDELINES.get(spec.get('guideline', ''), '—')}"]
+    if spec.get("registration"):
+        out.append(f"**Registration:** {spec['registration']}")
+    if spec.get("protocol"):
+        out.append(f"**Protocol:** {spec['protocol']}")
+    if spec.get("keywords"):
+        out.append(f"**Keywords:** {', '.join(spec['keywords'])}")
+    out += ["", "---", ""]
+
+    if spec.get("abstract"):
+        out += ["## Abstract", ""]
+        for head, body in spec["abstract"].items():
+            out.append(f"**{head}.** {body}")
+            out.append("")
+        out += ["> Every number in this abstract must also appear in the Results "
+                "with its confidence interval.", "", "---", ""]
+
+    for heading, body in (spec.get("sections") or {}).items():
+        out += [f"## {heading}", "", str(body), ""]
+
+    out += ["---", ""]
+    for label, key in [
+        ("Ethics approval and consent", "ethics"),
+        ("Funding", "funding"),
+        ("Role of the funder", "funder_role"),
+        ("Medical writing support", "writing_support"),
+        ("Conflicts of interest", "conflicts"),
+        ("Data sharing", "data_sharing"),
+        ("Acknowledgements", "acknowledgements"),
+    ]:
+        if spec.get(key):
+            out += [f"### {label}", "", spec[key], ""]
+
+    if spec.get("references"):
+        out += ["## References", ""]
+        out += [f"{i}. {r}" for i, r in enumerate(spec["references"], 1)]
+        out.append("")
+
+    out += ["", f"**{DRAFT}**", ""]
+    return "\n".join(out)
+
+
+def build(spec: dict, out: Path) -> None:
+    from docx import Document
+    from docx.shared import Pt, RGBColor
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
 
     doc = Document()
     style = doc.styles["Normal"]
@@ -383,13 +450,34 @@ def main() -> int:
         return 1
 
     out = Path(args.out)
-    build(spec, out)
-    print(f"Wrote {out}")
-    print(
+    NEXT = (
         "\nStill required before submission: citation-integrity over every "
         "reference, deliverable-quality-review for spin and overclaiming, and "
         "the full EQUATOR checklist for your design."
     )
+
+    if _have("docx"):
+        build(spec, out)
+        print(f"Wrote {out}")
+        print(NEXT)
+        return 0
+
+    md_path = out.with_suffix(".md")
+    md_path.parent.mkdir(parents=True, exist_ok=True)
+    md_path.write_text(render_markdown(spec), encoding="utf-8")
+    print(f"""⚠ DEGRADED OUTPUT — python-docx is not available in this environment.
+
+   Delivered:      {md_path}  (complete manuscript, IMRaD, statements, references)
+   Not delivered:  {out}
+   To get it:      pip install python-docx
+                   python3 {Path(__file__).name} --spec {args.spec} --out {out}
+
+   The content is complete. Title page, authorship with ICMJE criteria, the
+   structured abstract, the full body, every statement and the reference list
+   all survived. Only Word styling was lost — and most journals accept a plain
+   submission.
+""")
+    print(NEXT)
     return 0
 
 

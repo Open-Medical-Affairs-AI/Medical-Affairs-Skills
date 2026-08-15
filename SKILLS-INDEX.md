@@ -15,7 +15,7 @@ first — it explains how to run these. This file is the catalogue.
 - **Network** — external hosts the skill needs. Blank means it works fully offline.
 
 
-**26 skills.**
+**27 skills.**
 
 ## Orchestrator
 
@@ -31,6 +31,7 @@ These four are loaded for every Medical Affairs task. They carry the compliance 
 
 | Skill | What it does | Requires | Produces | Network |
 | --- | --- | --- | --- | --- |
+| [`capability-detection`](skills/capability-detection/SKILL.md) | Work out what this runtime can actually do before promising a deliverable, and degrade visibly rather than failing when something is missing. | — | Capability report and a resolved output strategy | — |
 | [`citation-integrity`](skills/citation-integrity/SKILL.md) | Guarantee that every factual claim traces to a real, retrievable source, and that the source actually says what it is cited for. | `medical-affairs-foundations` | Verified reference list with evidence tiers | `eutils.ncbi.nlm.nih.gov`<br>`api.crossref.org`<br>`api.openalex.org` |
 | [`deliverable-quality-review`](skills/deliverable-quality-review/SKILL.md) | Red-team your own Medical Affairs deliverable before anyone else sees it. | `medical-affairs-foundations`<br>`evidence-appraisal`<br>`citation-integrity` | Review findings with severity, and a revised deliverable | — |
 | [`evidence-appraisal`](skills/evidence-appraisal/SKILL.md) | Critically appraise clinical evidence the way an experienced Medical Affairs scientist does — before summarising, citing, or building strategy on it. | `medical-affairs-foundations` | Appraised evidence with stated certainty and limitations | — |

@@ -372,6 +372,41 @@ def draw_ae(spec: dict, out: Path) -> None:
 DRAWERS = {"km": draw_km, "forest": draw_forest,
            "waterfall": draw_waterfall, "ae": draw_ae}
 
+CAPTION_NOTE = (
+    "Caption requirement: state design, population, N, endpoint and its type,\n"
+    "the effect measure, and the principal limitation. A figure that travels\n"
+    "without its caption must still be interpretable."
+)
+
+
+def _have(module: str) -> bool:
+    """Inline capability check, kept small so a copied directory still works.
+
+    The full diagnostic lives in skills/capability-detection/.
+    """
+    try:
+        __import__(module)
+        return True
+    except ImportError:
+        return False
+
+
+def render_svg_fallback(kind: str, spec: dict, out: Path) -> tuple[Path, Path]:
+    """Tier 3: hand-written SVG plus the underlying data table.
+
+    Imported lazily and by path so this script stays self-contained — the
+    fallback module sits in the same directory.
+    """
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import svg_fallback  # noqa: E402 — deliberate late import
+
+    svg_path = out.with_suffix(".svg")
+    tbl_path = out.with_suffix(".md")
+    svg_path.parent.mkdir(parents=True, exist_ok=True)
+    svg_path.write_text(svg_fallback.RENDERERS[kind](spec), encoding="utf-8")
+    tbl_path.write_text(svg_fallback.data_table(kind, spec), encoding="utf-8")
+    return svg_path, tbl_path
+
 
 def main() -> int:
     ap = argparse.ArgumentParser(
@@ -382,6 +417,9 @@ def main() -> int:
     ap.add_argument("--out", default="figure.png")
     ap.add_argument("--example", action="store_true",
                     help="print a worked spec for this figure type")
+    ap.add_argument("--force-svg", action="store_true",
+                    help="use the dependency-free SVG renderer even if matplotlib "
+                         "is available (SVG scales better for print and posters)")
     args = ap.parse_args()
 
     if args.example:
@@ -397,13 +435,38 @@ def main() -> int:
         return 2
 
     spec = json.loads(path.read_text(encoding="utf-8"))
-    DRAWERS[args.kind](spec, Path(args.out))
-    print(f"Wrote {args.out}")
-    print(
-        "Caption requirement: state design, population, N, endpoint and its type,\n"
-        "the effect measure, and the principal limitation. A figure that travels\n"
-        "without its caption must still be interpretable."
-    )
+    out = Path(args.out)
+
+    if _have("matplotlib") and not args.force_svg:
+        DRAWERS[args.kind](spec, out)
+        print(f"Wrote {out}")
+        print(CAPTION_NOTE)
+        return 0
+
+    # Tier 3. This is a success, not a failure — exit 0.
+    try:
+        svg_path, tbl_path = render_svg_fallback(args.kind, spec, out)
+    except ValueError as exc:
+        # An integrity rule failed. These hold in EVERY tier — a survival curve
+        # without numbers at risk is misleading, not merely degraded.
+        print(f"BLOCKED  {exc}", file=sys.stderr)
+        return 1
+
+    reason = ("--force-svg requested" if args.force_svg
+              else "matplotlib is not available in this environment")
+    print(f"""⚠ DEGRADED OUTPUT — {reason}.
+
+   Delivered:      {svg_path}  (scalable vector, opens in any browser)
+                   {tbl_path}  (the underlying numbers)
+   Not delivered:  {out} (raster via matplotlib)
+   To get it:      pip install matplotlib
+                   python3 {Path(__file__).name} {args.kind} --spec {args.spec} --out {args.out}
+
+   The content is complete. Every integrity rule still applies — the axis is
+   not truncated, numbers at risk are present, denominators are shown. Only
+   the rendering path changed.
+""")
+    print(CAPTION_NOTE)
     return 0
 
 

@@ -113,14 +113,92 @@ def validate(spec: dict) -> list[str]:
     return problems
 
 
-def build(spec: dict, out: Path) -> None:
+def _have(module: str) -> bool:
+    """Inline capability check, kept small so a copied directory still works."""
     try:
-        from pptx import Presentation
-        from pptx.util import Inches, Pt
-        from pptx.dml.color import RGBColor
-        from pptx.enum.text import PP_ALIGN
+        __import__(module)
+        return True
     except ImportError:
-        raise SystemExit("python-pptx is required.\n  pip install python-pptx")
+        return False
+
+
+def render_html(spec: dict) -> str:
+    """Tier 3: a printable HTML poster at the correct physical aspect ratio.
+
+    This one arguably beats the .pptx: it prints correctly from any browser,
+    the type sizes are set in real inches so the two-metre legibility rule is
+    preserved exactly, and there is no dependency at all.
+    """
+    from html import escape
+
+    W, H = float(spec["width_in"]), float(spec["height_in"])
+    # Whole numbers read better in CSS: "48in", not "48.0in".
+    Ws = f"{W:g}"
+    Hs = f"{H:g}"
+    title_pt = spec.get("title_pt", max(MIN_TITLE_PT, int(W * 1.7)))
+    heading_pt = spec.get("heading_pt", max(MIN_HEADING_PT, int(W * 0.85)))
+    body_pt = spec.get("body_pt", max(MIN_BODY_PT, int(W * 0.55)))
+
+    cols = []
+    for col in spec.get("columns", []):
+        secs = []
+        for sec in col.get("sections", []):
+            body = escape(str(sec.get("body", ""))).replace("\n", "<br>")
+            img = ""
+            if sec.get("image"):
+                img = f'<img src="{escape(str(sec["image"]))}" alt="">'
+            secs.append(f"<section><h2>{escape(sec['heading'])}</h2>"
+                        f"<p>{body}</p>{img}</section>")
+        cols.append("<div class=\"col\">" + "".join(secs) + "</div>")
+
+    takeaway = (f'<div class="takeaway">{escape(spec["takeaway"])}</div>'
+                if spec.get("takeaway") else "")
+
+    return f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>{escape(spec.get('title', 'Poster'))}</title>
+<style>
+  @page {{ size: {Ws}in {Hs}in; margin: 0; }}
+  html, body {{ margin: 0; padding: 0; background: #fff; color: #1a1a1a;
+    font-family: Helvetica, Arial, sans-serif; }}
+  .poster {{ width: {Ws}in; height: {Hs}in; box-sizing: border-box;
+    padding: {W * 0.02}in; display: flex; flex-direction: column; }}
+  h1 {{ font-size: {title_pt}pt; color: #00518c; margin: 0 0 .18in; line-height: 1.05; }}
+  .meta {{ font-size: {int(body_pt * 0.95)}pt; margin-bottom: .06in; }}
+  .affil {{ font-size: {int(body_pt * 0.8)}pt; color: #555; margin-bottom: .16in; }}
+  .takeaway {{ font-size: {int(heading_pt * 0.9)}pt; font-weight: 700;
+    color: #00518c; border-top: 3px solid #00518c; border-bottom: 3px solid #00518c;
+    padding: .12in 0; margin: 0 0 .24in; }}
+  .cols {{ display: flex; gap: {W * 0.015}in; flex: 1; }}
+  .col {{ flex: 1; }}
+  h2 {{ font-size: {heading_pt}pt; color: #00518c; margin: 0 0 .08in; }}
+  section {{ margin-bottom: .28in; }}
+  p {{ font-size: {body_pt}pt; line-height: 1.35; margin: 0; }}
+  img {{ max-width: 100%; margin-top: .12in; }}
+  footer {{ font-size: {int(body_pt * 0.75)}pt; border-top: 1px solid #ccc;
+    padding-top: .1in; display: flex; justify-content: space-between; gap: 1in; }}
+  .draft {{ color: #993300; font-weight: 700; }}
+</style></head><body><div class="poster">
+<h1>{escape(spec.get('title', ''))}</h1>
+<div class="meta">{escape(spec.get('authors', ''))}
+  {(' · ' + escape(spec['abstract_number'])) if spec.get('abstract_number') else ''}</div>
+<div class="affil">{escape(spec.get('affiliations', ''))}</div>
+{takeaway}
+<div class="cols">{''.join(cols)}</div>
+<footer>
+  <span>{escape(spec.get('approval_status', ''))}<br>
+        <span style="color:#555">{escape(spec.get('footer', ''))}</span></span>
+  <span class="draft">DRAFT — REQUIRES QUALIFIED MEDICAL REVIEW</span>
+</footer>
+</div></body></html>
+"""
+
+
+def build(spec: dict, out: Path) -> None:
+    from pptx import Presentation
+    from pptx.util import Inches, Pt
+    from pptx.dml.color import RGBColor
+    from pptx.enum.text import PP_ALIGN
 
     W, H = float(spec["width_in"]), float(spec["height_in"])
     title_pt = spec.get("title_pt", max(MIN_TITLE_PT, int(W * 1.7)))
@@ -249,14 +327,36 @@ def main() -> int:
     if problems:
         return 1
 
-    sizes = build(spec, Path(args.out))
-    print(f"Wrote {args.out} at {spec['width_in']}×{spec['height_in']} inches.")
-    print(f"Type sizes: title {sizes[0]}pt · headings {sizes[1]}pt · body {sizes[2]}pt")
-    print(
+    PRINT_NOTE = (
         "\nBefore printing: confirm the dimensions with BOTH the congress and the\n"
         "printer, and check legibility by printing a page at 25% and reading it\n"
         "at arm's length. That approximates two metres from the full-size poster."
     )
+    out = Path(args.out)
+
+    if _have("pptx"):
+        sizes = build(spec, out)
+        print(f"Wrote {out} at {spec['width_in']}×{spec['height_in']} inches.")
+        print(f"Type sizes: title {sizes[0]}pt · headings {sizes[1]}pt · body {sizes[2]}pt")
+        print(PRINT_NOTE)
+        return 0
+
+    html_path = out.with_suffix(".html")
+    html_path.parent.mkdir(parents=True, exist_ok=True)
+    html_path.write_text(render_html(spec), encoding="utf-8")
+    print(f"""⚠ DEGRADED OUTPUT — python-pptx is not available in this environment.
+
+   Delivered:      {html_path}  ({spec['width_in']}×{spec['height_in']}in, print-ready)
+   Not delivered:  {out}
+   To get it:      pip install python-pptx
+                   python3 {Path(__file__).name} --spec {args.spec} --out {out}
+
+   The content is complete, and for a poster this format arguably beats the
+   .pptx — it prints correctly from any browser at the exact physical size, and
+   the minimum type sizes are preserved in real inches, so the two-metre
+   legibility rule still holds. Print to PDF from the browser for the printer.
+""")
+    print(PRINT_NOTE)
     return 0
 
 

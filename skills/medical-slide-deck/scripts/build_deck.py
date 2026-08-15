@@ -129,16 +129,82 @@ def validate(spec: dict) -> list[str]:
     return problems
 
 
-def build(spec: dict, out: Path) -> None:
+def _have(module: str) -> bool:
+    """Inline capability check, kept small so a copied directory still works."""
     try:
-        from pptx import Presentation
-        from pptx.util import Inches, Pt
-        from pptx.dml.color import RGBColor
-        from pptx.enum.text import PP_ALIGN
+        __import__(module)
+        return True
     except ImportError:
-        raise SystemExit(
-            "python-pptx is required.\n  pip install python-pptx"
-        )
+        return False
+
+
+def render_markdown(spec: dict) -> str:
+    """Tier 3: the deck as markdown, one section per slide.
+
+    Not a consolation prize — for review purposes this is often easier to read
+    than the .pptx, and every citation, design statement and compliance element
+    survives intact. Only layout is lost.
+    """
+    out = [
+        f"# {spec.get('title', 'Untitled deck')}",
+        "",
+        f"**{DRAFT}**",
+        "",
+    ]
+    if spec.get("subtitle"):
+        out += [f"*{spec['subtitle']}*", ""]
+    meta = " · ".join(
+        x for x in [spec.get("presenter", ""), spec.get("date", ""),
+                    spec.get("jurisdiction", "")] if x
+    )
+    if meta:
+        out += [meta, ""]
+    if spec.get("approval_status"):
+        out += ["> **Approval status.** " + spec["approval_status"], ""]
+    out += ["---", ""]
+
+    for i, s in enumerate(spec.get("slides", []), 1):
+        kind = s.get("type", "")
+        out.append(f"## Slide {i} — {s.get('title', '(untitled)')}")
+        out.append(f"*{kind} slide*")
+        out.append("")
+        if s.get("design"):
+            out += [f"**Design:** {s['design']}", ""]
+
+        if kind == "bullets":
+            out += [f"- {b}" for b in s.get("bullets", [])] + [""]
+        elif kind == "questions":
+            out += [f"{j}. {q}" for j, q in enumerate(s.get("questions", []), 1)] + [""]
+        elif kind == "data":
+            rows = s.get("rows", [])
+            if rows:
+                out.append("| " + " | ".join(str(c) for c in rows[0]) + " |")
+                out.append("| " + " | ".join("---" for _ in rows[0]) + " |")
+                for r in rows[1:]:
+                    out.append("| " + " | ".join(str(c) for c in r) + " |")
+                out.append("")
+        elif kind == "references":
+            refs = s.get("references", [])
+            out += ([f"{j}. {r}" for j, r in enumerate(refs, 1)] if refs
+                    else ["_No references listed._"]) + [""]
+        elif kind == "image":
+            out += [f"![{s.get('title', '')}]({s.get('path', '')})", ""]
+
+        if s.get("citation"):
+            tier = f" `[{s['tier']}]`" if s.get("tier") and s["tier"] != "peer-reviewed" else ""
+            out += [f"<sub>Source: {s['citation']}{tier}</sub>", ""]
+        if s.get("notes"):
+            out += [f"> **Speaker notes.** {s['notes']}", ""]
+        out += ["---", ""]
+
+    return "\n".join(out)
+
+
+def build(spec: dict, out: Path) -> None:
+    from pptx import Presentation
+    from pptx.util import Inches, Pt
+    from pptx.dml.color import RGBColor
+    from pptx.enum.text import PP_ALIGN
 
     prs = Presentation()
     prs.slide_width = Inches(13.333)  # 16:9
@@ -319,14 +385,38 @@ def main() -> int:
         return 0
 
     out = Path(args.out)
-    build(spec, out)
     n = len(spec.get("slides", [])) + 1
-    print(f"Wrote {out} ({n} slides).")
-    print(
-        "\nThe draft marking is stamped on every slide. It is the control that "
-        "keeps unreviewed content from reaching an external audience — the "
-        "reviewer removes it, not you."
-    )
+
+    if _have("pptx"):
+        build(spec, out)
+        print(f"Wrote {out} ({n} slides).")
+        print(
+            "\nThe draft marking is stamped on every slide. It is the control that "
+            "keeps unreviewed content from reaching an external audience — the "
+            "reviewer removes it, not you."
+        )
+        return 0
+
+    # Tier 3. A degraded output is a success — exit 0, or the calling agent
+    # reports failure to someone who could have had the content.
+    md_path = out.with_suffix(".md")
+    spec_path = out.with_suffix(".json")
+    md_path.parent.mkdir(parents=True, exist_ok=True)
+    md_path.write_text(render_markdown(spec), encoding="utf-8")
+    spec_path.write_text(json.dumps(spec, indent=2), encoding="utf-8")
+
+    print(f"""⚠ DEGRADED OUTPUT — python-pptx is not available in this environment.
+
+   Delivered:      {md_path}   ({n} slides, one section each)
+                   {spec_path}   (build spec — regenerate the .pptx from this)
+   Not delivered:  {out}
+   To get it:      pip install python-pptx
+                   python3 {Path(__file__).name} --spec {spec_path} --out {out}
+
+   The content is complete. Every citation, design statement, approval-status
+   line and speaker note survived; only slide layout was lost. The markdown is
+   often easier to review than the deck would have been.
+""")
     return 0
 
 

@@ -45,6 +45,23 @@ jobs:
       - name: Run offline API client tests
         run: python3 scripts/selftest_apis.py
 
+  fallbacks:
+    name: Graceful degradation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Deliberately NO document libraries installed. This job proves every
+      # content generator degrades visibly instead of failing, and that the
+      # substantive content — citations, designs, denominators, safety data,
+      # the draft marking — survives the fallback path.
+      - name: Content generators must degrade, not fail
+        run: python3 scripts/selftest_fallbacks.py
+
   live-apis:
     name: API clients (live — manual only)
     runs-on: ubuntu-latest
