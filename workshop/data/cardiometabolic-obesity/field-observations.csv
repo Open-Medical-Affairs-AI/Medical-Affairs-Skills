@@ -1,0 +1,58 @@
+# SYNTHETIC DATA - WORKSHOP USE ONLY. Fictional company, products, experts
+# and institutions. Contains deliberately seeded adverse events, a product
+# quality complaint and an off-label use. Not real data.
+record_id,date,msl,contact_id,setting,country,channel,observation
+OBS-001,2026-05-08,MSL-07,HCP-133,Regional centre,US,Virtual,Says the 68% regain figure is the most important number in the trial and it is never in the slide deck.
+OBS-002,2026-04-05,MSL-07,HCP-140,Academic,DE,Face-to-face,Asked directly whether there is a cardiovascular outcomes trial. Said without one this will not enter cardiology practice.
+OBS-003,2026-05-24,MSL-03,HCP-125,Academic,ES,Face-to-face,"Reports that a patient was hospitalised with acute pancreatitis during titration; recovered, investigation ongoing."
+OBS-004,2026-05-28,MSL-02,HCP-119,Academic,US,Phone,Says the titration schedule is too fast for her older patients and she slows it routinely.
+OBS-005,2026-06-06,MSL-04,HCP-137,Community,IT,Congress,Two patients discontinued because of intractable nausea despite dose reduction.
+OBS-006,2026-06-20,MSL-07,HCP-139,Academic,US,Phone,Asked about lean mass. Said the DXA sub-study was 'too small to reassure anyone'.
+OBS-007,2026-06-25,MSL-07,HCP-113,Community,UK,Face-to-face,Reports that patients are asking about stopping and she has no evidence-based answer.
+OBS-008,2026-04-07,MSL-03,HCP-109,Community,US,Face-to-face,"Says supply constraints on the competitor product are driving patients to ours by default, not by choice."
+OBS-009,2026-05-24,MSL-04,HCP-108,Academic,ES,Congress,"Reports a patient who became pregnant while on treatment; treatment stopped immediately, asked what data exist."
+OBS-010,2026-06-25,MSL-04,HCP-121,Community,DE,Face-to-face,Notes that gallbladder events in her practice seem more frequent than the label suggests.
+OBS-011,2026-06-01,MSL-06,HCP-130,Academic,US,Virtual,Says the weekly injection is manageable but patients would prefer oral.
+OBS-012,2026-06-19,MSL-03,HCP-136,Regional centre,UK,Face-to-face,Asked whether there is any data in patients over 75. Said she treats many.
+OBS-013,2026-05-13,MSL-05,HCP-133,Academic,IT,Virtual,Reports using it in a patient with HFpEF off-label; symptoms improved markedly.
+OBS-014,2026-06-06,MSL-01,HCP-139,Community,IT,Virtual,Says primary care cannot deliver the titration support the protocol assumes.
+OBS-015,2026-05-13,MSL-04,HCP-101,Community,FR,Face-to-face,Two pens in a recent batch would not prime; patients missed doses.
+OBS-016,2026-05-03,MSL-05,HCP-128,Community,FR,Face-to-face,Asked whether weight loss translates into any hard outcome or just the number on the scale.
+OBS-017,2026-06-04,MSL-06,HCP-120,Academic,JP,Congress,"Says her patients regain rapidly and blame themselves, which is a harm in itself."
+OBS-018,2026-06-28,MSL-04,HCP-106,Regional centre,JP,Face-to-face,Reports one patient with severe dehydration requiring intravenous fluids after persistent vomiting.
+OBS-019,2026-05-15,MSL-07,HCP-139,Academic,JP,Face-to-face,Thinks the discontinuation rate in the trial understates real-world discontinuation considerably.
+OBS-020,2026-05-27,MSL-04,HCP-125,Academic,FR,Phone,Asked whether there is a maintenance dose strategy anyone has studied.
+OBS-021,2026-05-06,MSL-04,HCP-121,Academic,DE,Face-to-face,Says insurance coverage is the single biggest determinant of who gets treated.
+OBS-022,2026-04-04,MSL-07,HCP-138,Community,JP,Phone,Notes that patients with binge eating disorder respond differently and nobody studies them.
+OBS-023,2026-04-15,MSL-03,HCP-127,Academic,ES,Phone,Reports a patient whose diabetes control improved so much they stopped their oral agents.
+OBS-024,2026-04-05,MSL-03,HCP-127,Academic,DE,Phone,Says the competitor's CV outcomes data is what cardiologists cite and we have nothing comparable.
+OBS-025,2026-04-14,MSL-01,HCP-119,Academic,ES,Phone,Asked whether muscle mass loss matters clinically or is a surrogate concern.
+OBS-026,2026-04-25,MSL-03,HCP-118,Academic,UK,Face-to-face,Reports declining effect in one patient after eight months at a stable dose.
+OBS-027,2026-04-08,MSL-05,HCP-103,Regional centre,IT,Face-to-face,Says the nausea is manageable but the anticipatory nausea before injection is not.
+OBS-028,2026-04-03,MSL-04,HCP-113,Regional centre,US,Face-to-face,"Notes that the trial excluded patients with significant psychiatric history, who are a large part of her clinic."
+OBS-029,2026-06-26,MSL-06,HCP-107,Academic,FR,Congress,Asked whether we would support an investigator-initiated study on discontinuation strategies.
+OBS-030,2026-04-13,MSL-06,HCP-122,Community,US,Virtual,"Reports that a patient took a double dose after confusing the pen strengths; monitored, no harm."
+OBS-031,2026-06-02,MSL-03,HCP-101,Academic,DE,Virtual,Says patients ask about facial appearance changes and there is nothing in the label about it.
+OBS-032,2026-06-11,MSL-01,HCP-127,Academic,IT,Face-to-face,Thinks the field is heading toward combination with resistance training and nobody has trial data.
+OBS-033,2026-06-26,MSL-07,HCP-117,Academic,IT,Virtual,Reports a patient with a new gallstone requiring cholecystectomy at month five.
+OBS-034,2026-06-23,MSL-06,HCP-137,Community,US,Face-to-face,Says primary care colleagues are prescribing without any structured support and outcomes are worse.
+OBS-035,2026-06-11,MSL-06,HCP-107,Regional centre,FR,Face-to-face,Asked what proportion of trial patients were still on treatment at 72 weeks.
+OBS-036,2026-06-02,MSL-07,HCP-121,Academic,US,Face-to-face,Notes that the competitor's oral formulation is preferred by needle-averse patients even at lower efficacy.
+OBS-037,2026-06-22,MSL-03,HCP-138,Community,DE,Face-to-face,Reports one patient who lost weight rapidly then developed severe fatigue and stopped.
+OBS-038,2026-04-27,MSL-02,HCP-118,Community,DE,Congress,"Says the biggest question in her clinic is 'for how long', and there is no answer."
+OBS-039,2026-06-18,MSL-02,HCP-127,Academic,UK,Virtual,Asked whether the effect differs by ethnicity; said the trial population was not representative of her practice.
+OBS-040,2026-05-03,MSL-02,HCP-108,Academic,FR,Face-to-face,Reports a patient with worsening gastroparesis symptoms who had pre-existing diabetes.
+OBS-041,2026-06-07,MSL-07,HCP-103,Academic,DE,Phone,Says the storage and travel requirements are a real barrier for shift workers.
+OBS-042,2026-06-22,MSL-02,HCP-137,Community,IT,Face-to-face,Thinks the weight regain data should be in the label and is not.
+OBS-043,2026-06-05,MSL-05,HCP-120,Community,UK,Congress,Reports two patients who stopped because of cost when insurance changed.
+OBS-044,2026-05-10,MSL-02,HCP-121,Regional centre,US,Virtual,Asked whether there is any signal on bone density.
+OBS-045,2026-06-06,MSL-04,HCP-129,Community,DE,Congress,Says her service cannot scale to demand and the waiting list is over a year.
+OBS-046,2026-04-11,MSL-03,HCP-124,Community,JP,Phone,"Notes that patients who lose weight quickly seem to regain fastest, but she has no data."
+OBS-047,2026-05-24,MSL-07,HCP-126,Community,UK,Face-to-face,Reports a patient who developed severe constipation requiring hospital assessment.
+OBS-048,2026-04-26,MSL-07,HCP-129,Community,ES,Virtual,Asked whether there is guidance on managing patients who plateau.
+OBS-049,2026-04-17,MSL-06,HCP-114,Academic,DE,Face-to-face,Says the competitor field team have been more present in primary care than ours.
+OBS-050,2026-05-28,MSL-03,HCP-103,Community,UK,Phone,"Reports one patient using it for cosmetic weight loss at a BMI of 26, obtained privately."
+OBS-051,2026-06-10,MSL-06,HCP-119,Community,JP,Congress,"Thinks the real unmet need is maintenance, not induction of weight loss."
+OBS-052,2026-04-01,MSL-05,HCP-104,Academic,UK,Congress,Asked whether combination with an oral agent has been studied.
+OBS-053,2026-06-24,MSL-04,HCP-132,Academic,US,Congress,Reports a patient whose HbA1c fell below the prediabetes threshold and asks whether treatment can stop.
+OBS-054,2026-05-03,MSL-01,HCP-132,Academic,US,Congress,Says she cannot answer patient questions about long-term safety and it undermines the conversation.
