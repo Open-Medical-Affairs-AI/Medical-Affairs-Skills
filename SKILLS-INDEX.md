@@ -15,7 +15,15 @@ first — it explains how to run these. This file is the catalogue.
 - **Network** — external hosts the skill needs. Blank means it works fully offline.
 
 
-**25 skills.**
+**26 skills.**
+
+## Orchestrator
+
+Start here if you have been handed a job and do not know which skill does it. This one routes.
+
+| Skill | What it does | Requires | Produces | Network |
+| --- | --- | --- | --- | --- |
+| [`medical-affairs-orchestrator`](skills/medical-affairs-orchestrator/SKILL.md) | Route any Medical Affairs request to the right workflow and run it end to end. | `medical-affairs-foundations` | A routed, executed Medical Affairs workflow | — |
 
 ## Foundation — always loaded
 

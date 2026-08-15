@@ -1,0 +1,32 @@
+{
+  "name": "open-medical-affairs-ai",
+  "owner": {
+    "name": "Open Medical Affairs AI",
+    "url": "https://github.com/Open-Medical-Affairs-AI"
+  },
+  "metadata": {
+    "description": "Open-source agent skills for Medical Affairs professionals.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "medical-affairs-skills",
+      "source": "./",
+      "description": "Give an AI agent a Medical Affairs job, not a prompt. KOL engagement briefs, field insight synthesis, congress intelligence, publication strategy, medical planning, evidence gap analysis, medical information responses, plus deck/manuscript/poster/figure generation. Ships working PubMed, ClinicalTrials.gov and openFDA clients and will not emit a citation it has not resolved.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Open Medical Affairs AI"
+      },
+      "homepage": "https://github.com/Open-Medical-Affairs-AI/Medical-Affairs-Skills",
+      "license": "Apache-2.0",
+      "category": "life-sciences",
+      "keywords": [
+        "medical-affairs",
+        "pharmaceutical",
+        "clinical-evidence",
+        "pubmed",
+        "regulatory"
+      ]
+    }
+  ]
+}
