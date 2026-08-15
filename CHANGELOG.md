@@ -15,9 +15,6 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Apache-2.0 licensing, third-party attribution, and conditions of use.
 - `scripts/validate_skills.py` and `scripts/build_index.py`, with CI enforcement
   from the first commit.
-
-### Added (continued)
-
 - 26 skills across six tiers: orchestrator, foundation, reasoning primitives,
   data and search, workflows, and content generation.
 - Working clients for PubMed E-utilities, ClinicalTrials.gov v2, openFDA, and
