@@ -716,19 +716,35 @@ def field_observations(ta: dict, rng: random.Random) -> list[dict]:
     for the insight exercise to be worth doing.
     """
     msls = [f"MSL-{i:02d}" for i in range(1, 8)]
-    contacts = [f"HCP-{i:03d}" for i in range(101, 141)]
+
+    # A contact is a person, so their setting and country are properties of THEM
+    # and must not vary between records. Randomising these per row produced a
+    # dataset where one HCP appeared as Community/FR and Academic/US, which makes
+    # contact-level frequency claims meaningless — and de-duplicating by contact
+    # is the core of the insight exercise. Fix the attributes to the contact.
+    contacts = {
+        f"HCP-{i:03d}": {
+            "setting": rng.choice(SETTINGS),
+            "country": rng.choice(COUNTRIES),
+        }
+        for i in range(101, 141)
+    }
+    contact_ids = list(contacts)
+
     rows = []
     for i, text in enumerate(ta["observations"], 1):
-        # Deterministic but varied; several MSLs report on the same contacts so
-        # that de-duplication is a real exercise rather than a formality.
+        # Several MSLs report on the same contacts, so working out whether a
+        # repeated theme is a pattern (many clinicians) or an echo (one
+        # clinician, several MSLs) is a real exercise rather than a formality.
+        cid = rng.choice(contact_ids)
         rows.append(
             {
                 "record_id": f"OBS-{i:03d}",
                 "date": f"2026-{rng.choice(['04','05','06'])}-{rng.randint(1, 28):02d}",
                 "msl": rng.choice(msls),
-                "contact_id": rng.choice(contacts),
-                "setting": rng.choice(SETTINGS),
-                "country": rng.choice(COUNTRIES),
+                "contact_id": cid,
+                "setting": contacts[cid]["setting"],
+                "country": contacts[cid]["country"],
                 "channel": rng.choice(
                     ["Face-to-face", "Face-to-face", "Virtual", "Congress", "Phone"]
                 ),
