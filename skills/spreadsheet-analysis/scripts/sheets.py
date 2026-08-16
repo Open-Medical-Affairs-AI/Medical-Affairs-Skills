@@ -227,6 +227,28 @@ def cmd_write(spec: dict, out: Path) -> int:
     return 0
 
 
+# A worked spec, used by --example and by scripts/selftest_fallbacks.py. The
+# denominator column is deliberate: a tracker of percentages with no n is the
+# commonest way a field-insight summary becomes uninterpretable.
+EXAMPLE_SPEC = {
+    "sheet_name": "Insight tracker Q2",
+    "draft_marking": "DRAFT — NOT FOR EXTERNAL USE. REQUIRES QUALIFIED MEDICAL REVIEW.",
+    "columns": ["Insight ID", "Theme", "Contacts raising", "n screened",
+                "% of contacts", "Confidence", "Owner", "Decision it informs"],
+    "rows": [
+        ["INS-001", "Infection prophylaxis practice varies by centre",
+         14, 40, "35.0%", "Moderate", "Medical Director, Haematology",
+         "Whether to develop prophylaxis guidance for the field"],
+        ["INS-002", "Step-up dosing burden limits community uptake",
+         9, 40, "22.5%", "Moderate", "Head of Field Medical",
+         "Community-setting evidence generation priority"],
+        ["INS-003", "Uncertainty about sequencing after BCMA exposure",
+         6, 40, "15.0%", "Low — weak signal, 6 contacts",
+         "Evidence Generation Lead", "Whether to fund the sequencing analysis"],
+    ],
+}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -241,10 +263,19 @@ def main() -> int:
             p.add_argument("--key", required=True)
             p.add_argument("--show-conflicts", action="store_true")
     w = sub.add_parser("write")
-    w.add_argument("--spec", required=True); w.add_argument("--out", default="table.xlsx")
+    w.add_argument("--spec")
+    w.add_argument("--out", default="table.xlsx")
+    w.add_argument("--example", action="store_true",
+                   help="print a worked spec to stdout and exit")
     args = ap.parse_args()
 
     if args.cmd == "write":
+        if args.example:
+            print(json.dumps(EXAMPLE_SPEC, indent=2))
+            return 0
+        if not args.spec:
+            print("write needs --spec (or --example to see one)", file=sys.stderr)
+            return 2
         return cmd_write(json.loads(Path(args.spec).read_text(encoding="utf-8")),
                          Path(args.out))
     path = Path(args.file)

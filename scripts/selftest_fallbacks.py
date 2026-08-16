@@ -40,11 +40,20 @@ DECK = "skills/medical-slide-deck/scripts/build_deck.py"
 MANUSCRIPT = "skills/scientific-manuscript/scripts/build_manuscript.py"
 POSTER = "skills/congress-abstract-and-poster/scripts/build_poster.py"
 FIGURES = "skills/data-visualization-for-medical/scripts/clinical_figures.py"
+SHEET = "skills/spreadsheet-analysis/scripts/sheets.py"
+PDF = "skills/pdf-generation/scripts/build_pdf.py"
+LETTER = "skills/medical-correspondence/scripts/letter.py"
 CAPS = "skills/capability-detection/scripts/capabilities.py"
 
 # Phrases every degradation notice must carry. These are not stylistic — a
-# reader has to be able to tell what they are holding.
-NOTICE_MARKERS = ("DEGRADED OUTPUT", "Delivered:", "To get it:", "pip install")
+# reader has to be able to tell what they are holding and how to get the full
+# version.
+#
+# "To get" rather than the exact "To get it:" because a generator that can name
+# the artefact says something more useful — build_pdf.py writes "To get the
+# PDF:", and pinning the literal string would have forced it to be vaguer. The
+# guarantee being enforced is that a route forward is stated, not its wording.
+NOTICE_MARKERS = ("DEGRADED OUTPUT", "Delivered:", "To get", "pip install")
 
 
 @dataclass
@@ -136,6 +145,49 @@ CASES = [
         out_name="wf.png",
         expect_files=(".svg", ".md"),
         must_survive=("not shown", "Enrolled", "34"),   # the exclusion must survive
+    ),
+    Case(
+        name="spreadsheet degrades to CSV + markdown table",
+        script=SHEET, hide="openpyxl",
+        example_args=["write", "--example"],
+        build_args=["write", "--spec", "SPEC", "--out", "OUT"],
+        out_name="tracker.xlsx",
+        expect_files=(".csv", ".md"),
+        must_survive=(
+            "DRAFT",                              # the draft marking
+            "INS-003",                            # every row, not just the top ones
+            "n screened",                         # the denominator column
+            "40",                                 # the denominator itself
+            "Low — weak signal",                  # the confidence qualifier
+            "Evidence Generation Lead",           # the owner
+        ),
+    ),
+    Case(
+        name="PDF degrades to printable HTML",
+        script=PDF, hide="reportlab",
+        example_args=["--example"],
+        out_name="brief.pdf",
+        expect_files=(".html",),
+        must_survive=(
+            "SRD-0142",                           # document control identifier
+            "NORVANTIB is approved",              # approval status statement
+            "CrCl &lt;40 mL/min",                 # the exclusion that is the answer,
+                                                  # HTML-escaped as it should be
+            "no dosing recommendation can be made",
+            "DRAFT",
+        ),
+    ),
+    Case(
+        name="letter degrades to markdown",
+        script=LETTER, hide="docx",
+        example_args=["--example", "dhcp"],
+        out_name="letter.docx",
+        expect_files=(".md",),
+        must_survive=(
+            "antimicrobial prophylaxis",          # the actual safety instruction
+            "post-marketing reports of serious infections",
+            "DRAFT",
+        ),
     ),
     Case(
         name="AE figure degrades to SVG + data table",
@@ -247,7 +299,7 @@ def check_case(case: Case, verbose: bool) -> tuple[bool, list[str]]:
 def check_no_hard_exits() -> list[str]:
     """No content generator may SystemExit on a missing optional package."""
     problems = []
-    for script in (DECK, MANUSCRIPT, POSTER, FIGURES):
+    for script in (DECK, MANUSCRIPT, POSTER, FIGURES, SHEET, PDF, LETTER):
         text = (REPO / script).read_text(encoding="utf-8")
         for i, line in enumerate(text.splitlines(), 1):
             if "SystemExit" in line and "is required" in line:
