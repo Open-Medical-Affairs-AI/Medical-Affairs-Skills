@@ -2,7 +2,7 @@
 name: medical-affairs-orchestrator
 description: >-
   Route any Medical Affairs request to the right workflow and run it end to
-  end. Load this FIRST whenever someone gives you a Medical Affairs job
+  end. Load this FIRST when someone gives you a Medical Affairs job
   rather than a named skill — "prepare me for this KOL meeting", "what do
   these field notes mean", "build our medical plan", "what evidence are we
   missing" — or any multi-part objective. Works out which workflow the job

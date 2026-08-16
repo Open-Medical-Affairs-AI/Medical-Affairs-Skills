@@ -2,7 +2,7 @@
 name: capability-detection
 description: >-
   Work out what this runtime can actually do before promising a deliverable,
-  and degrade visibly rather than failing. Load before producing any file —
+  and degrade visibly rather than failing. Use when about to produce any file —
   deck, document, spreadsheet, PDF, figure, report — and whenever a
   generation script has failed, a library is missing, there is no network,
   or the filesystem is not writable. Defines the four-tier output ladder

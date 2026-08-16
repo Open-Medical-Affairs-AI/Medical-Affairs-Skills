@@ -3,8 +3,8 @@ name: medical-affairs-foundations
 description: >-
   The operating principles, compliance boundaries and safety obligations
   that govern all Medical Affairs work. Load this for ANY Medical Affairs
-  task before doing anything else — field medical, KOL engagement, medical
-  information, insight handling, publication planning, medical strategy,
+  task when starting, before anything else — field medical, KOL engagement,
+  medical information, insight handling, publication planning, strategy,
   congress activity, advisory boards, evidence generation. Defines the non-
   promotional standard, handling of unsolicited requests and unapproved
   uses, adverse event and product complaint escalation, transparency and
