@@ -38,11 +38,13 @@ TIER_HEADINGS = {
         "does it. This one routes.",
     ),
     "foundation": (
-        "Foundation — always loaded",
-        "These four are loaded for every Medical Affairs task. They carry the "
-        "compliance boundaries, the evidence-appraisal discipline, the "
-        "citation rules, and the self-critique pass. Skipping them is how you "
-        "get a beautifully formatted document that cannot survive review.",
+        "Foundation — the core",
+        "`medical-affairs-foundations` loads on every Medical Affairs task, "
+        "without exception: it carries the compliance boundary and the "
+        "adverse-event escalation rule. The others load when the job reaches "
+        "them — evidence appraisal when interpreting study data, citation "
+        "integrity when the deliverable will carry references, quality review "
+        "at stage 4, capability detection when producing a file.",
     ),
     "primitive": (
         "Reasoning primitives — composed by the workflows",
@@ -78,7 +80,10 @@ first — it explains how to run these. This file is the catalogue.
 
 **How to read the columns**
 
-- **Requires** — other skills in this library that this one builds on. Load them too.
+- **Requires** — what this skill cannot run correctly without. Load all of it.
+- **Suggests** — where the job may go next. Follow one only when the work
+  actually goes there; loading every suggestion pulls a large closure into
+  context before any work starts.
 - **Produces** — the named deliverable. Skills without one are reasoning components.
 - **Network** — external hosts the skill needs. Blank means it works fully offline.
 
@@ -91,11 +96,19 @@ FOOTER = """
 
 For any real task the order that works is:
 
-1. **Foundation** — all four, always.
+1. **`medical-affairs-foundations`** — always, on every job.
 2. **Orchestrator** — if you do not already know which workflow you need.
 3. **One workflow** — the job itself.
-4. **Whatever that workflow requires** — it declares its own dependencies.
-5. **One content skill** — only once the analysis is done and reviewed.
+4. **Whatever that workflow *requires*** — the short list it cannot run without.
+5. **The rest of the core, when the job reaches it** — `evidence-appraisal` when
+   interpreting study data, `citation-integrity` when the deliverable will carry
+   references, `deliverable-quality-review` at stage 4.
+6. **One content skill** — only once the analysis is done and reviewed.
+
+**`suggests` is not a load list.** It names skills the job may reach into;
+follow one when the work actually goes there, not in advance. Dependencies load
+transitively, so speculative loading pulls a large closure into context before
+any work has started.
 
 Loading a content skill before the analysis is finished is the most common
 failure mode. It produces a well-formatted document with nothing behind it.
@@ -169,14 +182,15 @@ def render_index(skills: dict[str, dict]) -> str:
         out.append(f"## {heading}\n")
         if blurb:
             out.append(f"{blurb}\n")
-        out.append("| Skill | What it does | Requires | Produces | Network |")
-        out.append("| --- | --- | --- | --- | --- |")
+        out.append("| Skill | What it does | Requires (load) | Suggests (follow if needed) | Produces | Network |")
+        out.append("| --- | --- | --- | --- | --- | --- |")
         for name, fm in entries:
             meta = fm.get("metadata") or {}
             out.append(
                 f"| [`{name}`](skills/{name}/SKILL.md) "
                 f"| {_summary(fm)} "
                 f"| {_cell(meta.get('requires'))} "
+                f"| {_cell(meta.get('suggests'))} "
                 f"| {_cell(meta.get('produces'))} "
                 f"| {_cell(meta.get('network'))} |"
             )

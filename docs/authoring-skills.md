@@ -109,7 +109,7 @@ predictor of adoption is that a directory works when you move it.
 ### 8. Ship a validator and CI from the first commit
 
 We wrote `validate_skills.py` before the first skill, so it constrained
-everything written afterwards. Retrofitting a validator to 26 skills would have
+everything written afterwards. Retrofitting a validator to 48 skills would have
 been a week of cleanup.
 
 Ours checks: frontmatter parses; `name` matches the directory; description

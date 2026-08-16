@@ -2,7 +2,7 @@
 
 **Give an AI agent a Medical Affairs job, not a prompt.**
 
-An open library of 25 skills that encode how experienced Medical Affairs
+An open library of 48 skills that encode how experienced Medical Affairs
 professionals actually work — so that an AI agent can be handed a job and
 execute it to a standard that survives medical review.
 
@@ -68,13 +68,20 @@ deliver with a provenance appendix.
 | Tier | Skills |
 |---|---|
 | **Orchestrator** | Routes a job to the right workflow and runs the six-stage contract |
-| **Foundation** (always loaded) | Compliance and safety boundaries · evidence appraisal · citation integrity · self-critique |
+| **Foundation** | Compliance and safety boundaries (always loaded) · evidence appraisal · citation integrity · self-critique · capability detection |
 | **Reasoning primitives** | Insight generation · evidence synthesis · strategic analysis |
 | **Data and search** | PubMed · ClinicalTrials.gov · openFDA labels and FAERS · systematic review · terminology mapping |
-| **Workflows** | KOL briefing · field insights · congress intelligence · publication strategy · medical planning · evidence gaps · medical information |
-| **Content generation** | Slide decks · manuscripts · abstracts and posters · plain language summaries · MLR readiness · clinical figures |
+| **Workflows** | KOL briefing · field insights and field planning · congress and competitive intelligence · publication strategy and scientific platform · medical planning · evidence gaps and integrated evidence plans · RWE design · medical information · payer and HTA dossiers · advisory boards · medical education · IIS review · guideline engagement · safety communication · launch readiness · promotional review · impact metrics |
+| **Content generation** | Slide decks · manuscripts · abstracts and posters · correspondence · plain language summaries · MLR readiness · clinical figures · visual abstracts · diagrams · spreadsheets · PDFs · interactive reports · document ingestion |
 
 Full catalogue with dependencies: **[SKILLS-INDEX.md](SKILLS-INDEX.md)**
+
+**Everything degrades rather than failing.** If python-pptx is not installed you
+get the deck as markdown plus a build spec; if matplotlib is not there you get
+hand-written SVG with the data table; if nothing is available you get the full
+content in the response. The citations, study designs, denominators and safety
+data survive every tier, and CI proves it by running the generators in an
+environment with no document libraries installed at all.
 
 ---
 

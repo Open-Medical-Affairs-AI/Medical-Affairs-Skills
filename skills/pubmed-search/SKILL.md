@@ -37,33 +37,46 @@ evidence, it is an anecdote about what you happened to find.
 
 ## The client
 
+**Screen first, then fetch.** This is the pattern to use by default:
+
 ```bash
 S=skills/pubmed-search/scripts/pubmed.py
 
-# Search and get structured metadata back
-python3 $S search --query '"teclistamab"[tiab] AND "multiple myeloma"[MeSH]' --limit 50
+# 1. Screen — one line per record: PMID, year, journal, evidence tier, title
+python3 $S search --query '"teclistamab"[tiab] AND "multiple myeloma"[MeSH]' \
+        --limit 50 --format table
 
-# Abstracts too (slower; use when you need to appraise, not just count)
-python3 $S search --query 'teclistamab AND myeloma' --limit 20 --abstracts
+# 2. Fetch abstracts only for the records that survived screening
+python3 $S fetch --pmids 36001231,35660948,34891112 --abstracts
+```
 
-# What has this author published recently?
-python3 $S search --query 'Moreau P[au] AND myeloma' --from 2022 --limit 40
+The reason is cost, and it is not marginal. Fifty records as a table is a few
+hundred tokens; fifty structured abstracts is on the order of thirty thousand —
+more than every skill in this library put together. Pulling abstracts for a
+whole result set to find the four papers that matter wastes most of the context
+the actual analysis needs.
 
+So: `--abstracts` is opt-in, and it should stay that way. Reach for it on a
+first search only when the set is genuinely small and you know you will appraise
+all of it.
+
+```bash
 # Look up how PubMed indexes a concept before you search for it
 python3 $S mesh --term "multiple myeloma"
 
-# Fetch specific records you already have identifiers for
-python3 $S fetch --pmids 36001231,35660948 --abstracts
+# What has this author published recently?
+python3 $S search --query 'Moreau P[au] AND myeloma' --from 2022 --limit 40 --format table
 
 # What cites this, and what is related
 python3 $S links --pmid 36001231 --kind citedby
 
-# Markdown for dropping straight into a deliverable
-python3 $S search --query '...' --format markdown
+# A reference list for a deliverable
+python3 $S fetch --pmids 36001231,35660948 --format ama
 ```
 
-`--format json` for downstream processing, `--format markdown` for prose,
-`--format ama` for a reference list. `--help` documents the rest.
+`--format table` to screen, `--format json` for downstream processing,
+`--format markdown` for prose, `--format ama` for a reference list. `--help`
+documents the rest.
 
 **Get a free API key.** Register at https://account.ncbi.nlm.nih.gov/settings/
 and export `NCBI_API_KEY`. It raises the rate limit from 3 to 10 requests per

@@ -58,6 +58,12 @@ python3 $S search --condition "atopic dermatitis" --phase 2,3 --format table
 
 `--format json | markdown | table`. `--help` for the rest.
 
+**Screen with `--format table`, then pull the few trials that matter in full.**
+A registry record is long — eligibility criteria alone run to hundreds of words
+— so a 25-record landscape in `markdown` costs an order of magnitude more than
+the same landscape as a table, and you rarely need the detail on more than three
+or four of them. Same discipline as `pubmed-search`: narrow first, then read.
+
 ## What the registry is good for
 
 **Competitive pipeline.** Every interventional trial a competitor is running,

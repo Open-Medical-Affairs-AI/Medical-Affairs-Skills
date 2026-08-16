@@ -75,7 +75,12 @@ BODY_MAX_BY_TIER = {
     # compliance floor the whole library stands on, so this is a measured floor
     # rather than a round number — do not shave it by deleting a rule.
     "foundation": 190,
-    "orchestrator": 200,
+    # The orchestrator is a router for the whole library, so its body scales
+    # with skill count in a way no other tier does. The extra room is bought,
+    # not conceded: the routing table holds the trigger phrasings that used to
+    # sit in 48 always-resident descriptions, and it is read once per routed
+    # job instead of on every request.
+    "orchestrator": 240,
     "primitive": 200,
     "data": 240,
     "workflow": 240,
