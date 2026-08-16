@@ -17,6 +17,7 @@ metadata:
   requires:
     - medical-affairs-foundations
     - strategic-analysis
+    - evidence-appraisal
   suggests:
     - evidence-gap-analysis
     - real-world-evidence-design

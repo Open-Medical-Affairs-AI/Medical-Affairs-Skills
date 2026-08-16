@@ -38,7 +38,7 @@ all of it on every task costs more context than most jobs contain:
 
 | Load | When |
 |---|---|
-| `evidence-appraisal` | The job interprets study data — any trial, publication, abstract, real-world analysis or safety database. Not needed to build a deck from content you were handed. |
+| `evidence-appraisal` | The job interprets study data — any trial, publication, abstract, real-world analysis or safety database. Skip it only when nothing you are handling carries a study behind it: transcribing narrative or process content into a new format is exempt, but the moment a result appears you have to name its design, and naming a design is interpretation. |
 | `citation-integrity` | The deliverable will carry citations, or the agent is about to write a reference from memory. |
 | `deliverable-quality-review` | **At stage 4**, not now. It is the challenge pass; loading it at orient time buys nothing. |
 | `capability-detection` | The job produces a file. |
@@ -75,6 +75,7 @@ have to hold them in permanently resident context.
 | Are we ready for launch; readiness gate; label expansion preparation | `launch-medical-readiness` |
 | Guideline inclusion or positioning; a guideline just updated | `guideline-engagement` |
 | Scorecard, KPIs, "how do we show medical's value", choosing success measures | `medical-affairs-metrics` |
+| What does the totality of evidence say; reconciling conflicting trials into one position | `evidence-synthesis` |
 | Any of the above, but the question is really "so what should we do" | `strategic-analysis` |
 
 **Someone wants an event, a programme or a study designed**
@@ -95,7 +96,6 @@ have to hold them in permanently resident context.
 | What trials are running; competitor pipeline; verify an NCT number | `clinical-trials-search` |
 | What is it approved for; label wording; boxed warning; FAERS reports | `regulatory-label-intelligence` |
 | Everything on X, defensibly complete; HTA or guideline submission | `systematic-literature-review` |
-| What does the totality of evidence say; reconciling conflicting trials | `evidence-synthesis` |
 
 **Someone wants something produced**
 

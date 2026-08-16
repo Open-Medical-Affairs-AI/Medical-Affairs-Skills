@@ -53,7 +53,7 @@ The other three core skills load when the job reaches them:
 
 | Skill | Load when | What it prevents |
 |---|---|---|
-| [`evidence-appraisal`](skills/evidence-appraisal/SKILL.md) | The job interprets study data | Claims a study design cannot support |
+| [`evidence-appraisal`](skills/evidence-appraisal/SKILL.md) | The job interprets study data — and reformatting content that contains a study result counts, because you cannot name the design without reading it | Claims a study design cannot support |
 | [`citation-integrity`](skills/citation-integrity/SKILL.md) | The deliverable will carry citations | Fabricated and misattributed references |
 | [`deliverable-quality-review`](skills/deliverable-quality-review/SKILL.md) | Stage 4, every time | Delivering without arguing against yourself first |
 

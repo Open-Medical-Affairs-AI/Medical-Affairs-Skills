@@ -48,8 +48,10 @@ TIER_HEADINGS = {
     ),
     "primitive": (
         "Reasoning primitives — composed by the workflows",
-        "Not usually invoked directly. The workflow skills call these to do "
-        "the actual thinking.",
+        "Usually reached as a dependency rather than chosen: the workflow "
+        "skills call these to do the actual thinking. `strategic-analysis` is "
+        "the exception and is routable directly, for a request that is purely "
+        "\"so what should we do about it\" with no workflow behind it.",
     ),
     "data": (
         "Data and search — live external evidence",
@@ -155,13 +157,34 @@ def _cell(value) -> str:
 
 
 def _summary(fm: dict) -> str:
-    """First sentence of the description — enough to route on."""
-    desc = str(fm.get("description", "")).strip()
-    for stop in (". ", "? "):
-        if stop in desc:
-            desc = desc.split(stop, 1)[0] + stop.strip()
+    """Enough of the description to route on: what it does, and when.
+
+    One sentence is not enough. `competitive-intelligence` opens with
+    "continuously", which reads as excluding the single-announcement case it in
+    fact handles; `evidence-synthesis` opens without any trigger at all. A
+    cold-start routing test misrouted both from the index alone. So take the
+    opening sentence plus the first one that says when to use it, which by the
+    library's own description convention starts "Use ".
+    """
+    desc = " ".join(str(fm.get("description", "")).split())
+    parts, buf = [], desc
+    for _ in range(6):
+        cut = min((buf.find(s) for s in (". ", "? ") if s in buf), default=-1)
+        if cut == -1:
+            parts.append(buf)
             break
-    return desc.replace("|", "\\|").replace("\n", " ")
+        parts.append(buf[: cut + 1])
+        buf = buf[cut + 2 :]
+
+    out = parts[:1]
+    for sentence in parts[1:]:
+        out.append(sentence)
+        if sentence.startswith(("Use ", "Load ")):
+            break
+    else:
+        out = parts[:1]          # no trigger sentence found; keep it short
+
+    return " ".join(out).replace("|", "\\|")
 
 
 def render_index(skills: dict[str, dict]) -> str:

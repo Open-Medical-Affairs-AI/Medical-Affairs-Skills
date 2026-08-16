@@ -16,6 +16,7 @@ metadata:
   tier: content
   maturity: beta
   requires:
+    - medical-affairs-foundations
     - capability-detection
   produces: Diagram (Mermaid, SVG or ASCII)
 ---
