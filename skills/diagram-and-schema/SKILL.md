@@ -1,14 +1,13 @@
 ---
 name: diagram-and-schema
 description: >-
-  Draw the diagrams Medical Affairs actually needs — treatment pathways, study
-  schemas, PRISMA flow diagrams, patient journeys, evidence maps, decision
-  trees, mechanism-of-action schematics, and governance or process flows. Use
-  when a relationship, sequence or flow would be clearer as a picture than as
-  prose, when a protocol needs a study schema, when a systematic review needs
-  its flow diagram, or when someone asks for a flowchart or pathway. Emits
-  Mermaid, which renders natively in many surfaces including GitHub and several
-  agent runtimes, and falls back to SVG and then to structured ASCII so a
+  Draw the diagrams Medical Affairs actually needs — treatment pathways,
+  study schemas, PRISMA flow diagrams, patient journeys, evidence maps,
+  decision trees, mechanism-of-action schematics, and governance flows. Use
+  when a relationship, sequence or flow would be clearer as a picture than
+  as prose, when a protocol needs a study schema, or when someone asks for a
+  flowchart or pathway. Emits Mermaid, which renders natively in GitHub and
+  several agent runtimes, and falls back to SVG then structured ASCII so a
   diagram is always produced.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
@@ -16,7 +15,8 @@ metadata:
   version: "1.0.0"
   tier: content
   maturity: beta
-  requires: [capability-detection]
+  requires:
+    - capability-detection
   produces: Diagram (Mermaid, SVG or ASCII)
 ---
 

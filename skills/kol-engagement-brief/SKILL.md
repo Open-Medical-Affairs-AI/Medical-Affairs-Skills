@@ -1,16 +1,14 @@
 ---
 name: kol-engagement-brief
 description: >-
-  Prepare an MSL or medical lead for a specific scientific exchange with a named
-  external expert. Use when someone is about to meet a KOL, investigator,
-  guideline author, advisory board member, or society leader and needs to walk
-  in ready — including "prep me for my meeting with Dr X", "what should I know
-  before this call", "build me a KOL profile", and preparing for a difficult or
-  sceptical expert. Produces a brief covering who they are, what they actually
-  care about, what has changed since last contact, the questions worth asking,
-  the questions they are likely to ask and the evidence to answer them, and the
-  boundaries of what may be discussed. Written to be absorbed in the ten minutes
-  before the meeting, not to be comprehensive.
+  Prepare an MSL or medical lead for a specific scientific exchange with a
+  named external expert. Use when someone is about to meet a KOL,
+  investigator, guideline author or society leader and needs to walk in
+  ready — "prep me for my meeting with Dr X", "build me a KOL profile".
+  Produces a brief covering who they are, what they actually care about,
+  what has changed since last contact, the questions worth asking, the
+  questions they will ask, and the boundaries of what may be discussed.
+  Written to be absorbed in ten minutes, not to be comprehensive.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
@@ -19,8 +17,9 @@ metadata:
   maturity: stable
   requires:
     - medical-affairs-foundations
-    - evidence-appraisal
     - citation-integrity
+  suggests:
+    - evidence-appraisal
     - pubmed-search
     - clinical-trials-search
     - deliverable-quality-review

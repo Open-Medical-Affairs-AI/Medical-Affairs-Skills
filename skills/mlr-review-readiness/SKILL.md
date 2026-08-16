@@ -1,16 +1,15 @@
 ---
 name: mlr-review-readiness
 description: >-
-  Prepare Medical Affairs content for Medical/Legal/Regulatory review, and
-  pre-check it against what reviewers actually reject. Use before submitting any
-  deck, document, response, or material to MLR/MRC review, when a piece has come
-  back from review and you need to work out why, or when asked to check whether
-  content is promotional, substantiated, or fair-balanced. Builds a claim-evidence
-  matrix mapping every assertion to its supporting reference, detects promotional
-  language and unsubstantiated comparative claims, checks fair balance and
-  approval-status statements, and assembles the annotated reference pack
-  reviewers need. Most first-round MLR rejections are mechanical and avoidable,
-  and this catches them before they cost a cycle.
+  Prepare Medical Affairs content for Medical/Legal/Regulatory review and
+  pre-check it against what reviewers actually reject. Use before submitting
+  a deck, document, response or material to MLR/MRC review, when a piece has
+  come back and you need to work out why, or when asked whether content is
+  promotional, substantiated or fair-balanced. Builds a claim-evidence
+  matrix, detects promotional language and unsubstantiated comparative
+  claims, and assembles the annotated reference pack. This prepares your own
+  content; to sit as medical signatory on someone else's promotional
+  material, use promotional-material-medical-review.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
@@ -19,8 +18,10 @@ metadata:
   maturity: beta
   requires:
     - medical-affairs-foundations
-    - evidence-appraisal
     - citation-integrity
+  suggests:
+    - evidence-appraisal
+    - promotional-material-medical-review
     - deliverable-quality-review
   produces: Claim-evidence matrix and MLR submission pack
 ---

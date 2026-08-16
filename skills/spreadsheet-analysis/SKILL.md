@@ -2,22 +2,22 @@
 name: spreadsheet-analysis
 description: >-
   Analyse and produce spreadsheets — field insight exports, enquiry logs,
-  publication trackers, evidence tables, budget allocations, congress abstract
-  lists. Use when data arrives as .xlsx or .csv and needs summarising,
-  cross-tabulating, de-duplicating or checking, and when a deliverable is itself
-  a tracker or table someone will filter and sort. Handles the things that
-  quietly corrupt clinical data analysis: multi-row headers, merged cells,
-  inconsistent category spellings that split a count, dates stored as text, and
-  percentages without denominators. Falls back to CSV plus a markdown table when
-  openpyxl is unavailable, so the analysis survives even when the workbook
-  cannot be written.
+  publication trackers, evidence tables, budget allocations, congress
+  abstract lists. Use when data arrives as .xlsx or .csv and needs
+  summarising, cross-tabulating, de-duplicating or checking, and when the
+  deliverable is itself a tracker someone will filter and sort. Handles what
+  quietly corrupts clinical data analysis: multi-row headers, merged cells,
+  inconsistent category spellings that split a count, dates stored as text,
+  and percentages without denominators.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: content
   maturity: beta
-  requires: [capability-detection, medical-affairs-foundations]
+  requires:
+    - capability-detection
+    - medical-affairs-foundations
   produces: Spreadsheet analysis or a generated workbook
   python: [openpyxl]
 ---

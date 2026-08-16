@@ -1,25 +1,26 @@
 ---
 name: pubmed-search
 description: >-
-  Search PubMed properly and retrieve real, verifiable literature via the NCBI
-  E-utilities API. Use whenever a Medical Affairs task needs published evidence
-  — checking what exists on a topic, profiling a KOL's publication record,
-  building an evidence base for a brief or synthesis, finding the trial behind a
-  congress abstract, checking whether a claim has published support, or
-  monitoring new publications on a product or disease. Covers MeSH-aware query
-  construction, field tags, publication-type and date filters, the history
-  server for large result sets, pagination, deduplication, rate limits and the
-  free NCBI API key, and retrieving abstracts and PMC full text. Use this
-  instead of recalling references from memory — models fabricate citations that
-  look correct, and every reference in a Medical Affairs deliverable has to
-  resolve.
+  Search PubMed properly and retrieve real, verifiable literature via the
+  NCBI E-utilities API. Use whenever a Medical Affairs task needs published
+  evidence — what exists on a topic, a KOL's publication record, the
+  evidence base for a brief or synthesis, the trial behind a congress
+  abstract, or whether a claim has published support. Covers MeSH-aware
+  query construction, field tags, filters, the history server,
+  deduplication, rate limits and the free API key. Use this instead of
+  recalling references from memory: models fabricate citations that look
+  correct, and every reference has to resolve.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: data
   maturity: stable
-  requires: [citation-integrity, evidence-appraisal]
+  requires:
+    - citation-integrity
+  suggests:
+    - evidence-appraisal
+    - medical-terminology-mapping
   produces: Verified literature result set with search strategy recorded
   network: [eutils.ncbi.nlm.nih.gov]
 ---

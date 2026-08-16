@@ -3,15 +3,13 @@ name: medical-slide-deck
 description: >-
   Build non-promotional medical slide decks — advisory board decks, MSL
   scientific presentations, congress readouts, medical-to-medical (M2M)
-  presentations, internal data reviews, and training material. Use whenever
-  someone asks for slides, a deck, a presentation, or a PowerPoint in a Medical
-  Affairs context. Handles the structure and the compliance requirements that
-  make a medical deck different from a commercial one: a reference footnote on
-  every data slide, design named alongside every result, fair balance with
-  safety carried at comparable prominence, explicit data-on-file labelling,
-  approval status stated, and a backup-slide set built from anticipated
-  questions. Generates a real .pptx via python-pptx, or hands off to a
-  higher-fidelity renderer when one is available.
+  presentations, internal data reviews and training material. Use whenever
+  someone asks for slides, a deck, a presentation or a PowerPoint in a
+  Medical Affairs context. Handles what makes a medical deck different from
+  a commercial one: a reference on every data slide, the design named
+  alongside every result, fair balance at comparable prominence, approval
+  status stated, and a backup-slide set built from anticipated questions.
+  Generates a real .pptx.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
@@ -20,8 +18,11 @@ metadata:
   maturity: beta
   requires:
     - medical-affairs-foundations
-    - evidence-appraisal
     - citation-integrity
+    - capability-detection
+  suggests:
+    - evidence-appraisal
+    - data-visualization-for-medical
     - deliverable-quality-review
   produces: Non-promotional medical slide deck (.pptx)
   python: [python-pptx>=1.0]

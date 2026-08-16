@@ -2,21 +2,24 @@
 name: interactive-html-report
 description: >-
   Build a self-contained HTML report that opens in any browser with no
-  dependencies — evidence dashboards, insight reports with filterable tables,
-  congress readouts, competitive landscapes, evidence gap trackers. Use when a
-  deliverable has more content than a document should carry, when the reader
-  needs to filter or sort rather than read linearly, when a deck would lose the
-  detail and a PDF would lose the interactivity, or when nothing else can be
-  generated in the environment. Everything inlines into one file — no CDN, no
-  external assets — so it can be emailed, opened offline and archived. This is
-  the one output type that always works.
+  dependencies — evidence dashboards, insight reports with filterable
+  tables, congress readouts, competitive landscapes, evidence gap trackers.
+  Use when a deliverable carries more content than a document should, when
+  the reader needs to filter or sort rather than read linearly, or when
+  nothing else can be generated in the environment. Everything inlines into
+  one file — no CDN, no external assets — so it can be emailed, opened
+  offline and archived. This is the output type that always works.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: content
   maturity: beta
-  requires: [capability-detection, medical-affairs-foundations, citation-integrity]
+  requires:
+    - capability-detection
+    - medical-affairs-foundations
+  suggests:
+    - citation-integrity
   produces: Self-contained interactive HTML report
 ---
 

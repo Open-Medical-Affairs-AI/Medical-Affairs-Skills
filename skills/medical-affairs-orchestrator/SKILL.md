@@ -1,26 +1,22 @@
 ---
 name: medical-affairs-orchestrator
 description: >-
-  Route any Medical Affairs request to the right workflow and run it end to end.
-  Load this FIRST whenever someone gives you a Medical Affairs job rather than a
-  named skill — "prepare me for this KOL meeting", "what do these field notes
-  mean", "tell leadership what changed at the congress", "what should we publish
-  next year", "build our medical plan", "what evidence are we missing", "answer
-  this clinical enquiry", or any multi-part objective such as preparing for an
-  advisory board. It works out which workflow the job maps to, loads the
-  foundation skills and the workflow's dependencies, and enforces the six-stage
-  execution contract so the agent inventories what is missing and challenges its
-  own conclusions before delivering anything. Also handles long-horizon
-  objectives that need several workflows chained together. Use it when the
-  request names a Medical Affairs outcome rather than a skill, when you are
-  unsure which skill applies, or when the objective clearly needs more than one.
+  Route any Medical Affairs request to the right workflow and run it end to
+  end. Load this FIRST whenever someone gives you a Medical Affairs job
+  rather than a named skill — "prepare me for this KOL meeting", "what do
+  these field notes mean", "build our medical plan", "what evidence are we
+  missing" — or any multi-part objective. Works out which workflow the job
+  maps to, loads only what that job actually needs, and enforces the six-
+  stage execution contract so the agent inventories what is missing and
+  challenges its own conclusions before delivering anything.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: orchestrator
   maturity: stable
-  requires: [medical-affairs-foundations]
+  requires:
+    - medical-affairs-foundations
   produces: A routed, executed Medical Affairs workflow
 ---
 

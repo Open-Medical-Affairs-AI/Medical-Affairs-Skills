@@ -1,15 +1,14 @@
 ---
 name: congress-abstract-and-poster
 description: >-
-  Write congress abstracts that fit the submission rules and build the posters
-  that follow them. Use when preparing a submission to ASCO, ASH, ESMO, EHA,
-  AAD, ACR, ADA, ACC or any medical congress, when an abstract is over the word
-  or character limit, when preparing a poster or an encore presentation, or when
-  asked to draft an abstract from trial results. Handles structured abstract
-  formats, the character and word limits that cause late rejections, late-breaker
-  criteria, embargo and prior-publication rules, and poster layout built for
-  someone reading from two metres away in a crowded hall. Generates a real .pptx
-  poster at the physical dimensions the congress specifies.
+  Write congress abstracts that fit the submission rules and build the
+  posters that follow them. Use when preparing a submission to ASCO, ASH,
+  ESMO, EHA, AAD, ACR, ADA, ACC or any medical congress, when an abstract is
+  over the word limit, or when preparing a poster or encore presentation.
+  Handles structured formats, the character limits that cause late
+  rejections, late-breaker criteria, embargo and prior-publication rules,
+  and poster layout built to be read from two metres away. Generates a real
+  .pptx at the congress's physical dimensions.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
@@ -18,8 +17,11 @@ metadata:
   maturity: beta
   requires:
     - medical-affairs-foundations
-    - evidence-appraisal
     - citation-integrity
+    - capability-detection
+  suggests:
+    - evidence-appraisal
+    - data-visualization-for-medical
     - deliverable-quality-review
   produces: Congress abstract and poster (.pptx)
   python: [python-pptx>=1.0]

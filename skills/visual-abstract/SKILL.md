@@ -1,22 +1,25 @@
 ---
 name: visual-abstract
 description: >-
-  Create visual abstracts and infographics that summarise a study or a body of
-  evidence honestly. Use when a publication needs a visual abstract for a
+  Create visual abstracts and infographics that summarise a study or a body
+  of evidence honestly. Use when a publication needs a visual abstract for a
   journal or social media, when a congress presentation needs a graphical
-  summary, when patient-facing or lay material needs a visual, or when someone
-  asks for an infographic. Enforces the rules that stop a visual abstract
-  overstating its study: the design is stated on the graphic, absolute numbers
-  appear alongside relative ones, the sample size is visible, and a single-arm
-  study never gets a comparative layout. Renders dependency-free SVG so it works
-  everywhere and scales for print.
+  summary, when patient-facing material needs a visual, or when someone asks
+  for an infographic. Enforces the rules that stop a visual abstract
+  overstating its study: the design is stated on the graphic, absolute
+  numbers appear alongside relative ones, the sample size is visible, and a
+  single-arm study never gets a comparative layout. Renders dependency-free
+  SVG.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: content
   maturity: beta
-  requires: [evidence-appraisal, medical-affairs-foundations, capability-detection]
+  requires:
+    - medical-affairs-foundations
+    - evidence-appraisal
+    - capability-detection
   produces: Visual abstract or infographic (SVG)
 ---
 

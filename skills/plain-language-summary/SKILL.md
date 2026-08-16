@@ -3,15 +3,14 @@ name: plain-language-summary
 description: >-
   Write plain language summaries of clinical research for patients and the
   public — trial results lay summaries, plain language summaries of
-  publications, visual abstracts, and patient-facing scientific material. Use
-  when asked for a lay summary, patient summary, plain language version, or
-  material a non-specialist has to understand, and when meeting the EU Clinical
-  Trials Regulation requirement for a results summary in language understandable
-  to laypersons. Covers reading-level targets, translating clinical concepts
-  without distorting them, presenting risk in absolute terms with natural
-  frequencies, and the specific traps — false reassurance, false alarm, and
-  implied treatment advice — that make patient-facing material harmful rather
-  than merely unclear.
+  publications, and patient-facing scientific material. Use when asked for a
+  lay summary, patient summary or plain language version, and when meeting
+  the EU Clinical Trials Regulation requirement for a results summary
+  understandable to laypersons. Covers reading-level targets, translating
+  clinical concepts without distorting them, absolute risk in natural
+  frequencies, and the traps — false reassurance, false alarm, implied
+  treatment advice — that make patient material harmful rather than merely
+  unclear.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
@@ -21,6 +20,7 @@ metadata:
   requires:
     - medical-affairs-foundations
     - evidence-appraisal
+  suggests:
     - deliverable-quality-review
   produces: Plain language summary
 ---

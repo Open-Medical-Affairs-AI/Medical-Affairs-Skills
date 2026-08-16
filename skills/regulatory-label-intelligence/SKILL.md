@@ -1,25 +1,25 @@
 ---
 name: regulatory-label-intelligence
 description: >-
-  Retrieve approved US label content and post-marketing safety data via openFDA,
-  and interpret both correctly. Use when you need the exact approved indication
-  wording, boxed warnings, contraindications, warnings and precautions, adverse
-  reaction tables, or use in specific populations — for medical information
-  responses, determining whether a use is on- or off-label, checking fair
-  balance in a deliverable, comparing label language across a class, or looking
-  at FAERS post-marketing reports. Critically, it enforces the correct
-  interpretation of spontaneous reporting data: FAERS has no denominator,
-  disproportionality is hypothesis-generating only, and presenting it as
-  incidence or as evidence of causality is a serious error. Load this whenever a
-  deliverable makes a claim about what a product is approved for, or about its
-  safety profile.
+  Retrieve approved US label content and post-marketing safety data via
+  openFDA, and interpret both correctly. Use when you need the exact
+  approved indication wording, boxed warnings, contraindications, adverse
+  reaction tables or use in specific populations — for medical information
+  responses, deciding whether a use is on- or off-label, checking fair
+  balance, or looking at FAERS reports. Enforces the correct reading of
+  spontaneous reporting data: FAERS has no denominator, disproportionality
+  is hypothesis-generating only, and presenting it as incidence is a serious
+  error.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: data
   maturity: stable
-  requires: [medical-affairs-foundations, evidence-appraisal]
+  requires:
+    - medical-affairs-foundations
+  suggests:
+    - evidence-appraisal
   produces: Label-grounded product facts and correctly-caveated safety context
   network: [api.fda.gov]
 ---

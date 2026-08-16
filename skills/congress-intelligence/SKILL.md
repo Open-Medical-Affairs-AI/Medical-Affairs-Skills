@@ -1,17 +1,14 @@
 ---
 name: congress-intelligence
 description: >-
-  Analyse what changed at a medical congress and what the organisation should do
-  about it — not summarise what was presented. Use for post-congress readouts,
-  pre-congress preparation, competitive data assessment, and any request like
-  "what happened at ASCO", "summarise the congress", "what did we learn at ASH",
-  or "brief leadership on the meeting". Produces a four-part readout — what
-  changed, why it matters, what to watch, what we should do — built by comparing
-  what was expected against what actually happened, separating genuinely new
-  evidence from incremental updates, identifying what contradicts prior
-  evidence, and tracing the competitive and clinical consequences. Deliberately
-  resists producing an abstract summary, which is the default failure and has a
-  half-life of about three days.
+  Analyse what changed at a medical congress and what the organisation
+  should do about it — not summarise what was presented. Use for post-
+  congress readouts, pre-congress preparation, and requests like "what
+  happened at ASCO" or "brief leadership on the meeting". Produces a four-
+  part readout — what changed, why it matters, what to watch, what we should
+  do — by comparing what was expected against what happened and separating
+  genuinely new evidence from incremental updates. Deliberately resists the
+  abstract summary, which is the default failure.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
@@ -21,8 +18,9 @@ metadata:
   requires:
     - medical-affairs-foundations
     - evidence-appraisal
-    - evidence-synthesis
     - strategic-analysis
+  suggests:
+    - evidence-synthesis
     - citation-integrity
     - clinical-trials-search
     - deliverable-quality-review

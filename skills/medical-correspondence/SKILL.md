@@ -2,14 +2,13 @@
 name: medical-correspondence
 description: >-
   Write the formal correspondence Medical Affairs sends — Dear Healthcare
-  Professional letters, responses to investigators and institutions, agency and
-  vendor briefs, advisory board invitations, author correspondence, and letters
-  accompanying scientific responses. Use when a letter, formal email, or written
-  communication to an external professional audience is needed. Handles the
-  register, the structure each type requires, and the compliance content that
-  must appear: approval status, adverse event reporting instructions, transfer
-  of value disclosure where relevant, and the boundary between scientific
-  exchange and promotion in a format that is unusually easy to get wrong.
+  Professional letters, responses to investigators and institutions, agency
+  and vendor briefs, advisory board invitations, author correspondence, and
+  letters accompanying scientific responses. Use when a letter, formal email
+  or written communication to an external professional audience is needed.
+  Handles the register, the structure each type requires, and the compliance
+  content that must appear: approval status, adverse event reporting
+  instructions, and transfer-of-value disclosure.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
@@ -18,9 +17,11 @@ metadata:
   maturity: beta
   requires:
     - medical-affairs-foundations
-    - citation-integrity
-    - deliverable-quality-review
     - capability-detection
+  suggests:
+    - citation-integrity
+    - safety-communication
+    - deliverable-quality-review
   produces: Formal medical correspondence
   python: [python-docx]
 ---

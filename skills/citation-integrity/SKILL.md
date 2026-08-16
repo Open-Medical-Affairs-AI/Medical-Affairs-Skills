@@ -1,24 +1,22 @@
 ---
 name: citation-integrity
 description: >-
-  Guarantee that every factual claim traces to a real, retrievable source, and
-  that the source actually says what it is cited for. Use whenever producing any
-  Medical Affairs deliverable that cites literature — briefs, congress readouts,
-  standard response documents, manuscripts, slide decks, strategy documents,
-  insight reports. Covers the no-fabricated-reference protocol, verifying PMIDs
-  and DOIs against PubMed, CrossRef, and OpenAlex before use, quote fidelity,
-  evidence-tier labelling (peer-reviewed, abstract-only, preprint, data on file,
-  approved label), AMA reference formatting, and how to state a claim you cannot
-  source. Load this before drafting, not after — verification that happens after
-  writing tends to rationalise what is already on the page. Especially important
-  when an agent has generated citations from memory rather than from a search.
+  Guarantee every factual claim traces to a real, retrievable source that
+  actually says what it is cited for. Use whenever producing a Medical
+  Affairs deliverable that cites literature. Covers the no-fabricated-
+  reference protocol, verifying PMIDs and DOIs against PubMed, CrossRef and
+  OpenAlex before use, quote fidelity, evidence-tier labelling, AMA
+  formatting, and how to state a claim you cannot source. Load before
+  drafting, not after — and always when citations came from memory rather
+  than a search.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: foundation
   maturity: stable
-  requires: [medical-affairs-foundations]
+  requires:
+    - medical-affairs-foundations
   produces: Verified reference list with evidence tiers
   network: [eutils.ncbi.nlm.nih.gov, api.crossref.org, api.openalex.org]
 ---
@@ -154,39 +152,17 @@ own limitation statement. If a paper's discussion says the finding requires
 confirmation in a randomised trial, citing the finding without that caveat
 misrepresents the source.
 
-## AMA reference format
+## Reference format
 
-The default for medical publications. Numbered in order of first appearance;
-superscript in text.
+AMA is the default for medical publications: numbered in order of first
+appearance, superscript in text, journal abbreviations per the NLM catalogue,
+DOIs included wherever available because they are the most durable identifier
+and the easiest for a reviewer to check.
 
-**Journal article** (≤6 authors, list all; ≥7, list first three then "et al"):
-
-> 1. Moreau P, Garfall AL, van de Donk NWCJ, et al. Teclistamab in relapsed or
->    refractory multiple myeloma. *N Engl J Med.* 2022;387(6):495-505.
->    doi:10.1056/NEJMoa2203478
-
-**Congress abstract:**
-
-> 2. Smith AB, Jones CD. Title of abstract. Abstract 1234. Presented at: 66th
->    ASH Annual Meeting; December 7-10, 2024; San Diego, CA.
-
-**Package insert:**
-
-> 3. TECVAYLI (teclistamab-cqyv) [prescribing information]. Horsham, PA:
->    Janssen Biotech, Inc; 2022.
-
-**Registry record:**
-
-> 4. A Study of Teclistamab in Participants With Relapsed or Refractory Multiple
->    Myeloma. ClinicalTrials.gov identifier: NCT04557098. Updated [date].
->    Accessed [date].
-
-Journal abbreviations follow the NLM Title Abbreviation catalogue. Include DOIs
-where available — they are the most durable identifier and the easiest for a
-reviewer to check.
-
-Where your organisation or target journal specifies a different style, that
-wins; record it in `house-rules/citation-integrity.md`.
+Worked examples for journal articles, congress abstracts, package inserts and
+registry records are in `references/ama-format.md`. Where your organisation or
+target journal specifies a different style, that wins; record it in
+`house-rules/citation-integrity.md`.
 
 ## The provenance appendix
 
@@ -226,5 +202,7 @@ be attached to the wrong reference by the time you finish.
 
 ## References
 
+- `references/ama-format.md` — AMA worked examples for every source type
+  Medical Affairs cites.
 - `references/verification-sources.md` — what PubMed, CrossRef, OpenAlex, and
   Retraction Watch each cover, where they disagree, and which to trust for what.

@@ -1,16 +1,13 @@
 ---
 name: capability-detection
 description: >-
-  Work out what this runtime can actually do before promising a deliverable, and
-  degrade visibly rather than failing when something is missing. Load this
-  whenever you are about to produce a file — a deck, document, spreadsheet, PDF,
-  figure or report — and whenever a generation script has failed, a library is
-  missing, there is no network, or the filesystem is not writable. Defines the
-  four-tier output ladder every content skill in this library follows, the rule
-  that the analysis must never be lost to a missing container format, and the
-  degradation notice that tells a reader exactly what they are holding and how
-  to get the full version. Use it also to diagnose why a skill produced
-  something other than what was asked for.
+  Work out what this runtime can actually do before promising a deliverable,
+  and degrade visibly rather than failing. Load before producing any file —
+  deck, document, spreadsheet, PDF, figure, report — and whenever a
+  generation script has failed, a library is missing, there is no network,
+  or the filesystem is not writable. Defines the four-tier output ladder
+  every content skill in this library follows, and the rule that the
+  analysis is never lost to a missing container format.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:

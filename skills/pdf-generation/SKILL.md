@@ -3,20 +3,23 @@ name: pdf-generation
 description: >-
   Produce PDF deliverables — briefs, reports, standard response documents,
   one-pagers, evidence summaries, anything that must look the same for every
-  reader and print predictably. Use when someone asks for a PDF, when a document
-  is going to an external audience, when it must be printed, or when layout
-  fidelity matters more than editability. Falls back to HTML with a print
-  stylesheet when no PDF library is available, which loses nothing at all
-  because every browser prints to PDF. Handles the parts that matter in a
-  regulated document: the draft marking on every page, page numbers, headers
-  and footers carrying document control, and references that survive pagination.
+  reader and print predictably. Use when someone asks for a PDF, when a
+  document is going to an external audience, when it must be printed, or
+  when layout fidelity matters more than editability. Falls back to HTML
+  with a print stylesheet when no PDF library is available, which loses
+  nothing because every browser prints to PDF. Handles the draft marking on
+  every page, document control, and references that survive pagination.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: content
   maturity: beta
-  requires: [capability-detection, medical-affairs-foundations, citation-integrity]
+  requires:
+    - capability-detection
+    - medical-affairs-foundations
+  suggests:
+    - citation-integrity
   produces: PDF deliverable (or print-ready HTML)
   python: [reportlab]
 ---

@@ -1,16 +1,15 @@
 ---
 name: scientific-manuscript
 description: >-
-  Draft, structure and prepare a scientific manuscript for journal submission —
-  primary trial reports, secondary analyses, real-world evidence papers, reviews
-  and case reports. Use when asked to write or draft a paper, prepare a
-  manuscript, pick a target journal, write a cover letter, or respond to peer
-  reviewers. Applies ICMJE authorship criteria, GPP 2022 requirements for
-  company-sponsored research, and selects the right EQUATOR reporting guideline
-  for the study design (CONSORT, PRISMA, STROBE, CARE, SPIRIT, RECORD, CHEERS).
-  Produces a real .docx. Use it also to check whether an existing draft meets
-  the reporting guideline before submission — reviewers check, and a missing
-  checklist item is the most common avoidable reason for revision.
+  Draft, structure and prepare a scientific manuscript for journal
+  submission — primary trial reports, secondary analyses, real-world
+  evidence papers, reviews and case reports. Use when asked to write or
+  draft a paper, prepare a manuscript, pick a target journal, write a cover
+  letter, or respond to peer reviewers. Applies ICMJE authorship criteria,
+  GPP 2022, and the right EQUATOR reporting guideline for the design
+  (CONSORT, PRISMA, STROBE, CARE, SPIRIT, RECORD, CHEERS). Produces a real
+  .docx. Also use to check an existing draft against the reporting guideline
+  before submission.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
@@ -19,8 +18,10 @@ metadata:
   maturity: beta
   requires:
     - medical-affairs-foundations
-    - evidence-appraisal
     - citation-integrity
+    - capability-detection
+  suggests:
+    - evidence-appraisal
     - evidence-synthesis
     - deliverable-quality-review
   produces: Manuscript draft (.docx) with reporting-guideline checklist

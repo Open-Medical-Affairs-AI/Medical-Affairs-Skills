@@ -2,16 +2,14 @@
 name: medical-information-response
 description: >-
   Draft responses to unsolicited medical enquiries from healthcare
-  professionals, patients and payers, and build the standard response documents
-  and FAQ library behind them. Use when answering a specific clinical question
-  about a product, developing or updating a standard response document, building
-  an FAQ set for a launch or a new indication, or handling a question that
-  touches an unapproved use. Enforces the reactive-only pathway: answer the
-  question asked and no more, state approval status prominently, ground every
-  statement in the label or in appraised published evidence, include balancing
-  safety information, and scan the enquiry itself for adverse events — medical
-  information enquiries very often contain an unreported case inside the
-  question.
+  professionals, patients and payers, and build the standard response
+  documents and FAQ library behind them. Use when answering a specific
+  clinical question about a product, developing or updating a standard
+  response document, building an FAQ set for a launch, or handling a
+  question that touches an unapproved use. Enforces the reactive-only
+  pathway: answer the question asked and no more, state approval status,
+  ground every statement in the label or in appraised evidence, and scan the
+  enquiry itself for adverse events.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
@@ -20,9 +18,10 @@ metadata:
   maturity: stable
   requires:
     - medical-affairs-foundations
-    - evidence-appraisal
     - citation-integrity
     - regulatory-label-intelligence
+  suggests:
+    - evidence-appraisal
     - pubmed-search
     - deliverable-quality-review
   produces: Standard response document or scientific response letter

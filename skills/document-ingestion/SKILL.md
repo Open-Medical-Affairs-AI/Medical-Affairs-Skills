@@ -1,23 +1,23 @@
 ---
 name: document-ingestion
 description: >-
-  Read documents someone has given you — PDFs, Word files, PowerPoint decks,
-  Excel workbooks, CSVs. Use whenever a user references, uploads, attaches or
-  points at a file you need to understand: a competitor's publication, a
-  congress abstract book, a protocol, a slide deck, a field insight export, an
-  advisory board transcript, a label PDF, an HTA appraisal. Extracts text,
-  tables and structure, reports what it could NOT read rather than guessing,
-  and runs the mandatory adverse event scan over anything human-sourced.
-  Degrades through pypdf, pdfplumber and embedded-text extraction, and when no
-  reader is available says so and offers concrete alternatives instead of
-  inventing content. Load this before any skill that needs to analyse a file.
+  Read documents someone has given you — PDF, Word, PowerPoint, Excel, CSV.
+  Use whenever a user references, uploads, attaches or points at a file you
+  need to understand: a competitor's publication, a congress abstract book,
+  a protocol, a field insight export, an advisory board transcript, a label
+  PDF. Extracts text, tables and structure, reports what it could NOT read
+  rather than guessing, and runs the mandatory adverse event scan over
+  anything human-sourced. Load this before any skill that needs to analyse a
+  file.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: content
   maturity: beta
-  requires: [medical-affairs-foundations, capability-detection]
+  requires:
+    - medical-affairs-foundations
+    - capability-detection
   produces: Extracted document text, tables and structure
   python: [pypdf, pdfplumber, python-docx, python-pptx, openpyxl]
 ---
