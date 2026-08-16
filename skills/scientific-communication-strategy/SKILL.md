@@ -1,16 +1,15 @@
 ---
 name: scientific-communication-strategy
 description: >-
-  Decide what the scientific communication and publication strategy should be —
-  which questions to answer, for which audiences, in what sequence — rather than
-  listing papers by data availability. Use for building or challenging a
-  publication plan, congress submission strategy, scientific platform or
-  narrative development, medical education planning, and questions like "what
-  should we publish next year", "what are we over-communicating", and "what
-  important scientific question are we failing to answer". Works backwards from
-  audience information needs and evidence gaps to communication priorities,
-  distinguishes an evidence gap from a communication gap, and applies GPP 2022
-  and ICMJE authorship requirements throughout.
+  Decide what the publication and scientific communication strategy should
+  be — which questions to answer, for which audiences, in what sequence —
+  rather than listing papers by data availability. Use for building or
+  challenging a publication plan, congress submission strategy, and
+  questions like "what should we publish next year" or "what are we over-
+  communicating". Works backwards from audience information needs and
+  evidence gaps to communication priorities, distinguishes an evidence gap
+  from a communication gap, and applies GPP 2022 and ICMJE authorship
+  requirements throughout.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
@@ -19,10 +18,12 @@ metadata:
   maturity: stable
   requires:
     - medical-affairs-foundations
-    - evidence-synthesis
     - strategic-analysis
+  suggests:
+    - evidence-synthesis
     - pubmed-search
     - citation-integrity
+    - scientific-platform
     - deliverable-quality-review
   produces: Scientific communication strategy and prioritised publication plan
   network: [eutils.ncbi.nlm.nih.gov]

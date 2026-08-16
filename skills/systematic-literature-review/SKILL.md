@@ -2,22 +2,26 @@
 name: systematic-literature-review
 description: >-
   Run a reproducible, PRISMA-aligned systematic literature review — protocol
-  first, documented search strategy, screening funnel with recorded exclusion
-  reasons, structured extraction, and risk-of-bias assessment. Use when the
-  question demands defensible completeness rather than a quick scan: payer and
-  HTA submissions, guideline engagement, evidence dossiers, publication gap
-  analyses, indirect treatment comparison feasibility, safety reviews, and any
-  time someone asks "what is ALL the evidence on X". Also use to appraise
-  somebody else's published review. Distinguish this from a rapid evidence scan
-  and say which you are doing — a narrative summary presented as a systematic
-  review is a serious misrepresentation that HTA reviewers detect immediately.
+  first, documented search strategy, screening funnel with recorded
+  exclusion reasons, structured extraction, and risk-of-bias assessment. Use
+  when the question demands defensible completeness rather than a quick
+  scan: payer and HTA submissions, guideline engagement, evidence dossiers,
+  indirect comparison feasibility, and "what is ALL the evidence on X". Also
+  use to appraise someone else's published review. Say which you are doing —
+  a narrative summary presented as a systematic review is a serious
+  misrepresentation.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: data
   maturity: stable
-  requires: [pubmed-search, evidence-appraisal, citation-integrity, evidence-synthesis]
+  requires:
+    - pubmed-search
+    - evidence-appraisal
+  suggests:
+    - citation-integrity
+    - evidence-synthesis
   produces: PRISMA-aligned systematic review with flow diagram and evidence tables
   network: [eutils.ncbi.nlm.nih.gov, clinicaltrials.gov]
 ---

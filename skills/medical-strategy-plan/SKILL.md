@@ -4,13 +4,11 @@ description: >-
   Build or challenge a medical plan — the scientific priorities, the choices
   behind them, and the activities that trace to them. Use for annual medical
   planning, therapeutic area strategy, landscape and situation assessment,
-  setting scientific priorities, and requests like "develop our medical plan",
-  "what should our priorities be next year", "review this medical plan", or
-  "assess the landscape and tell us what to focus on". Enforces the discipline
-  that separates a strategy from an activity list: every activity traces to a
-  priority, every priority traces to a decision or outcome, every choice states
-  what is given up, and every success measure could actually come back negative.
-  Also use to stress-test a plan someone else wrote.
+  and requests like "develop our medical plan", "what should our priorities
+  be next year" or "review this medical plan". Enforces what separates a
+  strategy from an activity list: every activity traces to a priority, every
+  priority to a decision, every choice states what is given up, and every
+  success measure could come back negative.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
@@ -20,6 +18,7 @@ metadata:
   requires:
     - medical-affairs-foundations
     - strategic-analysis
+  suggests:
     - evidence-synthesis
     - insight-generation
     - clinical-trials-search

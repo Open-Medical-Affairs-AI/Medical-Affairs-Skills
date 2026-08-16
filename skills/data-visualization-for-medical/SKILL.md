@@ -1,22 +1,24 @@
 ---
 name: data-visualization-for-medical
 description: >-
-  Produce clinical trial figures that are honest and interpretable — Kaplan-Meier
-  curves with numbers at risk, forest plots, waterfall and spider plots, adverse
-  event tables, and PRISMA flow diagrams. Use whenever a Medical Affairs
-  deliverable needs a chart of clinical data, when preparing figures for a slide
-  deck, poster, manuscript or congress readout, or when reviewing whether an
-  existing figure misleads. Enforces the graphical integrity rules that matter
-  clinically: no axis truncation on efficacy figures, numbers at risk on every
-  survival curve, censoring marks shown, denominators visible, and colour never
-  the only encoding. Generates real figures via matplotlib.
+  Produce clinical trial figures that are honest and interpretable — Kaplan-
+  Meier curves with numbers at risk, forest plots, waterfall and spider
+  plots, adverse event figures, PRISMA flow diagrams. Use whenever a Medical
+  Affairs deliverable needs a chart of clinical data, or when reviewing
+  whether an existing figure misleads. Enforces the graphical integrity
+  rules that matter clinically: no axis truncation on efficacy figures,
+  numbers at risk on every survival curve, censoring shown, denominators
+  visible, and colour never the only encoding.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: content
   maturity: beta
-  requires: [evidence-appraisal, medical-affairs-foundations]
+  requires:
+    - medical-affairs-foundations
+    - evidence-appraisal
+    - capability-detection
   produces: Publication-quality clinical figures
   python: [matplotlib>=3.7]
 ---

@@ -50,6 +50,42 @@ to an approved indication to be provided to payer audiences where it is based on
 competent and reliable scientific evidence. It does not open a general channel to
 prescribers.
 
+### The reactive pathway in practice
+
+Medical Affairs can discuss unapproved uses, but only through a narrow,
+genuinely reactive pathway. Getting this wrong is one of the highest-consequence
+errors in the function.
+
+**What is permitted, broadly:**
+
+- Responding to a genuine **unsolicited** request from a healthcare professional
+  — one the company did not prompt, encourage, or engineer.
+- Responding with truthful, non-misleading, scientifically balanced information
+  that is factually supported.
+- Routing the response through Medical Information rather than a field
+  promotional channel, tailored to the specific requester, and recorded.
+- Stating the approval status explicitly and prominently.
+- Including safety information and the limitations of the supporting data.
+
+**What is not:**
+
+- Proactively raising unapproved uses, or asking questions engineered to
+  generate a "request".
+- Treating a question asked at a company-organised promotional event as
+  unsolicited.
+- Providing a response broader than the question asked.
+- Any comparative or superiority framing on an unapproved use.
+
+The approval-status statement belongs in the body, not a footnote:
+
+> *[Product] is not approved for [use] in [jurisdiction]. The following
+> information is provided in response to your specific request and describes
+> investigational data. Efficacy and safety have not been established for this
+> use.*
+
+**Guidance changes.** Where a decision turns on the precise standard, verify the
+current version rather than relying on this summary.
+
 ### Enforcement context
 
 - **OIG Compliance Program Guidance for Pharmaceutical Manufacturers** (2003,

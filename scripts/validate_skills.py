@@ -48,15 +48,55 @@ VALID_TIERS = {
 }
 VALID_MATURITY = {"stable", "beta", "experimental"}
 
-# Description bounds. Too short and the agent cannot tell when to load the
-# skill; too long and it crowds out every other skill in the selection context.
-DESC_MIN = 120
-DESC_MAX = 1400
+# Description bounds. Descriptions are the only part of this library that is in
+# context on *every single request*, whether or not the skill is used — at 48
+# skills they are the dominant fixed cost, and they scale linearly with the
+# library. Too short and the agent cannot tell when to load the skill; too long
+# and forty-seven irrelevant skills crowd out the actual task.
+#
+# The ceiling buys roughly a paragraph: what the skill does, when to reach for
+# it, and a trigger phrase or two. Enumerated lists of trigger phrasings belong
+# in the orchestrator's routing table, which is loaded once when routing
+# actually happens, not in the permanently resident block.
+DESC_MIN = 200
+DESC_MAX = 700
 
-# Body length. Progressive disclosure means depth belongs in references/,
-# not in the always-loaded body.
-BODY_WARN = 520
-BODY_MAX = 900
+# Body length, per tier. A skill's body loads when the skill is selected, so
+# the budget should reflect how often that happens. Foundation skills are
+# pulled into nearly every task and are held tightest; content skills carry
+# format-specific detail and get the most room.
+#
+# A single flat limit is close to useless here: set high enough not to block
+# the largest legitimate skill, it never fires at all. These are deliberately
+# near the current sizes so that growth has to be argued for.
+BODY_MAX_BY_TIER = {
+    # 190 is where medical-affairs-foundations lands once everything that can
+    # honestly move to references/ has moved. What remains is the safety and
+    # compliance floor the whole library stands on, so this is a measured floor
+    # rather than a round number — do not shave it by deleting a rule.
+    "foundation": 190,
+    # The orchestrator is a router for the whole library, so its body scales
+    # with skill count in a way no other tier does. The extra room is bought,
+    # not conceded: the routing table holds the trigger phrasings that used to
+    # sit in 48 always-resident descriptions, and it is read once per routed
+    # job instead of on every request.
+    "orchestrator": 240,
+    "primitive": 200,
+    "data": 240,
+    "workflow": 240,
+    "content": 260,
+}
+BODY_MAX_DEFAULT = 240
+
+# Warn at 90% of a tier's budget rather than at a fixed line count.
+BODY_WARN_FRACTION = 0.9
+
+# A hard dependency is one the skill genuinely cannot run correctly without,
+# because its body relies on rules defined there. Everything else — "you will
+# probably want this next" — belongs in metadata.suggests, which is named but
+# not loaded. Closures grow multiplicatively, so this cap is the difference
+# between loading four skills and loading ten.
+MAX_REQUIRES = 3
 
 SYNTHETIC_BANNER = "SYNTHETIC DATA"
 SYNTHETIC_SCAN_LINES = 8
@@ -144,8 +184,11 @@ def check_frontmatter(name: str, fm: dict, rep: Report) -> None:
         elif n > DESC_MAX:
             rep.error(
                 where,
-                f"description is {n} chars, over the {DESC_MAX} limit; move "
-                f"detail into the body",
+                f"description is {n} chars, over the {DESC_MAX} limit. This "
+                f"text sits in context on every request whether the skill is "
+                f"used or not — keep what it does, when to reach for it and a "
+                f"trigger phrase or two; move enumerated trigger lists into "
+                f"the orchestrator routing table and detail into the body",
             )
         low = desc.lower().lstrip()
         if low.startswith(WEAK_DESC_OPENERS):
@@ -196,25 +239,52 @@ def check_frontmatter(name: str, fm: dict, rep: Report) -> None:
             "a skill without a named deliverable is a topic, not a job",
         )
 
-    for key in ("requires", "network", "python"):
+    for key in ("requires", "suggests", "network", "python"):
         if key in meta and not isinstance(meta[key], list):
             rep.error(where, f"metadata.{key} must be a list")
 
+    requires = meta.get("requires") or []
+    if isinstance(requires, list) and len(requires) > MAX_REQUIRES:
+        rep.error(
+            where,
+            f"metadata.requires names {len(requires)} skills, over the cap of "
+            f"{MAX_REQUIRES}. Dependencies load transitively, so a long list "
+            f"here pulls a large closure into context before any work starts. "
+            f"Keep only what this skill cannot run correctly without and move "
+            f"the rest to metadata.suggests, which is named but not loaded",
+        )
+
+    overlap = set(requires or []) & set(meta.get("suggests") or [])
+    if overlap:
+        rep.error(
+            where,
+            f"{sorted(overlap)} appear in both metadata.requires and "
+            f"metadata.suggests — a dependency is either loaded or it is not",
+        )
+
 
 def check_dependencies(skills: dict[str, dict], rep: Report) -> None:
-    """Every declared dependency must resolve, and the graph must be acyclic."""
+    """Every declared dependency must resolve, and the graph must be acyclic.
+
+    Both `requires` and `suggests` must name real skills — a suggestion that
+    points nowhere sends the agent looking for something that does not exist.
+    Only `requires` is checked for cycles, because only `requires` is loaded
+    transitively; `suggests` is a hint the agent follows at most one hop, so a
+    loop in it costs nothing.
+    """
     for name, fm in skills.items():
         where = f"skills/{name}/SKILL.md"
-        requires = (fm.get("metadata") or {}).get("requires") or []
-        for dep in requires:
-            if dep == name:
-                rep.error(where, f"skill requires itself ('{dep}')")
-            elif dep not in skills:
-                rep.error(
-                    where,
-                    f"metadata.requires names '{dep}', which is not a skill in "
-                    f"this repository",
-                )
+        meta = fm.get("metadata") or {}
+        for key in ("requires", "suggests"):
+            for dep in meta.get(key) or []:
+                if dep == name:
+                    rep.error(where, f"skill lists itself in metadata.{key}")
+                elif dep not in skills:
+                    rep.error(
+                        where,
+                        f"metadata.{key} names '{dep}', which is not a skill "
+                        f"in this repository",
+                    )
 
     # Cycle detection over the requires graph.
     graph = {
@@ -243,21 +313,25 @@ LINK_RE = re.compile(r"\[[^\]]*\]\(([^)\s]+)\)")
 BACKTICK_PATH_RE = re.compile(r"`((?:scripts|references|assets)/[\w./-]+)`")
 
 
-def check_body(name: str, body: str, skill_dir: Path, rep: Report) -> None:
+def check_body(
+    name: str, body: str, skill_dir: Path, rep: Report, tier: str = ""
+) -> None:
     where = f"skills/{name}/SKILL.md"
     lines = body.splitlines()
 
-    if len(lines) > BODY_MAX:
+    budget = BODY_MAX_BY_TIER.get(tier, BODY_MAX_DEFAULT)
+    if len(lines) > budget:
         rep.error(
             where,
-            f"body is {len(lines)} lines, over the hard limit of {BODY_MAX}; "
-            f"move depth into references/",
+            f"body is {len(lines)} lines, over the {tier or 'default'} tier "
+            f"budget of {budget}; move depth into references/, which loads "
+            f"only when the agent asks for it",
         )
-    elif len(lines) > BODY_WARN:
+    elif len(lines) > budget * BODY_WARN_FRACTION:
         rep.warn(
             where,
-            f"body is {len(lines)} lines; past ~{BODY_WARN} the always-loaded "
-            f"context starts crowding out the actual task",
+            f"body is {len(lines)} lines against a {tier or 'default'} tier "
+            f"budget of {budget}; the remaining headroom is small",
         )
 
     # Relative links must resolve.
@@ -381,7 +455,7 @@ def load_skills(only: str | None, rep: Report) -> dict[str, dict]:
             continue
         skills[d.name] = fm
         check_frontmatter(d.name, fm, rep)
-        check_body(d.name, body, d, rep)
+        check_body(d.name, body, d, rep, str((fm.get("metadata") or {}).get("tier", "")))
     return skills
 
 

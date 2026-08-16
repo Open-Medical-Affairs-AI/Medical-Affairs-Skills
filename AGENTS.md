@@ -14,10 +14,13 @@ them depends on a runtime feature.
 
 ## What this is
 
-25 skills encoding how experienced Medical Affairs professionals do their work:
-KOL engagement, field insight synthesis, congress intelligence, publication
-strategy, medical planning, evidence gap analysis, medical information, and the
-document and figure generation that turns analysis into deliverables.
+48 skills encoding how experienced Medical Affairs professionals do their work:
+KOL engagement and field planning, insight synthesis, congress and competitive
+intelligence, publication and platform strategy, medical planning, evidence gap
+analysis and integrated evidence planning, RWE design, medical information,
+payer and HTA evidence, safety communication, medical education, promotional
+review, impact measurement — and the document and figure generation that turns
+analysis into deliverables.
 
 It is designed so that a person can hand you a **job** — not a prompt, not a
 skill name — and you can execute it properly.
@@ -32,26 +35,51 @@ pharmacovigilance obligation and is not clinical decision support.
 
 Someone gives you a Medical Affairs job. Load
 [`skills/medical-affairs-orchestrator/SKILL.md`](skills/medical-affairs-orchestrator/SKILL.md)
-— it works out which workflow the job maps to. Always load the four foundation
-skills alongside it. Run the six stages below, announcing them. Read
+— it works out which workflow the job maps to. Always load
+`medical-affairs-foundations` alongside it, and the rest of the core only when
+the job needs it. Run the six stages below, announcing them. Read
 `house-rules/<skill>.md` before producing anything. Deliver with a provenance
 appendix and the draft marking intact.
 
 ---
 
-## Always load these four
+## What to load, and when
 
-Whatever the job, these carry the boundaries that make the output usable:
+[`medical-affairs-foundations`](skills/medical-affairs-foundations/SKILL.md)
+loads on **every** job. It carries the compliance boundary, the adverse-event
+escalation rule and the intake gate, and none of that is conditional.
 
-| Skill | What it prevents |
-|---|---|
-| [`medical-affairs-foundations`](skills/medical-affairs-foundations/SKILL.md) | Promotional drift, mishandled off-label content, missed adverse events |
-| [`evidence-appraisal`](skills/evidence-appraisal/SKILL.md) | Claims a study design cannot support |
-| [`citation-integrity`](skills/citation-integrity/SKILL.md) | Fabricated and misattributed references |
-| [`deliverable-quality-review`](skills/deliverable-quality-review/SKILL.md) | Delivering without arguing against yourself first |
+The other three core skills load when the job reaches them:
+
+| Skill | Load when | What it prevents |
+|---|---|---|
+| [`evidence-appraisal`](skills/evidence-appraisal/SKILL.md) | The job interprets study data — and reformatting content that contains a study result counts, because you cannot name the design without reading it | Claims a study design cannot support |
+| [`citation-integrity`](skills/citation-integrity/SKILL.md) | The deliverable will carry citations | Fabricated and misattributed references |
+| [`deliverable-quality-review`](skills/deliverable-quality-review/SKILL.md) | Stage 4, every time | Delivering without arguing against yourself first |
+
+**`requires` and `suggests` are different.** A skill's `metadata.requires` is the
+short list it cannot run correctly without — load all of it. `metadata.suggests`
+names skills the job *may* reach into; follow one only when the work actually
+goes there. Loading every suggestion pulls a large closure into context before
+any work starts, which is what the split exists to prevent.
 
 The full catalogue, with dependencies and required network access, is in
 [SKILLS-INDEX.md](SKILLS-INDEX.md).
+
+---
+
+## Two rules that keep the context usable
+
+**Screen before you fetch.** Retrieval is the single largest cost in a real
+Medical Affairs task, and it dwarfs the skills themselves. Fifty PubMed records
+as `--format table` is a few hundred tokens; the same fifty with `--abstracts`
+is on the order of thirty thousand. Search with `table`, decide what matters,
+then `fetch --pmids` the handful you will actually appraise. Same for
+ClinicalTrials.gov: screen as a table, pull the three trials that matter in full.
+
+**References load on demand, not by default.** Every `references/` file in this
+repository is there because it was too detailed for the always-loaded body. Open
+one when you need it; do not read a skill's references as a matter of course.
 
 ---
 
@@ -60,8 +88,8 @@ The full catalogue, with dependencies and required network access, is in
 Every workflow runs these, and says so as it goes.
 
 ```
-0 · ORIENT     Identify the job. Load foundations + workflow + its
-               dependencies + house-rules/<skill>.md
+0 · ORIENT     Identify the job. Load medical-affairs-foundations + the
+               workflow + its `requires` + house-rules/<skill>.md
 
 1 · INVENTORY  List what you were given. Then name what is MISSING and how it
                limits the answer. Do not fill gaps with plausible guesses.
@@ -108,7 +136,7 @@ AGENTS.md              this file
 SKILLS-INDEX.md        every skill: what it does, needs, produces (generated)
 DISCLAIMER.md          conditions of use — read before real work
 
-skills/                25 skills, each with SKILL.md (+ references/, scripts/)
+skills/                48 skills, each with SKILL.md (+ references/, scripts/)
 house-rules/           YOUR organisation's overrides — read before delivering
 shared/templates/      deliverable skeletons
 shared/fixtures/       recorded API responses for offline testing
@@ -152,6 +180,33 @@ upstream improvements.
 
 Read them. If a file contains only the seeded examples, the organisation has not
 customised it yet.
+
+---
+
+## Producing files — degrade, never fail
+
+Every content skill in this library follows the same four-tier ladder, and it is
+a library-wide rule rather than one skill's convention. Detect what the runtime
+can do with
+[`capability-detection`](skills/capability-detection/SKILL.md), then take the
+highest tier available:
+
+| Tier | Path | Example |
+|---|---|---|
+| **1** | The runtime's own document skill, if it has one | A native `pptx` skill produces the deck |
+| **2** | This library's bundled script | `build_deck.py` via python-pptx |
+| **3** | An open format that needs nothing installed | Markdown + a build spec; HTML with a print stylesheet; hand-written SVG |
+| **4** | In the response itself | The full content as text, structured so a human can paste it |
+
+**Degrade the container, never the content.** The rule the CI enforces is that
+the citations, study designs, denominators, confidence intervals, safety data
+and the draft marking all survive to tier 4. A generator that exits non-zero
+because a library is missing has thrown away the analysis over a renderer, and
+`scripts/selftest_fallbacks.py` fails the build for it.
+
+When you degrade, **say so visibly** — what was missing, what you delivered
+instead, and the exact command that would produce the full version. A reader
+must be able to tell what they are holding.
 
 ---
 

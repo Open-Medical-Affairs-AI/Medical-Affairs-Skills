@@ -95,13 +95,25 @@ scripts are run. Listed for license transparency.
 | Package | License | Used by |
 |---|---|---|
 | `python-pptx` | MIT | `medical-slide-deck`, `congress-abstract-and-poster` |
-| `python-docx` | MIT | `scientific-manuscript`, `medical-information-response` |
-| `matplotlib` | PSF-based (BSD-compatible) | `data-visualization-for-medical` |
+| `python-docx` | MIT | `scientific-manuscript`, `medical-information-response`, `medical-correspondence` |
+| `matplotlib` | PSF-based (BSD-compatible) | `data-visualization-for-medical`, `visual-abstract` |
+| `openpyxl` | MIT | `spreadsheet-analysis` |
+| `reportlab` | BSD-3-Clause | `pdf-generation` |
+| `pypdf` | BSD-3-Clause | `document-ingestion` |
+| `pdfplumber` | MIT | `document-ingestion` (table extraction) |
 | `requests` | Apache-2.0 | all API skills (optional; stdlib fallback provided) |
 
 All API scripts fall back to the Python standard library (`urllib`) when
 `requests` is unavailable, so the core retrieval skills have **zero** third-party
 runtime dependencies.
+
+**Every one of these is optional.** Each content skill detects what is available
+and degrades through the four-tier ladder in `capability-detection` rather than
+failing — markdown plus a build spec instead of `.pptx`, HTML with a print
+stylesheet instead of PDF, hand-written SVG instead of matplotlib, CSV plus a
+markdown table instead of `.xlsx`. `scripts/selftest_fallbacks.py` runs the
+generators in an environment where these packages are deliberately unimportable
+and fails the build if any of them exits non-zero or loses content.
 
 ---
 

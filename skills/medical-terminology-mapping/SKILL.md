@@ -1,23 +1,22 @@
 ---
 name: medical-terminology-mapping
 description: >-
-  Resolve free-text clinical language to controlled vocabulary so that insights,
-  adverse events, conditions and interventions can be counted, compared and
-  aggregated consistently. Use when coding field insights or medical information
-  enquiries into a taxonomy, normalising adverse event verbatims toward MedDRA
-  terminology, building a PubMed search that needs the right MeSH descriptor,
-  reconciling how different sources name the same condition or drug, or
-  deduplicating a dataset where the same concept appears in a dozen phrasings.
-  Covers MeSH (free, queried live), and how to work correctly with MedDRA,
-  SNOMED CT, ICD and ATC — which are licensed, so this skill teaches their use
-  and deliberately ships none of their content.
+  Resolve free-text clinical language to controlled vocabulary so insights,
+  adverse events, conditions and interventions can be counted and compared
+  consistently. Use when coding field insights into a taxonomy, normalising
+  adverse event verbatims toward MedDRA, building a PubMed search that needs
+  the right MeSH descriptor, or deduplicating a dataset where one concept
+  appears in a dozen phrasings. Covers MeSH, queried live, and how to work
+  correctly with MedDRA, SNOMED CT, ICD and ATC — which are licensed, so
+  none of their content ships here.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: data
   maturity: beta
-  requires: [medical-affairs-foundations]
+  requires:
+    - medical-affairs-foundations
   produces: Concept-to-code mappings with confidence and unresolved list
   network: [eutils.ncbi.nlm.nih.gov]
 ---

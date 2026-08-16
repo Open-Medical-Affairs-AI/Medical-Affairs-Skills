@@ -1,17 +1,14 @@
 ---
 name: field-insight-synthesis
 description: >-
-  Turn a body of field medical observations into insights leadership can act on.
-  Use when given MSL interaction records, field notes, KOL feedback, advisory
-  board output, congress conversation logs, or medical information enquiry
-  patterns and asked what they mean — including "what are the insights here",
-  "synthesise these field notes", "what is the field telling us", and "what
-  should leadership know". Produces a ranked insight set with evidence,
-  frequency, confidence, strategic implication and recommended action with a
-  named owner, plus the contradictions, the weak signals, and what the field did
-  NOT say. Runs a mandatory adverse event and product complaint scan across
-  every record first, because field notes are one of the highest-yield sources
-  of unreported safety information.
+  Turn a body of field medical observations into insights leadership can act
+  on. Use when given MSL interaction records, field notes, KOL feedback,
+  advisory board output or medical information enquiry patterns and asked
+  what they mean — "what is the field telling us", "synthesise these field
+  notes". Produces a ranked insight set with evidence, frequency,
+  confidence, strategic implication and a named owner, plus the
+  contradictions, the weak signals and what the field did NOT say. Runs a
+  mandatory adverse event scan across every record first.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
@@ -21,8 +18,10 @@ metadata:
   requires:
     - medical-affairs-foundations
     - insight-generation
+  suggests:
     - strategic-analysis
     - medical-terminology-mapping
+    - spreadsheet-analysis
     - deliverable-quality-review
   produces: Field insight report with ranked insights and actions
 ---

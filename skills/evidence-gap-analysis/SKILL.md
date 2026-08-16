@@ -1,17 +1,14 @@
 ---
 name: evidence-gap-analysis
 description: >-
-  Identify what we still do not know, decide which gaps are worth closing, and
-  propose how. Use for evidence generation planning, research prioritisation,
-  investigator-initiated study strategy, real-world evidence planning, budget
-  allocation across studies, and requests like "what evidence are we missing",
-  "what should we study next", "where are the gaps", or "how should we spend the
-  evidence budget". Enforces the rule that a gap is only worth closing if
-  closing it changes a decision — missing data is not by itself a reason to
-  generate more. Ranks candidate gaps by decision impact, feasibility,
-  differentiation and timing, checks whether someone is already answering the
-  question, and allocates under a real constraint with an explicit below-the-line
-  list.
+  Identify what we still do not know, decide which gaps are worth closing,
+  and propose how. Use for evidence generation planning, research
+  prioritisation, budget allocation across studies, and requests like "what
+  evidence are we missing" or "what should we study next". Enforces the rule
+  that a gap is only worth closing if closing it changes a decision —
+  missing data is not by itself a reason to generate more. Ranks candidate
+  gaps by decision impact, feasibility, differentiation and timing, and
+  allocates under a real constraint with an explicit below-the-line list.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
@@ -21,8 +18,9 @@ metadata:
   requires:
     - medical-affairs-foundations
     - evidence-appraisal
-    - evidence-synthesis
     - strategic-analysis
+  suggests:
+    - evidence-synthesis
     - pubmed-search
     - clinical-trials-search
     - deliverable-quality-review

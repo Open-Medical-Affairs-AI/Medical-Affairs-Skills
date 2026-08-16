@@ -1,26 +1,22 @@
 ---
 name: medical-affairs-orchestrator
 description: >-
-  Route any Medical Affairs request to the right workflow and run it end to end.
-  Load this FIRST whenever someone gives you a Medical Affairs job rather than a
-  named skill — "prepare me for this KOL meeting", "what do these field notes
-  mean", "tell leadership what changed at the congress", "what should we publish
-  next year", "build our medical plan", "what evidence are we missing", "answer
-  this clinical enquiry", or any multi-part objective such as preparing for an
-  advisory board. It works out which workflow the job maps to, loads the
-  foundation skills and the workflow's dependencies, and enforces the six-stage
-  execution contract so the agent inventories what is missing and challenges its
-  own conclusions before delivering anything. Also handles long-horizon
-  objectives that need several workflows chained together. Use it when the
-  request names a Medical Affairs outcome rather than a skill, when you are
-  unsure which skill applies, or when the objective clearly needs more than one.
+  Route any Medical Affairs request to the right workflow and run it end to
+  end. Load this FIRST when someone gives you a Medical Affairs job
+  rather than a named skill — "prepare me for this KOL meeting", "what do
+  these field notes mean", "build our medical plan", "what evidence are we
+  missing" — or any multi-part objective. Works out which workflow the job
+  maps to, loads only what that job actually needs, and enforces the six-
+  stage execution contract so the agent inventories what is missing and
+  challenges its own conclusions before delivering anything.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: orchestrator
   maturity: stable
-  requires: [medical-affairs-foundations]
+  requires:
+    - medical-affairs-foundations
   produces: A routed, executed Medical Affairs workflow
 ---
 
@@ -33,43 +29,113 @@ Do not ask the user which skill to use. They should never have to know.
 
 ## Stage 0 — Orient
 
-**Always load these four first.** They carry the boundaries that make Medical
-Affairs output usable, and every workflow assumes them:
+**Load `medical-affairs-foundations` first, always.** It carries the compliance
+boundary, the safety escalation rule and the intake gate, and nothing here is
+safe to run without it.
 
-- `medical-affairs-foundations` — compliance, safety escalation, the intake gate
-- `evidence-appraisal` — what each design can support
-- `citation-integrity` — never emit an unresolved citation
-- `deliverable-quality-review` — the challenge pass, run before delivery
+Then load the rest of the core **when the job needs it**, not by reflex. Loading
+all of it on every task costs more context than most jobs contain:
+
+| Load | When |
+|---|---|
+| `evidence-appraisal` | The job interprets study data — any trial, publication, abstract, real-world analysis or safety database. Skip it only when nothing you are handling carries a study behind it: transcribing narrative or process content into a new format is exempt, but the moment a result appears you have to name its design, and naming a design is interpretation. |
+| `citation-integrity` | The deliverable will carry citations, or the agent is about to write a reference from memory. |
+| `deliverable-quality-review` | **At stage 4**, not now. It is the challenge pass; loading it at orient time buys nothing. |
+| `capability-detection` | The job produces a file. |
 
 Then route.
 
 ## Routing
 
 Match on what the person wants to *end up with*, not on the words they used.
+This table carries the trigger phrasings, so that the skills themselves do not
+have to hold them in permanently resident context.
+
+**Someone hands you material and asks what it means**
 
 | The job sounds like | Load |
 |---|---|
-| Prepare for a meeting with a named expert; KOL profile; "brief me before this call" | `kol-engagement-brief` |
-| Make sense of field notes, MSL records, interaction logs; "what is the field telling us" | `field-insight-synthesis` |
-| What happened at a congress; post-meeting readout; competitor data assessment | `congress-intelligence` |
-| What should we publish; publication plan; scientific platform; "what are we over-communicating" | `scientific-communication-strategy` |
+| A file to read first — PDF, Word, PowerPoint, Excel, CSV; "here's the paper", "look at this deck" | `document-ingestion`, then route on what it turns out to be |
+| Field notes, MSL records, interaction logs; "what is the field telling us", "synthesise these" | `field-insight-synthesis` |
+| A spreadsheet, enquiry log, tracker; cross-tabulate, de-duplicate, check this data | `spreadsheet-analysis` |
+| What happened at a congress; post-meeting readout; "what did we learn at ASH" | `congress-intelligence` |
+| What a competitor announcement means; ongoing competitor monitoring | `competitive-intelligence` |
+| Code these observations; normalise this terminology; map to MeSH or MedDRA | `medical-terminology-mapping` |
+
+**Someone wants a decision, a plan or a position**
+
+| The job sounds like | Load |
+|---|---|
 | Annual plan; scientific priorities; landscape assessment; "review this medical plan" | `medical-strategy-plan` |
 | What don't we know; what should we study; research prioritisation; budget allocation | `evidence-gap-analysis` |
-| Answer this clinical question; standard response document; FAQ development | `medical-information-response` |
-| Find the literature on X; what has been published | `pubmed-search` |
-| What trials are running; competitor pipeline | `clinical-trials-search` |
-| What is it approved for; label wording; safety profile | `regulatory-label-intelligence` |
-| Everything on X, defensibly complete; HTA or guideline submission | `systematic-literature-review` |
-| Code these observations; normalise this terminology | `medical-terminology-mapping` |
-| Make slides, a deck, a presentation | `medical-slide-deck` |
-| Write a paper, manuscript, or reviewer response | `scientific-manuscript` |
-| Congress abstract or poster | `congress-abstract-and-poster` |
-| Lay summary, patient-facing material | `plain-language-summary` |
-| Check this before review; is this promotional | `mlr-review-readiness` |
-| A chart, KM curve, forest plot, AE figure | `data-visualization-for-medical` |
+| Evidence across functions and lifecycle; "build the integrated evidence plan"; reconciling competing evidence requests | `integrated-evidence-plan` |
+| What should we publish; publication plan; "what are we over-communicating" | `scientific-communication-strategy` |
+| The core narrative, scientific statements, lexicon; "what is our scientific story" | `scientific-platform` |
+| Territory and MSL planning; field objectives; "is this field plan realistic" | `field-medical-planning` |
+| Are we ready for launch; readiness gate; label expansion preparation | `launch-medical-readiness` |
+| Guideline inclusion or positioning; a guideline just updated | `guideline-engagement` |
+| Scorecard, KPIs, "how do we show medical's value", choosing success measures | `medical-affairs-metrics` |
+| What does the totality of evidence say; reconciling conflicting trials into one position | `evidence-synthesis` |
+| Any of the above, but the question is really "so what should we do" | `strategic-analysis` |
 
-Load the workflow skill, then whatever it declares in `metadata.requires`.
-`SKILLS-INDEX.md` lists every skill with its dependencies.
+**Someone wants an event, a programme or a study designed**
+
+| The job sounds like | Load |
+|---|---|
+| Advisory board, expert panel, steering committee, scientific roundtable | `advisory-board-design` |
+| Prepare for a meeting with a named expert; KOL profile; "brief me before this call" | `kol-engagement-brief` |
+| Medical education, IME grant, curriculum, speaker programme, symposium, preceptorship | `medical-education-program` |
+| An IIS, ISR or IIT proposal to review; governing the IIS programme | `investigator-initiated-study-review` |
+| Design an RWE study, external control arm, choosing a data source | `real-world-evidence-design` |
+
+**Someone wants evidence retrieved**
+
+| The job sounds like | Load |
+|---|---|
+| Find the literature on X; what has been published; a KOL's publication record | `pubmed-search` |
+| What trials are running; competitor pipeline; verify an NCT number | `clinical-trials-search` |
+| What is it approved for; label wording; boxed warning; FAERS reports | `regulatory-label-intelligence` |
+| Everything on X, defensibly complete; HTA or guideline submission | `systematic-literature-review` |
+
+**Someone wants something produced**
+
+| The job sounds like | Load |
+|---|---|
+| Slides, a deck, a presentation, an M2M deck | `medical-slide-deck` |
+| A paper, manuscript, cover letter, or reviewer response | `scientific-manuscript` |
+| Congress abstract or poster | `congress-abstract-and-poster` |
+| A letter, DHCP letter, formal email to an external professional | `medical-correspondence` |
+| Answer this clinical question; standard response document; FAQ development | `medical-information-response` |
+| Payer or HTA material; AMCP dossier; NICE or G-BA submission; value proposition | `payer-value-dossier` |
+| Communicate a safety finding, signal or label safety change | `safety-communication` |
+| Lay summary, patient-facing material | `plain-language-summary` |
+| A PDF; something that must print identically for every reader | `pdf-generation` |
+| An interactive report, dashboard, filterable table | `interactive-html-report` |
+| A chart, KM curve, forest plot, waterfall, AE figure | `data-visualization-for-medical` |
+| A visual abstract or infographic | `visual-abstract` |
+| A treatment pathway, study schema, PRISMA diagram, flowchart | `diagram-and-schema` |
+
+**Someone wants content checked**
+
+| The job sounds like | Load |
+|---|---|
+| Check our own content before MLR; "is this promotional"; why did this come back | `mlr-review-readiness` |
+| Review or sign off someone else's promotional material as medical signatory | `promotional-material-medical-review` |
+| Does this reference say what we claim; verify these citations | `citation-integrity` |
+| Red-team this; critique this deliverable | `deliverable-quality-review` |
+
+Load the workflow skill, then whatever it declares in `metadata.requires` — that
+is the short list it cannot run without. `metadata.suggests` names skills the
+job **may** reach into; follow one only when the work actually goes there, and
+tell the user rather than loading it speculatively. `SKILLS-INDEX.md` lists
+every skill with both.
+
+**Two skills that look alike, and are not.** `mlr-review-readiness` prepares our
+own material for review; `promotional-material-medical-review` is the reviewer
+of someone else's. `kol-engagement-brief` is one meeting;
+`field-medical-planning` is the cycle. `evidence-gap-analysis` finds the gaps;
+`integrated-evidence-plan` sequences the studies that close them.
+`real-world-evidence-design` designs a study; `evidence-appraisal` judges one.
 
 **When the job maps to more than one workflow**, that is normal — see the
 long-horizon section below. **When it maps to none**, say so plainly, and do
@@ -104,39 +170,28 @@ it read as an agent doing a job rather than a model answering a prompt.
 ```
 
 **Stages 1 and 4 are the ones a generic agent skips**, and they are what
-separate this from summarisation. An agent that reports what is missing before
-it answers, and that argues against itself before delivering, is doing the job
-an experienced colleague does.
-
-Announce the plan at the start, briefly:
-
-> I'll treat this as a field insight synthesis. Five stages: inventory the
-> records and say what's missing, scan everything for safety findings, build the
-> insights, challenge them, then deliver with provenance. Starting with the
-> inventory.
-
-Then do it. Do not narrate every step; report at the stage boundaries.
+separate this from summarisation. Announce the plan briefly at the start —
+*"I'll treat this as a field insight synthesis: inventory the records and say
+what's missing, scan for safety findings, build the insights, challenge them,
+then deliver with provenance"* — then do it. Do not narrate every step; report
+at the stage boundaries.
 
 ## The safety scan is not optional
 
 Any job touching field notes, KOL interactions, medical information enquiries,
-advisory board records, or congress conversations gets an adverse event,
+advisory board records or congress conversations gets an adverse event,
 product-complaint and special-situation scan **before analysis**, per
-`medical-affairs-foundations`. Surface findings at the top of the output with
-verbatim quotes. If you scanned and found nothing, say so.
-
-This runs even when the request is framed as strategic. Especially then — that
-is when it gets skipped.
+`medical-affairs-foundations`. Surface findings at the top with verbatim quotes;
+if you scanned and found nothing, say so. This runs even when the request is
+framed as strategic — especially then, because that is when it gets skipped.
 
 ## House rules
 
 Before producing anything, read `house-rules/<skill-name>.md` for every skill
-you loaded. Rules there are the adopting organisation's, and they **override**
-the defaults. This is how a team adapts the library without forking it.
-
-If a house-rules file contains only the seeded examples, the organisation has
-not customised it yet — use the defaults, and it is worth mentioning once that
-the file exists.
+you loaded. Rules there are the adopting organisation's and they **override**
+the defaults — this is how a team adapts the library without forking it. If a
+file contains only the seeded examples the organisation has not customised it
+yet; use the defaults, and mention once that the file exists.
 
 ## Long-horizon objectives
 
@@ -145,8 +200,8 @@ Some jobs need several workflows chained. Example:
 > "We have an advisory board in three weeks. Work out the five most important
 > scientific questions to explore and prepare the briefing materials."
 
-Do not attempt this in one pass. Decompose, state the plan, execute in
-sequence, and let each stage feed the next:
+Do not attempt this in one pass. Decompose, state the plan, and let each stage
+feed the next:
 
 ```
 1. evidence-gap-analysis      → what we genuinely do not know
@@ -159,13 +214,13 @@ sequence, and let each stage feed the next:
 7. mlr-review-readiness       → before anything leaves the building
 ```
 
-State the decomposition before starting, and report at each boundary so the
+State the decomposition before starting and report at each boundary, so the
 person can redirect early rather than after everything is built.
 
 **Where a stage produces nothing useful, say so and continue.** "The gap
 analysis found no unanswered question that would justify an advisory board on
-this topic" is a legitimate and valuable finding — and is exactly the kind of
-conclusion an agent optimising for apparent productivity will avoid.
+this topic" is a legitimate finding, and exactly the kind an agent optimising
+for apparent productivity avoids.
 
 ## What good execution looks like
 

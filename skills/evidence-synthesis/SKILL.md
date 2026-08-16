@@ -1,24 +1,25 @@
 ---
 name: evidence-synthesis
 description: >-
-  Turn a body of clinical evidence into a defensible narrative that states what
-  the totality supports, what it does not, and where it disagrees with itself.
-  Use when you have multiple studies, trials, abstracts, or real-world analyses
-  and need a coherent scientific position rather than a study-by-study list —
-  scientific platforms, medical narratives, congress readouts, evidence sections
-  of strategy documents, KOL discussion preparation, and answering "what does
-  the evidence actually say about X". Handles weight of evidence, reconciling
-  conflicting trials, thematic rather than sequential organisation, stating
-  certainty honestly, and distinguishing what is established from what is
-  plausible from what is unknown. Load this instead of summarising each paper in
-  turn.
+  Turn a body of clinical evidence into a defensible narrative that states
+  what the totality supports, what it does not, and where it disagrees with
+  itself. Use when you have multiple studies, trials or analyses and need a
+  coherent scientific position rather than a study-by-study list —
+  scientific platforms, medical narratives, congress readouts, evidence
+  sections of strategy documents, and answering "what does the evidence
+  actually say about X". Handles weight of evidence, reconciling conflicting
+  trials, and stating certainty honestly.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: primitive
   maturity: stable
-  requires: [medical-affairs-foundations, evidence-appraisal, citation-integrity]
+  requires:
+    - medical-affairs-foundations
+    - evidence-appraisal
+  suggests:
+    - citation-integrity
   produces: Evidence narrative with stated certainty and open questions
 ---
 

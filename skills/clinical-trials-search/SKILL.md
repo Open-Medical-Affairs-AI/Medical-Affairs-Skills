@@ -1,24 +1,24 @@
 ---
 name: clinical-trials-search
 description: >-
-  Search ClinicalTrials.gov via the v2 API to map the trial landscape — what is
-  running, who is running it, in which populations, with what endpoints, and
-  what is about to read out. Use for competitive pipeline assessment, finding
-  the trial behind a congress abstract or publication, checking whether a
-  research question is already being answered before proposing a study,
-  identifying enrolling trials for a KOL discussion, tracking a competitor's
-  development programme, and verifying NCT numbers. Also use to check a trial's
-  amendment history, since a primary endpoint changed after enrolment began is a
-  material finding that is invisible in the publication. Load this alongside
-  pubmed-search whenever assessing evidence gaps or a competitive landscape —
-  the registry shows what is coming, which the literature cannot.
+  Search ClinicalTrials.gov via the v2 API to map the trial landscape — what
+  is running, by whom, in which populations, with what endpoints, and what
+  is about to read out. Use for competitive pipeline assessment, finding the
+  trial behind an abstract, checking whether a question is already being
+  answered before proposing a study, verifying NCT numbers, or reviewing a
+  trial's amendment history. Pair with pubmed-search when assessing evidence
+  gaps: the registry shows what is coming, which the literature cannot.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: data
   maturity: stable
-  requires: [citation-integrity, evidence-appraisal]
+  requires:
+    - citation-integrity
+  suggests:
+    - evidence-appraisal
+    - pubmed-search
   produces: Trial landscape with sponsors, phases, endpoints and timelines
   network: [clinicaltrials.gov]
 ---
@@ -57,6 +57,12 @@ python3 $S search --condition "atopic dermatitis" --phase 2,3 --format table
 ```
 
 `--format json | markdown | table`. `--help` for the rest.
+
+**Screen with `--format table`, then pull the few trials that matter in full.**
+A registry record is long — eligibility criteria alone run to hundreds of words
+— so a 25-record landscape in `markdown` costs an order of magnitude more than
+the same landscape as a table, and you rarely need the detail on more than three
+or four of them. Same discipline as `pubmed-search`: narrow first, then read.
 
 ## What the registry is good for
 

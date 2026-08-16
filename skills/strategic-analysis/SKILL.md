@@ -1,24 +1,23 @@
 ---
 name: strategic-analysis
 description: >-
-  Reason about Medical Affairs strategy rather than generating activity lists.
-  Use when building or challenging a medical plan, prioritising evidence
-  generation, allocating limited budget or headcount, assessing a competitive or
-  landscape shift, deciding what to stop doing, or answering "so what should we
-  do about it". Provides so-what laddering, the distinction between a strategy
-  and a list, assumption surfacing and testing, pre-mortem analysis,
-  prioritisation under real constraints, and the discipline of challenging
-  whether a proposed activity actually serves the stated priority. Load this
-  whenever someone asks for recommendations, priorities, or a plan — and
-  especially when the request is to critique or stress-test one that already
-  exists.
+  Reason about Medical Affairs strategy rather than generating activity
+  lists. Use when building or challenging a medical plan, prioritising
+  evidence generation, allocating limited budget or headcount, assessing a
+  competitive or landscape shift, deciding what to stop doing, or answering
+  "so what should we do about it". Provides so-what laddering, the
+  distinction between a strategy and a list, assumption surfacing and
+  testing, pre-mortem analysis, and prioritisation under real constraints.
+  Load whenever someone asks for recommendations or priorities — especially
+  to critique one that already exists.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: primitive
   maturity: stable
-  requires: [medical-affairs-foundations]
+  requires:
+    - medical-affairs-foundations
   produces: Prioritised strategic choices with stated assumptions and trade-offs
 ---
 
@@ -72,25 +71,23 @@ CHOICE            What we should do differently — and what we give up to do it
 > If the field's decision criterion shifts to burden, our differentiation
 > argument stops addressing the question clinicians are asking.
 > **So what?** We need real-world evidence on treatment burden and its effect on
-> adherence and persistence within 12 months — which means displacing something
-> from the current evidence plan. The candidate is the fourth-line expansion
-> analysis, which answers a question nobody is asking.
+> adherence within 12 months — which means displacing something from the current
+> evidence plan. The candidate is the fourth-line expansion analysis, which
+> answers a question nobody is asking.
 
-That final trade-off is where most analysis stops short. A recommendation with
+That final trade-off is where most analysis stops short: a recommendation with
 no stated cost is a wish.
 
 ## Surfacing assumptions
 
-Every strategy rests on beliefs about the future that may be wrong. Naming them
-turns an argument into something testable.
-
-For each significant recommendation, write down:
+Every strategy rests on beliefs about the future that may be wrong; naming them
+turns an argument into something testable. For each significant recommendation,
+write down:
 
 | Assumption | If wrong, what breaks | How would we know early? |
 |---|---|---|
 
-Assumptions that recur in Medical Affairs plans, and are worth checking
-explicitly:
+Assumptions that recur in Medical Affairs plans, worth checking explicitly:
 
 - The competitor's readout will be positive / negative
 - Guidelines will update within the planning horizon *(they usually will not —
@@ -100,49 +97,44 @@ explicitly:
 - Clinicians care about the dimension we are strongest on
 - Our KOLs' views represent the broader prescribing community *(they very often
   do not — academic and community practice diverge systematically)*
-- Field insight reflects the market rather than reflecting who our MSLs
-  preferentially visit
+- Field insight reflects the market, not who our MSLs preferentially visit
 - The evidence gap we identified is one clinicians actually feel
 
-**The highest-value analytical move** is often identifying the single assumption
-the whole plan depends on, and proposing the cheapest way to test it early.
+**The highest-value analytical move** is identifying the single assumption the
+whole plan depends on and proposing the cheapest way to test it early.
 
 ## Pre-mortem
 
 Before finalising, assume it is eighteen months later and the plan failed
 completely. Write the explanation.
 
-This surfaces risks that a forward-looking risk assessment reliably misses,
-because it converts "what could go wrong" — which invites reassuring answers —
-into "what did go wrong", which invites honest ones.
-
-Then, for each failure mode: is it detectable early, is it preventable, and is
-it survivable? Failure modes that are none of the three should change the plan.
+This surfaces risks a forward-looking assessment reliably misses, because it
+converts "what could go wrong" — which invites reassuring answers — into "what
+did go wrong", which invites honest ones. Then, for each failure mode: is it
+detectable early, preventable, and survivable? Failure modes that are none of
+the three should change the plan.
 
 ## Prioritisation
 
-Ranking everything as "high priority" is not prioritisation. Force distinction.
+Ranking everything "high priority" is not prioritisation. Force distinction.
 
 **Dimensions that matter for Medical Affairs choices:**
 
-- **Decision impact** — does closing this gap or running this activity change a
-  decision someone will actually make? This dominates everything else.
-- **Scientific value** — does it answer a real question, or confirm what is
-  already believed?
-- **Feasibility** — can it be done, in the time available, with the data and
-  access we have?
+- **Decision impact** — does this change a decision someone will actually make?
+  It dominates everything else.
+- **Scientific value** — a real question, or confirmation of what is believed?
+- **Feasibility** — in the time available, with the data and access we have?
 - **Timing fit** — does it land inside the window where it can influence
   anything? A perfect analysis delivered after the planning cycle closes changes
   nothing until next year.
-- **Differentiation** — does it advance something only we can do, or is it
-  table stakes?
+- **Differentiation** — only we can do it, or table stakes?
 - **Cost of not doing it** — the question that separates genuine priorities from
   comfortable ones.
 
 **Forced ranking beats scoring matrices.** Weighted scoring produces a spurious
-number and hides the judgement. Ordering items 1 to N and defending each
-adjacent pair exposes the reasoning. If two items genuinely cannot be separated,
-that is worth saying explicitly rather than resolving with an arbitrary weight.
+number and hides the judgement; ordering items 1 to N and defending each
+adjacent pair exposes it. If two genuinely cannot be separated, say so rather
+than resolving it with an arbitrary weight.
 
 **Under a hard constraint** — a fixed budget, a fixed headcount — allocate
 explicitly, state what falls below the line, and say what the organisation loses
@@ -168,33 +160,31 @@ activities, this is the review:
 5. **Check the resourcing is real.** Is the same person named on nine
    activities? Does the timeline assume nothing goes wrong?
 6. **Ask what success looks like.** If nobody can say how they would know it
-   worked, it will not be evaluated, and it will be repeated next year
-   regardless of outcome.
+   worked, it will not be evaluated and will be repeated next year regardless.
 
 **Report the challenge honestly, including when the plan is sound.** An analysis
 that manufactures criticism to look rigorous is as useless as one that rubber-
-stamps. If three of twelve activities do not trace to a priority, say that —
-and say the other nine do.
+stamps. If three of twelve activities do not trace to a priority, say that — and
+say the other nine do.
 
 ## Landscape and competitive analysis
 
-Analyse what changed and what it means, not what exists.
+Analyse what changed and what it means, not what exists. Five questions:
 
-- **What is the current standard of care, really?** Guidelines lag practice;
+- **What is the current standard of care, really?** Guidelines lag practice, and
   practice varies by setting and geography.
-- **What changed recently, and does it alter a decision?** Most changes do not.
-  Saying so is a legitimate and useful conclusion.
+- **What changed recently, and does it alter a decision?** Most changes do not,
+  and saying so is a legitimate conclusion.
 - **Where is the field's attention moving?** The dimension on which products are
   compared shifts over time — efficacy, then safety, then burden, then access —
   and a narrative built for the previous dimension quietly stops working.
-- **What are competitors investing in that we are not, and is that a gap or a
-  deliberate choice?**
+- **What are competitors investing in that we are not**, and is that a gap or a
+  deliberate choice?
 - **What would have to be true for our current position to be wrong?**
 
-Keep the compliance boundary in view: competitive analysis is legitimate
-internal intelligence. It becomes a problem the moment it turns into external
-comparative claims without head-to-head evidence
-(`medical-affairs-foundations`).
+Competitive analysis is legitimate internal intelligence; it becomes a problem
+the moment it turns into external comparative claims without head-to-head
+evidence (`medical-affairs-foundations`).
 
 ## Output
 
@@ -228,5 +218,5 @@ to evaluate the activity.
 ## Before you finish
 
 Read `house-rules/strategic-analysis.md`. Planning frameworks, priority
-definitions, and governance vary considerably, and the local vocabulary matters
-for a document that has to survive a leadership review.
+definitions and governance vary considerably, and the local vocabulary matters
+for a document that must survive a leadership review.

@@ -3,22 +3,21 @@ name: insight-generation
 description: >-
   Turn raw observations into insights that change a decision. Use whenever
   working with field medical notes, MSL interaction records, KOL feedback,
-  advisory board output, congress conversations, medical information enquiry
-  patterns, or any body of qualitative human-sourced material where someone
-  needs to know what it means rather than what it says. Enforces the distinction
-  between an observation and an insight, and drives every finding through the
-  ladder from observation to pattern to insight to strategic implication to
-  recommended action with a named owner. Also handles frequency versus
-  significance, distinguishing signal from anecdote, surfacing contradictions
-  instead of averaging them away, and detecting the emerging weak signal that
-  only one or two people have mentioned but that matters most.
+  advisory board output, congress conversations, enquiry patterns, or any
+  qualitative human-sourced material where someone needs to know what it
+  means rather than what it says. Enforces the distinction between an
+  observation and an insight, and drives every finding from observation to
+  pattern to insight to strategic implication to action with a named owner.
+  Handles frequency versus significance, and the weak signal only one or two
+  people have mentioned.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
   version: "1.0.0"
   tier: primitive
   maturity: stable
-  requires: [medical-affairs-foundations]
+  requires:
+    - medical-affairs-foundations
   produces: Insight set with implications and actions
 ---
 
