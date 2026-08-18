@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+- Expanded each workshop therapeutic-area pack from 10 to 32 synthetic files,
+  adding cross-functional inputs for all 48 skills, including safety and
+  Medical Information intake, account planning, metrics, advisory boards, IIS,
+  RWE, payer/HTA, guideline and launch readiness, MLR, publications, structured
+  evidence and patient-level analysis data.
+- Added a skill-to-data coverage catalogue with suggested jobs, testable
+  tensions and three cross-functional capstones.
+
 All notable changes to this project are recorded here. Skills are versioned
 individually in their `metadata.version` field; this file records what changed
 across the library as a whole.

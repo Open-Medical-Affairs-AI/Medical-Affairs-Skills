@@ -1,0 +1,7 @@
+# SYNTHETIC DATA - WORKSHOP USE ONLY. Entirely fictional.
+record,verbatim,proposed_concept,proposed_code,confidence,review_needed
+T-01,bad infection needed a bed,serious infection,DO NOT GUESS,low,yes
+T-02,medicine stopped working,lack of therapeutic effect,DO NOT GUESS,medium,yes
+T-03,pen jammed; dose leaked,device malfunction / product quality complaint,DO NOT GUESS,high,yes
+T-04,used before the labelled line,off-label use,not a MedDRA coding decision,high,yes
+T-05,felt wiped out,fatigue OR malaise,UNRESOLVED,low,yes
