@@ -1,0 +1,8 @@
+# SYNTHETIC DATA - WORKSHOP USE ONLY. Entirely fictional.
+id,date,requester,country,channel,verbatim,response_status
+MI-001,2026-06-03,Hospital pharmacist,UK,email,Is ADIPOSYN approved for the population in the product profile? Please send dosing and monitoring information.,open
+MI-002,2026-06-05,Specialist physician,US,phone,Unsolicited question: what evidence exists outside the approved population? I treated one patient that way; they were admitted with severe infection two weeks later.,escalation not recorded
+MI-003,2026-06-07,Nurse,DE,portal,The carton seal on ADIPOSYN was broken when pharmacy opened the shipment. No dose was administered. What should we do with the pack?,awaiting response
+MI-004,2026-06-10,Specialist physician,FR,email,A patient became pregnant during exposure to ADIPOSYN. Please provide any pregnancy information.,forwarded to medical information only
+MI-005,2026-06-12,Payer adviser,US,email,Can you provide an indirect comparison and budget impact estimate for our formulary review?,triaged
+MI-006,2026-06-18,Patient organisation,ES,web,Could you explain the main NVB-440 results without medical jargon?,open

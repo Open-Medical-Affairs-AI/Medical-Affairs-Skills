@@ -22,6 +22,18 @@ written to behave like real material so the exercise is worth doing.
 | `medical-plan.md` | This year's plan, with the problems real plans have |
 | `publication-plan.md` | What is currently planned |
 
+### Extended cross-functional exercises
+
+The pack also contains 22 deliberately imperfect source
+artefacts covering advisory boards, Medical Information and safety intake,
+field planning, metrics, education, IIS review, RWE, payer/HTA, guideline and
+launch readiness, integrated evidence planning, scientific platforms,
+publication development, MLR review, terminology mapping, document ingestion,
+data visualisation and spreadsheet analysis.
+
+See [`../SKILL-COVERAGE.md`](../SKILL-COVERAGE.md) for the exact skill-to-file
+map and suggested workshop jobs. The files are inputs, not worked answers.
+
 ## A note on the field observations
 
 They contain things a careful reader should escalate before doing any analysis
