@@ -13,7 +13,7 @@ description: >-
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   tier: content
   maturity: beta
   requires:
@@ -23,6 +23,7 @@ metadata:
   suggests:
     - evidence-appraisal
     - data-visualization-for-medical
+    - consulting-grade-design
     - deliverable-quality-review
   produces: Non-promotional medical slide deck (.pptx)
   python: [python-pptx>=1.0]
@@ -149,6 +150,27 @@ Not decoration — these affect whether the science lands.
 - **Kaplan-Meier curves need numbers at risk.** A KM plot without them cannot be
   interpreted where it matters most — in the tail.
 - **Tables over 6 rows** need a highlighted row or they will not be read.
+
+The builder already carries the library's visual language — palette, accent
+rule, kicker line, banded tables. For the reasoning behind it, and for
+anything rendered outside the builder, load `consulting-grade-design`.
+
+## Charts and imagery on slides
+
+**A number that can be a chart should be a chart.** When a data slide is
+carrying a comparison, a trend or a distribution, render it with
+`data-visualization-for-medical` (themed via `consulting-grade-design`'s
+`ma_theme.py`), save the PNG, and place it with an `image` slide — reserving
+`data` table slides for the values a reader will want to take away exactly.
+The citation and design statement still travel on the slide, because a chart
+inherits every rule a table has.
+
+**Images are welcome where data is not.** Title slides and section dividers
+take generated or licensed imagery well — abstract, desaturated toward the
+palette, never implying a clinical claim. If the runtime can generate images,
+prompt in the register of "muted navy and teal scientific abstract, minimal,
+editorial". Keep imagery off data slides entirely; next to a number, a
+picture is either noise or an argument, and neither belongs there.
 
 ## Stage 4 — Challenge
 

@@ -13,13 +13,15 @@ description: >-
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   tier: content
   maturity: beta
   requires:
     - medical-affairs-foundations
     - evidence-appraisal
     - capability-detection
+  suggests:
+    - consulting-grade-design
   produces: Visual abstract or infographic (SVG)
 ---
 
@@ -86,6 +88,13 @@ python3 $S icon-array --n 100 --affected 8 --comparator 4 --out icons.svg
 SVG throughout — no dependencies, scales perfectly for print, and opens in
 every browser. The builder refuses a comparative layout when the spec declares a
 single-arm design.
+
+## The look
+
+The library's visual language (`consulting-grade-design`) applies with full
+force here — palette, direct labels, message-first title — because a visual
+abstract is judged in the first second. The integrity rules above still
+outrank any aesthetic choice.
 
 ## Before you finish
 

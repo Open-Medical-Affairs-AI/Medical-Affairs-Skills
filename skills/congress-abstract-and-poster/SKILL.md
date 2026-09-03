@@ -12,7 +12,7 @@ description: >-
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   tier: content
   maturity: beta
   requires:
@@ -23,6 +23,7 @@ metadata:
     - evidence-appraisal
     - data-visualization-for-medical
     - deliverable-quality-review
+    - consulting-grade-design
   produces: Congress abstract and poster (.pptx)
   python: [python-pptx>=1.0]
 ---
@@ -164,6 +165,13 @@ Everything in `medical-affairs-foundations` applies. Specifically:
 - Is every number traceable to the source data?
 
 Run `deliverable-quality-review` and `mlr-review-readiness`.
+
+## The look
+
+Posters take the `consulting-grade-design` language: ink headings, one teal
+accent guiding the read path, generous white space over dense panels, and
+charts themed through its `ma_theme.py`. A poster is read at two metres for
+ten seconds before anyone steps closer — the design decides whether they do.
 
 ## Before you finish
 

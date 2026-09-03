@@ -211,9 +211,13 @@ def build(spec: dict, out: Path) -> None:
     prs.slide_height = Inches(7.5)
 
     BLANK = prs.slide_layouts[6]
-    INK = RGBColor(0x1A, 0x1A, 0x1A)
-    MUTED = RGBColor(0x5A, 0x5A, 0x5A)
-    WARN = RGBColor(0x99, 0x33, 0x00)
+    # The consulting-grade-design palette (skills/consulting-grade-design).
+    # One ink, one accent, a reserved warning colour, quiet furniture.
+    INK = RGBColor(0x12, 0x28, 0x3A)
+    MUTED = RGBColor(0x5B, 0x6B, 0x79)
+    TEAL = RGBColor(0x0E, 0x7C, 0x7B)
+    CLOUD = RGBColor(0xE8, 0xEC, 0xEF)
+    WARN = RGBColor(0x8C, 0x2F, 0x39)
 
     def textbox(slide, left, top, width, height, text, size, *,
                 bold=False, colour=INK, align=PP_ALIGN.LEFT, wrap=True):
@@ -230,6 +234,17 @@ def build(spec: dict, out: Path) -> None:
         run.font.color.rgb = colour
         return tf
 
+    def accent_bar(slide, top=0.0, height=0.09, colour=TEAL):
+        """The thin brand rule that makes a page look designed, not defaulted."""
+        from pptx.enum.shapes import MSO_SHAPE
+        bar = slide.shapes.add_shape(
+            MSO_SHAPE.RECTANGLE, Inches(0), Inches(top),
+            prs.slide_width, Inches(height))
+        bar.fill.solid()
+        bar.fill.fore_color.rgb = colour
+        bar.line.fill.background()
+        return bar
+
     def footer(slide, citation: str = "", tier: str = ""):
         parts = [p for p in [citation, f"[{tier}]" if tier and tier != "peer-reviewed" else ""] if p]
         if parts:
@@ -240,14 +255,23 @@ def build(spec: dict, out: Path) -> None:
 
     # ---- title slide ----------------------------------------------------
     s = prs.slides.add_slide(BLANK)
-    textbox(s, 0.8, 2.2, 11.7, 1.4, spec.get("title", ""), 40, bold=True)
+    accent_bar(s, top=0.0, height=0.12)
+    # Ink panel behind the title block: quiet, editorial, expensive.
+    from pptx.enum.shapes import MSO_SHAPE
+    panel = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0), Inches(1.7),
+                               prs.slide_width, Inches(2.6))
+    panel.fill.solid(); panel.fill.fore_color.rgb = INK
+    panel.line.fill.background()
+    tf = textbox(s, 0.8, 2.2, 11.7, 1.4, spec.get("title", ""), 40, bold=True,
+                 colour=RGBColor(0xFF, 0xFF, 0xFF))
     if spec.get("subtitle"):
-        textbox(s, 0.8, 3.6, 11.7, 0.8, spec["subtitle"], 20, colour=MUTED)
+        textbox(s, 0.8, 3.5, 11.7, 0.8, spec["subtitle"], 20,
+                colour=RGBColor(0xC8, 0xD4, 0xDC))
     meta = " · ".join(
         x for x in [spec.get("presenter", ""), spec.get("date", ""),
                     spec.get("jurisdiction", "")] if x
     )
-    textbox(s, 0.8, 4.5, 11.7, 0.5, meta, 13, colour=MUTED)
+    textbox(s, 0.8, 4.6, 11.7, 0.5, meta, 13, colour=MUTED)
     textbox(s, 0.8, 5.3, 11.7, 1.0, spec.get("approval_status", ""), 11, colour=INK)
     textbox(s, 0.8, 6.6, 11.7, 0.5, DRAFT, 12, bold=True, colour=WARN)
 
@@ -257,15 +281,20 @@ def build(spec: dict, out: Path) -> None:
         s = prs.slides.add_slide(BLANK)
 
         if kind == "section":
-            textbox(s, 0.8, 3.0, 11.7, 1.2, spec_slide["title"], 32, bold=True)
+            accent_bar(s, top=3.55, height=0.06)
+            textbox(s, 0.8, 2.6, 11.7, 1.2, spec_slide["title"], 34, bold=True)
             draft_stripe(s)
             continue
 
+        accent_bar(s)
         textbox(s, 0.6, 0.45, 12.1, 1.0, spec_slide["title"], 26, bold=True)
         top = 1.5
 
         if spec_slide.get("design"):
-            textbox(s, 0.6, 1.45, 12.1, 0.45, spec_slide["design"], 13, colour=MUTED)
+            # The kicker: design and N in small caps colour, where the eye
+            # lands before the number does.
+            textbox(s, 0.6, 1.45, 12.1, 0.45, spec_slide["design"].upper(),
+                    11, bold=True, colour=TEAL)
             top = 2.1
 
         if kind == "bullets":
@@ -297,10 +326,22 @@ def build(spec: dict, out: Path) -> None:
                 for c, val in enumerate(row):
                     cell = table.cell(r, c)
                     cell.text = str(val)
+                    # Consulting-grade table furniture: ink header row,
+                    # cloud banding, no loud default theme.
+                    cell.fill.solid()
+                    if r == 0:
+                        cell.fill.fore_color.rgb = INK
+                    elif r % 2 == 0:
+                        cell.fill.fore_color.rgb = CLOUD
+                    else:
+                        cell.fill.fore_color.rgb = RGBColor(0xFF, 0xFF, 0xFF)
                     for p in cell.text_frame.paragraphs:
                         for run in p.runs:
-                            run.font.size = Pt(14 if r else 14)
+                            run.font.size = Pt(14)
                             run.font.bold = r == 0
+                            run.font.color.rgb = (
+                                RGBColor(0xFF, 0xFF, 0xFF) if r == 0 else INK
+                            )
 
         elif kind == "references":
             tf = textbox(s, 0.9, top, 11.5, 4.6, "", 11)

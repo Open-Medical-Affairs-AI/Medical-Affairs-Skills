@@ -12,7 +12,7 @@ description: >-
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   tier: content
   maturity: beta
   requires:
@@ -20,6 +20,7 @@ metadata:
     - medical-affairs-foundations
   suggests:
     - citation-integrity
+    - consulting-grade-design
   produces: PDF deliverable (or print-ready HTML)
   python: [reportlab]
 ---
@@ -68,6 +69,13 @@ python3 $S --spec doc.json --out brief.pdf --html-only   # skip the PDF path
 The spec is JSON so the content is reviewable before it becomes a binary. The
 builder refuses to render without a draft marking and without document control
 fields — both are the kind of thing that is noticed only after distribution.
+
+## The look
+
+Report covers, section pages and typography follow `consulting-grade-design`
+— its palette, one-accent rule and message-first headings apply to print as
+much as to slides. A PDF is the artefact most often forwarded upward, so it
+is the one most often judged against expensive-firm output.
 
 ## Before you finish
 
