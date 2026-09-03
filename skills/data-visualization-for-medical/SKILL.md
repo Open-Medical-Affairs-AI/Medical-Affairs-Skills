@@ -12,13 +12,15 @@ description: >-
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   tier: content
   maturity: beta
   requires:
     - medical-affairs-foundations
     - evidence-appraisal
     - capability-detection
+  suggests:
+    - consulting-grade-design
   produces: Publication-quality clinical figures
   python: [matplotlib>=3.7]
 ---
@@ -145,6 +147,16 @@ Every figure caption states: design, population, N, endpoint and its type,
 the effect measure, and the principal limitation. A figure that travels without
 its caption — into a slide, a poster, a memo — must still be interpretable, so
 put the design in the figure title as well.
+
+## The look
+
+Integrity rules decide what a figure says; `consulting-grade-design` decides
+how it dresses. Its bundled theme module (ma_theme.py, in that skill's
+scripts directory) applies the library palette and chart furniture to
+matplotlib — import it before plotting rather than restyling by hand, and
+let its `finish()` stamp the kicker (design + N), message-first title and
+source line. Where the two ever appear to conflict, the integrity rules in
+this skill win; honesty outranks elegance.
 
 ## Before you finish
 

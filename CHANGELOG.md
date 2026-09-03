@@ -7,6 +7,24 @@ across the library as a whole.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+- **Four new skills (48 → 52):** `consulting-grade-design` (the shared visual
+  language), `library-menu` (capability overview + menu-card generator),
+  `executive-briefing` (leadership-ready distillation), and
+  `literature-surveillance` (ongoing delta-based watch).
+- **Consulting-grade design applied across every output skill** — palette,
+  accent bars, kicker lines, banded tables in the deck builder; "The look"
+  sections in pdf-generation, interactive-html-report, visual-abstract,
+  congress-abstract-and-poster, diagram-and-schema, data-visualization-for-medical.
+- **Deck builder:** banded data tables with ink headers, teal accent bars,
+  design-statement kickers, optional full-bleed title image with scrim.
+- **Exemplar:** `examples/advisory-board-deck/` — a complete synthetic 13-slide
+  deck with four themed matplotlib figures and a rebuild script.
+- **README:** rewritten with the generated menu-card graphic and exemplar
+  walkthrough; orchestrator routing covers the four new skills.
+
+
 ## [Unreleased]
 
 ### Added
@@ -55,7 +73,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Apache-2.0 licensing, third-party attribution, and conditions of use.
 - `scripts/validate_skills.py` and `scripts/build_index.py`, with CI enforcement
   from the first commit.
-- 48 skills across six tiers: orchestrator, foundation, reasoning primitives,
+- 52 skills across six tiers: orchestrator, foundation, reasoning primitives,
   data and search, workflows, and content generation.
 - Working clients for PubMed E-utilities, ClinicalTrials.gov v2, openFDA, and
   citation verification against CrossRef and OpenAlex. No third-party Python

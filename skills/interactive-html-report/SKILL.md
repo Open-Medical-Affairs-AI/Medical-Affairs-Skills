@@ -12,7 +12,7 @@ description: >-
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   tier: content
   maturity: beta
   requires:
@@ -20,6 +20,7 @@ metadata:
     - medical-affairs-foundations
   suggests:
     - citation-integrity
+    - consulting-grade-design
   produces: Self-contained interactive HTML report
 ---
 
@@ -95,6 +96,14 @@ Section types: `summary`, `table` (sortable and filterable), `cards`,
 - Colour never the only encoding
 - Works with JavaScript disabled: content present in the HTML, with JS adding
   filtering rather than supplying content
+
+## The look
+
+Style the report with `consulting-grade-design`: its palette as CSS custom
+properties, Cloud (`#E8ECEF`) banding for tables, Teal (`#0E7C7B`) for the
+single accent and interactive states, Oxblood (`#8C2F39`) reserved for
+safety content. One accent per view — a dashboard where everything is
+highlighted reads as a warning screen, not an analysis.
 
 ## Before you finish
 

@@ -12,12 +12,14 @@ description: >-
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   tier: content
   maturity: beta
   requires:
     - medical-affairs-foundations
     - capability-detection
+  suggests:
+    - consulting-grade-design
   produces: Diagram (Mermaid, SVG or ASCII)
 ---
 
@@ -94,6 +96,13 @@ python3 $S --example prisma > prisma.json
 - **Do not encode meaning in colour alone.**
 - **Say what the diagram omits.** A simplified pathway is fine; a simplified
   pathway presented as complete is not.
+
+## The look
+
+Diagrams follow `consulting-grade-design`: ink strokes, cloud fills, one teal
+accent on the path that matters, oxblood only for safety-relevant nodes.
+A diagram with six colours has six competing claims to attention and makes
+none.
 
 ## Before you finish
 
