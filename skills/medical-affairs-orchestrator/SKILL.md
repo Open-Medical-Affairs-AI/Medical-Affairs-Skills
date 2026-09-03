@@ -12,7 +12,7 @@ description: >-
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   tier: orchestrator
   maturity: stable
   requires:
@@ -96,6 +96,7 @@ have to hold them in permanently resident context.
 | What trials are running; competitor pipeline; verify an NCT number | `clinical-trials-search` |
 | What is it approved for; label wording; boxed warning; FAERS reports | `regulatory-label-intelligence` |
 | Everything on X, defensibly complete; HTA or guideline submission | `systematic-literature-review` |
+| Keep me posted on X; weekly or monthly literature update; what's new since last month | `literature-surveillance` |
 
 **Someone wants something produced**
 
@@ -114,6 +115,9 @@ have to hold them in permanently resident context.
 | A chart, KM curve, forest plot, waterfall, AE figure | `data-visualization-for-medical` |
 | A visual abstract or infographic | `visual-abstract` |
 | A treatment pathway, study schema, PRISMA diagram, flowchart | `diagram-and-schema` |
+| The exec summary, one-pager, "brief leadership", C-suite or board audience | `executive-briefing` |
+| What can you do; what's in this library; capability overview for stakeholders | `library-menu` |
+| It looks unpolished; "executive-ready" or "board-ready"; consistent look across outputs | `consulting-grade-design` |
 
 **Someone wants content checked**
 

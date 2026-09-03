@@ -255,25 +255,43 @@ def build(spec: dict, out: Path) -> None:
 
     # ---- title slide ----------------------------------------------------
     s = prs.slides.add_slide(BLANK)
-    accent_bar(s, top=0.0, height=0.12)
-    # Ink panel behind the title block: quiet, editorial, expensive.
+    title_colour = RGBColor(0xFF, 0xFF, 0xFF)
+    sub_colour = RGBColor(0xC8, 0xD4, 0xDC)
+    meta_colour = MUTED
+    bg = spec.get("title_image", "")
     from pptx.enum.shapes import MSO_SHAPE
-    panel = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0), Inches(1.7),
-                               prs.slide_width, Inches(2.6))
-    panel.fill.solid(); panel.fill.fore_color.rgb = INK
-    panel.line.fill.background()
+    if bg and Path(bg).exists():
+        # Full-bleed backdrop; text sits on the image, so the image must be
+        # quiet (see consulting-grade-design). A scrim guarantees contrast.
+        pic = s.shapes.add_picture(str(bg), Inches(0), Inches(0),
+                                   width=prs.slide_width,
+                                   height=prs.slide_height)
+        scrim = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0), Inches(1.7),
+                                   prs.slide_width, Inches(2.6))
+        scrim.fill.solid(); scrim.fill.fore_color.rgb = INK
+        scrim.line.fill.background()
+        meta_colour = sub_colour
+    else:
+        accent_bar(s, top=0.0, height=0.12)
+        # Ink panel behind the title block: quiet, editorial, expensive.
+        panel = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0), Inches(1.7),
+                                   prs.slide_width, Inches(2.6))
+        panel.fill.solid(); panel.fill.fore_color.rgb = INK
+        panel.line.fill.background()
     tf = textbox(s, 0.8, 2.2, 11.7, 1.4, spec.get("title", ""), 40, bold=True,
-                 colour=RGBColor(0xFF, 0xFF, 0xFF))
+                 colour=title_colour)
     if spec.get("subtitle"):
         textbox(s, 0.8, 3.5, 11.7, 0.8, spec["subtitle"], 20,
-                colour=RGBColor(0xC8, 0xD4, 0xDC))
+                colour=sub_colour)
     meta = " · ".join(
         x for x in [spec.get("presenter", ""), spec.get("date", ""),
                     spec.get("jurisdiction", "")] if x
     )
-    textbox(s, 0.8, 4.6, 11.7, 0.5, meta, 13, colour=MUTED)
-    textbox(s, 0.8, 5.3, 11.7, 1.0, spec.get("approval_status", ""), 11, colour=INK)
-    textbox(s, 0.8, 6.6, 11.7, 0.5, DRAFT, 12, bold=True, colour=WARN)
+    textbox(s, 0.8, 4.6, 11.7, 0.5, meta, 13, colour=meta_colour)
+    textbox(s, 0.8, 5.3, 11.7, 1.0, spec.get("approval_status", ""), 11,
+            colour=meta_colour if bg and Path(bg).exists() else INK)
+    textbox(s, 0.8, 6.6, 11.7, 0.5, DRAFT, 12, bold=True,
+            colour=RGBColor(0xE8, 0x9A, 0x9A) if bg and Path(bg).exists() else WARN)
 
     # ---- content slides -------------------------------------------------
     for spec_slide in spec.get("slides", []):

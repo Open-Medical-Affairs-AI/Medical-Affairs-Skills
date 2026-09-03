@@ -2,12 +2,16 @@
 
 **Give an AI agent a Medical Affairs job, not a prompt.**
 
-An open library of 48 skills that encode how experienced Medical Affairs
+An open library of **52 skills** that encode how experienced Medical Affairs
 professionals actually work — so that an AI agent can be handed a job and
-execute it to a standard that survives medical review.
+execute it to a standard that survives medical review, in deliverables that
+look like they came from a top-tier advisory firm.
+
+![The library, as a menu](assets/menu-card.png)
 
 > 🤖 **If you are an AI agent reading this repository, go to
-> [AGENTS.md](AGENTS.md).** That is your entry point.
+> [AGENTS.md](AGENTS.md).** That is your entry point — read it first, then
+> [SKILLS-INDEX.md](SKILLS-INDEX.md) for the full catalogue.
 
 ---
 
@@ -26,15 +30,15 @@ and through which channel, and what has to be true before a deliverable is
 allowed to leave the building.
 
 **Works with any agent.** Skills are plain markdown with `SKILL.md` frontmatter.
-Claude Code and Claude.ai discover them natively. Grok, ChatGPT, Copilot, Cursor
-and others read `AGENTS.md` and orient from there.
+Claude Code and Claude.ai discover them natively. Grok, ChatGPT, Copilot,
+Cursor and others read `AGENTS.md` and orient from there.
 
 ---
 
 ## Quickstart
 
 ```bash
-git clone https://github.com/Open-Medical-Affairs-AI/Medical-Affairs-Skills.git
+git clone https://github.com/Open-Medical-Affairs/Medical-Affairs-Skills.git
 cd Medical-Affairs-Skills
 ```
 
@@ -57,9 +61,15 @@ deliver with a provenance appendix.
 ### Claude Code
 
 ```bash
-/plugin marketplace add Open-Medical-Affairs-AI/Medical-Affairs-Skills
+/plugin marketplace add Open-Medical-Affairs/Medical-Affairs-Skills
 /plugin install medical-affairs-skills
 ```
+
+### Grok and other agents that read AGENTS.md
+
+Point the agent at this repository (clone it, upload it, or paste the URL if
+the agent can fetch) and it will read `AGENTS.md` and orient itself. No
+installation step. Give it a job, not a skill name.
 
 ---
 
@@ -71,8 +81,8 @@ deliver with a provenance appendix.
 | **Foundation** | Compliance and safety boundaries (always loaded) · evidence appraisal · citation integrity · self-critique · capability detection |
 | **Reasoning primitives** | Insight generation · evidence synthesis · strategic analysis |
 | **Data and search** | PubMed · ClinicalTrials.gov · openFDA labels and FAERS · systematic review · terminology mapping |
-| **Workflows** | KOL briefing · field insights and field planning · congress and competitive intelligence · publication strategy and scientific platform · medical planning · evidence gaps and integrated evidence plans · RWE design · medical information · payer and HTA dossiers · advisory boards · medical education · IIS review · guideline engagement · safety communication · launch readiness · promotional review · impact metrics |
-| **Content generation** | Slide decks · manuscripts · abstracts and posters · correspondence · plain language summaries · MLR readiness · clinical figures · visual abstracts · diagrams · spreadsheets · PDFs · interactive reports · document ingestion |
+| **Workflows** | KOL briefing · field insights and field planning · congress and competitive intelligence · publication strategy and scientific platform · medical planning · evidence gaps and integrated evidence plans · RWE design · medical information · payer and HTA dossiers · advisory boards · medical education · IIS review · guideline engagement · safety communication · launch readiness · promotional review · impact metrics · **literature surveillance · executive briefing** |
+| **Content generation** | Slide decks · manuscripts · abstracts and posters · correspondence · plain language summaries · MLR readiness · clinical figures · visual abstracts · diagrams · spreadsheets · PDFs · interactive reports · document ingestion · **the shared consulting-grade design system · the library menu card** |
 
 Full catalogue with dependencies: **[SKILLS-INDEX.md](SKILLS-INDEX.md)**
 
@@ -82,6 +92,33 @@ hand-written SVG with the data table; if nothing is available you get the full
 content in the response. The citations, study designs, denominators and safety
 data survive every tier, and CI proves it by running the generators in an
 environment with no document libraries installed at all.
+
+---
+
+## What the output looks like
+
+[`examples/advisory-board-deck/`](examples/advisory-board-deck/) is a complete
+**synthetic** exemplar: a 13-slide advisory board deck with a generated title
+backdrop, four matplotlib charts (a Kaplan–Meier curve with numbers at risk, a
+subgroup forest plot with the interaction p-value, paired adverse-event bars,
+an evidence-maturity chart), banded tables, kicker lines carrying the study
+design, citations on every data slide, and the draft marking on every page.
+
+Rebuild it yourself:
+
+```bash
+pip install matplotlib python-pptx
+python3 examples/advisory-board-deck/make_figures.py
+python3 skills/medical-slide-deck/scripts/build_deck.py \
+    --spec examples/advisory-board-deck/deck.json \
+    --out  advisory-board.pptx
+```
+
+The look comes from **`consulting-grade-design`** — the library's shared
+visual language. One ink, one accent, a reserved safety colour, message-first
+titles, direct chart labels, generous white space. Every output skill applies
+it, and every chart is rendered with real function calls into matplotlib —
+never a description of a chart. All sample data is synthetic and says so.
 
 ---
 
@@ -102,7 +139,7 @@ python3 skills/citation-integrity/scripts/verify_citations.py --file draft.md
 
 A single-arm trial result is what happened to those patients, not what the drug
 does relative to anything. The library carries that discipline through
-appraisal, synthesis, slides, manuscripts, and figures — the Kaplan-Meier
+appraisal, synthesis, slides, manuscripts, and figures — the Kaplan–Meier
 builder will not render a curve without a numbers-at-risk row, and the deck
 builder will not render a data slide without a citation and a named design.
 
@@ -180,6 +217,12 @@ pip install pyyaml
 python3 scripts/build_index.py
 python3 scripts/validate_skills.py
 python3 scripts/selftest_apis.py
+```
+
+Added a skill? Regenerate the menu card so the README stays current:
+
+```bash
+python3 skills/library-menu/scripts/menu_card.py --out assets/menu-card.svg
 ```
 
 ---

@@ -1,0 +1,106 @@
+{
+  "title": "NOVA-201 in relapsed/refractory multiple myeloma",
+  "subtitle": "Advisory board — scientific questions for discussion · SYNTHETIC EXAMPLE",
+  "presenter": "Medical Affairs",
+  "date": "2026-09-12",
+  "jurisdiction": "US",
+  "title_image": "examples/advisory-board-deck/figures/title_background.png",
+  "approval_status": "NOVANTERA (novantamab) is approved in the US for adults with relapsed/refractory multiple myeloma after ≥4 prior lines of therapy. All other uses discussed are investigational. ALL DATA IN THIS DECK ARE SYNTHETIC — this is a design exemplar, not a clinical document.",
+  "slides": [
+    {
+      "type": "section",
+      "title": "Why we asked you here"
+    },
+    {
+      "type": "bullets",
+      "title": "Three decisions your advice will shape",
+      "bullets": [
+        "Whether the randomised comparison we design answers the question you would ask, or the one that is easiest to run",
+        "How to generate sequencing evidence after BCMA exposure before 2028, when the guideline committee next convenes",
+        "Which real-world data source you would trust for effectiveness in the populations the trial excluded"
+      ],
+      "notes": "State explicitly what will be done with the advice, and when the group will hear back. Advice into a void is the fastest way to lose an advisory board's respect."
+    },
+    {
+      "type": "section",
+      "title": "What the data show — and what they cannot"
+    },
+    {
+      "type": "image",
+      "title": "PFS separation emerges after month 3 and is sustained",
+      "path": "examples/advisory-board-deck/figures/fig1_km.png",
+      "citation": "SYNTHETIC DATA — design exemplar only. Pattern after: [verified citation required]",
+      "tier": "synthetic-example",
+      "notes": "The kicker carries the warning that matters: single-arm vs historical control is not a randomised comparison. Say it aloud before anyone reads the curve."
+    },
+    {
+      "type": "data",
+      "title": "ORR 63% (95% CI 55–70) in triple-class-exposed patients",
+      "design": "Single-arm, phase 2, N=165 · no comparative inference",
+      "rows": [
+        ["Endpoint", "Result (95% CI)", "Note"],
+        ["Overall response rate", "63.0% (55.2–70.4)", "Primary endpoint"],
+        ["≥ VGPR", "48.5% (40.6–56.4)", "—"],
+        ["Median DOR", "18.4 mo (14.9–NE)", "Immature at cut-off"],
+        ["Median PFS", "17.8 mo (13.1–NE)", "Secondary endpoint"]
+      ],
+      "citation": "SYNTHETIC DATA — design exemplar only. Pattern after: [verified citation required]",
+      "tier": "synthetic-example"
+    },
+    {
+      "type": "image",
+      "title": "Effect is consistent across subgroups",
+      "path": "examples/advisory-board-deck/figures/fig2_forest.png",
+      "citation": "SYNTHETIC DATA — design exemplar only",
+      "tier": "synthetic-example",
+      "notes": "Interaction p on the figure, not per-subgroup p-values. ECOG 2 is wide because n=19 — uninformative, not discordant."
+    },
+    {
+      "type": "image",
+      "title": "Cytopenias, not CRS, carry the grade ≥3 burden",
+      "path": "examples/advisory-board-deck/figures/fig3_ae.png",
+      "citation": "SYNTHETIC DATA — design exemplar only",
+      "tier": "synthetic-example",
+      "notes": "Safety at comparable prominence to efficacy — same position in the deck, same size, same design language. Oxblood is the reserved safety colour."
+    },
+    {
+      "type": "bullets",
+      "title": "What remains unknown",
+      "bullets": [
+        "No randomised comparison against current standard of care — every efficacy statement in this deck is single-arm",
+        "No prospective data on sequencing after prior BCMA-directed therapy",
+        "Median follow-up 16.9 months; DOR and OS are immature",
+        "Trial excluded ECOG ≥2 (except n=19), CrCl <40, and prior CAR-T within 90 days — the patients clinicians ask about most"
+      ],
+      "notes": "This slide builds more credibility than any efficacy slide. Do not cut it for time."
+    },
+    {
+      "type": "section",
+      "title": "The evidence plan we want you to break"
+    },
+    {
+      "type": "image",
+      "title": "The randomised comparison is the binding constraint",
+      "path": "examples/advisory-board-deck/figures/fig4_gaps.png",
+      "citation": "SYNTHETIC DATA — internal evidence-maturity assessment, design exemplar only",
+      "tier": "synthetic-example"
+    },
+    {
+      "type": "questions",
+      "title": "Questions for the group",
+      "questions": [
+        "What comparator would make the randomised trial decision-changing for you — and what comparator would make it ignorable?",
+        "Where does sequencing after BCMA exposure actually happen in your practice today, and what would you need to see to change it?",
+        "Which of the excluded populations matters most, and would registry data convince you — or only a pragmatic trial?",
+        "What question should we have asked today that we did not?"
+      ]
+    },
+    {
+      "type": "references",
+      "title": "References",
+      "references": [
+        "ALL DATA SYNTHETIC — this deck is a design exemplar for the Medical-Affairs-Skills library. In real use, every reference here is retrieved live and verified with citation-integrity/scripts/verify_citations.py before the deck renders."
+      ]
+    }
+  ]
+}

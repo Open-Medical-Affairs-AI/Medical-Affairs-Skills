@@ -14,7 +14,7 @@ them depends on a runtime feature.
 
 ## What this is
 
-48 skills encoding how experienced Medical Affairs professionals do their work:
+52 skills encoding how experienced Medical Affairs professionals do their work:
 KOL engagement and field planning, insight synthesis, congress and competitive
 intelligence, publication and platform strategy, medical planning, evidence gap
 analysis and integrated evidence planning, RWE design, medical information,
@@ -135,11 +135,13 @@ Full detail: [`skills/medical-affairs-foundations/references/adverse-events.md`]
 AGENTS.md              this file
 SKILLS-INDEX.md        every skill: what it does, needs, produces (generated)
 DISCLAIMER.md          conditions of use — read before real work
+README.md              the human-facing overview, with the menu-card graphic
 
-skills/                48 skills, each with SKILL.md (+ references/, scripts/)
+skills/                52 skills, each with SKILL.md (+ references/, scripts/)
 house-rules/           YOUR organisation's overrides — read before delivering
 shared/templates/      deliverable skeletons
 shared/fixtures/       recorded API responses for offline testing
+examples/              a complete synthetic exemplar deck, rebuildable
 workshop/              facilitator guide, team missions, synthetic data packs
 scripts/               validation, index generation, API self-tests
 docs/                  authoring guide, orchestration, API setup
