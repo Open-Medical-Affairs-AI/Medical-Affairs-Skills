@@ -1,0 +1,12 @@
+# SYNTHETIC DATA - WORKSHOP USE ONLY. Entirely fictional.
+source_id,study,design,population_n,endpoint,result,role,evidence_tier,limitation
+EV-01,NVB-201,"single-arm, open-label, phase 1/2",168,Overall response rate,62.5% (95% CI 54.8–69.8),primary endpoint,synthetic pivotal report,See protocol and SAP; not independently verified
+EV-02,NVB-201,"single-arm, open-label, phase 1/2",168,Very good partial response or better,58.3%,secondary,synthetic pivotal report,See protocol and SAP; not independently verified
+EV-03,NVB-201,"single-arm, open-label, phase 1/2",168,Median duration of response,18.1 months (95% CI 14.2–NE),"secondary, immature",synthetic pivotal report,See protocol and SAP; not independently verified
+EV-04,NVB-201,"single-arm, open-label, phase 1/2",168,Median progression-free survival,11.4 months (95% CI 8.9–15.2),secondary,synthetic pivotal report,See protocol and SAP; not independently verified
+EV-05,NVB-201,"single-arm, open-label, phase 1/2",168,Median follow-up,16.8 months,,synthetic pivotal report,See protocol and SAP; not independently verified
+EV-10,NVB-201 updated analysis: 24-month follow-up,"single-arm, n=168",extract from abstract,reported finding,ORR 62.5%; mDOR now 19.6 mo; 41% of responders remain in response at 24 mo,context,congress abstract,Methods incomplete; sponsor: Nordvant
+EV-11,VELTRAXA real-world outcomes in 412 patients across 28 centres,retrospective cohort,extract from abstract,reported finding,ORR 54% in real-world use vs 61% in trial; infection-related mortality 4.1%,context,congress abstract,Methods incomplete; sponsor: Competitor A
+EV-12,TARRICEL: outpatient step-up dosing feasibility,"prospective, n=94",extract from abstract,reported finding,No grade ≥3 CRS with outpatient step-up; 2 admissions for observation,context,congress abstract,Methods incomplete; sponsor: Competitor B
+EV-13,Sequencing after BCMA-directed therapy: a multicentre retrospective analysis,"retrospective, n=286",extract from abstract,reported finding,ORR 31% with second BCMA agent vs 58% switching target class,context,congress abstract,Methods incomplete; sponsor: Academic consortium
+EV-14,CELVARIS 3-year follow-up,"single-arm, n=97",extract from abstract,reported finding,36% progression-free at 3 years; no new safety signals,context,congress abstract,Methods incomplete; sponsor: Competitor C

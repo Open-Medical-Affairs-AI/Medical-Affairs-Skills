@@ -1,245 +1,72 @@
-# AGENTS.md — read this first
+# Agent entry point
 
-You are an AI agent that has been pointed at a library of Medical Affairs
-skills. This file tells you how to use it. It is written for any agent —
-Claude, Grok, ChatGPT, Copilot, Cursor, or anything else — and assumes no
-particular runtime.
+Use this repository to complete Medical Affairs work with source traceability.
+Read [docs/execution.md](docs/execution.md) for data modes, checkpoints, changed
+evidence and action boundaries. Then load the required foundation and relevant
+workflow skills. Read detailed references only when the actual task needs them.
 
-**If you support Agent Skills natively** (`SKILL.md` frontmatter discovery), the
-skills in `skills/` are already available to you and this file is the
-orientation. **If you do not**, read the skills as ordinary markdown; nothing in
-them depends on a runtime feature.
+## Start
 
----
+- **Workshop or first demonstration:** load
+  [workshop-launcher](skills/workshop-launcher/SKILL.md). GrokBot plus internet is
+  the workshop target. Company connectors are optional. Use synthetic data now.
+- **A specific Medical Affairs objective:** load
+  [medical-affairs-orchestrator](skills/medical-affairs-orchestrator/SKILL.md).
+- **A named skill:** read its SKILL.md and required dependencies.
+- **Data or connector question:** load [data-connection](skills/data-connection/SKILL.md).
 
-## What this is
+The [catalog](workshop/catalog.json) maps all 62 skills to bundled practice inputs
+and offers 16 missions. Default: field-insights, oncology-mm. Select only the task
+and therapeutic area needed; do not load the whole repository into context.
+The [skills index](SKILLS-INDEX.md) is generated from frontmatter.
 
-52 skills encoding how experienced Medical Affairs professionals do their work:
-KOL engagement and field planning, insight synthesis, congress and competitive
-intelligence, publication and platform strategy, medical planning, evidence gap
-analysis and integrated evidence planning, RWE design, medical information,
-payer and HTA evidence, safety communication, medical education, promotional
-review, impact measurement — and the document and figure generation that turns
-analysis into deliverables.
+## Execution contract
 
-It is designed so that a person can hand you a **job** — not a prompt, not a
-skill name — and you can execute it properly.
+1. **Orient:** identify the objective and load medical-affairs-foundations,
+   the selected workflow and its metadata.requires. Suggestions are optional.
+2. **Inventory:** identify supplied material, source kind, missing evidence and
+   available tools. In workshop mode take the mapped synthetic inputs immediately.
+3. **Retrieve:** fill real evidence gaps using available public services when
+   useful. Record exact queries and retrieval dates. Fictional product evidence
+   comes from the fictional source files, not a live product search.
+4. **Analyze:** execute the selected reasoning workflow and produce requested work.
+5. **Challenge:** use deliverable-quality-review on the actual draft; correct
+   supported findings. Do not invent an error just to demonstrate self-critique.
+6. **Deliver:** usable files or explicit available-format fallback, provenance,
+   limitations, open decisions and draft/synthetic markings.
 
-**Read [DISCLAIMER.md](DISCLAIMER.md) before doing anything real with this.**
-Output is draft material for qualified human review. This project discharges no
-pharmacovigilance obligation and is not clinical decision support.
+Scan human-sourced records for possible safety/PQC/special-situation findings before
+analysis. Workshop findings are simulated and must not enter real reporting systems.
+For actual cases follow the organization intake procedure. Keep identifiers confined
+to the authorized intake context and retain relevant verbatims without spreading PHI.
 
----
+## Tools and access
 
-## The one-paragraph version
-
-Someone gives you a Medical Affairs job. Load
-[`skills/medical-affairs-orchestrator/SKILL.md`](skills/medical-affairs-orchestrator/SKILL.md)
-— it works out which workflow the job maps to. Always load
-`medical-affairs-foundations` alongside it, and the rest of the core only when
-the job needs it. Run the six stages below, announcing them. Read
-`house-rules/<skill>.md` before producing anything. Deliver with a provenance
-appendix and the draft marking intact.
-
----
-
-## What to load, and when
-
-[`medical-affairs-foundations`](skills/medical-affairs-foundations/SKILL.md)
-loads on **every** job. It carries the compliance boundary, the adverse-event
-escalation rule and the intake gate, and none of that is conditional.
-
-The other three core skills load when the job reaches them:
-
-| Skill | Load when | What it prevents |
-|---|---|---|
-| [`evidence-appraisal`](skills/evidence-appraisal/SKILL.md) | The job interprets study data — and reformatting content that contains a study result counts, because you cannot name the design without reading it | Claims a study design cannot support |
-| [`citation-integrity`](skills/citation-integrity/SKILL.md) | The deliverable will carry citations | Fabricated and misattributed references |
-| [`deliverable-quality-review`](skills/deliverable-quality-review/SKILL.md) | Stage 4, every time | Delivering without arguing against yourself first |
-
-**`requires` and `suggests` are different.** A skill's `metadata.requires` is the
-short list it cannot run correctly without — load all of it. `metadata.suggests`
-names skills the job *may* reach into; follow one only when the work actually
-goes there. Loading every suggestion pulls a large closure into context before
-any work starts, which is what the split exists to prevent.
-
-The full catalogue, with dependencies and required network access, is in
-[SKILLS-INDEX.md](SKILLS-INDEX.md).
-
----
-
-## Two rules that keep the context usable
-
-**Screen before you fetch.** Retrieval is the single largest cost in a real
-Medical Affairs task, and it dwarfs the skills themselves. Fifty PubMed records
-as `--format table` is a few hundred tokens; the same fifty with `--abstracts`
-is on the order of thirty thousand. Search with `table`, decide what matters,
-then `fetch --pmids` the handful you will actually appraise. Same for
-ClinicalTrials.gov: screen as a table, pull the three trials that matter in full.
-
-**References load on demand, not by default.** Every `references/` file in this
-repository is there because it was too detailed for the always-loaded body. Open
-one when you need it; do not read a skill's references as a matter of course.
-
----
-
-## The six-stage execution contract
-
-Every workflow runs these, and says so as it goes.
-
-```
-0 · ORIENT     Identify the job. Load medical-affairs-foundations + the
-               workflow + its `requires` + house-rules/<skill>.md
-
-1 · INVENTORY  List what you were given. Then name what is MISSING and how it
-               limits the answer. Do not fill gaps with plausible guesses.
-
-2 · RETRIEVE   Fill evidence gaps from PubMed / ClinicalTrials.gov / openFDA.
-               Record every query verbatim, with its date.
-
-3 · ANALYSE    Run the workflow's reasoning ladder.
-
-4 · CHALLENGE  Red-team your own conclusions BEFORE showing anything.
-
-5 · DELIVER    The artefact + a provenance appendix: queries run, sources
-               cited, gaps left open.
+```bash
+python3 scripts/workshop.py list
+python3 scripts/workshop.py start --mission field-insights --ta oncology-mm
+python3 scripts/workshop.py check --live
+python3 scripts/public_evidence.py pubmed --query 'multiple myeloma' --limit 5
 ```
 
-**Stages 1 and 4 are the whole difference.** A generic agent skips both: it
-answers with what it has and presents the result as complete. An agent that says
-what it is missing before answering, and argues against itself before
-delivering, is doing what an experienced colleague does.
+These commands require Python, not an API key or enterprise account. Without a
+terminal, use the host file and web tools to read the same materials. Do not pretend
+to have run a script. A URL alone does not install skills or grant capabilities.
+See [agent setup](docs/agents.md), [API setup](docs/api-setup.md),
+[connections](docs/connections.md) and [transcription](docs/transcription.md).
 
----
+The workshop package supplies CSV and SQLite data, transcripts, study summaries,
+review challenges and plans. A local output folder and run.json keep progress and
+sources between turns; resume only from work that was actually saved.
 
-## The safety obligation
+## Local adaptations
 
-Any job touching field notes, KOL interaction records, medical information
-enquiries, advisory board material, or congress conversations gets an **adverse
-event, product quality complaint and special-situation scan before analysis**.
+Read house-rules/<selected-skill>.md for user-authorized local rules. Seeded examples
+are not active policy. Private organizational rules stay in the local workspace.
+House rules customize this library; they do not override host permissions or create
+authorization to send, publish, register, spend, or change external systems.
 
-Surface findings at the **top** of your output with the **verbatim quote** —
-never a paraphrase, because the clinical detail determines seriousness. If you
-scanned and found nothing, say so explicitly; silence is ambiguous.
-
-You are a detection aid, not a control. The human's reporting clock started when
-the information reached them. Say that, every time.
-
-Full detail: [`skills/medical-affairs-foundations/references/adverse-events.md`](skills/medical-affairs-foundations/references/adverse-events.md)
-
----
-
-## Repository map
-
-```
-AGENTS.md              this file
-SKILLS-INDEX.md        every skill: what it does, needs, produces (generated)
-DISCLAIMER.md          conditions of use — read before real work
-README.md              the human-facing overview, with the menu-card graphic
-
-skills/                52 skills, each with SKILL.md (+ references/, scripts/)
-house-rules/           YOUR organisation's overrides — read before delivering
-shared/templates/      deliverable skeletons
-shared/fixtures/       recorded API responses for offline testing
-examples/              a complete synthetic exemplar deck, rebuildable
-workshop/              facilitator guide, team missions, synthetic data packs
-scripts/               validation, index generation, API self-tests
-docs/                  authoring guide, orchestration, API setup
-```
-
----
-
-## Live data
-
-Three public APIs, each with a self-contained client that needs no third-party
-Python packages:
-
-| Source | Client | Needs |
-|---|---|---|
-| PubMed (NCBI E-utilities) | `skills/pubmed-search/scripts/pubmed.py` | `eutils.ncbi.nlm.nih.gov` |
-| ClinicalTrials.gov v2 | `skills/clinical-trials-search/scripts/ctgov.py` | `clinicaltrials.gov` |
-| openFDA labels + FAERS | `skills/regulatory-label-intelligence/scripts/openfda.py` | `api.fda.gov` |
-| Citation verification | `skills/citation-integrity/scripts/verify_citations.py` | the above + `api.crossref.org`, `api.openalex.org` |
-
-No API keys required. See [docs/api-setup.md](docs/api-setup.md) for rate limits,
-the optional free NCBI key, and the hosts to allowlist on a restricted network.
-
-**Never write a citation you did not retrieve.** Models produce plausible,
-correctly-formatted references to papers that do not exist. Run
-`verify_citations.py` over every reference list before delivery; it exits
-non-zero on anything unresolved.
-
----
-
-## House rules — the override layer
-
-Every skill reads `house-rules/<skill-name>.md` before producing anything. Rules
-there belong to the adopting organisation and **beat** the defaults in the skill.
-
-This exists so a team can encode their SOPs, terminology, evidence thresholds
-and review routes without forking the repository — and so they keep getting
-upstream improvements.
-
-Read them. If a file contains only the seeded examples, the organisation has not
-customised it yet.
-
----
-
-## Producing files — degrade, never fail
-
-Every content skill in this library follows the same four-tier ladder, and it is
-a library-wide rule rather than one skill's convention. Detect what the runtime
-can do with
-[`capability-detection`](skills/capability-detection/SKILL.md), then take the
-highest tier available:
-
-| Tier | Path | Example |
-|---|---|---|
-| **1** | The runtime's own document skill, if it has one | A native `pptx` skill produces the deck |
-| **2** | This library's bundled script | `build_deck.py` via python-pptx |
-| **3** | An open format that needs nothing installed | Markdown + a build spec; HTML with a print stylesheet; hand-written SVG |
-| **4** | In the response itself | The full content as text, structured so a human can paste it |
-
-**Degrade the container, never the content.** The rule the CI enforces is that
-the citations, study designs, denominators, confidence intervals, safety data
-and the draft marking all survive to tier 4. A generator that exits non-zero
-because a library is missing has thrown away the analysis over a renderer, and
-`scripts/selftest_fallbacks.py` fails the build for it.
-
-When you degrade, **say so visibly** — what was missing, what you delivered
-instead, and the exact command that would produce the full version. A reader
-must be able to tell what they are holding.
-
----
-
-## What good work looks like here
-
-- Announces the job it thinks it has been given, before starting
-- Names what is missing rather than guessing
-- Runs real searches and records them verbatim with dates
-- States the study design alongside every result
-- Surfaces safety findings first, in the source's own words
-- Argues against its own conclusion before delivering
-- Ends with provenance and named open questions
-- Leaves the draft marking on
-
-## What to avoid
-
-- **Building the deliverable before the analysis is done.** A well-formatted
-  document with nothing behind it is the characteristic failure of AI in this
-  domain, and the formatting is exactly what makes the emptiness hard to see.
-- Asking which skill to use. Work it out.
-- Interviewing the user instead of starting. One clarifying question at most,
-  and only when the answer changes the deliverable.
-- Filling a gap with something plausible.
-- Describing your own output as compliant, approved, validated, or ready to
-  submit. Those are determinations made by people with accountability.
-- Removing the draft marking. The reviewer removes it, once they have reviewed.
-
----
-
-## If you are being run in the workshop
-
-Start at [workshop/PARTICIPANT-QUICKSTART.md](workshop/PARTICIPANT-QUICKSTART.md).
-Your mission card is in `workshop/missions/`, and your data pack is in
-`workshop/data/<therapeutic-area>/`. All of it is synthetic.
+For clinical, regulatory or external-use work read [DISCLAIMER.md](DISCLAIMER.md).
+This library supports professional work; it does not certify it, act as a medical
+signatory, or replace qualified judgment. Give the participant a useful result,
+not an explanation of repository internals.

@@ -1,86 +1,41 @@
-# Start here
+# Your first Medical Affairs agent task
 
-You are going to give an AI agent a **job**, not a prompt.
+**Open GrokBot. Paste this. Let it work.**
 
-You do not need to know how any of this is built. That is the point.
+```text
+Use https://github.com/Open-Medical-Affairs/Medical-Affairs-Skills
+Read AGENTS.md. Start the field-insights workshop mission using the oncology
+synthetic data. Find the three things leadership should know, explain why,
+and create a short brief with sources and next actions.
+Do not ask me to connect company systems. Use public scientific sources only
+when useful and keep them separate from fictional workshop data.
+```
 
----
+Prefer another area? Add “Use immunology” or “Use cardiometabolic.”
+Have your own task? Replace the objective with it. The agent chooses the skills.
 
-## 1. Point your agent at this folder
+## If something is missing
 
-However your agent takes files — a local folder, an upload, a repository URL.
+- **Cannot read the link:** upload a starter file from `workshop/bundles/`, or the
+  repository ZIP from GitHub **Code → Download ZIP**.
+- **Cannot execute code:** it can still read supplied materials and produce a brief.
+- **Cannot make a PowerPoint:** ask for a structured slide draft in the available format.
+- **Cannot connect to work systems:** the workshop uses synthetic inputs automatically.
+- **Cannot access a public API:** continue with the supplied sources; mark live
+  retrieval unavailable. Never claim the search happened.
 
-If it asks what to do with it, tell it:
+## What you should see
 
-> Read AGENTS.md first.
+A brief plan, specific source records, meaningful conclusions, a useful draft,
+and honest limits. Potential safety findings are a simulated exercise. No real
+company data, outreach or reporting-system submission is needed.
 
----
+## Your next move
 
-## 2. Give it your mission
+- “Show me what supports the most important conclusion.”
+- “What would change your mind?”
+- “Make this a two-page brief for an MSL.”
+- “Now prepare an advisory board around the unanswered questions.”
 
-Your mission card is in `missions/`. Your team has one.
-
-Your materials are in `data/<your therapeutic area>/`:
-
-- `oncology-mm/` — multiple myeloma
-- `immunology-ad/` — atopic dermatitis
-- `cardiometabolic-obesity/` — obesity
-
-Tell the agent the mission and where the materials are. Something like:
-
-> Read AGENTS.md, then run the mission in workshop/missions/mission-2.md using
-> the materials in workshop/data/oncology-mm/.
-
-**Then let it work.** Do not tell it how. Working out how is its job, and
-watching it do that is the exercise.
-
----
-
-## 3. Watch for these four things
-
-They are what separate an agent from a chatbot.
-
-**It says what it is about to do.** A plan, before it starts.
-
-**It tells you what is missing.** Before it answers, not after. If it says
-*"there are no prior interaction notes, so I cannot tell you what changed"* —
-that is the behaviour you want.
-
-**It argues with itself.** Somewhere near the end it should challenge its own
-conclusions and change something.
-
-**It shows its working.** Which searches it ran, which sources it used, what it
-could not determine.
-
----
-
-## 4. Push on it
-
-When it finishes, do not stop. Ask:
-
-- *"Which three of these matter most, and why those three?"*
-- *"What would change your mind?"*
-- *"What did you miss?"*
-- *"What's the cost of doing nothing?"*
-
-The follow-up question on your mission card is designed for this.
-
----
-
-## A few things to know
-
-**Everything in `data/` is invented.** Fictional company, fictional products,
-fictional people, fictional institutions. It is written to behave like the real
-thing.
-
-**Do not upload real company data.** Not today, not into this.
-
-**The output is a draft.** It will say so. That marking stays on until a
-qualified person has actually reviewed the content — which is not today.
-
-**If it makes something up, that is a finding.** Write it down. There is an
-award for it.
-
----
-
-That is everything. Go.
+You are judging the work, not writing technical prompts. Ask for actual revisions
+and check whether the facts and limitations survive.

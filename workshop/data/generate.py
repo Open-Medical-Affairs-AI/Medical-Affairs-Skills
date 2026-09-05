@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate the workshop's synthetic data packs.
 
-Three therapeutic areas, nine artefacts each. Generated rather than hand-written
+Three therapeutic areas, 32 artefacts each. Generated rather than hand-written
 so that the *content* is reviewable in one place, the structure stays consistent
 across areas, and regenerating after an edit is one command.
 
@@ -28,7 +28,10 @@ from __future__ import annotations
 
 import csv
 import random
+import zlib
 from pathlib import Path
+
+from synthetic_expansion import render_artifacts
 
 HERE = Path(__file__).resolve().parent
 
@@ -624,7 +627,7 @@ def product_profile(ta: dict) -> str:
 
 ---
 
-*All figures above are invented for workshop use. Do not cite them.*
+*All figures above are invented for workshop use. Cite this file only as a labelled synthetic source, never as real clinical evidence.*
 """
 
 
@@ -859,7 +862,7 @@ what sits unpublished at the bottom.*
 """
 
 
-def readme(ta_key: str, ta: dict, n_obs: int) -> str:
+def readme(ta_key: str, ta: dict, n_obs: int, extra_files: list[str]) -> str:
     return f"""{BANNER}
 # Data pack — {ta['label']}
 
@@ -881,6 +884,18 @@ written to behave like real material so the exercise is worth doing.
 | `medical-plan.md` | This year's plan, with the problems real plans have |
 | `publication-plan.md` | What is currently planned |
 
+### Extended cross-functional exercises
+
+The pack also contains {len(extra_files)} deliberately imperfect source
+artefacts covering advisory boards, Medical Information and safety intake,
+field planning, metrics, education, IIS review, RWE, payer/HTA, guideline and
+launch readiness, integrated evidence planning, scientific platforms,
+publication development, MLR review, terminology mapping, document ingestion,
+data visualisation and spreadsheet analysis.
+
+See [`../SKILL-COVERAGE.md`](../SKILL-COVERAGE.md) for the exact skill-to-file
+map and suggested workshop jobs. The files are inputs, not worked answers.
+
 ## A note on the field observations
 
 They contain things a careful reader should escalate before doing any analysis
@@ -895,7 +910,9 @@ at all. That is deliberate — finding them is part of the exercise, not a trick
 def main() -> int:
     total = 0
     for key, ta in TAS.items():
-        rng = random.Random(hash(key) & 0xFFFF)  # deterministic per area
+        # Python's built-in hash is salted per process, so it cannot make
+        # regenerated fixtures reproducible. CRC32 is stable across runtimes.
+        rng = random.Random(zlib.crc32(key.encode("utf-8")))
         out = HERE / key
 
         obs = field_observations(ta, rng)
@@ -903,7 +920,9 @@ def main() -> int:
         csv_path.parent.mkdir(parents=True, exist_ok=True)
         with csv_path.open("w", encoding="utf-8", newline="") as fh:
             fh.write(CSV_BANNER)
-            w = csv.DictWriter(fh, fieldnames=list(obs[0].keys()))
+            w = csv.DictWriter(
+                fh, fieldnames=list(obs[0].keys()), lineterminator="\n"
+            )
             w.writeheader()
             w.writerows(obs)
 
@@ -915,10 +934,14 @@ def main() -> int:
         write(out / "competitor-announcements.md", competitor_announcements(ta))
         write(out / "medical-plan.md", medical_plan(ta))
         write(out / "publication-plan.md", publication_plan(ta))
-        write(out / "README.md", readme(key, ta, len(obs)))
+        extra = render_artifacts(ta, rng)
+        for filename, content in extra.items():
+            write(out / filename, content)
+        write(out / "README.md", readme(key, ta, len(obs), sorted(extra)))
 
-        print(f"  {key}: 9 files, {len(obs)} field observations")
-        total += 9
+        count = 10 + len(extra)
+        print(f"  {key}: {count} files, {len(obs)} field observations")
+        total += count
 
     print(f"\nWrote {total} files across {len(TAS)} therapeutic areas.")
     print("All carry a SYNTHETIC DATA banner; validate_skills.py enforces it.")

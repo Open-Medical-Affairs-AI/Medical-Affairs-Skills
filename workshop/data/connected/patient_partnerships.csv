@@ -1,0 +1,14 @@
+# SYNTHETIC DATA - fictional training records, not clinical evidence.
+partner_id,therapeutic_area,organization,need,input,permission_to_quote,commercial_link
+oncology-mm:PATORG-1,oncology-mm,Fictional patient partnership 1,travel burden,Offer remote participation and short sessions,yes,none
+oncology-mm:PATORG-2,oncology-mm,Fictional patient partnership 2,plain language evidence,Include absolute benefits and harms,no,none
+oncology-mm:PATORG-3,oncology-mm,Fictional patient partnership 3,caregiver support,Ask about time away from work,yes,none
+oncology-mm:PATORG-4,oncology-mm,Fictional patient partnership 4,accessible meeting format,Provide captions and translated summaries,yes,none
+immunology-ad:PATORG-1,immunology-ad,Fictional patient partnership 1,travel burden,Offer remote participation and short sessions,yes,none
+immunology-ad:PATORG-2,immunology-ad,Fictional patient partnership 2,plain language evidence,Include absolute benefits and harms,no,none
+immunology-ad:PATORG-3,immunology-ad,Fictional patient partnership 3,caregiver support,Ask about time away from work,yes,none
+immunology-ad:PATORG-4,immunology-ad,Fictional patient partnership 4,accessible meeting format,Provide captions and translated summaries,yes,none
+cardiometabolic-obesity:PATORG-1,cardiometabolic-obesity,Fictional patient partnership 1,travel burden,Offer remote participation and short sessions,yes,none
+cardiometabolic-obesity:PATORG-2,cardiometabolic-obesity,Fictional patient partnership 2,plain language evidence,Include absolute benefits and harms,no,none
+cardiometabolic-obesity:PATORG-3,cardiometabolic-obesity,Fictional patient partnership 3,caregiver support,Ask about time away from work,yes,none
+cardiometabolic-obesity:PATORG-4,cardiometabolic-obesity,Fictional patient partnership 4,accessible meeting format,Provide captions and translated summaries,yes,none

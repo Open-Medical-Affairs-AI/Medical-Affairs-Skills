@@ -1,0 +1,1853 @@
+{
+  "source": "Crossref",
+  "source_kind": "real_public",
+  "status": "retrieved",
+  "retrieved_at": "2026-09-05T19:10:26.361165+00:00",
+  "claim_support_checked": false,
+  "selection": "Three deliberately selected scientific teaching examples per therapeutic area; DOI and title checked against Crossref. Not a systematic, comprehensive or current treatment review.",
+  "reuse": "Bibliographic metadata only; inspect article license before obtaining or redistributing text.",
+  "records": [
+    {
+      "DOI": "10.1056/nejmoa2203478",
+      "title": [
+        "Teclistamab in Relapsed or Refractory Multiple Myeloma"
+      ],
+      "author": [
+        {
+          "given": "Philippe",
+          "family": "Moreau",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Alfred L.",
+          "family": "Garfall",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Niels W.C.J.",
+          "family": "van de Donk",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Hareth",
+          "family": "Nahi",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jesús F.",
+          "family": "San-Miguel",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Albert",
+          "family": "Oriol",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ajay K.",
+          "family": "Nooka",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Thomas",
+          "family": "Martin",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Laura",
+          "family": "Rosinol",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ajai",
+          "family": "Chari",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lionel",
+          "family": "Karlin",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lotfi",
+          "family": "Benboubker",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Maria-Victoria",
+          "family": "Mateos",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Nizar",
+          "family": "Bahlis",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Rakesh",
+          "family": "Popat",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Britta",
+          "family": "Besemer",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Joaquín",
+          "family": "Martínez-López",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Surbhi",
+          "family": "Sidana",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Michel",
+          "family": "Delforge",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lixia",
+          "family": "Pei",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Danielle",
+          "family": "Trancucci",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Raluca",
+          "family": "Verona",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Suzette",
+          "family": "Girgis",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Shun X.W.",
+          "family": "Lin",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yunsi",
+          "family": "Olyslager",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Mindy",
+          "family": "Jaffe",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Clarissa",
+          "family": "Uhlar",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Tara",
+          "family": "Stephenson",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Rian",
+          "family": "Van Rampelbergh",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Arnob",
+          "family": "Banerjee",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jenna D.",
+          "family": "Goldberg",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Rachel",
+          "family": "Kobos",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Amrita",
+          "family": "Krishnan",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Saad Z.",
+          "family": "Usmani",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Hematology Clinic, University Hospital Hôtel-Dieu, Nantes (P.M.), Service d’Hématologie Clinique, Centre Hospitalier Lyon Sud, Pierre-Bénite (L.K.), and Service d’Hématologie et Thérapie Cellulaire, Hôpital Bretonneau, Centre Hospitalier Régional Universitaire, Tours (L.B.) — all in France; Abramson Cancer Center, Perelman School of Medicine, University of Pennsylvania, Philadelphia (A.L.G.), and Janssen Research and Development, Spring House (R.V., S.G., S.X.W.L., C.U., T.S., A.B.) — both in Pennsylvania; the Department of Hematology, Amsterdam University Medical Center, Vrije Universiteit Amsterdam, Cancer Center Amsterdam, Amsterdam (N.W.C.J.D.); Karolinska University Hospital at Huddinge, Stockholm (H.N.); Clínica Universidad de Navarra, Centro de Investigación Médica Aplicada, Centro de Investigación Biomédica en Red de Cáncer (CIBERONC), Instituto de Investigación Sanitaria de Navarra, Pamplona (J.F.S.-M.), Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Puj..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2022,
+            8,
+            11
+          ]
+        ]
+      },
+      "container-title": [
+        "New England Journal of Medicine"
+      ],
+      "type": "journal-article",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2022,
+                8,
+                11
+              ]
+            ],
+            "date-time": "2022-08-11T00:00:00Z",
+            "timestamp": 1660176000000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://www.nejmgroup.org/legal/terms-of-use.htm"
+        }
+      ],
+      "link": [
+        {
+          "URL": "http://www.nejm.org/doi/pdf/10.1056/NEJMoa2203478",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "update-to": null,
+      "URL": "https://doi.org/10.1056/nejmoa2203478",
+      "request_url": "https://api.crossref.org/works/10.1056%2FNEJMoa2203478",
+      "teaching_exercise": "Appraise a study design before translating response rates into claims"
+    },
+    {
+      "DOI": "10.1056/nejmoa2024850",
+      "title": [
+        "Idecabtagene Vicleucel in Relapsed and Refractory Multiple Myeloma"
+      ],
+      "author": [
+        {
+          "given": "Nikhil C.",
+          "family": "Munshi",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "suffix": "Jr.",
+          "given": "Larry D.",
+          "family": "Anderson",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Nina",
+          "family": "Shah",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Deepu",
+          "family": "Madduri",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jesús",
+          "family": "Berdeja",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Sagar",
+          "family": "Lonial",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Noopur",
+          "family": "Raje",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yi",
+          "family": "Lin",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-3604-2574",
+          "authenticated-orcid": false,
+          "given": "David",
+          "family": "Siegel",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Albert",
+          "family": "Oriol",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Philippe",
+          "family": "Moreau",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-4524-8782",
+          "authenticated-orcid": false,
+          "given": "Ibrahim",
+          "family": "Yakoub-Agha",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Michel",
+          "family": "Delforge",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Michele",
+          "family": "Cavo",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Hermann",
+          "family": "Einsele",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Hartmut",
+          "family": "Goldschmidt",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Katja",
+          "family": "Weisel",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Alessandro",
+          "family": "Rambaldi",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Donna",
+          "family": "Reece",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Fabio",
+          "family": "Petrocca",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Monica",
+          "family": "Massaro",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jamie N.",
+          "family": "Connarn",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Shari",
+          "family": "Kaiser",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Payal",
+          "family": "Patel",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Liping",
+          "family": "Huang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Timothy B.",
+          "family": "Campbell",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Kristen",
+          "family": "Hege",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jesús",
+          "family": "San-Miguel",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Jerome Lipper Multiple Myeloma Center, Dana–Farber Cancer Institute (N.C.M.), the Veterans Affairs Boston Healthcare System, Harvard Medical School (N.C.M.), and Massachusetts General Hospital (N.R.), Boston, and bluebird bio, Cambridge (F.P., M.M.) — all in Massachusetts; Simmons Comprehensive Cancer Center, University of Texas Southwestern Medical Center, Dallas (L.D.A.); the University of California, San Francisco, San Francisco (N.S.); Icahn School of Medicine at Mount Sinai, New York ..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2021,
+            2,
+            25
+          ]
+        ]
+      },
+      "container-title": [
+        "New England Journal of Medicine"
+      ],
+      "type": "journal-article",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2021,
+                2,
+                25
+              ]
+            ],
+            "date-time": "2021-02-25T00:00:00Z",
+            "timestamp": 1614211200000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://www.nejmgroup.org/legal/terms-of-use.htm"
+        }
+      ],
+      "link": [
+        {
+          "URL": "http://www.nejm.org/doi/pdf/10.1056/NEJMoa2024850",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "update-to": null,
+      "URL": "https://doi.org/10.1056/nejmoa2024850",
+      "request_url": "https://api.crossref.org/works/10.1056%2FNEJMoa2024850",
+      "teaching_exercise": "Compare eligibility and follow-up without an unsupported cross-trial ranking"
+    },
+    {
+      "DOI": "10.1056/nejmoa2303379",
+      "title": [
+        "Cilta-cel or Standard Care in Lenalidomide-Refractory Multiple Myeloma"
+      ],
+      "author": [
+        {
+          "given": "Jesús",
+          "family": "San-Miguel",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-4377-9742",
+          "authenticated-orcid": false,
+          "given": "Binod",
+          "family": "Dhakal",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Kwee",
+          "family": "Yong",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Andrew",
+          "family": "Spencer",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Sébastien",
+          "family": "Anguille",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "María-Victoria",
+          "family": "Mateos",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Carlos",
+          "family": "Fernández de Larrea",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Joaquín",
+          "family": "Martínez-López",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Philippe",
+          "family": "Moreau",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Cyrille",
+          "family": "Touzeau",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Xavier",
+          "family": "Leleu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Irit",
+          "family": "Avivi",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Michele",
+          "family": "Cavo",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Tadao",
+          "family": "Ishida",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Seok Jin",
+          "family": "Kim",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Wilfried",
+          "family": "Roeloffzen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Niels W.C.J.",
+          "family": "van de Donk",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Dominik",
+          "family": "Dytfeld",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Surbhi",
+          "family": "Sidana",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-5362-2469",
+          "authenticated-orcid": false,
+          "given": "Luciano J.",
+          "family": "Costa",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Albert",
+          "family": "Oriol",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Rakesh",
+          "family": "Popat",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Abdullah M.",
+          "family": "Khan",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yaël C.",
+          "family": "Cohen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "P. Joy",
+          "family": "Ho",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "James",
+          "family": "Griffin",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Nikoletta",
+          "family": "Lendvai",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Carolina",
+          "family": "Lonardi",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ana",
+          "family": "Slaughter",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jordan M.",
+          "family": "Schecter",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Carolyn C.",
+          "family": "Jackson",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Kaitlyn",
+          "family": "Connors",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Katherine",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Enrique",
+          "family": "Zudaire",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Diana",
+          "family": "Chen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jane",
+          "family": "Gilbert",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Tzu-min",
+          "family": "Yeh",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Sarah",
+          "family": "Nagle",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Erika",
+          "family": "Florendo",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lida",
+          "family": "Pacaud",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Nitin",
+          "family": "Patel",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Simon J.",
+          "family": "Harrison",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Hermann",
+          "family": "Einsele",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the Cancer Center Clínica Universidad de Navarra, Centro Investigación Medica Aplicada, Instituto de Investigación de Navarra, Centro Investigación Biomédica en Red Cáncer (CIBERONC), Pamplona (J.S.-M.), the University Hospital of Salamanca, Instituto de Investigación Biomédica de Salamanca, Centro Investigación del Cáncer, CIBERONC, Salamanca (M.-V.M.), the Amyloidosis and Myeloma Unit, Department of Hematology, Hospital Clínic of Barcelona, Institut d’Investigacions Biomèdiques August Pi i Sunyer, University of Barcelona, Barcelona (C.F.L.), the Hematological Malignancies Clinical Research Unit, Hospital 12 de Octubre Universidad Complutense, Centro Nacional de Investigaciones Oncológicas, CIBERONC, Madrid (J.M.-L.), and the Institut Català d’Oncologia and Institut Josep Carreras, Hospital Germans Trias i Pujol, Badalona (A.O.) — all in Spain; the Medical College of Wisconsin, Milwaukee (B.D.); the University College London Cancer Institute (K.Y.) and University College London Hospitals, NHS Foundat..."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2023,
+            7,
+            27
+          ]
+        ]
+      },
+      "container-title": [
+        "New England Journal of Medicine"
+      ],
+      "type": "journal-article",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2023,
+                7,
+                27
+              ]
+            ],
+            "date-time": "2023-07-27T00:00:00Z",
+            "timestamp": 1690416000000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://www.nejmgroup.org/legal/terms-of-use.htm"
+        }
+      ],
+      "link": [
+        {
+          "URL": "http://www.nejm.org/doi/pdf/10.1056/NEJMoa2303379",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "update-to": null,
+      "URL": "https://doi.org/10.1056/nejmoa2303379",
+      "request_url": "https://api.crossref.org/works/10.1056%2FNEJMoa2303379",
+      "teaching_exercise": "Distinguish the question a comparative trial can address"
+    }
+  ]
+}

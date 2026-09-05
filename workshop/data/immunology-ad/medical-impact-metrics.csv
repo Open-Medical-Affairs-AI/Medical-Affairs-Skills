@@ -1,0 +1,8 @@
+# SYNTHETIC DATA - WORKSHOP USE ONLY. Entirely fictional.
+month,scientific_exchanges,unique_hcps,repeat_hcp_share,insights_submitted,insights_actioned,requests_closed_on_time,publication_milestones_on_time,note
+2026-01,84,46,32%,19,3,89%,80%,
+2026-02,93,48,33%,20,4,90%,78%,
+2026-03,102,50,34%,21,2,91%,76%,
+2026-04,111,52,35%,22,3,92%,74%,Volume target increased in April
+2026-05,120,54,36%,23,4,93%,72%,
+2026-06,129,56,37%,24,2,94%,70%,

@@ -1,0 +1,12 @@
+# SYNTHETIC DATA - WORKSHOP USE ONLY. Entirely fictional.
+source_id,study,design,population_n,endpoint,result,role,evidence_tier,limitation
+EV-01,NVB-440,"randomised, double-blind, placebo-controlled phase 3",2280,Mean weight change at week 72,"−22.4% vs −2.6% placebo (difference −19.8 pp, 95% CI −21.1 to −18.5)",co-primary,synthetic pivotal report,See protocol and SAP; not independently verified
+EV-02,NVB-440,"randomised, double-blind, placebo-controlled phase 3",2280,≥20% weight reduction at week 72,61.3% vs 4.1% placebo,co-primary,synthetic pivotal report,See protocol and SAP; not independently verified
+EV-03,NVB-440,"randomised, double-blind, placebo-controlled phase 3",2280,Waist circumference change,−18.2 cm vs −3.1 cm,key secondary,synthetic pivotal report,See protocol and SAP; not independently verified
+EV-04,NVB-440,"randomised, double-blind, placebo-controlled phase 3",2280,HbA1c change (prediabetes subgroup),−0.7% vs −0.1%,secondary,synthetic pivotal report,See protocol and SAP; not independently verified
+EV-05,NVB-440,"randomised, double-blind, placebo-controlled phase 3",2280,Weight regain at 1 year post-discontinuation,mean 68% of lost weight regained,off-treatment extension,synthetic pivotal report,See protocol and SAP; not independently verified
+EV-10,NVB-440 72-week primary analysis,"randomised, n=2280",extract from abstract,reported finding,−22.4% weight vs −2.6% placebo; 61.3% achieved ≥20% reduction,context,congress abstract,Methods incomplete; sponsor: Nordvant
+EV-11,NVB-440 off-treatment extension,"extension, n=640",extract from abstract,reported finding,Mean 68% of lost weight regained by 1 year off treatment,context,congress abstract,Methods incomplete; sponsor: Nordvant
+EV-12,SLENDARA cardiovascular outcomes trial: final results,"randomised CVOT, n=17,600",extract from abstract,reported finding,"17% reduction in MACE (HR 0.83, 95% CI 0.74–0.93)",context,congress abstract,Methods incomplete; sponsor: Competitor A
+EV-13,DUOMETRIX vs SLENDARA head-to-head,"randomised, n=1,410",extract from abstract,reported finding,−20.9% vs −14.8% weight at 72 weeks,context,congress abstract,Methods incomplete; sponsor: Competitor B
+EV-14,Lean mass changes with incretin therapy: pooled DXA analysis,"pooled, n=412",extract from abstract,reported finding,25–39% of total weight lost is lean mass; clinical significance unclear,context,congress abstract,Methods incomplete; sponsor: Academic

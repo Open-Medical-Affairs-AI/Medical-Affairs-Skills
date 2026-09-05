@@ -12,7 +12,7 @@ description: >-
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
-  version: "1.1.0"
+  version: "1.2.0"
   tier: orchestrator
   maturity: stable
   requires:
@@ -26,6 +26,10 @@ You have been given a job, not a skill name. Your task is to work out what job
 it is, load what you need, and execute it properly.
 
 Do not ask the user which skill to use. They should never have to know.
+
+Read [execution.md](../../docs/execution.md) for workshop mode, resumable tasks,
+source dependencies and authorized actions. For workshop inputs, consult the
+selected entry in [catalog.json](../../workshop/catalog.json).
 
 ## Stage 0 — Orient
 
@@ -55,6 +59,9 @@ have to hold them in permanently resident context.
 
 | The job sounds like | Load |
 |---|---|
+| First workshop task, synthetic inputs, getting started | `workshop-launcher` |
+| Connect CRM, Veeva, Salesforce, SharePoint or SQL data | `data-connection` |
+| Audio or a meeting transcript to review before synthesis | `meeting-transcription` |
 | A file to read first — PDF, Word, PowerPoint, Excel, CSV; "here's the paper", "look at this deck" | `document-ingestion`, then route on what it turns out to be |
 | Field notes, MSL records, interaction logs; "what is the field telling us", "synthesise these" | `field-insight-synthesis` |
 | A spreadsheet, enquiry log, tracker; cross-tabulate, de-duplicate, check this data | `spreadsheet-analysis` |
@@ -66,6 +73,8 @@ have to hold them in permanently resident context.
 
 | The job sounds like | Load |
 |---|---|
+| Medical content across channels, asset expiry or localization | `medical-content-operations` |
+| Patient organizations, accessible listening or co-creation | `patient-engagement-planning` |
 | Annual plan; scientific priorities; landscape assessment; "review this medical plan" | `medical-strategy-plan` |
 | What don't we know; what should we study; research prioritisation; budget allocation | `evidence-gap-analysis` |
 | Evidence across functions and lifecycle; "build the integrated evidence plan"; reconciling competing evidence requests | `integrated-evidence-plan` |
@@ -83,6 +92,10 @@ have to hold them in permanently resident context.
 | The job sounds like | Load |
 |---|---|
 | Advisory board, expert panel, steering committee, scientific roundtable | `advisory-board-design` |
+| MSL pre-call preparation, prior commitments and logistics | `msl-pre-call-planning` |
+| Find scientifically relevant HCPs and appropriate access routes | `hcp-discovery-and-access` |
+| Post-call CRM notes and scientific follow-up drafts | `msl-post-call-follow-up` |
+| MSL open tasks, duplicate records and weekly administration | `msl-administrative-operations` |
 | Prepare for a meeting with a named expert; KOL profile; "brief me before this call" | `kol-engagement-brief` |
 | Medical education, IME grant, curriculum, speaker programme, symposium, preceptorship | `medical-education-program` |
 | An IIS, ISR or IIT proposal to review; governing the IIS programme | `investigator-initiated-study-review` |
@@ -92,6 +105,7 @@ have to hold them in permanently resident context.
 
 | The job sounds like | Load |
 |---|---|
+| Supplementary open-access discovery or public API access | `public-evidence-search` |
 | Find the literature on X; what has been published; a KOL's publication record | `pubmed-search` |
 | What trials are running; competitor pipeline; verify an NCT number | `clinical-trials-search` |
 | What is it approved for; label wording; boxed warning; FAERS reports | `regulatory-label-intelligence` |
@@ -199,32 +213,10 @@ yet; use the defaults, and mention once that the file exists.
 
 ## Long-horizon objectives
 
-Some jobs need several workflows chained. Example:
-
-> "We have an advisory board in three weeks. Work out the five most important
-> scientific questions to explore and prepare the briefing materials."
-
-Do not attempt this in one pass. Decompose, state the plan, and let each stage
-feed the next:
-
-```
-1. evidence-gap-analysis      → what we genuinely do not know
-2. field-insight-synthesis    → what the field is asking that we cannot answer
-3. congress-intelligence      → what changed recently that bears on it
-   ─────────────────────────────────────────────────────────────────
-4. strategic-analysis         → rank to the five questions worth an advisory board
-5. medical-slide-deck         → the pre-read, weighted toward questions
-6. kol-engagement-brief       → one per advisor
-7. mlr-review-readiness       → before anything leaves the building
-```
-
-State the decomposition before starting and report at each boundary, so the
-person can redirect early rather than after everything is built.
-
-**Where a stage produces nothing useful, say so and continue.** "The gap
-analysis found no unanswered question that would justify an advisory board on
-this topic" is a legitimate finding, and exactly the kind an agent optimising
-for apparent productivity avoids.
+Read [the worked example](references/long-horizon.md) when several workflows must
+feed one another. Maintain run.json with completed steps and output dependencies.
+When new evidence arrives, reassess affected conclusions and revise dependent
+outputs. A host scheduler is required for future unattended work.
 
 ## What good execution looks like
 

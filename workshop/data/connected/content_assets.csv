@@ -1,0 +1,38 @@
+# SYNTHETIC DATA - fictional training records, not clinical evidence.
+asset_id,therapeutic_area,topic,audience,format,version,review_status,review_due,jurisdiction,language,source_file
+oncology-mm:ASSET-01,oncology-mm,long-term evidence,HCP,video script,1.0,draft,2026-11-01,US,en,workshop/data/oncology-mm/product-profile.md
+oncology-mm:ASSET-02,oncology-mm,safety education,HCP,FAQ,1.0,draft,2026-11-01,US,en,workshop/data/oncology-mm/product-profile.md
+oncology-mm:ASSET-03,oncology-mm,care access,patient organization,slide deck,1.0,draft,2026-11-01,US,en,workshop/data/oncology-mm/product-profile.md
+oncology-mm:ASSET-04,oncology-mm,long-term evidence,HCP,brief,1.0,expired,2026-09-01,US,en,workshop/data/oncology-mm/product-profile.md
+oncology-mm:ASSET-05,oncology-mm,safety education,HCP,video script,1.0,draft,2026-11-01,US,en,workshop/data/oncology-mm/product-profile.md
+oncology-mm:ASSET-06,oncology-mm,care access,patient organization,FAQ,1.0,draft,2026-11-01,US,en,workshop/data/oncology-mm/product-profile.md
+oncology-mm:ASSET-07,oncology-mm,long-term evidence,HCP,slide deck,1.0,draft,2026-11-01,US,en,workshop/data/oncology-mm/product-profile.md
+oncology-mm:ASSET-08,oncology-mm,safety education,HCP,brief,1.0,expired,2026-09-01,US,en,workshop/data/oncology-mm/product-profile.md
+oncology-mm:ASSET-09,oncology-mm,care access,patient organization,video script,1.0,draft,2026-11-01,US,en,workshop/data/oncology-mm/product-profile.md
+oncology-mm:ASSET-10,oncology-mm,long-term evidence,HCP,FAQ,1.0,draft,2026-11-01,US,en,workshop/data/oncology-mm/product-profile.md
+oncology-mm:ASSET-11,oncology-mm,safety education,HCP,slide deck,1.0,draft,2026-11-01,US,en,workshop/data/oncology-mm/product-profile.md
+oncology-mm:ASSET-12,oncology-mm,care access,patient organization,brief,1.0,expired,2026-09-01,US,en,workshop/data/oncology-mm/product-profile.md
+immunology-ad:ASSET-01,immunology-ad,long-term evidence,HCP,video script,1.0,draft,2026-11-01,US,en,workshop/data/immunology-ad/product-profile.md
+immunology-ad:ASSET-02,immunology-ad,safety education,HCP,FAQ,1.0,draft,2026-11-01,US,en,workshop/data/immunology-ad/product-profile.md
+immunology-ad:ASSET-03,immunology-ad,care access,patient organization,slide deck,1.0,draft,2026-11-01,US,en,workshop/data/immunology-ad/product-profile.md
+immunology-ad:ASSET-04,immunology-ad,long-term evidence,HCP,brief,1.0,expired,2026-09-01,US,en,workshop/data/immunology-ad/product-profile.md
+immunology-ad:ASSET-05,immunology-ad,safety education,HCP,video script,1.0,draft,2026-11-01,US,en,workshop/data/immunology-ad/product-profile.md
+immunology-ad:ASSET-06,immunology-ad,care access,patient organization,FAQ,1.0,draft,2026-11-01,US,en,workshop/data/immunology-ad/product-profile.md
+immunology-ad:ASSET-07,immunology-ad,long-term evidence,HCP,slide deck,1.0,draft,2026-11-01,US,en,workshop/data/immunology-ad/product-profile.md
+immunology-ad:ASSET-08,immunology-ad,safety education,HCP,brief,1.0,expired,2026-09-01,US,en,workshop/data/immunology-ad/product-profile.md
+immunology-ad:ASSET-09,immunology-ad,care access,patient organization,video script,1.0,draft,2026-11-01,US,en,workshop/data/immunology-ad/product-profile.md
+immunology-ad:ASSET-10,immunology-ad,long-term evidence,HCP,FAQ,1.0,draft,2026-11-01,US,en,workshop/data/immunology-ad/product-profile.md
+immunology-ad:ASSET-11,immunology-ad,safety education,HCP,slide deck,1.0,draft,2026-11-01,US,en,workshop/data/immunology-ad/product-profile.md
+immunology-ad:ASSET-12,immunology-ad,care access,patient organization,brief,1.0,expired,2026-09-01,US,en,workshop/data/immunology-ad/product-profile.md
+cardiometabolic-obesity:ASSET-01,cardiometabolic-obesity,long-term evidence,HCP,video script,1.0,draft,2026-11-01,US,en,workshop/data/cardiometabolic-obesity/product-profile.md
+cardiometabolic-obesity:ASSET-02,cardiometabolic-obesity,safety education,HCP,FAQ,1.0,draft,2026-11-01,US,en,workshop/data/cardiometabolic-obesity/product-profile.md
+cardiometabolic-obesity:ASSET-03,cardiometabolic-obesity,care access,patient organization,slide deck,1.0,draft,2026-11-01,US,en,workshop/data/cardiometabolic-obesity/product-profile.md
+cardiometabolic-obesity:ASSET-04,cardiometabolic-obesity,long-term evidence,HCP,brief,1.0,expired,2026-09-01,US,en,workshop/data/cardiometabolic-obesity/product-profile.md
+cardiometabolic-obesity:ASSET-05,cardiometabolic-obesity,safety education,HCP,video script,1.0,draft,2026-11-01,US,en,workshop/data/cardiometabolic-obesity/product-profile.md
+cardiometabolic-obesity:ASSET-06,cardiometabolic-obesity,care access,patient organization,FAQ,1.0,draft,2026-11-01,US,en,workshop/data/cardiometabolic-obesity/product-profile.md
+cardiometabolic-obesity:ASSET-07,cardiometabolic-obesity,long-term evidence,HCP,slide deck,1.0,draft,2026-11-01,US,en,workshop/data/cardiometabolic-obesity/product-profile.md
+cardiometabolic-obesity:ASSET-08,cardiometabolic-obesity,safety education,HCP,brief,1.0,expired,2026-09-01,US,en,workshop/data/cardiometabolic-obesity/product-profile.md
+cardiometabolic-obesity:ASSET-09,cardiometabolic-obesity,care access,patient organization,video script,1.0,draft,2026-11-01,US,en,workshop/data/cardiometabolic-obesity/product-profile.md
+cardiometabolic-obesity:ASSET-10,cardiometabolic-obesity,long-term evidence,HCP,FAQ,1.0,draft,2026-11-01,US,en,workshop/data/cardiometabolic-obesity/product-profile.md
+cardiometabolic-obesity:ASSET-11,cardiometabolic-obesity,safety education,HCP,slide deck,1.0,draft,2026-11-01,US,en,workshop/data/cardiometabolic-obesity/product-profile.md
+cardiometabolic-obesity:ASSET-12,cardiometabolic-obesity,care access,patient organization,brief,1.0,expired,2026-09-01,US,en,workshop/data/cardiometabolic-obesity/product-profile.md

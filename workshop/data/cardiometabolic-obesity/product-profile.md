@@ -50,4 +50,4 @@ ADIPOSYN is indicated for the treatment of adults with an initial body mass inde
 
 ---
 
-*All figures above are invented for workshop use. Do not cite them.*
+*All figures above are invented for workshop use. Cite this file only as a labelled synthetic source, never as real clinical evidence.*

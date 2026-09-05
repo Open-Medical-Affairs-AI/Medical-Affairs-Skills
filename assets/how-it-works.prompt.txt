@@ -1,0 +1,23 @@
+Generated with the built-in image generation tool on 2026-09-05.
+Purpose: README infographic; image is not a scientific data chart.
+
+Use case: infographic-diagram. Create an exceptionally polished editorial infographic image for a GitHub README, aimed at Medical Affairs MDs and PhDs with no AI setup experience. Wide landscape 3:2 canvas, high resolution, light ivory-white background, deep navy typography, cobalt blue and teal primary accents, restrained fuchsia highlights. Modern highly legible sans-serif, generous whitespace, elegant hand-drawn line illustrations with subtle watercolor fills. No purple, no gradients, no tiny dense text, no fake logos, no clinical charts.
+Title exact: "YOUR MEDICAL AFFAIRS AGENT"
+Subtitle exact: "One objective. Connected skills. Work you can review."
+Small top badge exact: "62 skills  •  16 missions  •  3 therapeutic areas"
+Main upper middle is a clear five-step illustrated journey with large numbered cards, arranged two rows if necessary for readable labels:
+1 exact heading "GIVE THE OBJECTIVE" and text "Paste the link into GrokBot"
+2 heading "USE THE RIGHT DATA" and text "Synthetic practice data included"
+3 heading "LET THE AGENT WORK" and text "Find evidence • Analyze • Create"
+4 heading "CHECK THE SCIENCE" and text "Sources • Uncertainty • Review"
+5 heading "REVIEW THE DELIVERABLES" and text "Briefs • Slides • Plans • Draft records"
+Illustrations: clinician with chat bubble, neat data folders and small practice database, approachable abstract agent icon with research papers, magnifying glass over paper, beautiful deck/document/workbook icons.
+A compact horizontal middle band label "PUBLIC EVIDENCE, BUILT IN" with service names "PubMed  •  ClinicalTrials.gov  •  openFDA  •  Europe PMC  •  Crossref". Small supporting text "Company connectors are optional for the workshop."
+Lower third distinguished by soft teal tinted band with exact title "MORE HCP ENGAGEMENT. LESS MSL ADMIN."
+Four elegant illustrated mini-panels:
+"Discover HCPs" / "Scientific relevance and access"
+"Prepare the call" / "Evidence, questions and context"
+"Capture the discussion" / "Actual notes and open needs"
+"Organize follow-up" / "Draft CRM records and tasks"
+Small tasteful footer exact: "Synthetic workshop data. Draft outputs. Qualified human review."
+Clearly communicate assistance with scientific professional work and optional company connectors. Never imply automatic medical approval, autonomous prescribing, guaranteed access to HCPs, free hosted AI, or emails automatically sent. Keep all text crisp and exactly spelled. Create the final publication-quality image.

@@ -1,7 +1,7 @@
 ---
 name: citation-integrity
 description: >-
-  Guarantee every factual claim traces to a real, retrievable source that
+  Check that every factual claim traces to a real, retrievable source that
   actually says what it is cited for. Use whenever producing a Medical
   Affairs deliverable that cites literature. Covers the no-fabricated-
   reference protocol, verifying PMIDs and DOIs against PubMed, CrossRef and
@@ -12,7 +12,7 @@ description: >-
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   tier: foundation
   maturity: stable
   requires:
@@ -23,18 +23,17 @@ metadata:
 
 # Citation Integrity
 
-A fabricated citation in a Medical Affairs deliverable is the fastest way to
-destroy the credibility of the function. It only has to happen once, in front of
-one KOL, for every subsequent document from that team to be read with suspicion.
+Every claim must be supported by the source it cites, not merely a real identifier.
 
-Language models generate citations that look right — plausible authors,
-plausible journal, plausible year, correctly formatted PMID — for papers that do
-not exist. They also attach real PMIDs to the wrong papers, and real papers to
-claims those papers never made. None of this is detectable by inspection. It is
-only detectable by resolution.
-
-**The rule this skill exists to enforce: never emit a citation you have not
-resolved against an external source in this session.**
+- **Real public sources:** retrieve and resolve identifiers, then read the source
+  to check the claim. An access failure is unverified, not proof of fabrication.
+- **Supplied documents:** cite the filename/version and page, table or record ID.
+  Do not invent a DOI for internal evidence or claim to have checked unseen text.
+- **Synthetic workshop sources:** cite `SYN:<TA>:<file>` plus section/record ID,
+  labelled fictional. Do not resolve invented products or studies online.
+- **Offline real sources:** retain accessible source text and provenance. Distinguish
+  local inspection from a fresh external check; put unresolved items in a remediation
+  log and qualify or omit claims that lack accessible support.
 
 ## The two failure modes
 
@@ -51,10 +50,8 @@ Resolution catches the first. Only reading the source catches the second.
 
 ### 1. Never write a citation from memory
 
-If you did not retrieve it in this session, you do not have it. This applies
-even when you are confident. Especially when you are confident — the landmark
-trials are exactly the ones where a plausible-but-wrong author list or year
-surfaces most fluently.
+Use a retrieved source or an accessible supplied/cached document with provenance.
+Memory alone is not a source. State the access date and any limits on freshness.
 
 When you need a source for a claim, search for it (`pubmed-search`). Do not
 recall it.
@@ -71,8 +68,8 @@ python3 scripts/verify_citations.py --file references.txt --format ama
 
 It queries PubMed (E-utilities), CrossRef, and OpenAlex, and reports for each
 identifier whether it resolved, the retrieved title and author list, and any
-mismatch against what you claimed. An identifier that does not resolve does not
-go in the document — not with a caveat, not in brackets. It comes out.
+mismatch against what you claimed. A failed request cannot establish whether the identifier exists. Keep unverified
+items in a remediation log; do not present them as verified support.
 
 Read `scripts/verify_citations.py --help` for the retraction check and the
 offline fixture mode.
@@ -108,7 +105,7 @@ claim can bear. Readers cannot infer it from the format.
 | Tier | Marker | What it means for the claim |
 |---|---|---|
 | **Peer-reviewed publication** | (none needed) | Full methods available; appraise normally |
-| **Congress abstract** | `[abstract]` | Not peer-reviewed, methods incomplete; results frequently change before full publication |
+| **Congress abstract** | `[abstract]` | Abstract-level review varies; limited methods; findings may change before full publication |
 | **Congress presentation / poster** | `[presented]` | As above, and often not retrievable later |
 | **Preprint** | `[preprint]` | Not peer-reviewed; may change substantially |
 | **Data on file** | `[data on file]` | Unpublished company data; external readers cannot verify it. Say who holds it. |
