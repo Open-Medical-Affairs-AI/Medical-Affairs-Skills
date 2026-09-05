@@ -52,6 +52,12 @@ Teams pick their therapeutic area from `data/`: oncology (multiple myeloma),
 immunology (atopic dermatitis), or cardiometabolic (obesity). The missions are
 TA-agnostic; the data packs are not.
 
+For workshops focused on a specific function, or for a second day beyond the
+six introductory missions, use the expanded 32-file packs and the skill-by-skill
+jobs in [`data/SKILL-COVERAGE.md`](data/SKILL-COVERAGE.md). The same file schema
+is available in every therapeutic area, which makes cross-team comparisons
+possible without giving teams identical clinical problems.
+
 ---
 
 ## Round 1 — Give the agent a job (30 min)

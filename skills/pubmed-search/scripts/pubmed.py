@@ -460,6 +460,9 @@ def main() -> int:
             api, args.query, args.limit, args.date_from, args.date_to, args.sort
         )
         if not pmids:
+            if args.format == 'json':
+                print(render([], 'json', total, args.query))
+                return 0
             print(f"No results for: {args.query}\n")
             print(
                 "A well-documented empty result is a real finding — record the exact\n"
@@ -472,7 +475,7 @@ def main() -> int:
         if args.abstracts:
             efetch_abstracts(api, articles)
         print(render(articles, args.format, total, args.query))
-        if total > len(articles):
+        if total > len(articles) and args.format != 'json':
             print(
                 f"\n_Showing {len(articles)} of {total}. Raise --limit, or narrow the "
                 f"query — do not treat this subset as representative._"
@@ -488,7 +491,7 @@ def main() -> int:
         print(render(articles, args.format, len(pmids), "fetch"))
         if missing:
             print(f"\n!! DID NOT RESOLVE: {', '.join(sorted(missing))}")
-            print("Unresolved PMIDs are very likely fabricated. Remove them.")
+            print("These PMIDs are unverified. Check identifiers and access before use; a failed lookup alone does not prove fabrication.")
             return 1
         return 0
 

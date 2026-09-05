@@ -1,0 +1,979 @@
+{
+  "source": "Crossref",
+  "source_kind": "real_public",
+  "status": "retrieved",
+  "retrieved_at": "2026-09-05T16:15:30.707557+00:00",
+  "claim_support_checked": false,
+  "selection": "Three deliberately selected scientific teaching examples per therapeutic area; DOI and title checked against Crossref. Not a systematic, comprehensive or current treatment review.",
+  "reuse": "Bibliographic metadata only; inspect article license before obtaining or redistributing text.",
+  "records": [
+    {
+      "DOI": "10.1056/nejmoa1610020",
+      "title": [
+        "Two Phase 3 Trials of Dupilumab versus Placebo in Atopic Dermatitis"
+      ],
+      "author": [
+        {
+          "given": "Eric L.",
+          "family": "Simpson",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Thomas",
+          "family": "Bieber",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Emma",
+          "family": "Guttman-Yassky",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lisa A.",
+          "family": "Beck",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Andrew",
+          "family": "Blauvelt",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Michael J.",
+          "family": "Cork",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jonathan I.",
+          "family": "Silverberg",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Mette",
+          "family": "Deleuran",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yoko",
+          "family": "Kataoka",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jean-Philippe",
+          "family": "Lacour",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Külli",
+          "family": "Kingo",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Margitta",
+          "family": "Worm",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yves",
+          "family": "Poulin",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Andreas",
+          "family": "Wollenberg",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yuhwen",
+          "family": "Soo",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Neil M.H.",
+          "family": "Graham",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Gianluca",
+          "family": "Pirozzi",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Bolanle",
+          "family": "Akinlade",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Heribert",
+          "family": "Staudinger",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Vera",
+          "family": "Mastey",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Laurent",
+          "family": "Eckert",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Abhijit",
+          "family": "Gadkari",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Neil",
+          "family": "Stahl",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "George D.",
+          "family": "Yancopoulos",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Marius",
+          "family": "Ardeleanu",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2016,
+            12,
+            15
+          ]
+        ]
+      },
+      "container-title": [
+        "New England Journal of Medicine"
+      ],
+      "type": "journal-article",
+      "license": null,
+      "link": [
+        {
+          "URL": "http://www.nejm.org/doi/pdf/10.1056/NEJMoa1610020",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "update-to": null,
+      "URL": "https://doi.org/10.1056/nejmoa1610020",
+      "request_url": "https://api.crossref.org/works/10.1056%2FNEJMoa1610020",
+      "teaching_exercise": "Identify trial populations, endpoints and analysis sets"
+    },
+    {
+      "DOI": "10.1001/jamadermatol.2021.3023",
+      "title": [
+        "Efficacy and Safety of Upadacitinib vs Dupilumab in Adults With Moderate-to-Severe Atopic Dermatitis"
+      ],
+      "author": [
+        {
+          "given": "Andrew",
+          "family": "Blauvelt",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Oregon Medical Research Center, Portland"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Henrique D.",
+          "family": "Teixeira",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "AbbVie Inc, North Chicago, Illinois"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Eric L.",
+          "family": "Simpson",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Dermatology, Oregon Health & Science University, Portland"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Antonio",
+          "family": "Costanzo",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Dermatology Unit, Department of Biomedical Sciences, Humanitas University, Pieve Emanuele, Italy"
+            },
+            {
+              "name": "Humanitas Clinical and Research Center, Scientific Institute for Research, Hospitalization and Healthcare, Rozzano, Italy"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Marjolein",
+          "family": "De Bruin-Weller",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Dermatology and Allergology, University Medical Center Utrecht, Utrecht, the Netherlands"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Sebastien",
+          "family": "Barbarot",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Dermatology, Nantes Université, Centre Hospitalier Universitaire de Nantes, Nantes, France"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Vimal H.",
+          "family": "Prajapati",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Division of Dermatology, Department of Medicine, University of Calgary, Calgary, Alberta, Canada"
+            },
+            {
+              "name": "Division of Community Pediatrics, Department of Pediatrics, University of Calgary, Calgary, Alberta, Canada"
+            },
+            {
+              "name": "Division of Pediatric Rheumatology, Department of Pediatrics, University of Calgary, Calgary, Alberta, Canada"
+            },
+            {
+              "name": "Skin Health & Wellness Centre, Calgary, Alberta, Canada"
+            },
+            {
+              "name": "Dermatology Research Institute, Calgary, Alberta, Canada"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Peter",
+          "family": "Lio",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Dermatology, Feinberg School of Medicine, Northwestern University, Chicago, Illinois"
+            },
+            {
+              "name": "Medical Dermatology Associates of Chicago, Chicago, Illinois"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Xiaofei",
+          "family": "Hu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "AbbVie Inc, North Chicago, Illinois"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Tianshuang",
+          "family": "Wu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "AbbVie Inc, North Chicago, Illinois"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "John",
+          "family": "Liu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "AbbVie Inc, North Chicago, Illinois"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Barry",
+          "family": "Ladizinski",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "AbbVie Inc, North Chicago, Illinois"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Alvina D.",
+          "family": "Chu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "AbbVie Inc, North Chicago, Illinois"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Kilian",
+          "family": "Eyerich",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Karolinska Institutet and Karolinska University Hospital, Stockholm, Sweden"
+            },
+            {
+              "name": "Department of Dermatology and Allergy, Technical University of Munich, Munich, Germany"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2021,
+            9,
+            1
+          ]
+        ]
+      },
+      "container-title": [
+        "JAMA Dermatology"
+      ],
+      "type": "journal-article",
+      "license": null,
+      "link": [
+        {
+          "URL": "https://jamanetwork.com/journals/jamadermatology/articlepdf/2782803/jamadermatology_blauvelt_2021_oi_210044_1721758666.55503.pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "update-to": null,
+      "URL": "https://doi.org/10.1001/jamadermatol.2021.3023",
+      "request_url": "https://api.crossref.org/works/10.1001%2Fjamadermatol.2021.3023",
+      "teaching_exercise": "Inspect direct comparison, safety and endpoint hierarchy"
+    },
+    {
+      "DOI": "10.1056/nejmoa2019380",
+      "title": [
+        "Abrocitinib versus Placebo or Dupilumab for Atopic Dermatitis"
+      ],
+      "author": [
+        {
+          "given": "Thomas",
+          "family": "Bieber",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Eric L.",
+          "family": "Simpson",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jonathan I.",
+          "family": "Silverberg",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Diamant",
+          "family": "Thaçi",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Carle",
+          "family": "Paul",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Andrew E.",
+          "family": "Pink",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yoko",
+          "family": "Kataoka",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Chia-Yu",
+          "family": "Chu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Marco",
+          "family": "DiBonaventura",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ricardo",
+          "family": "Rojo",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jeremias",
+          "family": "Antinew",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ileana",
+          "family": "Ionita",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Rodney",
+          "family": "Sinclair",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Seth",
+          "family": "Forman",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jacek",
+          "family": "Zdybski",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Pinaki",
+          "family": "Biswas",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Bimal",
+          "family": "Malhotra",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Fan",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Hernan",
+          "family": "Valdez",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "From the University Hospital of Bonn, Bonn (T.B.), and University of Lübeck, Lübeck (D.T.) — both in Germany; Oregon Health and Science University, Portland (E.L.S.); George Washington University School of Medicine and Health Sciences, Washington, DC (J.I.S.); Toulouse University and Centre Hospitalier Universitaire, Toulouse, France (C.P.); St. John’s Institute of Dermatology, Guy’s and St. Thomas’ NHS Foundation Trust, London (A.E.P.); Osaka Habikino Medical Center, Osaka, Japan (Y.K.); the Department of Dermatology, National Taiwan University Hospital and National Taiwan University College of Medicine, Taipei (C.-Y.C.); Pfizer, New York (M.D., P.B., B.M., H.V.); Pfizer, Groton, CT (R.R., J.A., I.I., F.Z.); Sinclair Dermatology, East Melbourne, VIC, Australia (R.S.); ForCare Clinical Research, Tampa, FL (S.F.); and Dermedic Jacek Zdybski, Ostrowiec Świętokrzyski, Poland (J.Z.)."
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2021,
+            3,
+            25
+          ]
+        ]
+      },
+      "container-title": [
+        "New England Journal of Medicine"
+      ],
+      "type": "journal-article",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2021,
+                3,
+                25
+              ]
+            ],
+            "date-time": "2021-03-25T00:00:00Z",
+            "timestamp": 1616630400000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://www.nejmgroup.org/legal/terms-of-use.htm"
+        }
+      ],
+      "link": [
+        {
+          "URL": "http://www.nejm.org/doi/pdf/10.1056/NEJMoa2019380",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "update-to": null,
+      "URL": "https://doi.org/10.1056/nejmoa2019380",
+      "request_url": "https://api.crossref.org/works/10.1056%2FNEJMoa2019380",
+      "teaching_exercise": "Check the actual comparison before writing a summary"
+    }
+  ]
+}

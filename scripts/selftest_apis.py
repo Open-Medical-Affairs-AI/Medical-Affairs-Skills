@@ -89,7 +89,7 @@ CASES: list[Case] = [
         "pubmed: unresolvable PMID exits non-zero and says why",
         [PUBMED, "fetch", "--pmids", "99999999"],
         expect_exit=1,
-        must_contain=("DID NOT RESOLVE", "fabricated"),
+        must_contain=("DID NOT RESOLVE", "unverified"),
     ),
     Case(
         "pubmed: AMA formatting truncates author lists at the right threshold",
@@ -165,7 +165,7 @@ CASES: list[Case] = [
         "citations: resolves a real PMID and rejects a fabricated one",
         [CITES, "--pmids", "36001231,99999999"],
         expect_exit=1,
-        must_contain=("[OK]   36001231", "[FAIL] 99999999", "fabricated"),
+        must_contain=("[OK]   36001231", "[FAIL] 99999999", "unresolved"),
     ),
     Case(
         "citations: extracts identifiers from free text",

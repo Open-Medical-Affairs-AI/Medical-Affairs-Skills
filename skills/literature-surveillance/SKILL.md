@@ -11,7 +11,7 @@ description: >-
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   tier: workflow
   maturity: beta
   requires:
@@ -33,6 +33,11 @@ metadata:
 A surveillance cycle answers one question: **what is new since last time,
 and what does it change?** A report that re-describes the known landscape
 each cycle trains its readers to stop reading — the delta is the product.
+
+A recurring request needs a supported host scheduler. Verify a created schedule
+and next run before saying surveillance is active; otherwise deliver the current
+cycle and reusable strategy. Track publication date separately from indexing date;
+use an overlap window with ID deduplication to catch delayed indexing and corrections.
 
 ## The strategy, written once
 

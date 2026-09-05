@@ -29,3 +29,9 @@ out/
 # Workshop participant work — teams generate a lot of this and none of it
 # belongs in the upstream repository.
 workshop/participant-output/
+
+# Local runs and model weights
+outputs/
+*.wav
+*.mp3
+*.pt

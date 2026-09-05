@@ -115,12 +115,14 @@ def fetch_label(name: str, by: str, fixtures) -> dict | None:
     search = urllib.parse.quote(f'{field}:"{name}"', safe="")
     url = f"{API}/drug/label.json?search={search}&limit=1"
     status, body = http_get(url, fixtures)
-    if status == 404 or not body:
+    if status == 404:
         return None
+    if status != 200 or not body:
+        raise SystemExit(f'Label service unavailable (HTTP {status}); approval status is not determined')
     try:
         results = json.loads(body).get("results", [])
     except json.JSONDecodeError:
-        return None
+        raise SystemExit('Label service returned invalid JSON; approval status is not determined')
     return results[0] if results else None
 
 
@@ -166,12 +168,14 @@ def faers_reactions(name: str, limit: int, fixtures) -> list[dict]:
         f"&count=patient.reaction.reactionmeddrapt.exact&limit={limit}"
     )
     status, body = http_get(url, fixtures)
-    if status == 404 or not body:
+    if status == 404:
         return []
+    if status != 200 or not body:
+        raise SystemExit(f'FAERS service unavailable (HTTP {status}); report counts are not determined')
     try:
         return json.loads(body).get("results", [])
     except json.JSONDecodeError:
-        return []
+        raise SystemExit('FAERS service returned invalid JSON; report counts are not determined')
 
 
 def main() -> int:
@@ -281,6 +285,10 @@ def main() -> int:
 
     if args.cmd == "faers":
         rows = faers_reactions(args.generic, args.limit, fixtures)
+        if args.format == 'json':
+            print(json.dumps({'generic': args.generic, 'retrieved': time.strftime('%Y-%m-%d'),
+                              'reactions': rows, 'caveat': FAERS_CAVEAT}, indent=2))
+            return 0
         print(f"# FAERS reported reactions — {args.generic}")
         print(f"Retrieved {time.strftime('%Y-%m-%d')} via openFDA\n")
         if not rows:

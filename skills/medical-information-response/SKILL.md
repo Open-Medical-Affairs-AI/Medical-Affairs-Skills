@@ -13,7 +13,7 @@ description: >-
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   tier: workflow
   maturity: stable
   requires:
@@ -195,9 +195,9 @@ Run `deliverable-quality-review`, plus:
 
 Use `shared/templates/medical-information-response.md`.
 
-Register the response, and — where the enquiry revealed a gap the evidence
-cannot fill — record that separately for evidence generation rather than letting
-it disappear into the enquiry log.
+Prepare a response-register entry and a separate evidence-gap entry where useful.
+Write to a live system or send only with existing user authorization and available
+permitted tools. In workshop mode keep these as simulated local records.
 
 ## Before you finish
 

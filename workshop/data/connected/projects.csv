@@ -1,0 +1,20 @@
+# SYNTHETIC DATA - fictional training records, not clinical evidence.
+project_id,therapeutic_area,objective,cost_gbp,hours,status,dependency,decision_needed
+oncology-mm:PROJECT-1,oncology-mm,education,75000,20,proposed,,prioritize within budget; no spending authorization
+oncology-mm:PROJECT-2,oncology-mm,publication,150000,40,proposed,oncology-mm:PROJECT-1,prioritize within budget; no spending authorization
+oncology-mm:PROJECT-3,oncology-mm,evidence gap,225000,60,proposed,oncology-mm:PROJECT-2,prioritize within budget; no spending authorization
+oncology-mm:PROJECT-4,oncology-mm,education,300000,80,proposed,oncology-mm:PROJECT-3,prioritize within budget; no spending authorization
+oncology-mm:PROJECT-5,oncology-mm,publication,375000,100,proposed,oncology-mm:PROJECT-4,prioritize within budget; no spending authorization
+oncology-mm:PROJECT-6,oncology-mm,evidence gap,450000,120,proposed,oncology-mm:PROJECT-5,prioritize within budget; no spending authorization
+immunology-ad:PROJECT-1,immunology-ad,education,75000,20,proposed,,prioritize within budget; no spending authorization
+immunology-ad:PROJECT-2,immunology-ad,publication,150000,40,proposed,immunology-ad:PROJECT-1,prioritize within budget; no spending authorization
+immunology-ad:PROJECT-3,immunology-ad,evidence gap,225000,60,proposed,immunology-ad:PROJECT-2,prioritize within budget; no spending authorization
+immunology-ad:PROJECT-4,immunology-ad,education,300000,80,proposed,immunology-ad:PROJECT-3,prioritize within budget; no spending authorization
+immunology-ad:PROJECT-5,immunology-ad,publication,375000,100,proposed,immunology-ad:PROJECT-4,prioritize within budget; no spending authorization
+immunology-ad:PROJECT-6,immunology-ad,evidence gap,450000,120,proposed,immunology-ad:PROJECT-5,prioritize within budget; no spending authorization
+cardiometabolic-obesity:PROJECT-1,cardiometabolic-obesity,education,75000,20,proposed,,prioritize within budget; no spending authorization
+cardiometabolic-obesity:PROJECT-2,cardiometabolic-obesity,publication,150000,40,proposed,cardiometabolic-obesity:PROJECT-1,prioritize within budget; no spending authorization
+cardiometabolic-obesity:PROJECT-3,cardiometabolic-obesity,evidence gap,225000,60,proposed,cardiometabolic-obesity:PROJECT-2,prioritize within budget; no spending authorization
+cardiometabolic-obesity:PROJECT-4,cardiometabolic-obesity,education,300000,80,proposed,cardiometabolic-obesity:PROJECT-3,prioritize within budget; no spending authorization
+cardiometabolic-obesity:PROJECT-5,cardiometabolic-obesity,publication,375000,100,proposed,cardiometabolic-obesity:PROJECT-4,prioritize within budget; no spending authorization
+cardiometabolic-obesity:PROJECT-6,cardiometabolic-obesity,evidence gap,450000,120,proposed,cardiometabolic-obesity:PROJECT-5,prioritize within budget; no spending authorization

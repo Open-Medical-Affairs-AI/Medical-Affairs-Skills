@@ -1,0 +1,7 @@
+# SYNTHETIC DATA - WORKSHOP USE ONLY. Entirely fictional.
+work_id,question,decision,design,owner,cost_gbp,start,readout,status,dependency
+IEP-01,"No head-to-head against oral JAK inhibitors, which is the comparison clinicians actually make",guideline evidence readiness,comparative study,Clinical Development,4200000,2027-Q1,2029-Q4,concept,regulatory alignment
+IEP-02,Long-term safety beyond 52 weeks in adolescents,implementation protocol,prospective pragmatic cohort,Medical Affairs,900000,2026-Q4,2028-Q1,proposed,site feasibility
+IEP-03,Long-term safety beyond 52 weeks in adolescents,publication narrative,investigator-initiated single-centre cohort,IIS Committee,780000,2027-Q1,2029-Q2,under review,IIS-26-014
+IEP-04,Efficacy in skin of colour — trial populations were predominantly white and EASI performs differently,payer reassessment,claims-EHR comparative RWE,HEOR,650000,2026-Q3,2027-Q3,feasibility,outcome validation
+IEP-05,24-month safety and durability,scientific communication,existing trial follow-up analysis,Publications,120000,2026-Q2,2026-Q4,drafting,data reconciliation

@@ -1,8 +1,8 @@
 ---
 name: promotional-material-medical-review
 description: >-
-  Review commercial promotional material as the medical signatory — the person
-  who certifies that every claim is scientifically accurate, substantiated by
+  Support a qualified medical signatory reviewing commercial promotional material
+  by assessing that every claim is scientifically accurate, substantiated by
   the referenced data, and fairly balanced. Use when asked to review, approve,
   sign off or medically certify an advertisement, sales aid, leave-piece,
   website, congress booth panel, email campaign or social post, and when
@@ -12,7 +12,7 @@ description: >-
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   tier: workflow
   maturity: stable
   requires:
@@ -23,15 +23,14 @@ metadata:
     - citation-integrity
     - mlr-review-readiness
     - deliverable-quality-review
-  produces: Medical review findings with a signatory decision and rationale
+  produces: Draft medical review findings and recommendation for the signatory
 ---
 
 # Promotional Material Medical Review
 
-You are the medical signatory. Your signature is a personal certification, in
-several jurisdictions a named and individually accountable one, that the
-material is scientifically accurate, capable of substantiation, consistent with
-the licence, and fairly balanced.
+You support the qualified medical signatory. Your output is a draft assessment,
+not certification, a signature or authorization to distribute material. Record
+findings and a recommendation for the accountable reviewer.
 
 The commercial team's job is to make the strongest legitimate case. Yours is to
 establish where legitimate ends. That tension is the design of the system, not a
@@ -63,7 +62,8 @@ Work through the piece systematically. For each claim, in this order:
    endpoint, the analysis, the numbers. This is where most findings come from.
 5. **Does the design support the strength of the claim?** Apply
    `evidence-appraisal`. A single-arm ORR does not support a comparative claim; a
-   secondary endpoint below a failed hierarchy step does not support any claim.
+   secondary endpoint below a failed hierarchy step cannot establish confirmatory
+   statistical significance; any descriptive reporting needs explicit qualification.
 6. **Is it fairly balanced?** Prominence, position, and comparable depth.
 
 ## What reviewers reject, in descending frequency
@@ -122,11 +122,11 @@ of the same message.
 
 | Decision | Meaning |
 |---|---|
-| **Approved** | Certified as accurate, substantiated, balanced and within the licence |
-| **Approved with changes** | Specified changes made and verified before use, then re-certified |
-| **Not approved** | The material cannot be certified as it stands; findings state why and what would change that |
+| **Recommend acceptance for signatory review** | No unresolved issues found within the stated review scope; not certified |
+| **Revise and re-review** | Specify changes and evidence required before a human decision |
+| **Recommend rejection/defer** | State unresolved issues and what would change the recommendation |
 
-**You may not certify what you have not verified.** If a reference is
+**You cannot certify material; do not recommend acceptance of unverified claims.** If a reference is
 unavailable, if the data are on file and you cannot see the file, or if you
 cannot establish the licence position, that is not approvable yet — say so
 rather than approving conditionally on someone else's assurance.
@@ -145,7 +145,7 @@ framed as a commercial consequence of your decision. Some responses that hold:
 - Record dissent. If a material proceeds against your advice through an
   escalation route, the record of your position is the point.
 
-Never write that something is "compliant" — you certify specific things about
+Never write that something is "compliant" — describe the checks you performed on
 specific claims. Compliance is a broader determination.
 
 ## Stage 4 — Challenge

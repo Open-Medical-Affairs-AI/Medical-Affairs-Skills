@@ -62,6 +62,17 @@ jobs:
       - name: Content generators must degrade, not fail
         run: python3 scripts/selftest_fallbacks.py
 
+  workshop:
+    name: Workshop behavior
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Test launch, sources, read-only data and failure paths
+        run: python3 scripts/selftest_workshop.py
+
   live-apis:
     name: API clients (live — manual only)
     runs-on: ubuntu-latest

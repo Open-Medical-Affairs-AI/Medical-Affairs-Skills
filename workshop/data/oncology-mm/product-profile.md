@@ -50,4 +50,4 @@ NORVANTIB is indicated for the treatment of adult patients with relapsed or refr
 
 ---
 
-*All figures above are invented for workshop use. Do not cite them.*
+*All figures above are invented for workshop use. Cite this file only as a labelled synthetic source, never as real clinical evidence.*

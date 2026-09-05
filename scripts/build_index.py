@@ -55,8 +55,8 @@ TIER_HEADINGS = {
     ),
     "data": (
         "Data and search — live external evidence",
-        "These reach the public literature, trial registry, and label/safety "
-        "databases. They need network access; see docs/api-setup.md.",
+        "These retrieve or prepare public, supplied and local evidence. Public literature, trial registry, and label/safety "
+        "databases need network access; local data and supplied transcripts do not. See docs/api-setup.md.",
     ),
     "workflow": (
         "Workflows — the jobs",
@@ -87,7 +87,7 @@ first — it explains how to run these. This file is the catalogue.
   actually goes there; loading every suggestion pulls a large closure into
   context before any work starts.
 - **Produces** — the named deliverable. Skills without one are reasoning components.
-- **Network** — external hosts the skill needs. Blank means it works fully offline.
+- **Network** — external hosts the skill needs. Blank means no direct host is declared; dependencies or the host may still need access.
 
 """
 

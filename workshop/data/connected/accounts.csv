@@ -1,0 +1,26 @@
+# SYNTHETIC DATA - fictional training records, not clinical evidence.
+account_id,therapeutic_area,name,capacity_hours_month,scientific_need
+oncology-mm:ACC-01,oncology-mm,Fictional oncology-mm care network 1,9,care access
+oncology-mm:ACC-02,oncology-mm,Fictional oncology-mm care network 2,10,safety education
+oncology-mm:ACC-03,oncology-mm,Fictional oncology-mm care network 3,11,long-term evidence
+oncology-mm:ACC-04,oncology-mm,Fictional oncology-mm care network 4,12,care access
+oncology-mm:ACC-05,oncology-mm,Fictional oncology-mm care network 5,13,safety education
+oncology-mm:ACC-06,oncology-mm,Fictional oncology-mm care network 6,14,long-term evidence
+oncology-mm:ACC-07,oncology-mm,Fictional oncology-mm care network 7,15,care access
+oncology-mm:ACC-08,oncology-mm,Fictional oncology-mm care network 8,16,safety education
+immunology-ad:ACC-01,immunology-ad,Fictional immunology-ad care network 1,9,care access
+immunology-ad:ACC-02,immunology-ad,Fictional immunology-ad care network 2,10,safety education
+immunology-ad:ACC-03,immunology-ad,Fictional immunology-ad care network 3,11,long-term evidence
+immunology-ad:ACC-04,immunology-ad,Fictional immunology-ad care network 4,12,care access
+immunology-ad:ACC-05,immunology-ad,Fictional immunology-ad care network 5,13,safety education
+immunology-ad:ACC-06,immunology-ad,Fictional immunology-ad care network 6,14,long-term evidence
+immunology-ad:ACC-07,immunology-ad,Fictional immunology-ad care network 7,15,care access
+immunology-ad:ACC-08,immunology-ad,Fictional immunology-ad care network 8,16,safety education
+cardiometabolic-obesity:ACC-01,cardiometabolic-obesity,Fictional cardiometabolic-obesity care network 1,9,care access
+cardiometabolic-obesity:ACC-02,cardiometabolic-obesity,Fictional cardiometabolic-obesity care network 2,10,safety education
+cardiometabolic-obesity:ACC-03,cardiometabolic-obesity,Fictional cardiometabolic-obesity care network 3,11,long-term evidence
+cardiometabolic-obesity:ACC-04,cardiometabolic-obesity,Fictional cardiometabolic-obesity care network 4,12,care access
+cardiometabolic-obesity:ACC-05,cardiometabolic-obesity,Fictional cardiometabolic-obesity care network 5,13,safety education
+cardiometabolic-obesity:ACC-06,cardiometabolic-obesity,Fictional cardiometabolic-obesity care network 6,14,long-term evidence
+cardiometabolic-obesity:ACC-07,cardiometabolic-obesity,Fictional cardiometabolic-obesity care network 7,15,care access
+cardiometabolic-obesity:ACC-08,cardiometabolic-obesity,Fictional cardiometabolic-obesity care network 8,16,safety education

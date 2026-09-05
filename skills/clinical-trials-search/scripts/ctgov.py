@@ -316,6 +316,9 @@ def main() -> int:
         )
         total, trials = search(args, fixtures)
         if not trials:
+            if args.format == 'json':
+                print(render([], total, 'json', desc))
+                return 0
             print(f"No trials matched: {desc}")
             print(
                 "\nBefore concluding nothing is running: sponsor names vary across\n"
@@ -324,7 +327,7 @@ def main() -> int:
             )
             return 0
         print(render(trials, total, args.format, desc))
-        if total > len(trials):
+        if total > len(trials) and args.format != 'json':
             print(f"\n_Showing {len(trials)} of {total}. Raise --limit._")
         return 0
 
@@ -333,7 +336,7 @@ def main() -> int:
         status, body = http_get(f"{API}/studies/{nct}", fixtures)
         if status != 200 or not body:
             print(f"{nct} did not resolve (HTTP {status}).")
-            print("Unresolved NCT numbers are very likely fabricated. Remove it.")
+            print("This NCT number is unverified. Check the identifier and access; failure alone does not prove fabrication.")
             return 1
         trial = parse_study(json.loads(body))
         print(render([trial], 1, args.format, nct))

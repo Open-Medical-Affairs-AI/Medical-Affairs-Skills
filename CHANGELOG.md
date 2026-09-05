@@ -1,5 +1,31 @@
 # Changelog
 
+## 0.2.0 candidate — October workshop upgrade
+
+- Reconciled the expanded synthetic packs with the current 52-skill library.
+- Added ten skills, including four MSL workflows for pre-call planning, HCP
+  discovery and access, post-call follow-up and administrative operations.
+- Added 16 workshop missions, three self-contained starter bundles, a connected
+  fictional organization, change cards and a two-hour facilitator runbook.
+- Added a public evidence gateway, transcript import, a read-only database helper
+  and a traceable MSL preparation helper; repaired API JSON and error handling.
+- Strengthened source verification, action boundaries and synthetic-data handling
+  in the foundations, orchestrator and selected scientific workflows.
+- Added nine curated public bibliographic examples, enterprise connection guidance,
+  owner governance instructions, CODEOWNERS and workshop CI checks.
+- Rebuilt the beginner README with a generated infographic and updated skill menu.
+- Recorded engineering checks and remaining rehearsal steps in docs/validation.md.
+
+## Unreleased
+
+- Expanded each workshop therapeutic-area pack from 10 to 32 synthetic files,
+  adding cross-functional inputs for all 48 skills, including safety and
+  Medical Information intake, account planning, metrics, advisory boards, IIS,
+  RWE, payer/HTA, guideline and launch readiness, MLR, publications, structured
+  evidence and patient-level analysis data.
+- Added a skill-to-data coverage catalogue with suggested jobs, testable
+  tensions and three cross-functional capstones.
+
 All notable changes to this project are recorded here. Skills are versioned
 individually in their `metadata.version` field; this file records what changed
 across the library as a whole.

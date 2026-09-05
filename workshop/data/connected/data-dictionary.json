@@ -1,0 +1,180 @@
+{
+  "label": "SYNTHETIC DATA - fictional training records, not clinical evidence.",
+  "version": "0.2.0",
+  "scenario_date": "2026-10-01",
+  "tables": {
+    "accounts": {
+      "rows": 24,
+      "columns": [
+        "account_id",
+        "therapeutic_area",
+        "name",
+        "capacity_hours_month",
+        "scientific_need"
+      ]
+    },
+    "hcps": {
+      "rows": 90,
+      "columns": [
+        "hcp_id",
+        "original_id",
+        "therapeutic_area",
+        "account_id",
+        "name",
+        "country",
+        "setting",
+        "email_permission",
+        "preferred_channel",
+        "profile_note"
+      ]
+    },
+    "interactions": {
+      "rows": 163,
+      "columns": [
+        "interaction_id",
+        "hcp_id",
+        "therapeutic_area",
+        "date",
+        "msl",
+        "channel",
+        "verbatim",
+        "source_file",
+        "source_record"
+      ]
+    },
+    "enquiries": {
+      "rows": 18,
+      "columns": [
+        "enquiry_id",
+        "therapeutic_area",
+        "requester",
+        "country",
+        "date",
+        "verbatim",
+        "response_status",
+        "source_file",
+        "source_record"
+      ]
+    },
+    "content_assets": {
+      "rows": 36,
+      "columns": [
+        "asset_id",
+        "therapeutic_area",
+        "topic",
+        "audience",
+        "format",
+        "version",
+        "review_status",
+        "review_due",
+        "jurisdiction",
+        "language",
+        "source_file"
+      ]
+    },
+    "engagement": {
+      "rows": 90,
+      "columns": [
+        "event_id",
+        "hcp_id",
+        "asset_id",
+        "therapeutic_area",
+        "invited",
+        "attended",
+        "completed",
+        "pre_score",
+        "post_score",
+        "note"
+      ]
+    },
+    "patient_partnerships": {
+      "rows": 12,
+      "columns": [
+        "partner_id",
+        "therapeutic_area",
+        "organization",
+        "need",
+        "input",
+        "permission_to_quote",
+        "commercial_link"
+      ]
+    },
+    "projects": {
+      "rows": 18,
+      "columns": [
+        "project_id",
+        "therapeutic_area",
+        "objective",
+        "cost_gbp",
+        "hours",
+        "status",
+        "dependency",
+        "decision_needed"
+      ]
+    },
+    "access_log": {
+      "rows": 90,
+      "columns": [
+        "access_id",
+        "hcp_id",
+        "therapeutic_area",
+        "route",
+        "status",
+        "institution_rule",
+        "contact_detail",
+        "last_checked",
+        "note"
+      ]
+    },
+    "msl_tasks": {
+      "rows": 180,
+      "columns": [
+        "task_id",
+        "hcp_id",
+        "therapeutic_area",
+        "source_commitment_id",
+        "task_text",
+        "owner_role",
+        "due_date",
+        "status",
+        "note"
+      ]
+    },
+    "source_links": {
+      "rows": 96,
+      "columns": [
+        "source_id",
+        "path",
+        "sha256",
+        "source_kind",
+        "license",
+        "note"
+      ]
+    }
+  },
+  "joins": {
+    "hcps": {
+      "account_id": "accounts(account_id)"
+    },
+    "interactions": {
+      "hcp_id": "hcps(hcp_id)"
+    },
+    "engagement": {
+      "hcp_id": "hcps(hcp_id)",
+      "asset_id": "content_assets(asset_id)"
+    },
+    "access_log": {
+      "hcp_id": "hcps(hcp_id)"
+    },
+    "msl_tasks": {
+      "hcp_id": "hcps(hcp_id)"
+    }
+  },
+  "notes": [
+    "HCP and account assignments are synthetic, not real entity matches.",
+    "Original IDs are namespaced by therapeutic area. Never join on bare HCP-101.",
+    "Existing pack contradictions are preserved for appraisal.",
+    "Medical enquiry requesters are not guessed to be named HCPs.",
+    "No outreach is authorized by a yes value in a fictional permission column."
+  ]
+}

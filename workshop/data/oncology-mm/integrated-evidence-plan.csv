@@ -1,0 +1,7 @@
+# SYNTHETIC DATA - WORKSHOP USE ONLY. Entirely fictional.
+work_id,question,decision,design,owner,cost_gbp,start,readout,status,dependency
+IEP-01,No randomised comparison against current standard of care in any line,guideline evidence readiness,comparative study,Clinical Development,4200000,2027-Q1,2029-Q4,concept,regulatory alignment
+IEP-02,Sequencing after prior BCMA-directed therapy — no prospective data,implementation protocol,prospective pragmatic cohort,Medical Affairs,900000,2026-Q4,2028-Q1,proposed,site feasibility
+IEP-03,Sequencing after prior BCMA-directed therapy — no prospective data,publication narrative,investigator-initiated single-centre cohort,IIS Committee,780000,2027-Q1,2029-Q2,under review,IIS-26-014
+IEP-04,Optimal duration of therapy and whether response-adapted discontinuation is safe,payer reassessment,claims-EHR comparative RWE,HEOR,650000,2026-Q3,2027-Q3,feasibility,outcome validation
+IEP-05,24-month safety and durability,scientific communication,existing trial follow-up analysis,Publications,120000,2026-Q2,2026-Q4,drafting,data reconciliation

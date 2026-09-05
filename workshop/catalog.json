@@ -1,0 +1,600 @@
+{
+  "version": "0.2.0",
+  "default_mission": "field-insights",
+  "default_ta": "oncology-mm",
+  "mode": "synthetic workshop; public evidence is separate optional context",
+  "missions": [
+    {
+      "id": "field-insights",
+      "title": "What should leadership know?",
+      "objective": "Find the three most consequential field insights. Preserve safety findings, contradictions and source IDs. Recommend a concrete next action for each.",
+      "inputs": [
+        "workshop/data/{ta}/field-observations.csv",
+        "workshop/data/{ta}/medical-plan.md",
+        "workshop/data/{ta}/product-profile.md"
+      ],
+      "skills": [
+        "field-insight-synthesis",
+        "executive-briefing"
+      ],
+      "deliverables": [
+        "Leadership brief",
+        "Insight table with source records",
+        "Simulated safety escalation and missing-information list"
+      ]
+    },
+    {
+      "id": "kol-meeting",
+      "title": "Prepare for the difficult meeting",
+      "objective": "Prepare for the first expert in the supplied KOL dossiers. Address unresolved questions honestly and propose useful questions for scientific exchange.",
+      "inputs": [
+        "workshop/data/{ta}/kol-dossiers.md",
+        "workshop/data/{ta}/interaction-notes.md",
+        "workshop/data/{ta}/product-profile.md",
+        "workshop/data/{ta}/evidence-landscape.md"
+      ],
+      "skills": [
+        "kol-engagement-brief"
+      ],
+      "deliverables": [
+        "Two-page meeting brief",
+        "Questions, source links and unresolved evidence"
+      ]
+    },
+    {
+      "id": "congress",
+      "title": "What changed after congress?",
+      "objective": "Compare the congress findings to the existing medical plan. Explain what changes, what does not, and why.",
+      "inputs": [
+        "workshop/data/{ta}/congress-abstracts.md",
+        "workshop/data/{ta}/competitor-announcements.md",
+        "workshop/data/{ta}/medical-plan.md",
+        "workshop/data/{ta}/product-profile.md"
+      ],
+      "skills": [
+        "congress-intelligence",
+        "competitive-intelligence"
+      ],
+      "deliverables": [
+        "Congress readout",
+        "Change recommendations with evidence limitations"
+      ]
+    },
+    {
+      "id": "medical-information",
+      "title": "Handle the enquiry queue",
+      "objective": "Triage the enquiries, surface potential safety issues and draft responses supported by the fictional sources. Do not infer other-country approval or send responses.",
+      "inputs": [
+        "workshop/data/{ta}/medical-information-enquiries.csv",
+        "workshop/data/{ta}/product-profile.md",
+        "workshop/data/{ta}/structured-evidence-table.csv"
+      ],
+      "skills": [
+        "medical-information-response"
+      ],
+      "deliverables": [
+        "Triage register",
+        "Draft response and gap log",
+        "Simulated safety routing"
+      ]
+    },
+    {
+      "id": "evidence-investment",
+      "title": "Choose what to fund",
+      "objective": "Choose an evidence portfolio within a GBP 2 million ceiling. Evaluate duplication, dependencies and what must be declined or deferred.",
+      "inputs": [
+        "workshop/data/{ta}/iis-proposal.md",
+        "workshop/data/{ta}/rwe-study-concept.md",
+        "workshop/data/{ta}/integrated-evidence-plan.csv",
+        "workshop/data/{ta}/payer-hta-brief.md",
+        "workshop/data/{ta}/evidence-landscape.md"
+      ],
+      "skills": [
+        "integrated-evidence-plan",
+        "investigator-initiated-study-review",
+        "real-world-evidence-design"
+      ],
+      "deliverables": [
+        "Investment decision workbook or CSV",
+        "Committee brief with trade-offs"
+      ]
+    },
+    {
+      "id": "publication",
+      "title": "Keep every scientific output consistent",
+      "objective": "Review the manuscript and reconcile reported values with the supplied study sources. Create an abstract, one honest figure and a plain-language summary with a discrepancy log.",
+      "inputs": [
+        "workshop/data/{ta}/manuscript-draft.md",
+        "workshop/data/{ta}/structured-evidence-table.csv",
+        "workshop/data/{ta}/patient-level-analysis.csv",
+        "workshop/data/{ta}/abstract-poster-brief.md",
+        "workshop/data/{ta}/plain-language-source.md",
+        "workshop/data/{ta}/product-profile.md"
+      ],
+      "skills": [
+        "scientific-manuscript",
+        "congress-abstract-and-poster",
+        "data-visualization-for-medical",
+        "plain-language-summary"
+      ],
+      "deliverables": [
+        "Revised manuscript draft",
+        "Abstract and figure",
+        "Lay summary",
+        "Cross-output discrepancy log"
+      ]
+    },
+    {
+      "id": "advisory-board",
+      "title": "Design an advisory board worth holding",
+      "objective": "Identify five unanswered questions that justify an advisory board and prepare the briefing materials. Explain if the evidence does not justify a proposed question.",
+      "inputs": [
+        "workshop/data/{ta}/advisory-board-transcript.md",
+        "workshop/data/{ta}/field-observations.csv",
+        "workshop/data/{ta}/evidence-landscape.md",
+        "workshop/data/{ta}/kol-dossiers.md",
+        "workshop/data/{ta}/product-profile.md"
+      ],
+      "skills": [
+        "advisory-board-design",
+        "evidence-gap-analysis",
+        "medical-slide-deck"
+      ],
+      "deliverables": [
+        "Board charter and discussion guide",
+        "Pre-read deck or structured equivalent",
+        "Advisor briefs"
+      ]
+    },
+    {
+      "id": "launch-readiness",
+      "title": "Can the medical team launch?",
+      "objective": "Assess launch readiness without averaging a critical dependency into a green score. Prepare a remediation plan and leadership readout.",
+      "inputs": [
+        "workshop/data/{ta}/launch-readiness-register.md",
+        "workshop/data/{ta}/medical-information-enquiries.csv",
+        "workshop/data/{ta}/mlr-review-comments.md",
+        "workshop/data/{ta}/scientific-platform-draft.md",
+        "workshop/data/{ta}/integrated-evidence-plan.csv"
+      ],
+      "skills": [
+        "launch-medical-readiness",
+        "mlr-review-readiness"
+      ],
+      "deliverables": [
+        "Gate assessment",
+        "Remediation tracker",
+        "Leadership brief"
+      ]
+    },
+    {
+      "id": "connected-planning",
+      "title": "Work across a practice CRM and content library",
+      "objective": "Use the linked records to prioritize account coverage and content needs for the selected therapeutic area. Respect channel preferences, capacity, evidence and review status.",
+      "inputs": [
+        "workshop/data/connected/hcps.csv",
+        "workshop/data/connected/accounts.csv",
+        "workshop/data/connected/interactions.csv",
+        "workshop/data/connected/content_assets.csv",
+        "workshop/data/connected/engagement.csv",
+        "workshop/data/connected/data-dictionary.json",
+        "workshop/data/{ta}/product-profile.md"
+      ],
+      "skills": [
+        "data-connection",
+        "field-medical-planning",
+        "medical-content-operations"
+      ],
+      "deliverables": [
+        "Account priorities",
+        "Content review queue",
+        "Metric definitions and limitations"
+      ]
+    },
+    {
+      "id": "patient-partnership",
+      "title": "Bring patient priorities into the plan",
+      "objective": "Design an accessible listening and co-creation activity for the selected therapeutic area. Link patient priorities to decisions and respect quotation permissions.",
+      "inputs": [
+        "workshop/data/connected/patient_partnerships.csv",
+        "workshop/data/{ta}/plain-language-source.md",
+        "workshop/data/{ta}/medical-education-needs.md",
+        "workshop/data/{ta}/evidence-landscape.md"
+      ],
+      "skills": [
+        "patient-engagement-planning",
+        "plain-language-summary"
+      ],
+      "deliverables": [
+        "Accessible participation plan",
+        "Discussion guide",
+        "Feedback-to-decision table"
+      ]
+    },
+    {
+      "id": "transcript",
+      "title": "Turn a meeting transcript into action",
+      "objective": "Review the supplied transcript, preserve uncertain medical terms and safety verbatims, then identify decisions and unanswered questions. Clearly state that audio was not supplied.",
+      "inputs": [
+        "workshop/data/{ta}/advisory-board-transcript.md",
+        "workshop/data/{ta}/product-profile.md"
+      ],
+      "skills": [
+        "meeting-transcription",
+        "field-insight-synthesis"
+      ],
+      "deliverables": [
+        "Reviewed transcript and correction queue",
+        "Decision and follow-up log"
+      ]
+    },
+    {
+      "id": "thirty-day-capstone",
+      "title": "Run the next 30 days of Medical Affairs",
+      "objective": "Prepare a coordinated 30-day draft plan for the selected fictional product. Prioritize evidence, field actions and content within the supplied constraints. Deliver a leadership brief, action tracker and scientific briefing, with source dependencies so new evidence can update affected work.",
+      "inputs": [
+        "workshop/data/{ta}/medical-plan.md",
+        "workshop/data/{ta}/product-profile.md",
+        "workshop/data/{ta}/field-observations.csv",
+        "workshop/data/{ta}/evidence-landscape.md",
+        "workshop/data/{ta}/integrated-evidence-plan.csv",
+        "workshop/data/{ta}/launch-readiness-register.md",
+        "workshop/data/connected/content_assets.csv",
+        "workshop/data/connected/projects.csv"
+      ],
+      "skills": [
+        "medical-strategy-plan",
+        "field-insight-synthesis",
+        "integrated-evidence-plan",
+        "medical-content-operations",
+        "executive-briefing",
+        "medical-slide-deck"
+      ],
+      "deliverables": [
+        "Leadership brief",
+        "30-day action tracker",
+        "Scientific briefing",
+        "Source dependencies and change log"
+      ]
+    },
+    {
+      "id": "msl-pre-call",
+      "title": "Prepare the MSL pre-call brief",
+      "objective": "Select an HCP with existing interactions in the selected therapeutic area. Gather prior scientific questions, open tasks and access context, then prepare a one-page pre-call brief. Do not invent meeting facts.",
+      "inputs": [
+        "workshop/data/connected/hcps.csv",
+        "workshop/data/connected/interactions.csv",
+        "workshop/data/connected/access_log.csv",
+        "workshop/data/connected/msl_tasks.csv",
+        "workshop/data/connected/data-dictionary.json",
+        "workshop/data/{ta}/product-profile.md"
+      ],
+      "skills": [
+        "msl-pre-call-planning"
+      ],
+      "deliverables": [
+        "One-page pre-call brief",
+        "Source context and open questions",
+        "Material and logistics check"
+      ]
+    },
+    {
+      "id": "hcp-access",
+      "title": "Identify scientific coverage and access gaps",
+      "objective": "Use the fictional professional and account records to identify scientific coverage gaps and appropriate access routes. Respect declined contact and distinguish unverified access. Do not search for fictional people online.",
+      "inputs": [
+        "workshop/data/connected/hcps.csv",
+        "workshop/data/connected/interactions.csv",
+        "workshop/data/connected/access_log.csv",
+        "workshop/data/connected/msl_tasks.csv",
+        "workshop/data/connected/data-dictionary.json",
+        "workshop/data/connected/accounts.csv"
+      ],
+      "skills": [
+        "hcp-discovery-and-access",
+        "field-medical-planning"
+      ],
+      "deliverables": [
+        "Candidate/coverage register",
+        "Institution-aware access plan",
+        "Draft introduction for review"
+      ]
+    },
+    {
+      "id": "msl-post-call",
+      "title": "Turn the call notes into useful follow-up",
+      "objective": "Use the actual supplied historical notes to create a factual CRM draft and follow-up queue. Separate statements from inferences, preserve unresolved fields and identify simulated safety intake. Do not invent a new meeting.",
+      "inputs": [
+        "workshop/data/{ta}/interaction-notes.md",
+        "workshop/data/{ta}/product-profile.md",
+        "workshop/data/connected/msl_tasks.csv"
+      ],
+      "skills": [
+        "msl-post-call-follow-up"
+      ],
+      "deliverables": [
+        "CRM note draft",
+        "Commitment and gap register",
+        "Follow-up correspondence draft"
+      ]
+    },
+    {
+      "id": "msl-admin",
+      "title": "Clear the administrative queue",
+      "objective": "Prepare a source-backed MSL administrative queue for the selected therapeutic area: open tasks, overdue items, access checks and next pre-call preparation. Use the scenario date of 1 October 2026. Do not claim tasks were completed or CRM records updated.",
+      "inputs": [
+        "workshop/data/connected/hcps.csv",
+        "workshop/data/connected/interactions.csv",
+        "workshop/data/connected/access_log.csv",
+        "workshop/data/connected/msl_tasks.csv",
+        "workshop/data/connected/data-dictionary.json"
+      ],
+      "skills": [
+        "msl-administrative-operations"
+      ],
+      "deliverables": [
+        "Prioritized task queue",
+        "Draft records with source IDs",
+        "Weekly status brief"
+      ]
+    }
+  ],
+  "skill_inputs": {
+    "advisory-board-design": [
+      "workshop/data/{ta}/advisory-board-transcript.md",
+      "workshop/data/{ta}/evidence-landscape.md"
+    ],
+    "capability-detection": [
+      "workshop/data/{ta}/product-profile.md",
+      "workshop/data/{ta}/structured-evidence-table.csv"
+    ],
+    "citation-integrity": [
+      "workshop/data/{ta}/manuscript-draft.md",
+      "workshop/data/{ta}/scientific-platform-draft.md"
+    ],
+    "clinical-trials-search": [
+      "workshop/data/{ta}/iis-proposal.md",
+      "workshop/data/{ta}/integrated-evidence-plan.csv"
+    ],
+    "competitive-intelligence": [
+      "workshop/data/{ta}/competitor-announcements.md",
+      "workshop/data/{ta}/congress-abstracts.md"
+    ],
+    "congress-abstract-and-poster": [
+      "workshop/data/{ta}/abstract-poster-brief.md",
+      "workshop/data/{ta}/structured-evidence-table.csv"
+    ],
+    "congress-intelligence": [
+      "workshop/data/{ta}/congress-abstracts.md",
+      "workshop/data/{ta}/medical-plan.md"
+    ],
+    "consulting-grade-design": [
+      "workshop/data/{ta}/structured-evidence-table.csv",
+      "workshop/data/{ta}/product-profile.md"
+    ],
+    "data-connection": [
+      "workshop/data/connected/data-dictionary.json",
+      "workshop/data/connected/hcps.csv",
+      "workshop/data/connected/interactions.csv"
+    ],
+    "data-visualization-for-medical": [
+      "workshop/data/{ta}/patient-level-analysis.csv"
+    ],
+    "deliverable-quality-review": [
+      "workshop/data/{ta}/plain-language-source.md",
+      "workshop/data/{ta}/manuscript-draft.md"
+    ],
+    "diagram-and-schema": [
+      "workshop/data/{ta}/rwe-study-concept.md",
+      "workshop/data/{ta}/integrated-evidence-plan.csv"
+    ],
+    "document-ingestion": [
+      "workshop/data/{ta}/document-ingestion-challenge.md"
+    ],
+    "evidence-appraisal": [
+      "workshop/data/{ta}/structured-evidence-table.csv",
+      "workshop/data/{ta}/product-profile.md"
+    ],
+    "evidence-gap-analysis": [
+      "workshop/data/{ta}/evidence-landscape.md",
+      "workshop/data/{ta}/integrated-evidence-plan.csv"
+    ],
+    "evidence-synthesis": [
+      "workshop/data/{ta}/structured-evidence-table.csv",
+      "workshop/data/{ta}/congress-abstracts.md"
+    ],
+    "executive-briefing": [
+      "workshop/data/{ta}/medical-plan.md",
+      "workshop/data/{ta}/medical-impact-metrics.csv"
+    ],
+    "field-insight-synthesis": [
+      "workshop/data/{ta}/field-observations.csv",
+      "workshop/data/{ta}/terminology-coding-queue.csv"
+    ],
+    "field-medical-planning": [
+      "workshop/data/{ta}/field-account-plan.csv",
+      "workshop/data/{ta}/medical-impact-metrics.csv"
+    ],
+    "guideline-engagement": [
+      "workshop/data/{ta}/guideline-landscape.md",
+      "workshop/data/{ta}/structured-evidence-table.csv"
+    ],
+    "hcp-discovery-and-access": [
+      "workshop/data/connected/hcps.csv",
+      "workshop/data/connected/interactions.csv",
+      "workshop/data/connected/access_log.csv",
+      "workshop/data/connected/msl_tasks.csv",
+      "workshop/data/connected/data-dictionary.json",
+      "workshop/data/connected/accounts.csv"
+    ],
+    "insight-generation": [
+      "workshop/data/{ta}/advisory-board-transcript.md",
+      "workshop/data/{ta}/field-observations.csv"
+    ],
+    "integrated-evidence-plan": [
+      "workshop/data/{ta}/integrated-evidence-plan.csv",
+      "workshop/data/{ta}/iis-proposal.md",
+      "workshop/data/{ta}/rwe-study-concept.md"
+    ],
+    "interactive-html-report": [
+      "workshop/data/{ta}/structured-evidence-table.csv",
+      "workshop/data/{ta}/medical-impact-metrics.csv"
+    ],
+    "investigator-initiated-study-review": [
+      "workshop/data/{ta}/iis-proposal.md",
+      "workshop/data/{ta}/integrated-evidence-plan.csv"
+    ],
+    "kol-engagement-brief": [
+      "workshop/data/{ta}/kol-dossiers.md",
+      "workshop/data/{ta}/interaction-notes.md"
+    ],
+    "launch-medical-readiness": [
+      "workshop/data/{ta}/launch-readiness-register.md",
+      "workshop/data/{ta}/mlr-review-comments.md"
+    ],
+    "library-menu": [
+      "workshop/data/{ta}/product-profile.md"
+    ],
+    "literature-surveillance": [
+      "workshop/data/{ta}/evidence-landscape.md",
+      "workshop/data/{ta}/congress-abstracts.md"
+    ],
+    "medical-affairs-foundations": [
+      "workshop/data/{ta}/medical-information-enquiries.csv",
+      "workshop/data/{ta}/advisory-board-transcript.md"
+    ],
+    "medical-affairs-metrics": [
+      "workshop/data/{ta}/medical-impact-metrics.csv",
+      "workshop/data/{ta}/medical-plan.md"
+    ],
+    "medical-affairs-orchestrator": [
+      "workshop/data/{ta}/product-profile.md",
+      "workshop/data/{ta}/structured-evidence-table.csv"
+    ],
+    "medical-content-operations": [
+      "workshop/data/connected/content_assets.csv",
+      "workshop/data/connected/engagement.csv"
+    ],
+    "medical-correspondence": [
+      "workshop/data/{ta}/medical-information-enquiries.csv",
+      "workshop/data/{ta}/iis-proposal.md"
+    ],
+    "medical-education-program": [
+      "workshop/data/{ta}/medical-education-needs.md",
+      "workshop/data/{ta}/field-observations.csv"
+    ],
+    "medical-information-response": [
+      "workshop/data/{ta}/medical-information-enquiries.csv",
+      "workshop/data/{ta}/product-profile.md"
+    ],
+    "medical-slide-deck": [
+      "workshop/data/{ta}/scientific-platform-draft.md",
+      "workshop/data/{ta}/patient-level-analysis.csv"
+    ],
+    "medical-strategy-plan": [
+      "workshop/data/{ta}/medical-plan.md",
+      "workshop/data/{ta}/evidence-landscape.md",
+      "workshop/data/{ta}/medical-impact-metrics.csv"
+    ],
+    "medical-terminology-mapping": [
+      "workshop/data/{ta}/terminology-coding-queue.csv"
+    ],
+    "meeting-transcription": [
+      "workshop/data/{ta}/advisory-board-transcript.md"
+    ],
+    "mlr-review-readiness": [
+      "workshop/data/{ta}/mlr-review-comments.md",
+      "workshop/data/{ta}/promotional-claims-review.md"
+    ],
+    "msl-administrative-operations": [
+      "workshop/data/connected/hcps.csv",
+      "workshop/data/connected/interactions.csv",
+      "workshop/data/connected/access_log.csv",
+      "workshop/data/connected/msl_tasks.csv",
+      "workshop/data/connected/data-dictionary.json"
+    ],
+    "msl-post-call-follow-up": [
+      "workshop/data/{ta}/interaction-notes.md",
+      "workshop/data/{ta}/product-profile.md",
+      "workshop/data/connected/msl_tasks.csv"
+    ],
+    "msl-pre-call-planning": [
+      "workshop/data/connected/hcps.csv",
+      "workshop/data/connected/interactions.csv",
+      "workshop/data/connected/access_log.csv",
+      "workshop/data/connected/msl_tasks.csv",
+      "workshop/data/connected/data-dictionary.json",
+      "workshop/data/{ta}/product-profile.md"
+    ],
+    "patient-engagement-planning": [
+      "workshop/data/connected/patient_partnerships.csv"
+    ],
+    "payer-value-dossier": [
+      "workshop/data/{ta}/payer-hta-brief.md",
+      "workshop/data/{ta}/structured-evidence-table.csv"
+    ],
+    "pdf-generation": [
+      "workshop/data/{ta}/product-profile.md",
+      "workshop/data/{ta}/structured-evidence-table.csv"
+    ],
+    "plain-language-summary": [
+      "workshop/data/{ta}/plain-language-source.md",
+      "workshop/data/{ta}/product-profile.md"
+    ],
+    "promotional-material-medical-review": [
+      "workshop/data/{ta}/promotional-claims-review.md",
+      "workshop/data/{ta}/product-profile.md"
+    ],
+    "public-evidence-search": [
+      "workshop/data/{ta}/evidence-landscape.md"
+    ],
+    "pubmed-search": [
+      "workshop/data/{ta}/manuscript-draft.md",
+      "workshop/data/{ta}/evidence-landscape.md"
+    ],
+    "real-world-evidence-design": [
+      "workshop/data/{ta}/rwe-study-concept.md",
+      "workshop/data/{ta}/patient-level-analysis.csv"
+    ],
+    "regulatory-label-intelligence": [
+      "workshop/data/{ta}/medical-information-enquiries.csv",
+      "workshop/data/{ta}/promotional-claims-review.md"
+    ],
+    "safety-communication": [
+      "workshop/data/{ta}/safety-case-series.md",
+      "workshop/data/{ta}/medical-information-enquiries.csv"
+    ],
+    "scientific-communication-strategy": [
+      "workshop/data/{ta}/publication-plan.md",
+      "workshop/data/{ta}/scientific-platform-draft.md"
+    ],
+    "scientific-manuscript": [
+      "workshop/data/{ta}/manuscript-draft.md",
+      "workshop/data/{ta}/structured-evidence-table.csv"
+    ],
+    "scientific-platform": [
+      "workshop/data/{ta}/scientific-platform-draft.md",
+      "workshop/data/{ta}/structured-evidence-table.csv"
+    ],
+    "spreadsheet-analysis": [
+      "workshop/data/{ta}/product-profile.md",
+      "workshop/data/{ta}/structured-evidence-table.csv"
+    ],
+    "strategic-analysis": [
+      "workshop/data/{ta}/medical-plan.md",
+      "workshop/data/{ta}/integrated-evidence-plan.csv"
+    ],
+    "systematic-literature-review": [
+      "workshop/data/{ta}/payer-hta-brief.md",
+      "workshop/data/{ta}/guideline-landscape.md"
+    ],
+    "visual-abstract": [
+      "workshop/data/{ta}/abstract-poster-brief.md",
+      "workshop/data/{ta}/patient-level-analysis.csv"
+    ],
+    "workshop-launcher": [
+      "workshop/data/{ta}/field-observations.csv",
+      "workshop/data/{ta}/medical-plan.md"
+    ]
+  }
+}

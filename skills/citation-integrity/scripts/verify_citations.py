@@ -51,7 +51,7 @@ OPENALEX = "https://api.openalex.org/works"
 TOOL = "medical-affairs-skills"
 CONTACT = os.environ.get("API_CONTACT_EMAIL", "")
 
-PMID_RE = re.compile(r"\bPMID:?\s*(\d{7,8})\b", re.I)
+PMID_RE = re.compile(r"\bPMID:?\s*(\d{1,8})\b|pubmed\.ncbi\.nlm\.nih\.gov/(\d{1,8})", re.I)
 BARE_PMID_RE = re.compile(r"\b(\d{8})\b")
 DOI_RE = re.compile(r"\b(10\.\d{4,9}/[-._;()/:A-Z0-9]+)", re.I)
 NCT_RE = re.compile(r"\b(NCT\d{8})\b", re.I)
@@ -133,11 +133,8 @@ class Http:
                 if attempt < retries - 1:
                     time.sleep(2**attempt)
                     continue
-                raise SystemExit(
-                    f"Network error reaching {urllib.parse.urlparse(url).netloc}: {exc}\n"
-                    f"If you are on a restricted network, see docs/api-setup.md "
-                    f"for the hosts that must be allowlisted."
-                )
+                # Unavailable is not nonexistent; keep checking other identifiers.
+                return 0, ""
         return 0, ""
 
 
@@ -220,9 +217,11 @@ def resolve_doi(doi: str, http: Http) -> Record:
                         rec.pubtypes.append("Retracted Publication")
             return rec
 
-    # CrossRef misses some records (notably older and non-member content).
-    # OpenAlex is a reasonable second opinion and is CC0.
-    status, body = http.get(f"{OPENALEX}/doi:{urllib.parse.quote(doi, safe='')}")
+    # OpenAlex access requirements can change. Use an optional local key;
+    # Crossref remains the keyless primary path. Fixtures never use real keys.
+    key = '' if http.fixtures is not None else os.environ.get('OPENALEX_API_KEY', '')
+    suffix = ('?api_key=' + urllib.parse.quote(key)) if key else ''
+    status, body = http.get(f"{OPENALEX}/doi:{urllib.parse.quote(doi, safe='')}{suffix}")
     if status == 200 and body:
         try:
             msg = json.loads(body)
@@ -246,7 +245,7 @@ def resolve_doi(doi: str, http: Http) -> Record:
                 rec.pmid = str(ids["pmid"]).rsplit("/", 1)[-1]
             return rec
 
-    rec.notes.append("did not resolve in CrossRef or OpenAlex")
+    rec.notes.append("not verified by available Crossref/OpenAlex responses; an outage or access limit is not proof of fabrication")
     return rec
 
 
@@ -269,6 +268,9 @@ def resolve_nct(nct: str, http: Http) -> Record:
     except json.JSONDecodeError:
         rec.notes.append("ClinicalTrials.gov returned invalid JSON")
         return rec
+    if ident.get('nctId', '').upper() != nct or not ident.get('briefTitle'):
+        rec.notes.append('trial identifier/title missing or mismatched in registry response')
+        return rec
     rec.resolved = True
     rec.source = "ClinicalTrials.gov"
     rec.title = ident.get("briefTitle", "")
@@ -276,15 +278,8 @@ def resolve_nct(nct: str, http: Http) -> Record:
 
 
 def extract_identifiers(text: str) -> dict[str, list[str]]:
-    """Pull PMIDs, DOIs, and NCT numbers out of free text.
-
-    Deliberately conservative on bare 8-digit numbers: only treats them as PMIDs
-    when no explicit 'PMID:' prefix was found anywhere, since a document full of
-    years and patient counts would otherwise produce nonsense.
-    """
-    pmids = PMID_RE.findall(text)
-    if not pmids:
-        pmids = BARE_PMID_RE.findall(text)
+    """Pull explicitly labelled identifiers; dates/account IDs are not PMIDs."""
+    pmids = [a or b for a, b in PMID_RE.findall(text)]
     dois = [d.rstrip(".,;)") for d in DOI_RE.findall(text)]
     ncts = [n.upper() for n in NCT_RE.findall(text)]
 
@@ -375,7 +370,7 @@ def main() -> int:
         for i, rec in enumerate([r for r in records if r.resolved], 1):
             print(format_ama(rec, i))
         for rec in failed:
-            print(f"!! UNRESOLVED — remove before use: {rec.identifier}")
+            print(f"!! UNVERIFIED — resolve before citing as verified: {rec.identifier}")
     else:
         for rec in records:
             if rec.resolved:
@@ -396,9 +391,9 @@ def main() -> int:
         )
         if failed:
             print(
-                "\nUnresolved identifiers must be removed from the deliverable, not\n"
-                "caveated. An identifier that does not resolve is not a weak citation;\n"
-                "it is very likely a fabricated one."
+                "\nDo not treat unresolved references as verified support. Preserve them\n"
+                "in the remediation log. Access failures are not proof of fabrication.\n"
+                "Check the source and the claim before scientific use."
             )
         if retracted:
             print(

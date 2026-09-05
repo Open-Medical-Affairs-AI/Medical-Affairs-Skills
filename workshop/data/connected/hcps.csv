@@ -1,0 +1,92 @@
+# SYNTHETIC DATA - fictional training records, not clinical evidence.
+hcp_id,original_id,therapeutic_area,account_id,name,country,setting,email_permission,preferred_channel,profile_note
+oncology-mm:HCP-101,HCP-101,oncology-mm,oncology-mm:ACC-01,Fictional clinician HCP-101,ES,Community,no,Virtual,Workshop identity; do not search for this person online
+oncology-mm:HCP-104,HCP-104,oncology-mm,oncology-mm:ACC-02,Fictional clinician HCP-104,ES,Community,yes,Phone,Workshop identity; do not search for this person online
+oncology-mm:HCP-106,HCP-106,oncology-mm,oncology-mm:ACC-03,Fictional clinician HCP-106,US,Academic,yes,Face-to-face,Workshop identity; do not search for this person online
+oncology-mm:HCP-107,HCP-107,oncology-mm,oncology-mm:ACC-04,Fictional clinician HCP-107,ES,Community,yes,Virtual,Workshop identity; do not search for this person online
+oncology-mm:HCP-109,HCP-109,oncology-mm,oncology-mm:ACC-05,Fictional clinician HCP-109,US,Academic,yes,Phone,Workshop identity; do not search for this person online
+oncology-mm:HCP-110,HCP-110,oncology-mm,oncology-mm:ACC-06,Fictional clinician HCP-110,US,Academic,no,Face-to-face,Workshop identity; do not search for this person online
+oncology-mm:HCP-111,HCP-111,oncology-mm,oncology-mm:ACC-07,Fictional clinician HCP-111,FR,Regional centre,yes,Virtual,Workshop identity; do not search for this person online
+oncology-mm:HCP-112,HCP-112,oncology-mm,oncology-mm:ACC-08,Fictional clinician HCP-112,US,Community,yes,Phone,Workshop identity; do not search for this person online
+oncology-mm:HCP-113,HCP-113,oncology-mm,oncology-mm:ACC-01,Fictional clinician HCP-113,FR,Academic,yes,Face-to-face,Workshop identity; do not search for this person online
+oncology-mm:HCP-114,HCP-114,oncology-mm,oncology-mm:ACC-02,Fictional clinician HCP-114,DE,Academic,yes,Virtual,Workshop identity; do not search for this person online
+oncology-mm:HCP-115,HCP-115,oncology-mm,oncology-mm:ACC-03,Fictional clinician HCP-115,UK,Community,no,Phone,Workshop identity; do not search for this person online
+oncology-mm:HCP-116,HCP-116,oncology-mm,oncology-mm:ACC-04,Fictional clinician HCP-116,US,Academic,yes,Face-to-face,Workshop identity; do not search for this person online
+oncology-mm:HCP-117,HCP-117,oncology-mm,oncology-mm:ACC-05,Fictional clinician HCP-117,DE,Community,yes,Virtual,Workshop identity; do not search for this person online
+oncology-mm:HCP-118,HCP-118,oncology-mm,oncology-mm:ACC-06,Fictional clinician HCP-118,DE,Regional centre,yes,Phone,Workshop identity; do not search for this person online
+oncology-mm:HCP-119,HCP-119,oncology-mm,oncology-mm:ACC-07,Fictional clinician HCP-119,JP,Academic,yes,Face-to-face,Workshop identity; do not search for this person online
+oncology-mm:HCP-121,HCP-121,oncology-mm,oncology-mm:ACC-08,Fictional clinician HCP-121,ES,Regional centre,no,Virtual,Workshop identity; do not search for this person online
+oncology-mm:HCP-122,HCP-122,oncology-mm,oncology-mm:ACC-01,Fictional clinician HCP-122,US,Community,yes,Phone,Workshop identity; do not search for this person online
+oncology-mm:HCP-124,HCP-124,oncology-mm,oncology-mm:ACC-02,Fictional clinician HCP-124,US,Regional centre,yes,Face-to-face,Workshop identity; do not search for this person online
+oncology-mm:HCP-125,HCP-125,oncology-mm,oncology-mm:ACC-03,Fictional clinician HCP-125,FR,Academic,yes,Virtual,Workshop identity; do not search for this person online
+oncology-mm:HCP-127,HCP-127,oncology-mm,oncology-mm:ACC-04,Fictional clinician HCP-127,US,Community,yes,Phone,Workshop identity; do not search for this person online
+oncology-mm:HCP-129,HCP-129,oncology-mm,oncology-mm:ACC-05,Fictional clinician HCP-129,US,Community,no,Face-to-face,Workshop identity; do not search for this person online
+oncology-mm:HCP-130,HCP-130,oncology-mm,oncology-mm:ACC-06,Fictional clinician HCP-130,US,Academic,yes,Virtual,Workshop identity; do not search for this person online
+oncology-mm:HCP-131,HCP-131,oncology-mm,oncology-mm:ACC-07,Fictional clinician HCP-131,FR,Community,yes,Phone,Workshop identity; do not search for this person online
+oncology-mm:HCP-132,HCP-132,oncology-mm,oncology-mm:ACC-08,Fictional clinician HCP-132,ES,Community,yes,Face-to-face,Workshop identity; do not search for this person online
+oncology-mm:HCP-133,HCP-133,oncology-mm,oncology-mm:ACC-01,Fictional clinician HCP-133,JP,Academic,yes,Virtual,Workshop identity; do not search for this person online
+oncology-mm:HCP-134,HCP-134,oncology-mm,oncology-mm:ACC-02,Fictional clinician HCP-134,JP,Community,no,Phone,Workshop identity; do not search for this person online
+oncology-mm:HCP-135,HCP-135,oncology-mm,oncology-mm:ACC-03,Fictional clinician HCP-135,IT,Regional centre,yes,Face-to-face,Workshop identity; do not search for this person online
+oncology-mm:HCP-136,HCP-136,oncology-mm,oncology-mm:ACC-04,Fictional clinician HCP-136,ES,Community,yes,Virtual,Workshop identity; do not search for this person online
+oncology-mm:HCP-137,HCP-137,oncology-mm,oncology-mm:ACC-05,Fictional clinician HCP-137,IT,Community,yes,Phone,Workshop identity; do not search for this person online
+oncology-mm:HCP-138,HCP-138,oncology-mm,oncology-mm:ACC-06,Fictional clinician HCP-138,DE,Academic,yes,Face-to-face,Workshop identity; do not search for this person online
+oncology-mm:HCP-139,HCP-139,oncology-mm,oncology-mm:ACC-07,Fictional clinician HCP-139,US,Academic,no,Virtual,Workshop identity; do not search for this person online
+oncology-mm:HCP-140,HCP-140,oncology-mm,oncology-mm:ACC-08,Fictional clinician HCP-140,ES,Community,yes,Phone,Workshop identity; do not search for this person online
+immunology-ad:HCP-101,HCP-101,immunology-ad,immunology-ad:ACC-01,Fictional clinician HCP-101,US,Academic,no,Virtual,Workshop identity; do not search for this person online
+immunology-ad:HCP-103,HCP-103,immunology-ad,immunology-ad:ACC-02,Fictional clinician HCP-103,DE,Community,yes,Phone,Workshop identity; do not search for this person online
+immunology-ad:HCP-104,HCP-104,immunology-ad,immunology-ad:ACC-03,Fictional clinician HCP-104,IT,Academic,yes,Face-to-face,Workshop identity; do not search for this person online
+immunology-ad:HCP-109,HCP-109,immunology-ad,immunology-ad:ACC-04,Fictional clinician HCP-109,ES,Community,yes,Virtual,Workshop identity; do not search for this person online
+immunology-ad:HCP-110,HCP-110,immunology-ad,immunology-ad:ACC-05,Fictional clinician HCP-110,UK,Academic,yes,Phone,Workshop identity; do not search for this person online
+immunology-ad:HCP-111,HCP-111,immunology-ad,immunology-ad:ACC-06,Fictional clinician HCP-111,ES,Community,no,Face-to-face,Workshop identity; do not search for this person online
+immunology-ad:HCP-113,HCP-113,immunology-ad,immunology-ad:ACC-07,Fictional clinician HCP-113,IT,Academic,yes,Virtual,Workshop identity; do not search for this person online
+immunology-ad:HCP-114,HCP-114,immunology-ad,immunology-ad:ACC-08,Fictional clinician HCP-114,DE,Community,yes,Phone,Workshop identity; do not search for this person online
+immunology-ad:HCP-115,HCP-115,immunology-ad,immunology-ad:ACC-01,Fictional clinician HCP-115,JP,Academic,yes,Face-to-face,Workshop identity; do not search for this person online
+immunology-ad:HCP-116,HCP-116,immunology-ad,immunology-ad:ACC-02,Fictional clinician HCP-116,US,Regional centre,yes,Virtual,Workshop identity; do not search for this person online
+immunology-ad:HCP-117,HCP-117,immunology-ad,immunology-ad:ACC-03,Fictional clinician HCP-117,JP,Community,no,Phone,Workshop identity; do not search for this person online
+immunology-ad:HCP-118,HCP-118,immunology-ad,immunology-ad:ACC-04,Fictional clinician HCP-118,US,Community,yes,Face-to-face,Workshop identity; do not search for this person online
+immunology-ad:HCP-120,HCP-120,immunology-ad,immunology-ad:ACC-05,Fictional clinician HCP-120,US,Academic,yes,Virtual,Workshop identity; do not search for this person online
+immunology-ad:HCP-121,HCP-121,immunology-ad,immunology-ad:ACC-06,Fictional clinician HCP-121,US,Community,yes,Phone,Workshop identity; do not search for this person online
+immunology-ad:HCP-123,HCP-123,immunology-ad,immunology-ad:ACC-07,Fictional clinician HCP-123,IT,Academic,yes,Face-to-face,Workshop identity; do not search for this person online
+immunology-ad:HCP-125,HCP-125,immunology-ad,immunology-ad:ACC-08,Fictional clinician HCP-125,IT,Academic,no,Virtual,Workshop identity; do not search for this person online
+immunology-ad:HCP-126,HCP-126,immunology-ad,immunology-ad:ACC-01,Fictional clinician HCP-126,US,Academic,yes,Phone,Workshop identity; do not search for this person online
+immunology-ad:HCP-129,HCP-129,immunology-ad,immunology-ad:ACC-02,Fictional clinician HCP-129,US,Community,yes,Face-to-face,Workshop identity; do not search for this person online
+immunology-ad:HCP-130,HCP-130,immunology-ad,immunology-ad:ACC-03,Fictional clinician HCP-130,JP,Community,yes,Virtual,Workshop identity; do not search for this person online
+immunology-ad:HCP-131,HCP-131,immunology-ad,immunology-ad:ACC-04,Fictional clinician HCP-131,US,Community,yes,Phone,Workshop identity; do not search for this person online
+immunology-ad:HCP-132,HCP-132,immunology-ad,immunology-ad:ACC-05,Fictional clinician HCP-132,JP,Academic,no,Face-to-face,Workshop identity; do not search for this person online
+immunology-ad:HCP-133,HCP-133,immunology-ad,immunology-ad:ACC-06,Fictional clinician HCP-133,ES,Academic,yes,Virtual,Workshop identity; do not search for this person online
+immunology-ad:HCP-134,HCP-134,immunology-ad,immunology-ad:ACC-07,Fictional clinician HCP-134,US,Academic,yes,Phone,Workshop identity; do not search for this person online
+immunology-ad:HCP-135,HCP-135,immunology-ad,immunology-ad:ACC-08,Fictional clinician HCP-135,FR,Academic,yes,Face-to-face,Workshop identity; do not search for this person online
+immunology-ad:HCP-136,HCP-136,immunology-ad,immunology-ad:ACC-01,Fictional clinician HCP-136,UK,Regional centre,yes,Virtual,Workshop identity; do not search for this person online
+immunology-ad:HCP-137,HCP-137,immunology-ad,immunology-ad:ACC-02,Fictional clinician HCP-137,ES,Regional centre,no,Phone,Workshop identity; do not search for this person online
+immunology-ad:HCP-138,HCP-138,immunology-ad,immunology-ad:ACC-03,Fictional clinician HCP-138,US,Regional centre,yes,Face-to-face,Workshop identity; do not search for this person online
+immunology-ad:HCP-139,HCP-139,immunology-ad,immunology-ad:ACC-04,Fictional clinician HCP-139,UK,Regional centre,yes,Virtual,Workshop identity; do not search for this person online
+immunology-ad:HCP-140,HCP-140,immunology-ad,immunology-ad:ACC-05,Fictional clinician HCP-140,UK,Academic,yes,Phone,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-102,HCP-102,cardiometabolic-obesity,cardiometabolic-obesity:ACC-01,Fictional clinician HCP-102,UK,Community,no,Virtual,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-103,HCP-103,cardiometabolic-obesity,cardiometabolic-obesity:ACC-02,Fictional clinician HCP-103,US,Academic,yes,Phone,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-105,HCP-105,cardiometabolic-obesity,cardiometabolic-obesity:ACC-03,Fictional clinician HCP-105,US,Community,yes,Face-to-face,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-106,HCP-106,cardiometabolic-obesity,cardiometabolic-obesity:ACC-04,Fictional clinician HCP-106,ES,Academic,yes,Virtual,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-108,HCP-108,cardiometabolic-obesity,cardiometabolic-obesity:ACC-05,Fictional clinician HCP-108,FR,Community,yes,Phone,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-109,HCP-109,cardiometabolic-obesity,cardiometabolic-obesity:ACC-06,Fictional clinician HCP-109,US,Regional centre,no,Face-to-face,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-111,HCP-111,cardiometabolic-obesity,cardiometabolic-obesity:ACC-07,Fictional clinician HCP-111,UK,Academic,yes,Virtual,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-112,HCP-112,cardiometabolic-obesity,cardiometabolic-obesity:ACC-08,Fictional clinician HCP-112,US,Academic,yes,Phone,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-113,HCP-113,cardiometabolic-obesity,cardiometabolic-obesity:ACC-01,Fictional clinician HCP-113,FR,Academic,yes,Face-to-face,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-114,HCP-114,cardiometabolic-obesity,cardiometabolic-obesity:ACC-02,Fictional clinician HCP-114,JP,Regional centre,yes,Virtual,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-115,HCP-115,cardiometabolic-obesity,cardiometabolic-obesity:ACC-03,Fictional clinician HCP-115,UK,Regional centre,no,Phone,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-118,HCP-118,cardiometabolic-obesity,cardiometabolic-obesity:ACC-04,Fictional clinician HCP-118,UK,Community,yes,Face-to-face,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-119,HCP-119,cardiometabolic-obesity,cardiometabolic-obesity:ACC-05,Fictional clinician HCP-119,US,Academic,yes,Virtual,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-120,HCP-120,cardiometabolic-obesity,cardiometabolic-obesity:ACC-06,Fictional clinician HCP-120,US,Community,yes,Phone,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-121,HCP-121,cardiometabolic-obesity,cardiometabolic-obesity:ACC-07,Fictional clinician HCP-121,US,Regional centre,yes,Face-to-face,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-122,HCP-122,cardiometabolic-obesity,cardiometabolic-obesity:ACC-08,Fictional clinician HCP-122,IT,Academic,no,Virtual,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-124,HCP-124,cardiometabolic-obesity,cardiometabolic-obesity:ACC-01,Fictional clinician HCP-124,IT,Community,yes,Phone,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-125,HCP-125,cardiometabolic-obesity,cardiometabolic-obesity:ACC-02,Fictional clinician HCP-125,US,Academic,yes,Face-to-face,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-127,HCP-127,cardiometabolic-obesity,cardiometabolic-obesity:ACC-03,Fictional clinician HCP-127,FR,Community,yes,Virtual,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-128,HCP-128,cardiometabolic-obesity,cardiometabolic-obesity:ACC-04,Fictional clinician HCP-128,DE,Academic,yes,Phone,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-129,HCP-129,cardiometabolic-obesity,cardiometabolic-obesity:ACC-05,Fictional clinician HCP-129,US,Community,no,Face-to-face,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-130,HCP-130,cardiometabolic-obesity,cardiometabolic-obesity:ACC-06,Fictional clinician HCP-130,DE,Community,yes,Virtual,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-133,HCP-133,cardiometabolic-obesity,cardiometabolic-obesity:ACC-07,Fictional clinician HCP-133,US,Regional centre,yes,Phone,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-134,HCP-134,cardiometabolic-obesity,cardiometabolic-obesity:ACC-08,Fictional clinician HCP-134,ES,Academic,yes,Face-to-face,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-135,HCP-135,cardiometabolic-obesity,cardiometabolic-obesity:ACC-01,Fictional clinician HCP-135,IT,Regional centre,yes,Virtual,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-137,HCP-137,cardiometabolic-obesity,cardiometabolic-obesity:ACC-02,Fictional clinician HCP-137,US,Community,no,Phone,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-138,HCP-138,cardiometabolic-obesity,cardiometabolic-obesity:ACC-03,Fictional clinician HCP-138,ES,Academic,yes,Face-to-face,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-139,HCP-139,cardiometabolic-obesity,cardiometabolic-obesity:ACC-04,Fictional clinician HCP-139,JP,Academic,yes,Virtual,Workshop identity; do not search for this person online
+cardiometabolic-obesity:HCP-140,HCP-140,cardiometabolic-obesity,cardiometabolic-obesity:ACC-05,Fictional clinician HCP-140,IT,Academic,yes,Phone,Workshop identity; do not search for this person online

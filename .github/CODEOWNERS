@@ -1,0 +1,4 @@
+# Official changes are reviewed by the owner. Add delegates only when authorized.
+# Enforcement also requires GitHub branch rules; this file alone is not a lock.
+* @vivmuk
+/.github/ @vivmuk

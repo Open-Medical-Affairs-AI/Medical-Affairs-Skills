@@ -2,58 +2,58 @@
 # and institutions. Contains deliberately seeded adverse events, a product
 # quality complaint and an off-label use. Not real data.
 record_id,date,msl,contact_id,setting,country,channel,observation
-OBS-001,2026-05-20,MSL-07,HCP-107,Regional centre,US,Face-to-face,Asked directly what happens at 18 months if a patient is still responding. Said the answer 'we continue' is not evidence-based.
-OBS-002,2026-05-10,MSL-02,HCP-111,Academic,DE,Face-to-face,Wants the cytogenetic subgroup breakdown. Has asked before. Frustrated it has not come.
-OBS-003,2026-06-05,MSL-06,HCP-104,Academic,US,Phone,Says his centre now does step-up dosing as outpatient with a 24h observation window; no CRS escalations so far in 11 patients.
-OBS-004,2026-04-19,MSL-07,HCP-135,Community,US,Face-to-face,"Two of her patients discontinued because of recurrent infections, not disease progression."
-OBS-005,2026-05-19,MSL-07,HCP-132,Regional centre,US,Phone,"Thinks the infection rate in the label understates what he sees, because trial patients had mandated prophylaxis and his do not."
-OBS-006,2026-04-07,MSL-06,HCP-111,Academic,DE,Face-to-face,Asked whether we have any data after prior BCMA CAR-T. Said this is now the most common question on his ward round.
-OBS-007,2026-05-11,MSL-04,HCP-117,Academic,IT,Phone,Community centre says they cannot take these patients at all without an inpatient bed for step-up.
-OBS-008,2026-06-27,MSL-06,HCP-103,Academic,FR,Congress,Reports that a patient developed grade 3 CRS requiring hospitalisation on day 3 of step-up dosing; recovered after tocilizumab.
-OBS-009,2026-05-28,MSL-02,HCP-118,Community,US,Congress,"Says the weekly dosing schedule is the main reason patients decline, not the toxicity."
-OBS-010,2026-04-24,MSL-02,HCP-136,Regional centre,US,Virtual,Raised that the injector pens have been jamming — two of five in the last batch would not deliver the full dose.
-OBS-011,2026-06-22,MSL-03,HCP-105,Academic,JP,Virtual,"Asked about use in a patient with CrCl 24. Said he used it anyway and the patient responded, but he was 'flying blind'."
-OBS-012,2026-06-10,MSL-06,HCP-125,Academic,DE,Congress,Notes his older patients seem to do worse but he has no numbers.
-OBS-013,2026-05-20,MSL-01,HCP-103,Academic,FR,Face-to-face,Wants to know whether MRD negativity means anything for stopping treatment.
-OBS-014,2026-06-03,MSL-03,HCP-105,Academic,JP,Virtual,Says the competitor's GPRC5D agent is being preferred locally because of the lower infection signal.
-OBS-015,2026-06-07,MSL-03,HCP-107,Regional centre,US,Congress,Concerned about the taste changes and weight loss with the GPRC5D class; says patients tolerate ours better on that axis.
-OBS-016,2026-04-02,MSL-07,HCP-120,Academic,FR,Face-to-face,Asked whether there is a plan for a randomised trial. Said 'single-arm data will not get this into guidelines'.
-OBS-017,2026-04-16,MSL-06,HCP-131,Community,US,Phone,A patient became pregnant while on study treatment. Reported to the site; asked what we know about exposure.
-OBS-018,2026-05-17,MSL-04,HCP-126,Academic,US,Face-to-face,"Says referral pathways from community to academic centres are the bottleneck, not capacity."
-OBS-019,2026-05-21,MSL-03,HCP-126,Academic,US,Phone,Thinks the step-up schedule could be compressed and wants to know if anyone is studying that.
-OBS-020,2026-05-17,MSL-06,HCP-112,Academic,US,Face-to-face,Reports that one patient stopped responding after four months and he could not tell whether it was antigen loss.
-OBS-021,2026-04-15,MSL-07,HCP-111,Academic,DE,Face-to-face,Asked for real-world data on outcomes in patients who would not have met trial eligibility.
-OBS-022,2026-04-20,MSL-05,HCP-109,Community,UK,Virtual,Says the pre-medication requirements are onerous for day-case units.
-OBS-023,2026-06-23,MSL-03,HCP-140,Community,DE,Congress,Two community physicians in the network say they have never seen the product used and would not know how to start.
-OBS-024,2026-04-20,MSL-06,HCP-123,Community,US,Phone,"Raised that the sequencing question is now blocking earlier-line adoption — 'it's a how question, not a whether question'."
-OBS-025,2026-06-25,MSL-02,HCP-129,Community,US,Face-to-face,Says the response rate is not the interesting number any more; durability is.
-OBS-026,2026-04-19,MSL-07,HCP-128,Academic,ES,Face-to-face,Reported a patient hospitalised with pneumonia six weeks after starting; unclear whether treatment-related.
-OBS-027,2026-06-06,MSL-04,HCP-119,Regional centre,US,Congress,Asked whether hypogammaglobulinaemia management guidance exists. Said practice varies wildly across her network.
-OBS-028,2026-06-07,MSL-06,HCP-113,Community,JP,Virtual,Notes that nurses find the step-up dosing paperwork the hardest part of the protocol.
-OBS-029,2026-04-06,MSL-04,HCP-139,Community,US,Face-to-face,Says the label's four-prior-lines requirement does not match how patients present to him.
-OBS-030,2026-06-24,MSL-05,HCP-101,Academic,FR,Phone,Asked whether we have any quality-of-life data at all. Said its absence is 'telling'.
-OBS-031,2026-04-20,MSL-05,HCP-124,Community,US,Face-to-face,Reports using it in third line off-label in one patient after discussion with the patient; the patient responded.
-OBS-032,2026-06-21,MSL-07,HCP-126,Academic,US,Virtual,"Says the competitor CAR-T is preferred where a manufacturing slot is available, and ours is the fallback."
-OBS-033,2026-04-23,MSL-01,HCP-125,Academic,DE,Congress,Wants to know what happens to patients who progress on our agent — what is left.
-OBS-034,2026-04-14,MSL-02,HCP-101,Academic,FR,Congress,Thinks the field is over-indexed on ORR because that is what the trials reported.
-OBS-035,2026-04-08,MSL-04,HCP-125,Academic,DE,Face-to-face,Reports that a patient's disease progressed rapidly after a treatment interruption for infection.
-OBS-036,2026-06-14,MSL-06,HCP-126,Academic,US,Virtual,Asked whether there is any biomarker for who responds durably.
-OBS-037,2026-04-15,MSL-06,HCP-137,Regional centre,JP,Phone,Says his pharmacy will not stock it because of the storage requirement.
-OBS-038,2026-06-02,MSL-01,HCP-118,Community,US,Congress,Raised that patients travelling from rural areas cannot manage weekly dosing.
-OBS-039,2026-06-22,MSL-03,HCP-134,Community,ES,Face-to-face,Notes that his MDT has stopped debating whether to use bispecifics and now debates which one.
-OBS-040,2026-05-14,MSL-04,HCP-129,Community,US,Virtual,Says the safety data in older patients is 'basically absent' and he treats a lot of older patients.
-OBS-041,2026-05-22,MSL-07,HCP-127,Regional centre,US,Phone,Asked directly whether we would fund an investigator-initiated study on outpatient step-up dosing.
-OBS-042,2026-05-18,MSL-03,HCP-114,Academic,US,Virtual,Reports a patient with grade 2 ICANS that resolved without intervention; had not expected neurotoxicity.
-OBS-043,2026-06-05,MSL-03,HCP-113,Community,JP,Face-to-face,Says the guidelines will not move until there is a randomised trial and everyone knows it.
-OBS-044,2026-06-04,MSL-04,HCP-127,Regional centre,US,Face-to-face,Thinks combination with an anti-CD38 in earlier lines is where the field is going.
-OBS-045,2026-06-08,MSL-01,HCP-125,Academic,DE,Face-to-face,Reports two patients whose response deepened after six months — asked if that is expected.
-OBS-046,2026-06-06,MSL-06,HCP-116,Academic,US,Face-to-face,Says the competitor's field team have been more visible than ours.
-OBS-047,2026-05-21,MSL-06,HCP-113,Community,JP,Face-to-face,Asked whether the extramedullary disease subgroup is large enough to say anything.
-OBS-048,2026-05-28,MSL-01,HCP-107,Regional centre,US,Face-to-face,Notes that infection prophylaxis practice at her centre now diverges from the label because of local experience.
-OBS-049,2026-04-06,MSL-06,HCP-123,Community,US,Face-to-face,"Says the biggest unmet need is not another agent, it is knowing what to do after they all fail."
-OBS-050,2026-04-06,MSL-01,HCP-103,Academic,FR,Face-to-face,Reports a patient who received a double dose in error owing to a scheduling mix-up; no ill effects observed.
-OBS-051,2026-06-16,MSL-05,HCP-135,Community,US,Virtual,"Asked whether the product can be given in a day unit or requires overnight stay, and said the answer determines whether she uses it."
-OBS-052,2026-04-25,MSL-03,HCP-112,Academic,US,Congress,Thinks patient selection is the whole game and nobody has published on it.
-OBS-053,2026-06-12,MSL-06,HCP-118,Community,US,Face-to-face,Says a competitor's real-world dataset was presented at the last congress and ours was not.
-OBS-054,2026-05-15,MSL-01,HCP-126,Academic,US,Congress,Reports declining response over three cycles in one patient with no clear explanation.
-OBS-055,2026-04-16,MSL-01,HCP-135,Community,US,Face-to-face,Asked what proportion of trial patients were still on treatment at two years.
+OBS-001,2026-06-10,MSL-01,HCP-138,Academic,DE,Congress,Asked directly what happens at 18 months if a patient is still responding. Said the answer 'we continue' is not evidence-based.
+OBS-002,2026-05-24,MSL-02,HCP-133,Academic,JP,Phone,Wants the cytogenetic subgroup breakdown. Has asked before. Frustrated it has not come.
+OBS-003,2026-06-17,MSL-01,HCP-137,Community,IT,Virtual,Says his centre now does step-up dosing as outpatient with a 24h observation window; no CRS escalations so far in 11 patients.
+OBS-004,2026-04-19,MSL-07,HCP-124,Regional centre,US,Congress,"Two of her patients discontinued because of recurrent infections, not disease progression."
+OBS-005,2026-05-01,MSL-06,HCP-132,Community,ES,Face-to-face,"Thinks the infection rate in the label understates what he sees, because trial patients had mandated prophylaxis and his do not."
+OBS-006,2026-04-14,MSL-04,HCP-110,Academic,US,Phone,Asked whether we have any data after prior BCMA CAR-T. Said this is now the most common question on his ward round.
+OBS-007,2026-05-25,MSL-01,HCP-137,Community,IT,Face-to-face,Community centre says they cannot take these patients at all without an inpatient bed for step-up.
+OBS-008,2026-05-13,MSL-07,HCP-117,Community,DE,Face-to-face,Reports that a patient developed grade 3 CRS requiring hospitalisation on day 3 of step-up dosing; recovered after tocilizumab.
+OBS-009,2026-06-14,MSL-06,HCP-119,Academic,JP,Face-to-face,"Says the weekly dosing schedule is the main reason patients decline, not the toxicity."
+OBS-010,2026-05-12,MSL-07,HCP-106,Academic,US,Phone,Raised that the injector pens have been jamming — two of five in the last batch would not deliver the full dose.
+OBS-011,2026-05-05,MSL-01,HCP-112,Community,US,Phone,"Asked about use in a patient with CrCl 24. Said he used it anyway and the patient responded, but he was 'flying blind'."
+OBS-012,2026-04-27,MSL-07,HCP-109,Academic,US,Phone,Notes his older patients seem to do worse but he has no numbers.
+OBS-013,2026-06-18,MSL-04,HCP-121,Regional centre,ES,Virtual,Wants to know whether MRD negativity means anything for stopping treatment.
+OBS-014,2026-05-09,MSL-06,HCP-111,Regional centre,FR,Virtual,Says the competitor's GPRC5D agent is being preferred locally because of the lower infection signal.
+OBS-015,2026-05-18,MSL-06,HCP-131,Community,FR,Phone,Concerned about the taste changes and weight loss with the GPRC5D class; says patients tolerate ours better on that axis.
+OBS-016,2026-06-28,MSL-05,HCP-112,Community,US,Face-to-face,Asked whether there is a plan for a randomised trial. Said 'single-arm data will not get this into guidelines'.
+OBS-017,2026-04-28,MSL-04,HCP-117,Community,DE,Congress,A patient became pregnant while on study treatment. Reported to the site; asked what we know about exposure.
+OBS-018,2026-06-03,MSL-04,HCP-109,Academic,US,Face-to-face,"Says referral pathways from community to academic centres are the bottleneck, not capacity."
+OBS-019,2026-04-24,MSL-07,HCP-129,Community,US,Face-to-face,Thinks the step-up schedule could be compressed and wants to know if anyone is studying that.
+OBS-020,2026-06-18,MSL-04,HCP-127,Community,US,Face-to-face,Reports that one patient stopped responding after four months and he could not tell whether it was antigen loss.
+OBS-021,2026-04-07,MSL-04,HCP-111,Regional centre,FR,Face-to-face,Asked for real-world data on outcomes in patients who would not have met trial eligibility.
+OBS-022,2026-06-05,MSL-07,HCP-129,Community,US,Phone,Says the pre-medication requirements are onerous for day-case units.
+OBS-023,2026-04-14,MSL-03,HCP-125,Academic,FR,Face-to-face,Two community physicians in the network say they have never seen the product used and would not know how to start.
+OBS-024,2026-05-15,MSL-06,HCP-118,Regional centre,DE,Virtual,"Raised that the sequencing question is now blocking earlier-line adoption — 'it's a how question, not a whether question'."
+OBS-025,2026-06-13,MSL-04,HCP-140,Community,ES,Face-to-face,Says the response rate is not the interesting number any more; durability is.
+OBS-026,2026-04-04,MSL-02,HCP-115,Community,UK,Congress,Reported a patient hospitalised with pneumonia six weeks after starting; unclear whether treatment-related.
+OBS-027,2026-04-25,MSL-07,HCP-116,Academic,US,Face-to-face,Asked whether hypogammaglobulinaemia management guidance exists. Said practice varies wildly across her network.
+OBS-028,2026-05-15,MSL-06,HCP-112,Community,US,Face-to-face,Notes that nurses find the step-up dosing paperwork the hardest part of the protocol.
+OBS-029,2026-06-05,MSL-04,HCP-125,Academic,FR,Virtual,Says the label's four-prior-lines requirement does not match how patients present to him.
+OBS-030,2026-05-09,MSL-06,HCP-118,Regional centre,DE,Phone,Asked whether we have any quality-of-life data at all. Said its absence is 'telling'.
+OBS-031,2026-06-03,MSL-06,HCP-135,Regional centre,IT,Face-to-face,Reports using it in third line off-label in one patient after discussion with the patient; the patient responded.
+OBS-032,2026-05-23,MSL-06,HCP-134,Community,JP,Phone,"Says the competitor CAR-T is preferred where a manufacturing slot is available, and ours is the fallback."
+OBS-033,2026-04-08,MSL-01,HCP-113,Academic,FR,Congress,Wants to know what happens to patients who progress on our agent — what is left.
+OBS-034,2026-04-14,MSL-03,HCP-117,Community,DE,Face-to-face,Thinks the field is over-indexed on ORR because that is what the trials reported.
+OBS-035,2026-04-02,MSL-03,HCP-117,Community,DE,Virtual,Reports that a patient's disease progressed rapidly after a treatment interruption for infection.
+OBS-036,2026-05-13,MSL-03,HCP-134,Community,JP,Virtual,Asked whether there is any biomarker for who responds durably.
+OBS-037,2026-05-03,MSL-03,HCP-122,Community,US,Congress,Says his pharmacy will not stock it because of the storage requirement.
+OBS-038,2026-05-09,MSL-06,HCP-101,Community,ES,Congress,Raised that patients travelling from rural areas cannot manage weekly dosing.
+OBS-039,2026-04-02,MSL-02,HCP-115,Community,UK,Face-to-face,Notes that his MDT has stopped debating whether to use bispecifics and now debates which one.
+OBS-040,2026-06-28,MSL-01,HCP-136,Community,ES,Virtual,Says the safety data in older patients is 'basically absent' and he treats a lot of older patients.
+OBS-041,2026-06-16,MSL-05,HCP-119,Academic,JP,Congress,Asked directly whether we would fund an investigator-initiated study on outpatient step-up dosing.
+OBS-042,2026-05-15,MSL-03,HCP-115,Community,UK,Phone,Reports a patient with grade 2 ICANS that resolved without intervention; had not expected neurotoxicity.
+OBS-043,2026-04-07,MSL-06,HCP-114,Academic,DE,Face-to-face,Says the guidelines will not move until there is a randomised trial and everyone knows it.
+OBS-044,2026-06-13,MSL-04,HCP-140,Community,ES,Face-to-face,Thinks combination with an anti-CD38 in earlier lines is where the field is going.
+OBS-045,2026-06-22,MSL-01,HCP-104,Community,ES,Congress,Reports two patients whose response deepened after six months — asked if that is expected.
+OBS-046,2026-06-10,MSL-03,HCP-124,Regional centre,US,Face-to-face,Says the competitor's field team have been more visible than ours.
+OBS-047,2026-06-07,MSL-06,HCP-130,Academic,US,Virtual,Asked whether the extramedullary disease subgroup is large enough to say anything.
+OBS-048,2026-04-07,MSL-05,HCP-104,Community,ES,Virtual,Notes that infection prophylaxis practice at her centre now diverges from the label because of local experience.
+OBS-049,2026-05-09,MSL-07,HCP-139,Academic,US,Congress,"Says the biggest unmet need is not another agent, it is knowing what to do after they all fail."
+OBS-050,2026-05-26,MSL-05,HCP-115,Community,UK,Congress,Reports a patient who received a double dose in error owing to a scheduling mix-up; no ill effects observed.
+OBS-051,2026-05-15,MSL-05,HCP-116,Academic,US,Face-to-face,"Asked whether the product can be given in a day unit or requires overnight stay, and said the answer determines whether she uses it."
+OBS-052,2026-06-07,MSL-05,HCP-129,Community,US,Face-to-face,Thinks patient selection is the whole game and nobody has published on it.
+OBS-053,2026-05-07,MSL-04,HCP-110,Academic,US,Face-to-face,Says a competitor's real-world dataset was presented at the last congress and ours was not.
+OBS-054,2026-05-25,MSL-01,HCP-107,Community,ES,Face-to-face,Reports declining response over three cycles in one patient with no clear explanation.
+OBS-055,2026-06-14,MSL-01,HCP-135,Regional centre,IT,Face-to-face,Asked what proportion of trial patients were still on treatment at two years.
