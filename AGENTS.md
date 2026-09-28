@@ -32,8 +32,11 @@ The [skills index](SKILLS-INDEX.md) is generated from frontmatter.
 4. **Analyze:** execute the selected reasoning workflow and produce requested work.
 5. **Challenge:** use deliverable-quality-review on the actual draft; correct
    supported findings. Do not invent an error just to demonstrate self-critique.
-6. **Deliver:** usable files or explicit available-format fallback, provenance,
-   limitations, open decisions and draft/synthetic markings.
+6. **Deliver:** designed files — Word (.docx) plus PDF for documents and
+   research outputs, PowerPoint (.pptx) plus PDF for presentations — built with
+   the skill's `scripts/ma_render.py`, previewed and fixed before handover.
+   Never hand over a Markdown file or an ad-hoc python-pptx script's output.
+   Include provenance, limitations, open decisions and draft/synthetic markings.
 
 Scan human-sourced records for possible safety/PQC/special-situation findings before
 analysis. Workshop findings are simulated and must not enter real reporting systems.
@@ -43,13 +46,17 @@ to the authorized intake context and retain relevant verbatims without spreading
 ## Tools and access
 
 ```bash
+python3 skills/medical-slide-deck/scripts/ma_render.py bootstrap   # deliverable packages
 python3 scripts/workshop.py list
 python3 scripts/workshop.py start --mission field-insights --ta oncology-mm
 python3 scripts/workshop.py check --live
 python3 scripts/public_evidence.py pubmed --query 'multiple myeloma' --limit 5
 ```
 
-These commands require Python, not an API key or enterprise account. Without a
+Every skill folder carries the same standalone engine (`scripts/ma_render.py`)
+and a `scripts/requirements.txt`; `bootstrap` installs python-pptx, python-docx,
+matplotlib and reportlab. These commands require Python, not an API key or
+enterprise account. Without a
 terminal, use the host file and web tools to read the same materials. Do not pretend
 to have run a script. A URL alone does not install skills or grant capabilities.
 See [agent setup](docs/agents.md), [API setup](docs/api-setup.md),

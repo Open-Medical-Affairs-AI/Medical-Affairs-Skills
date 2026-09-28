@@ -317,7 +317,12 @@ def check_body(
     name: str, body: str, skill_dir: Path, rep: Report, tier: str = ""
 ) -> None:
     where = f"skills/{name}/SKILL.md"
-    lines = body.splitlines()
+    # The generated "Deliverable format" section is identical boilerplate kept
+    # current by scripts/sync_renderer.py; it is checked there, not charged
+    # against the skill's own reasoning budget.
+    budget_body = re.sub(r"\n*<!-- ma-render:begin.*?<!-- ma-render:end -->\n*", "\n\n",
+                         body, flags=re.S).rstrip("\n") + "\n"
+    lines = budget_body.splitlines()
 
     budget = BODY_MAX_BY_TIER.get(tier, BODY_MAX_DEFAULT)
     if len(lines) > budget:
@@ -459,6 +464,17 @@ def load_skills(only: str | None, rep: Report) -> dict[str, dict]:
     return skills
 
 
+def check_renderer_sync(rep: Report) -> None:
+    """Every skill must carry the current standalone deliverable engine."""
+    import subprocess
+    proc = subprocess.run([sys.executable, str(REPO / "scripts" / "sync_renderer.py"), "--check"],
+                          capture_output=True, text=True)
+    if proc.returncode != 0:
+        for line in proc.stdout.splitlines():
+            if "DRIFT" in line:
+                rep.error("renderer", line.replace("DRIFT", "").strip())
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--strict", action="store_true", help="treat warnings as errors")
@@ -473,6 +489,7 @@ def main() -> int:
         check_house_rules(skills, rep)
         check_synthetic_data(rep)
         check_index_is_current(skills, rep)
+        check_renderer_sync(rep)
 
     for w in rep.warnings:
         print(f"  warn   {w}")

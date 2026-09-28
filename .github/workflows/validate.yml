@@ -29,6 +29,32 @@ jobs:
       - name: Validate all skills
         run: python3 scripts/validate_skills.py
 
+      # Every skill must carry the current standalone deliverable engine, and
+      # the GrokBot agent roster must match the catalog and skill metadata.
+      - name: Check the engine copies and the GrokBot roster
+        run: |
+          python3 scripts/sync_renderer.py --check
+          python3 scripts/package_skills.py --check
+
+  render:
+    name: Deliverables render (Word, PowerPoint, PDF)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install document packages
+        run: pip install --quiet -r skills/medical-slide-deck/scripts/requirements.txt
+
+      # Renders the worked examples and the rebuilt advisory pre-read, and fails
+      # on overflow, text-only decks, a data slide without a citation, or a
+      # markdown draft that does not become a Word document.
+      - name: Render and QA the worked deliverables
+        run: python3 scripts/selftest_render.py
+
   apis:
     name: API clients (offline fixtures)
     runs-on: ubuntu-latest

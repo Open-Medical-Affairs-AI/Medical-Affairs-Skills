@@ -15,6 +15,7 @@ metadata:
   tier: foundation
   maturity: stable
   produces: Capability report and a resolved output strategy
+  deliverables: [docx, pdf]
 ---
 
 # Capability Detection and Graceful Degradation
@@ -45,15 +46,16 @@ tier.
 
 | Tier | Path | When |
 |---|---|---|
-| **1 — Native** | A runtime-provided document skill (`pptx`, `docx`, `xlsx`, `pdf`) | Best fidelity. Some agent runtimes bundle these. Hand off content and let them render. |
-| **2 — Bundled script** | This library's own generators via `python-pptx`, `python-docx`, `openpyxl`, `matplotlib` | Good fidelity, enforces our compliance rules mechanically |
-| **3 — Open format** | HTML, Markdown, CSV, SVG — formats writable with the standard library alone | Always available if the filesystem is writable. A poster becomes printable HTML; a KM curve becomes hand-written SVG. |
-| **4 — In-response** | The structured content in your reply | No filesystem needed. Always possible. |
+| **1 — Bundled engine** | `scripts/ma_render.py` in every skill: installs `python-pptx`, `python-docx`, `matplotlib`, `reportlab` on first use, then builds .pptx/.docx/.pdf with charts and layout QA | The default. Consistent design, compliance furniture, previews you can inspect |
+| **2 — Host document tools** | A runtime-provided `pptx`/`docx`/`pdf` skill, fed the same spec | Only when tier 1 cannot run (no Python) — keep this library's content rules |
+| **3 — Standard-library files** | The engine's own no-package writers: a real `.docx`, print-ready 16:9 HTML slides, HTML-to-PDF, SVG figures, CSV | Python without pip. Still a file a stakeholder can open, print or forward |
+| **4 — In-response** | The structured content in your reply | No filesystem. Always possible — say which file you could not create |
 
-**Tier 3 is not a consolation prize.** An HTML poster at the right aspect ratio
-prints correctly. Hand-written SVG has no dependencies and scales perfectly. A
-markdown deck with one section per slide is often easier to review than the
-`.pptx` would have been. Say what it is, do not apologise for it.
+**Markdown is never a deliverable.** It is a drafting and review format:
+`python3 scripts/ma_render.py report draft.md --out brief.docx` turns a markdown
+draft into the designed Word and PDF files. Handing over the `.md` itself, or a
+hand-rolled python-pptx script with default styling, is the failure this
+ladder exists to prevent.
 
 ## Checking
 
@@ -67,22 +69,22 @@ python3 $S --best-path figure --require-tier 2   # exit non-zero if unavailable
 python3 $S --check-network          # which API hosts are reachable
 ```
 
-Check **before** promising an output format. Telling someone at the start that
-you will deliver markdown because `python-pptx` is unavailable is a different
-conversation from handing them markdown when they expected slides.
+Check **before** promising an output format, and run `python3 scripts/ma_render.py
+bootstrap` first — most "unavailable" packages are one install away. Telling
+someone at the start that you will deliver print-ready HTML because Python has no
+pip is a different conversation from handing it over when they expected slides.
 
 ## The degradation notice
 
 Every degraded output carries this, at the top of the file **and** in your reply:
 
 ```
-⚠ DEGRADED OUTPUT — python-pptx is not available in this environment.
+⚠ DEGRADED OUTPUT — python-pptx is not available and could not be installed.
 
-   Delivered:  structured markdown, one section per slide, plus deck.json
+   Delivered:  deck.html (one 16:9 slide per printed page) plus deck.json
    Not delivered: the .pptx itself
    To get it:  pip install python-pptx
-               python3 skills/medical-slide-deck/scripts/build_deck.py \
-                 --spec deck.json --out deck.pptx
+               python3 scripts/ma_render.py deck deck.json --out deck.pptx
 
    The content is complete. Only the container changed.
 ```
@@ -106,10 +108,10 @@ def _have(module: str) -> bool:
         return False
 
 if _have("pptx"):
-    build_pptx(spec, out)                       # tier 2
+    build_pptx(spec, out)                       # tier 1
 else:
-    md = render_markdown(spec)                  # tier 3
-    out.with_suffix(".md").write_text(md)
+    html = ma_render.deck_html(spec)            # tier 3 — never markdown
+    out.with_suffix(".html").write_text(html)
     spec_path.write_text(json.dumps(spec, indent=2))
     print(DEGRADED_NOTICE.format(...))
     # exit 0 — this succeeded, it just succeeded differently
@@ -154,9 +156,9 @@ unverified rather than implying it was checked.
 
 **Filesystem.** Some runtimes give no writable path. Tier 4 exists for this.
 
-**Native document skills.** If the runtime provides its own `pptx`/`docx`
-skills, prefer them — better fidelity, and they handle templates and themes this
-library does not attempt.
+**Office converter.** LibreOffice (`soffice`) turns the .pptx/.docx into an
+identical PDF and powers the page previews; without it the engine renders PDFs
+with reportlab and skips previews. `bootstrap` reports both.
 
 ## When the network is missing specifically
 
@@ -172,6 +174,27 @@ is then **unverified**, and the deliverable must say so:
 
 Do not quietly emit citations as though they had been checked. That is the
 single most damaging thing this library could do.
+
+<!-- ma-render:begin — generated by scripts/sync_renderer.py; edit the template there -->
+## Deliverable format
+
+Deliver a designed **Word document (.docx) plus a PDF copy**.
+Build it with this skill's bundled engine. Markdown is for drafting only —
+never hand over a .md file, and never hand-write a python-pptx or
+python-docx script instead of the engine.
+
+```bash
+python3 scripts/ma_render.py bootstrap      # installs python-pptx, python-docx, matplotlib, reportlab
+python3 scripts/ma_render.py example report > spec.json   # spec format; or write a markdown draft
+python3 scripts/ma_render.py report spec.json --out outputs/<name>.docx --preview outputs/preview
+```
+
+Turn numbers into `stats`/`chart` blocks and comparisons into tables or
+`two_column` slides; put a source on every data element. Then open
+`outputs/preview/contact-sheet.png`, fix every overflow, empty or text-only
+page, and re-render. If a package cannot be installed the engine still
+writes a real .docx or print-ready HTML and says what degraded.
+<!-- ma-render:end -->
 
 ## Before you finish
 

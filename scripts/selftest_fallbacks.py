@@ -70,11 +70,11 @@ class Case:
 
 CASES = [
     Case(
-        name="deck degrades to markdown + build spec",
+        name="deck degrades to print-ready HTML slides + build spec",
         script=DECK, hide="pptx",
         example_args=["--example"],
         out_name="deck.pptx",
-        expect_files=(".md", ".json"),
+        expect_files=(".html", ".json"),
         must_survive=(
             "Example A, et al. J Example Med",   # the citation
             "Single-arm",                         # the design statement
@@ -85,11 +85,11 @@ CASES = [
         ),
     ),
     Case(
-        name="manuscript degrades to markdown",
+        name="manuscript degrades to a standard-library .docx",
         script=MANUSCRIPT, hide="docx",
         example_args=["--example"],
         out_name="ms.docx",
-        expect_files=(".md",),
+        expect_files=(".docx",),
         must_survive=(
             "ICMJE",                              # authorship criteria retained
             "Conflicts of interest",
@@ -120,7 +120,7 @@ CASES = [
         example_args=["km", "--example"],
         build_args=["km", "--spec", "SPEC", "--out", "OUT"],
         out_name="km.png",
-        expect_files=(".svg", ".md"),
+        expect_files=(".svg", ".html"),
         must_survive=(
             "Number at risk",                     # mandatory in every tier
             "280", "241", "61",                   # the at-risk numbers themselves
@@ -134,7 +134,7 @@ CASES = [
         example_args=["forest", "--example"],
         build_args=["forest", "--spec", "SPEC", "--out", "OUT"],
         out_name="forest.png",
-        expect_files=(".svg", ".md"),
+        expect_files=(".svg", ".html"),
         must_survive=("0.58", "0.47", "0.72", "p(int)", "hypothesis-generating"),
     ),
     Case(
@@ -143,16 +143,16 @@ CASES = [
         example_args=["waterfall", "--example"],
         build_args=["waterfall", "--spec", "SPEC", "--out", "OUT"],
         out_name="wf.png",
-        expect_files=(".svg", ".md"),
+        expect_files=(".svg", ".html"),
         must_survive=("not shown", "Enrolled", "34"),   # the exclusion must survive
     ),
     Case(
-        name="spreadsheet degrades to CSV + markdown table",
+        name="spreadsheet degrades to CSV + HTML table",
         script=SHEET, hide="openpyxl",
         example_args=["write", "--example"],
         build_args=["write", "--spec", "SPEC", "--out", "OUT"],
         out_name="tracker.xlsx",
-        expect_files=(".csv", ".md"),
+        expect_files=(".csv", ".html"),
         must_survive=(
             "DRAFT",                              # the draft marking
             "INS-003",                            # every row, not just the top ones
@@ -178,11 +178,11 @@ CASES = [
         ),
     ),
     Case(
-        name="letter degrades to markdown",
+        name="letter degrades to a standard-library .docx",
         script=LETTER, hide="docx",
         example_args=["--example", "dhcp"],
         out_name="letter.docx",
-        expect_files=(".md",),
+        expect_files=(".docx",),
         must_survive=(
             "antimicrobial prophylaxis",          # the actual safety instruction
             "post-marketing reports of serious infections",
@@ -195,7 +195,7 @@ CASES = [
         example_args=["ae", "--example"],
         build_args=["ae", "--spec", "SPEC", "--out", "OUT"],
         out_name="ae.png",
-        expect_files=(".svg", ".md"),
+        expect_files=(".svg", ".html"),
         must_survive=("n=165", "Cytokine release syndrome", "72.1", "64.2"),
     ),
 ]
@@ -208,7 +208,10 @@ def run(argv: list[str], cwd: Path, hide: str | None = None) -> subprocess.Compl
     script runs in a fresh interpreter — this is how it would genuinely behave
     on a machine where the package is not installed.
     """
-    env = None
+    import os
+    env = dict(os.environ)
+    # Never reach for the network in a test: auto-install is proved separately.
+    env["MA_RENDER_NO_INSTALL"] = "1"
     if hide:
         shim = cwd / "_shim"
         shim.mkdir(exist_ok=True)
@@ -226,13 +229,23 @@ def run(argv: list[str], cwd: Path, hide: str | None = None) -> subprocess.Compl
             "sys.meta_path.insert(0, _Block())\n",
             encoding="utf-8",
         )
-        import os
-        env = dict(os.environ)
         env["PYTHONPATH"] = str(shim) + os.pathsep + env.get("PYTHONPATH", "")
     return subprocess.run(
         [sys.executable] + argv, cwd=cwd, capture_output=True, text=True,
         timeout=120, env=env,
     )
+
+
+def _text_of(path: Path) -> str:
+    """Readable text of a produced file; .docx is unzipped and de-tagged."""
+    if path.suffix.lower() == ".docx":
+        import re
+        import zipfile
+        with zipfile.ZipFile(path) as z:
+            xml = z.read("word/document.xml").decode("utf-8", errors="replace")
+        xml = re.sub(r"</w:p>", "\n", xml)
+        return re.sub(r"<[^>]+>", "", xml).replace("&lt;", "<").replace("&gt;", ">").replace("&amp;", "&")
+    return path.read_text(encoding="utf-8", errors="replace")
 
 
 def check_case(case: Case, verbose: bool) -> tuple[bool, list[str]]:
@@ -284,8 +297,12 @@ def check_case(case: Case, verbose: bool) -> tuple[bool, list[str]]:
                 )
 
         # -- assertion 4: the substantive content survived -------------------
-        blob = "\n".join(p.read_text(encoding="utf-8", errors="replace")
-                         for p in produced)
+        blob = "\n".join(_text_of(p) for p in produced)
+        md_files = list(work.glob("*.md"))
+        if md_files:
+            problems.append(
+                f"wrote markdown ({', '.join(f.name for f in md_files)}) — markdown is "
+                f"a drafting format, never a deliverable; fall back to .docx or HTML")
         for needle in case.must_survive:
             if needle not in blob:
                 problems.append(

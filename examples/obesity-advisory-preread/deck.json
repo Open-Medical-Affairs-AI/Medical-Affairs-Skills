@@ -1,0 +1,179 @@
+{
+  "title": "Sustaining obesity treatment in routine practice",
+  "subtitle": "Advisory board pre-read — evidence gaps and HCP education priorities",
+  "kicker": "Advisory board pre-read · workshop rehearsal",
+  "short_title": "Obesity Evidence Lab · advisory pre-read",
+  "presenter": "Medical Affairs · Obesity Evidence Lab",
+  "date": "2026-09-28",
+  "synthetic": true,
+  "title_note": "Advice sought — not endorsement. No invitations issued. ADIPOSYN is a fictional workshop product; real-trial evidence is cited by PMID/NCT and kept separate from SYN sources.",
+  "slides": [
+    {
+      "type": "bullets",
+      "kicker": "The question",
+      "title": "The decision we cannot make alone",
+      "bullets": [
+        "**What evidence should we generate, and what should we teach HCPs,** so obesity pharmacotherapy started in routine practice is more often continued — and when treatment stops, patients and clinicians have a credible plan?",
+        "**Decision owners (company):** Medical Affairs with Clinical Development, Medical Education and Access",
+        "**Why external advisors:** trial persistence ≠ routine persistence; education-versus-study trade-offs need challenge"
+      ],
+      "takeaway": "Success = advice that could surprise us — including disagreement."
+    },
+    {
+      "type": "two_column",
+      "kicker": "Simulated escalation exercise",
+      "title": "Safety intake — workshop simulation only",
+      "left": {
+        "heading": "Simulated findings in SYN field notes and safety cases",
+        "style": "safety",
+        "bullets": [
+          "Acute pancreatitis hospitalisation during titration (OBS-003)",
+          "Pregnancy exposures (OBS-009; CASE-03; MI-004)",
+          "Injector failure / incomplete dose — PQC (CASE-02)",
+          "Off-label HFpEF use with outcome (OBS-013)",
+          "Severe dehydration after vomiting; severe constipation with hospital assessment"
+        ]
+      },
+      "right": {
+        "heading": "Handling rules",
+        "bullets": [
+          "**Workshop:** do NOT send these to real pharmacovigilance systems",
+          "**Real programmes:** escalate per company SOP; the reporting clock starts at company awareness",
+          "Verbatim quotes stay in the AE surface file, not in this deck"
+        ]
+      }
+    },
+    {
+      "type": "chart",
+      "title": "On-treatment efficacy is not the binding constraint",
+      "design": "Randomised, placebo-controlled · STEP 1 n=1,961 (no diabetes) · STEP 5 n=304",
+      "chart": {
+        "kind": "column",
+        "categories": ["STEP 1 · week 68", "STEP 5 · week 104"],
+        "series": [
+          {"name": "Semaglutide 2.4 mg", "values": [-14.9, -15.2]},
+          {"name": "Placebo", "values": [-2.4, -2.6]}
+        ],
+        "unit": "%",
+        "y_label": "Mean change in body weight"
+      },
+      "bullets": [
+        "STEP 1 ETD −12.4 pp (95% CI −13.4 to −11.5)",
+        "STEP 5 ETD −12.6 pp (95% CI −15.3 to −9.8) — on-treatment durability",
+        "**Limitation:** selected trial populations plus lifestyle co-intervention ≠ unselected primary care"
+      ],
+      "takeaway": "Implication: sustaining benefit is a continuation, access and counselling problem.",
+      "citation": "STEP 1: PMID 33567185 · NCT03548935.  STEP 5: PMID 36216945 · NCT03693430"
+    },
+    {
+      "type": "chart",
+      "title": "Withdrawal RCTs: continued therapy maintains weight loss",
+      "design": "Randomised withdrawal after open-label lead-in · STEP 4 (semaglutide) · SURMOUNT-4 (tirzepatide)",
+      "chart": {
+        "kind": "column",
+        "categories": ["STEP 4 · weeks 20–68", "SURMOUNT-4 · weeks 36–88"],
+        "series": [
+          {"name": "Continued active drug", "values": [-7.9, -5.5]},
+          {"name": "Switched to placebo", "values": [6.9, 14.0]}
+        ],
+        "unit": "%",
+        "y_label": "Weight change after randomisation"
+      },
+      "bullets": [
+        "STEP 4 difference −14.8 pp (95% CI −16.0 to −13.5)",
+        "SURMOUNT-4: ≥80% of lead-in loss kept in 89.5% vs 16.6%",
+        "**Fair balance:** GI adverse events more common with continued active drug",
+        "**Gap:** taper / switch strategies not settled (NCT07832084 not yet recruiting)"
+      ],
+      "citation": "STEP 4: PMID 33755728 · NCT03548987.  SURMOUNT-4: PMID 38078870 · NCT04660643"
+    },
+    {
+      "type": "stats",
+      "title": "After cessation, regain is large and patterned",
+      "design": "Meta-regression of RCTs after GLP-1RA cessation · SURMOUNT-4 post-hoc (associative)",
+      "items": [
+        {"value": "~60%", "label": "of lost weight regained at 1 year", "note": "Meta-regression of RCTs · PMID 41938838"},
+        {"value": "75.3%", "label": "plateau estimate of weight regained", "note": "95% CI 68.9–81.6 · PMID 41938838"},
+        {"value": "68%", "label": "SYN: ADIPOSYN regain at 1 year", "note": "Fictional workshop profile — not real data", "style": "limitation"}
+      ],
+      "bullets": [
+        "SURMOUNT-4 post-hoc: greater regain associated with greater reversal of waist, BP, lipids and HbA1c (PMID 41284285; associative)"
+      ],
+      "takeaway": "Education implication: an unplanned stop is a foreseeable clinical event — counsel accordingly.",
+      "citation": "PMID 41938838; PMID 41284285; SYN:ADIPOSYN product profile"
+    },
+    {
+      "type": "stats",
+      "title": "Routine practice: the persistence gap",
+      "design": "Observational · US commercial claims, Wegovy pens · n=15,811",
+      "items": [
+        {"value": "~46%", "label": "discontinued by month 5", "note": "US commercial claims · PMID 40464214"},
+        {"value": "41% → 51%", "label": "discontinuation across copay quintiles", "note": "Higher cost, higher discontinuation"}
+      ],
+      "bullets": [
+        "Narrative review: real-world persistence often suboptimal in year 1 — GI AEs, cost, perceived efficacy, fear of rare AEs (PMID 42168641)",
+        "SYN field (OBS-019): clinicians report trial discontinuation understates practice",
+        "**Limitation:** claims incompletely capture reasons for stopping; geography-specific"
+      ],
+      "citation": "PMID 40464214 (claims); PMID 42168641 (narrative review); SYN:OBS-019"
+    },
+    {
+      "type": "stats",
+      "title": "Cardiometabolic stakes — class evidence is agent-specific",
+      "design": "SELECT · randomised, placebo-controlled · adults ≥45 y, BMI ≥27, established CVD, no diabetes · n=17,604",
+      "items": [
+        {"value": "0.80", "label": "Primary MACE hazard ratio", "note": "95% CI 0.72–0.90 · semaglutide 2.4 mg vs placebo"},
+        {"value": "16.6% vs 8.2%", "label": "AE-related discontinuation", "note": "Semaglutide vs placebo", "style": "safety"}
+      ],
+      "bullets": [
+        "**Board question:** what may HCPs be taught from class data, and what requires product-specific evidence?"
+      ],
+      "takeaway": "Do NOT transfer SELECT to fictional ADIPOSYN — the SYN landscape states no product CVOT.",
+      "citation": "SELECT: PMID 37952131 · NCT03574597"
+    },
+    {
+      "type": "table",
+      "kicker": "Draft for challenge",
+      "title": "Draft gap → decision map",
+      "rows": [
+        ["#", "Evidence gap", "What it would change"],
+        ["1", "Persistence / off-ramp implementation evidence", "Support-programme funding"],
+        ["2", "Access–persistence relationship", "Payer and support design"],
+        ["3", "Taper vs continue vs switch", "Study design — check ATTAIN-MAINTAIN (NCT06584916) before duplicating"],
+        ["4", "Product-specific outcomes strategy", "Boundaries of careful class education"],
+        ["5", "Independent primary-care education", "Competence objectives — not “increase use”"]
+      ],
+      "takeaway": "Below the line: mechanism studies without a near-term decision owner. Please force-rank and record minority views.",
+      "citation": "Draft synthesis of the evidence on slides 4–8; SYN workshop sources"
+    },
+    {
+      "type": "questions",
+      "title": "What we ask of you — disagreement welcome",
+      "questions": [
+        "Where is this pre-read wrong for your setting?",
+        "Force-rank HCP education priorities against evidence-generation bets.",
+        "When is a planned stop still good care?",
+        "Where are we conflating class and product for cardiovascular claims?"
+      ],
+      "takeaway": "Output we need: advice that changes a decision — including advice to wait or not to study.",
+      "notes": "FMV compensation and invitations are a separate human process — this deck does not invite or pay anyone."
+    },
+    {
+      "type": "references",
+      "title": "References",
+      "references": [
+        "STEP 1 — PMID 33567185 · NCT03548935",
+        "STEP 5 — PMID 36216945 · NCT03693430",
+        "STEP 4 — PMID 33755728 · NCT03548987",
+        "SURMOUNT-4 — PMID 38078870 · NCT04660643",
+        "SURMOUNT-4 post-hoc (cardiometabolic reversal) — PMID 41284285",
+        "Meta-regression of weight regain after GLP-1RA cessation — PMID 41938838",
+        "US commercial claims persistence analysis — PMID 40464214",
+        "Narrative review of real-world persistence — PMID 42168641",
+        "SELECT — PMID 37952131 · NCT03574597",
+        "Taper/switch trial (not yet recruiting) — NCT07832084; ATTAIN-MAINTAIN — NCT06584916",
+        "SYN workshop sources: ADIPOSYN product profile; field observations OBS-003, -009, -013, -019; CASE-02, -03; MI-004"
+      ]
+    }
+  ]
+}

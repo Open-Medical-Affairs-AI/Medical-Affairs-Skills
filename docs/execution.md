@@ -65,7 +65,20 @@ Do not claim the skill fulfills that procedure.
 
 ## Deliver
 
-Give the requested files where possible, with a concise answer, material limitations,
-source traceability and open decisions. If a renderer is unavailable, supply the
-complete supported content in an available format. Do not claim scientific review,
-live verification, connector access or file creation that did not occur.
+Give the requested files, with a concise answer, material limitations, source
+traceability and open decisions. The default formats are fixed:
+
+| Deliverable | Files |
+|---|---|
+| Brief, report, plan, research or evidence summary, response document | Word (.docx) + PDF |
+| Presentation, advisory board or congress deck, training | PowerPoint (.pptx) + PDF |
+| Data tracker or register | Excel (.xlsx) + a Word/PDF summary |
+
+Build them with the selected skill's `scripts/ma_render.py` (run `bootstrap` once;
+it installs python-pptx, python-docx, matplotlib and reportlab). Draft in JSON or
+markdown, render, open the `--preview` contact sheet, fix overflow and text-only
+pages, and re-render. Markdown is a drafting format: never deliver a .md file,
+and never replace the engine with a hand-written python-pptx script. If packages
+cannot be installed, the engine still writes a real .docx or print-ready HTML and
+states what degraded. Do not claim scientific review, live verification,
+connector access or file creation that did not occur.

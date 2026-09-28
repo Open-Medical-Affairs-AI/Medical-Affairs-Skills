@@ -3,6 +3,11 @@
 Worked tier-3 renderers for each output type, and what each one actually loses.
 Read this when writing a new content skill or extending an existing one.
 
+Tier 1 is always the bundled engine (`scripts/ma_render.py` in every skill), which
+installs its packages on first use. Tier 3 below is what happens only when that
+install is impossible. **No tier delivers a markdown file** — markdown is where a
+draft is written, and the engine turns it into Word, PowerPoint or PDF.
+
 ---
 
 ## The shape every generator follows
@@ -15,12 +20,12 @@ def _have(module: str) -> bool:
     except ImportError:
         return False
 
-if _have("pptx"):
-    build_pptx(spec, out)                    # tier 2
+if _have("pptx") or ma_render.ensure(["pptx"])["pptx"]:
+    build_pptx(spec, out)                    # tier 1 — installs on first use
     return 0
 
-write_markdown(out.with_suffix(".md"), spec) # tier 3
-write_spec(out.with_suffix(".json"), spec)   # so tier 2 can be reached later
+write_html(out.with_suffix(".html"), spec)   # tier 3 — a file people can open
+write_spec(out.with_suffix(".json"), spec)   # so tier 1 can be reached later
 print(DEGRADATION_NOTICE)
 return 0                                     # a degraded output is a SUCCESS
 ```
@@ -39,16 +44,16 @@ full diagnostic, but a copied skill directory must still work on its own.
 
 ---
 
-## Deck → markdown + build spec
+## Deck → print-ready HTML slides + build spec
 
-One `##` section per slide, carrying title, slide type, design statement, the
-table or bullets, the citation footnote, and the speaker notes.
+One 16:9 page per slide (`@page { size: 13.333in 7.5in }`), carrying title,
+design kicker, the table, stat values or chart data, bullets, the citation
+footnote, the takeaway and the draft marking. Prints to PDF from any browser.
 
-**Loses:** slide layout, theming.
-**Keeps:** everything else — and for a review pass this is often easier to read
-than the deck, because a reviewer can search it.
+**Loses:** native charts (shown as their data tables), editability in PowerPoint.
+**Keeps:** everything else.
 
-`skills/medical-slide-deck/scripts/build_deck.py::render_markdown`
+`ma_render.deck_html` (bundled in every skill's `scripts/ma_render.py`)
 
 ---
 
@@ -66,17 +71,15 @@ print-to-PDF is what most print shops want anyway.
 
 ---
 
-## Manuscript → markdown
+## Manuscript, letter or report → standard-library .docx
 
-Title page, authors with their ICMJE criteria, structured abstract, IMRaD body,
-the full statements block (ethics, funding, writing support, conflicts, data
-sharing), and references.
+A genuine Word file written with `zipfile` alone: styles for title and headings,
+banded tables, shaded callouts (safety in oxblood), the draft marking in the
+footer with page numbers. The manuscript and letter builders draft in markdown
+internally and convert with `ma_render.md_to_docx`.
 
-**Loses:** Word styling and tracked changes.
-**Keeps:** every element a journal requires. Most journals accept a plain
-submission.
-
-`skills/scientific-manuscript/scripts/build_manuscript.py::render_markdown`
+**Loses:** embedded chart images (their data tables are kept) and some styling.
+**Keeps:** every element a journal or reviewer requires.
 
 ---
 
@@ -98,7 +101,7 @@ cannot be read as more than it says.
 
 ---
 
-## Spreadsheet → CSV + markdown table
+## Spreadsheet → CSV + HTML table
 
 **Loses:** formulas, formatting, multiple sheets, charts.
 **Keeps:** the data.

@@ -65,8 +65,15 @@ This is broad workflow coverage, not a guarantee that every task can be automate
    appropriate study interpretation and explicit gaps.
 4. **It checks the draft.** Challenges claims, reconciles numbers and preserves
    material limitations and safety findings.
-5. **You review the result.** Files where supported, sources, next actions and
-   remaining decisions. Professional approval stays with accountable people.
+5. **You review the result.** Designed files — Word + PDF for briefs and research,
+   PowerPoint + PDF for decks — with sources, next actions and remaining
+   decisions. Professional approval stays with accountable people.
+
+Every skill carries the same standalone deliverable engine (`scripts/ma_render.py`):
+native charts, stat cards, banded tables, cover pages, draft marking on every
+page, and a preview contact sheet the agent inspects before handing over.
+Markdown is only a drafting format. For GrokBot agents, build complete uploads
+with `python3 scripts/package_skills.py` — see [agent setup](docs/agents.md).
 
 ## No company connectors? Start anyway.
 
@@ -75,6 +82,7 @@ This is broad workflow coverage, not a guarantee that every task can be automate
 | Synthetic pack only | The agent completes the supported mission with local sources |
 | Internet and public APIs | It can add separately labelled real-disease evidence |
 | Your authorized company connections | It can use the permitted records and document versions |
+| Python but no pip | The engine still writes a real .docx or print-ready HTML and says what degraded |
 | No code execution or file creation | It reads available files and provides structured content in the response |
 
 A public API outage is not an empty search. A missing renderer is not permission

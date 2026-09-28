@@ -8,11 +8,17 @@ register is exactly the one in which an unsubstantiated claim slips through.
     python3 $S --example dhcp > letter.json
     python3 $S --spec letter.json --out letter.docx
 
-python-docx is optional; falls back to markdown.
+python-docx is installed on first use; without it a plainer standard-library
+.docx is written — never a markdown letter.
 """
 from __future__ import annotations
-import argparse, json, sys
+import argparse
+import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import ma_render  # noqa: E402  (bundled, standalone copy)
 
 DRAFT = "DRAFT — NOT FOR EXTERNAL USE. REQUIRES QUALIFIED MEDICAL REVIEW."
 TYPES = ["dhcp", "investigator-response", "agency-brief",
@@ -189,18 +195,16 @@ def main() -> int:
     if problems:
         return 1
     out = Path(args.out)
-    if _have("docx"):
+    if _have("docx") or ma_render.ensure(["docx"])["docx"]:
         build_docx(spec, out); print(f"Wrote {out}")
     else:
-        md = out.with_suffix(".md"); md.parent.mkdir(parents=True, exist_ok=True)
-        md.write_text(render_markdown(spec), encoding="utf-8")
-        print(f"""⚠ DEGRADED OUTPUT — python-docx is not available.
+        ma_render.md_to_docx(render_markdown(spec), out)
+        print(f"""⚠ DEGRADED OUTPUT — python-docx is not available and could not be installed.
 
-   Delivered:      {md}  (complete letter, all compliance sections)
-   Not delivered:  {out}
-   To get it:      pip install python-docx && python3 {Path(__file__).name} --spec {args.spec} --out {out}
+   Delivered:      {out}  (standard-library Word file: complete letter, all compliance sections)
+   To get the fully styled letter: pip install python-docx && python3 {Path(__file__).name} --spec {args.spec} --out {out}
 
-   The content is complete. Only Word formatting was lost.
+   The content is complete. Only Word letterhead styling was simplified.
 """)
     if spec.get("type") == "dhcp":
         print("\nDHCP letters have a review pathway that usually includes regulatory "

@@ -35,3 +35,6 @@ outputs/
 *.wav
 *.mp3
 *.pt
+
+# Packaged agent uploads — rebuild with scripts/package_skills.py
+dist/
