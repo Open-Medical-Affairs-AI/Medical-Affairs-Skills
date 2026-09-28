@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Report what this runtime can actually do, and resolve the best output path.
 
-Check before promising a deliverable. Telling someone up front that you will
-deliver markdown because python-pptx is unavailable is a different conversation
-from handing them markdown when they expected slides.
+Check before promising a deliverable — and run `python3 scripts/ma_render.py
+bootstrap` first, which installs the missing packages. Markdown is never the
+fallback deliverable: the floor is a standard-library .docx or print-ready HTML.
 
     S=skills/capability-detection/scripts/capabilities.py
 
@@ -56,15 +56,15 @@ HOSTS = {
 
 # output type -> (tier 2 requirement, tier 3 format, what tier 3 loses)
 OUTPUTS = {
-    "deck": ("pptx", "markdown + deck.json build spec",
+    "deck": ("pptx", "print-ready 16:9 HTML slides + deck.json build spec",
              "slide layout and theming; no content is lost"),
     "poster": ("pptx", "printable HTML at the correct aspect ratio",
                "exact print positioning; no content is lost"),
-    "document": ("docx", "markdown with the full structure and statements block",
-                 "Word styling; no content is lost"),
-    "manuscript": ("docx", "markdown with the full IMRaD structure",
-                   "Word styling; no content is lost"),
-    "spreadsheet": ("openpyxl", "CSV plus a markdown table",
+    "document": ("docx", "standard-library .docx with the full structure and statements block",
+                 "richer Word styling and embedded charts; no content is lost"),
+    "manuscript": ("docx", "standard-library .docx with the full IMRaD structure",
+                   "richer Word styling; no content is lost"),
+    "spreadsheet": ("openpyxl", "CSV plus a print-ready HTML table",
                     "formulas, formatting and multiple sheets"),
     "figure": ("matplotlib", "hand-written SVG plus the underlying data table",
                "nothing for line and bar figures; complex plots simplify"),

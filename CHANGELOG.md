@@ -18,6 +18,28 @@
 
 ## Unreleased
 
+- **Deliverables are designed files, never Markdown.** Added `ma_render`, a
+  standalone engine (`shared/ma_render/ma_render.py`) copied byte-for-byte into
+  every skill's `scripts/` by `scripts/sync_renderer.py`. It builds PowerPoint
+  decks (agenda, section, stats, native charts, tables, two-column, questions,
+  timeline, process, callout, closing), Word documents with a cover page,
+  key-takeaways box, callouts, charts and "page N of M" control, and PDFs
+  (LibreOffice or reportlab). It installs its packages on first use, converts
+  markdown drafts to Word/PowerPoint, and runs layout QA with a PNG contact sheet.
+- Every SKILL.md now has a generated "Deliverable format" section and
+  `metadata.deliverables`; every skill has `scripts/requirements.txt`.
+- `build_deck.py` renders through the engine and still blocks uncited data slides
+  and decks without approval status. Letter, manuscript, figure, spreadsheet and
+  menu fallbacks write .docx or HTML instead of Markdown; the fallback self-test
+  now fails any generator that writes a .md file.
+- Capability detection, AGENTS.md and docs/execution.md make the bundled engine
+  tier 1 and remove Markdown as a delivered format.
+- Added `scripts/package_skills.py` and `workshop/grokbot-agents.json`: complete
+  per-skill and per-mission GrokBot uploads with dependency closure and
+  ready-to-paste agent instructions.
+- Added `scripts/selftest_render.py` and a CI render job, and a rebuilt advisory
+  pre-read example (`examples/obesity-advisory-preread/`).
+
 - Expanded each workshop therapeutic-area pack from 10 to 32 synthetic files,
   adding cross-functional inputs for all 48 skills, including safety and
   Medical Information intake, account planning, metrics, advisory boards, IIS,

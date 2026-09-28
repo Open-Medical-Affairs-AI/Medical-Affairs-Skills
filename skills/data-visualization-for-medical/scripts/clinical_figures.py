@@ -401,10 +401,13 @@ def render_svg_fallback(kind: str, spec: dict, out: Path) -> tuple[Path, Path]:
     import svg_fallback  # noqa: E402 — deliberate late import
 
     svg_path = out.with_suffix(".svg")
-    tbl_path = out.with_suffix(".md")
+    tbl_path = out.with_suffix(".html")
     svg_path.parent.mkdir(parents=True, exist_ok=True)
     svg_path.write_text(svg_fallback.RENDERERS[kind](spec), encoding="utf-8")
-    tbl_path.write_text(svg_fallback.data_table(kind, spec), encoding="utf-8")
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import ma_render  # noqa: E402 — bundled, standalone copy
+    tbl_path.write_text(ma_render.md_to_html("# Figure data\n\n" + svg_fallback.data_table(kind, spec)),
+                        encoding="utf-8")
     return svg_path, tbl_path
 
 

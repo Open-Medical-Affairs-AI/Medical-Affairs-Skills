@@ -48,6 +48,10 @@ def start(mission, ta, out):
         + '## Inputs\n\n' + '\n'.join('- ' + i['path'] for i in inputs)
         + '\n\n## Start with these skills\n\n' + ', '.join(spec['skills'])
         + '\n\n## Expected deliverables\n\n' + '\n'.join('- ' + d for d in spec['deliverables'])
+        + '\n\n## Deliverable format\n\nDeliver designed files, never Markdown: Word (.docx) + PDF for briefs, '
+        'reports and plans; PowerPoint (.pptx) + PDF for decks. Build them with '
+        f"`python3 skills/{spec['skills'][0]}/scripts/ma_render.py` (run `bootstrap` once), use --preview, "
+        'and fix every check line before delivery.'
         + '\n\nRead AGENTS.md and docs/execution.md. Save files alongside this run. Update run.json '
         'at meaningful checkpoints with actual completed steps, source IDs, output paths and the next step. '
         'Do not mark a draft reviewed or sent. Public evidence is optional, separate context for the real disease; '

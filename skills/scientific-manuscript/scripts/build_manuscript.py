@@ -20,6 +20,9 @@ import json
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import ma_render  # noqa: E402  (bundled, standalone copy)
+
 DRAFT = "DRAFT — NOT FOR SUBMISSION. REQUIRES QUALIFIED MEDICAL REVIEW."
 
 GUIDELINES = {
@@ -456,26 +459,23 @@ def main() -> int:
         "the full EQUATOR checklist for your design."
     )
 
-    if _have("docx"):
+    if _have("docx") or ma_render.ensure(["docx"])["docx"]:
         build(spec, out)
         print(f"Wrote {out}")
         print(NEXT)
         return 0
 
-    md_path = out.with_suffix(".md")
-    md_path.parent.mkdir(parents=True, exist_ok=True)
-    md_path.write_text(render_markdown(spec), encoding="utf-8")
-    print(f"""⚠ DEGRADED OUTPUT — python-docx is not available in this environment.
+    ma_render.md_to_docx(render_markdown(spec), out)
+    print(f"""⚠ DEGRADED OUTPUT — python-docx is not available and could not be installed.
 
-   Delivered:      {md_path}  (complete manuscript, IMRaD, statements, references)
-   Not delivered:  {out}
-   To get it:      pip install python-docx
+   Delivered:      {out}  (standard-library Word file: IMRaD, statements, references)
+   To get the fully styled manuscript: pip install python-docx
                    python3 {Path(__file__).name} --spec {args.spec} --out {out}
 
    The content is complete. Title page, authorship with ICMJE criteria, the
    structured abstract, the full body, every statement and the reference list
-   all survived. Only Word styling was lost — and most journals accept a plain
-   submission.
+   all survived. Only Word styling was simplified — most journals accept a
+   plain submission.
 """)
     print(NEXT)
     return 0

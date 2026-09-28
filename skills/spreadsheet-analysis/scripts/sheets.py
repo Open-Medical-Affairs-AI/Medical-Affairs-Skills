@@ -11,13 +11,16 @@ Inconsistent category spellings split a count until the signal disappears.
     python3 $S dedupe    --file insights.csv --key contact_id --show-conflicts
     python3 $S write     --spec table.json --out tracker.xlsx
 
-openpyxl is optional — without it, `write` emits CSV plus a markdown table.
+openpyxl is optional — without it, `write` emits CSV plus a print-ready HTML table.
 """
 from __future__ import annotations
 import argparse, csv, json, re, sys
 from collections import Counter, defaultdict
 from difflib import SequenceMatcher
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import ma_render  # noqa: E402  (bundled, standalone copy)
 
 DATE_RE = re.compile(r"^\s*\d{1,4}[-/ ]\d{1,2}[-/ ]\d{1,4}\s*$")
 NUM_RE = re.compile(r"^-?\d+(\.\d+)?%?$")
@@ -205,14 +208,14 @@ def cmd_write(spec: dict, out: Path) -> int:
         print(f"Wrote {out} ({len(rows)} rows). Header frozen at row 3.")
         return 0
 
-    csv_path, md_path = out.with_suffix(".csv"), out.with_suffix(".md")
+    csv_path, md_path = out.with_suffix(".csv"), out.with_suffix(".html")
     out.parent.mkdir(parents=True, exist_ok=True)
     with csv_path.open("w", encoding="utf-8", newline="") as fh:
         w = csv.writer(fh); w.writerow(cols); w.writerows(rows)
     md = ["**DRAFT — NOT FOR EXTERNAL USE. REQUIRES QUALIFIED MEDICAL REVIEW.**", "",
           "| " + " | ".join(cols) + " |", "| " + " | ".join("---" for _ in cols) + " |"]
     md += ["| " + " | ".join(str(c) for c in r) + " |" for r in rows]
-    md_path.write_text("\n".join(md) + "\n", encoding="utf-8")
+    md_path.write_text(ma_render.md_to_html("# Data table\n\n" + "\n".join(md) + "\n"), encoding="utf-8")
     print(f"""⚠ DEGRADED OUTPUT — openpyxl is not available in this environment.
 
    Delivered:      {csv_path}  (the data)

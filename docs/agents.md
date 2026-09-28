@@ -28,6 +28,37 @@ Reading a link does not install software or grant permissions. The agent should
 use its actual tools, state gaps briefly and deliver useful supported content.
 The workshop host must be tested by the facilitator before the session.
 
+## Loading skills into GrokBot agents
+
+A GrokBot agent only knows the files it has been given. Loading one SKILL.md on
+its own drops the scripts, the skills it depends on and the deliverable engine —
+which is when an agent improvises its own slides. Give each agent a complete
+upload instead:
+
+```bash
+python3 scripts/package_skills.py          # builds dist/grokbot/ (git-ignored)
+```
+
+| Upload | Use for |
+|---|---|
+| `dist/grokbot/agents/<mission>.zip` | One GrokBot agent per workshop mission: its workflow skills, their `requires` closure, the always-loaded foundations, and the mission inputs for all three therapeutic areas |
+| `dist/grokbot/skills/<skill>.zip` | One specialist agent per skill (for example a deck agent built from `medical-slide-deck.zip`) |
+
+[`workshop/grokbot-agents.json`](../workshop/grokbot-agents.json) is the roster:
+for each agent, the skills in load order, the file types it must deliver, the
+upload, and ready-to-paste agent **instructions**. Paste those instructions into
+the agent's system prompt or custom instructions, and attach the matching zip.
+Every skill inside carries `scripts/ma_render.py` (the same standalone engine)
+and `scripts/requirements.txt`; the agent runs `ma_render.py bootstrap` once to
+install python-pptx, python-docx, matplotlib and reportlab.
+
+**Test each agent before the session** with one request that must produce a file
+("build the advisory-board pre-read deck"). It passes when the agent ran the
+engine (the reply shows `wrote … .pptx` and a `preview` contact sheet), delivered
+.pptx/.docx/.pdf rather than a .md file, and fixed the `check` lines. If the host
+has no Python, the agent cannot render files; it must say so rather than
+substitute a Markdown "deck".
+
 ## Other agents
 
 | Environment | Starting route | Capability to verify |

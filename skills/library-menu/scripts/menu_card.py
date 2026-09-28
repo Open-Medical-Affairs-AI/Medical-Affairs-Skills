@@ -7,7 +7,7 @@ written natively by matplotlib; a PNG sibling is written for READMEs.
 
     python3 menu_card.py --out assets/menu-card.svg
 
-Degrades, never fails: without matplotlib it writes a markdown menu next to
+Degrades, never fails: without matplotlib it writes an HTML menu next to
 the requested path and exits 0, stating what was delivered and how to get
 the graphic.
 """
@@ -104,14 +104,17 @@ def grouped(names: list[str]):
 
 
 def render_markdown(names: list[str], out: Path) -> Path:
-    md = out.with_suffix(".md")
+    """The menu as a print-ready HTML page (drafted in markdown, never shipped as it)."""
+    md = out.with_suffix(".html")
     lines = [f"# Medical Affairs Skills — menu ({len(names)} skills, {date.today()})", ""]
     for title, _c, members in grouped(names):
         if not members:
             continue
         lines.append(f"## {title}")
         lines += [f"- `{m}`" for m in members] + [""]
-    md.write_text("\n".join(lines), encoding="utf-8")
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import ma_render  # noqa: E402 — bundled, standalone copy
+    md.write_text(ma_render.md_to_html("\n".join(lines)), encoding="utf-8")
     return md
 
 
@@ -217,7 +220,7 @@ def main() -> int:
         md = render_markdown(names, out)
         print(f"""⚠ DEGRADED OUTPUT — matplotlib is not available in this environment.
 
-   Delivered:      {md}   (the menu as markdown, all {len(names)} skills)
+   Delivered:      {md}   (the menu as a print-ready HTML page, all {len(names)} skills)
    Not delivered:  {out}
    To get it:      pip install matplotlib
                    python3 {Path(__file__).name} --out {out}
