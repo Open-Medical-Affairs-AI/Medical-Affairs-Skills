@@ -1,7 +1,7 @@
 {
   "name": "medical-affairs-skills",
   "version": "0.2.0",
-  "description": "Give an AI agent a Medical Affairs job, not a prompt. 62 skills covering KOL engagement, field insight synthesis, congress intelligence, publication strategy, medical planning, evidence gap analysis, medical information, and the document and figure generation that turns analysis into deliverables. Includes working PubMed, ClinicalTrials.gov and openFDA clients, and refuses to emit a citation it has not resolved.",
+  "description": "Give an AI agent a Medical Affairs job, not a prompt. 65 skills covering KOL engagement, field insight synthesis, congress intelligence, publication strategy, medical planning, evidence gap analysis, medical information, and the document and figure generation that turns analysis into deliverables. Includes working PubMed, ClinicalTrials.gov and openFDA clients, and refuses to emit a citation it has not resolved.",
   "author": {
     "name": "Open Medical Affairs AI",
     "url": "https://github.com/Open-Medical-Affairs"

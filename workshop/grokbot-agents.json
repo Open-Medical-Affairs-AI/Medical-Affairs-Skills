@@ -503,6 +503,50 @@
       ],
       "install": "python3 skills/msl-administrative-operations/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'Clear the administrative queue' Medical Affairs agent. Objective: Prepare a source-backed MSL administrative queue for the selected therapeutic area: open tasks, overdue items, access checks and next pre-call preparation. Use the scenario date of 1 October 2026. Do not claim tasks were completed or CRM records updated.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, msl-administrative-operations. The workflow skills for this agent are: msl-administrative-operations.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf. Run `python3 skills/msl-administrative-operations/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
+    },
+    {
+      "id": "launch-plan-swarm",
+      "title": "Build the whole medical launch plan",
+      "skills": [
+        "medical-launch-plan",
+        "launch-timeline-and-governance",
+        "launch-field-training",
+        "launch-medical-readiness"
+      ],
+      "load_order": [
+        "medical-affairs-foundations",
+        "deliverable-quality-review",
+        "capability-detection",
+        "strategic-analysis",
+        "medical-launch-plan",
+        "launch-timeline-and-governance",
+        "evidence-appraisal",
+        "launch-field-training",
+        "launch-medical-readiness"
+      ],
+      "deliverables": [
+        "docx",
+        "pdf",
+        "pptx"
+      ],
+      "upload": "dist/grokbot/agents/launch-plan-swarm.zip",
+      "inputs": [
+        "workshop/data/{ta}/product-profile.md",
+        "workshop/data/{ta}/medical-plan.md",
+        "workshop/data/{ta}/evidence-landscape.md",
+        "workshop/data/{ta}/launch-readiness-register.md",
+        "workshop/data/{ta}/integrated-evidence-plan.csv",
+        "workshop/data/{ta}/scientific-platform-draft.md",
+        "workshop/data/{ta}/publication-plan.md",
+        "workshop/data/{ta}/field-account-plan.csv",
+        "workshop/data/{ta}/medical-information-enquiries.csv",
+        "workshop/data/{ta}/safety-case-series.md",
+        "workshop/data/{ta}/payer-hta-brief.md",
+        "workshop/data/{ta}/guideline-landscape.md",
+        "workshop/data/{ta}/medical-education-needs.md"
+      ],
+      "install": "python3 skills/medical-launch-plan/scripts/ma_render.py bootstrap",
+      "instructions": "You are the 'Build the whole medical launch plan' Medical Affairs agent. Objective: Act as the Launch Lead for the selected fictional product's proposed label expansion. Build the launch facts sheet and six-month question list, staff an org chart of digital workers (one per launch workstream, each with its own context packet), run them in waves with human decision gates, integrate the joins, and finish with an independent readiness verdict that is allowed to be 'not ready'. Every gap carries a named human owner and a date.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, strategic-analysis, medical-launch-plan, launch-timeline-and-governance, evidence-appraisal, launch-field-training, launch-medical-readiness. The workflow skills for this agent are: medical-launch-plan, launch-timeline-and-governance, launch-field-training, launch-medical-readiness.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf, pptx. Run `python3 skills/medical-launch-plan/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
     }
   ],
   "skills": [
@@ -830,6 +874,19 @@
       "upload": "dist/grokbot/skills/kol-engagement-brief.zip"
     },
     {
+      "skill": "launch-field-training",
+      "requires": [
+        "medical-affairs-foundations",
+        "evidence-appraisal"
+      ],
+      "deliverables": [
+        "docx",
+        "pdf",
+        "pptx"
+      ],
+      "upload": "dist/grokbot/skills/launch-field-training.zip"
+    },
+    {
       "skill": "launch-medical-readiness",
       "requires": [
         "medical-affairs-foundations",
@@ -841,6 +898,19 @@
         "pptx"
       ],
       "upload": "dist/grokbot/skills/launch-medical-readiness.zip"
+    },
+    {
+      "skill": "launch-timeline-and-governance",
+      "requires": [
+        "medical-affairs-foundations",
+        "strategic-analysis"
+      ],
+      "deliverables": [
+        "docx",
+        "pdf",
+        "pptx"
+      ],
+      "upload": "dist/grokbot/skills/launch-timeline-and-governance.zip"
     },
     {
       "skill": "library-menu",
@@ -949,6 +1019,19 @@
         "pdf"
       ],
       "upload": "dist/grokbot/skills/medical-information-response.zip"
+    },
+    {
+      "skill": "medical-launch-plan",
+      "requires": [
+        "medical-affairs-foundations",
+        "strategic-analysis"
+      ],
+      "deliverables": [
+        "docx",
+        "pdf",
+        "pptx"
+      ],
+      "upload": "dist/grokbot/skills/medical-launch-plan.zip"
     },
     {
       "skill": "medical-slide-deck",

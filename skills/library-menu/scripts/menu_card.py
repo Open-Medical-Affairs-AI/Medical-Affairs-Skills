@@ -43,9 +43,11 @@ GROUPS: list[tuple[str, str, list[str]]] = [
     ("Prepare for the moment", INK, [
         "kol-engagement-brief", "congress-intelligence",
         "competitive-intelligence", "launch-medical-readiness",
+        "launch-field-training",
         "congress-abstract-and-poster",
     ]),
     ("Build the plan", INK, [
+        "medical-launch-plan", "launch-timeline-and-governance",
         "medical-strategy-plan", "integrated-evidence-plan",
         "evidence-gap-analysis", "scientific-communication-strategy",
         "scientific-platform", "field-medical-planning",

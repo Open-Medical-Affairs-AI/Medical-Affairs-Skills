@@ -35,10 +35,11 @@ and API keys are not prerequisites. Do not use real company or patient material.
 
 ## Team allocation
 
-Use the 16 missions in `catalog.json`. For six tables, start with field insights,
+Use the 17 missions in `catalog.json`. For six tables, start with field insights,
 KOL meeting, congress, medical information, evidence investment and publication.
 Use different therapeutic areas to compare reasoning, not just output wording.
-Fast teams can try connected planning, patient partnership or launch readiness.
+Fast teams can try connected planning, patient partnership, launch readiness
+or the launch-plan swarm.
 
 ## Teach one local rule
 

@@ -3,16 +3,16 @@ name: launch-medical-readiness
 description: >-
   Assess whether Medical Affairs is actually ready for a launch, label expansion
   or major data readout — and say plainly where it is not. Use when preparing for
-  a launch, running a readiness review or gate, planning the medical activities
-  ahead of an approval, or when someone asks whether the team is ready. This is
-  a gate with a verdict, not a plan: it tests evidence readiness, field
-  capability, medical information coverage, publication timing, and the questions
-  the field will be asked in the first six months that nobody can currently
-  answer. For the plan itself, use medical-strategy-plan.
+  a launch, running a readiness review or gate, or when someone asks whether
+  the team is ready. This is a gate with a verdict, not a plan: it tests
+  evidence readiness, field capability, medical information coverage,
+  publication timing, and the questions the field will be asked in the first
+  six months that nobody can currently answer. For the launch plan itself, use
+  medical-launch-plan.
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   tier: workflow
   maturity: stable
   requires:
@@ -21,6 +21,7 @@ metadata:
   suggests:
     - evidence-gap-analysis
     - medical-strategy-plan
+    - medical-launch-plan
     - deliverable-quality-review
   produces: Launch readiness assessment with a verdict
   deliverables: [docx, pdf, pptx]

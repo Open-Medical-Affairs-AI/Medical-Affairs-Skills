@@ -337,6 +337,39 @@
         "Draft records with source IDs",
         "Weekly status brief"
       ]
+    },
+    {
+      "id": "launch-plan-swarm",
+      "title": "Build the whole medical launch plan",
+      "objective": "Act as the Launch Lead for the selected fictional product's proposed label expansion. Build the launch facts sheet and six-month question list, staff an org chart of digital workers (one per launch workstream, each with its own context packet), run them in waves with human decision gates, integrate the joins, and finish with an independent readiness verdict that is allowed to be 'not ready'. Every gap carries a named human owner and a date.",
+      "inputs": [
+        "workshop/data/{ta}/product-profile.md",
+        "workshop/data/{ta}/medical-plan.md",
+        "workshop/data/{ta}/evidence-landscape.md",
+        "workshop/data/{ta}/launch-readiness-register.md",
+        "workshop/data/{ta}/integrated-evidence-plan.csv",
+        "workshop/data/{ta}/scientific-platform-draft.md",
+        "workshop/data/{ta}/publication-plan.md",
+        "workshop/data/{ta}/field-account-plan.csv",
+        "workshop/data/{ta}/medical-information-enquiries.csv",
+        "workshop/data/{ta}/safety-case-series.md",
+        "workshop/data/{ta}/payer-hta-brief.md",
+        "workshop/data/{ta}/guideline-landscape.md",
+        "workshop/data/{ta}/medical-education-needs.md"
+      ],
+      "skills": [
+        "medical-launch-plan",
+        "launch-timeline-and-governance",
+        "launch-field-training",
+        "launch-medical-readiness"
+      ],
+      "deliverables": [
+        "Integrated launch plan with org chart and workstream plans",
+        "Critical path, gate criteria and RACI",
+        "Six-month question list with routes",
+        "Independent readiness verdict and gap register",
+        "Leadership deck"
+      ]
     }
   ],
   "skill_inputs": {
@@ -448,9 +481,21 @@
       "workshop/data/{ta}/kol-dossiers.md",
       "workshop/data/{ta}/interaction-notes.md"
     ],
+    "launch-field-training": [
+      "workshop/data/{ta}/medical-information-enquiries.csv",
+      "workshop/data/{ta}/scientific-platform-draft.md",
+      "workshop/data/{ta}/product-profile.md",
+      "workshop/data/{ta}/safety-case-series.md"
+    ],
     "launch-medical-readiness": [
       "workshop/data/{ta}/launch-readiness-register.md",
       "workshop/data/{ta}/mlr-review-comments.md"
+    ],
+    "launch-timeline-and-governance": [
+      "workshop/data/{ta}/launch-readiness-register.md",
+      "workshop/data/{ta}/integrated-evidence-plan.csv",
+      "workshop/data/{ta}/publication-plan.md",
+      "workshop/data/{ta}/guideline-landscape.md"
     ],
     "library-menu": [
       "workshop/data/{ta}/product-profile.md"
@@ -486,6 +531,12 @@
     "medical-information-response": [
       "workshop/data/{ta}/medical-information-enquiries.csv",
       "workshop/data/{ta}/product-profile.md"
+    ],
+    "medical-launch-plan": [
+      "workshop/data/{ta}/product-profile.md",
+      "workshop/data/{ta}/launch-readiness-register.md",
+      "workshop/data/{ta}/medical-plan.md",
+      "workshop/data/{ta}/evidence-landscape.md"
     ],
     "medical-slide-deck": [
       "workshop/data/{ta}/scientific-platform-draft.md",

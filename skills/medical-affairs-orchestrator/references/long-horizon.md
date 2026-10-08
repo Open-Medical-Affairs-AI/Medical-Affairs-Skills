@@ -28,4 +28,9 @@ this topic" is a legitimate finding, and exactly the kind an agent optimising
 for apparent productivity avoids.
 
 
+**A whole launch plan** is the largest chain in the library and has its own
+coordinator: load `medical-launch-plan`. It runs the workflows as an org chart
+of digital workers, each with its own context packet, in waves separated by
+human decision gates, and ends with an independent readiness verdict.
+
 For checkpoint format and change propagation, read [execution.md](../../../docs/execution.md).

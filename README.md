@@ -2,7 +2,7 @@
 
 **Give your agent a Medical Affairs objective. Get a traceable draft you can review.**
 
-62 skills · 16 workshop missions · 3 therapeutic areas · public scientific APIs · synthetic data included
+65 skills · 17 workshop missions · 3 therapeutic areas · public scientific APIs · synthetic data included
 
 ![How Medical Affairs Agent Skills works: give an objective, use synthetic data or public evidence, let the agent analyze and check, then review the deliverables.](assets/how-it-works.png)
 
@@ -174,7 +174,7 @@ include presentations, documents, spreadsheets, PDFs and interactive HTML.
 Actual formats depend on the agent environment; supported content remains available
 when a preferred renderer is missing.
 
-[All 62 skills](SKILLS-INDEX.md) · [Capability menu](assets/menu-card.svg)
+[All 65 skills](SKILLS-INDEX.md) · [Capability menu](assets/menu-card.svg)
 
 ## Open to use. Official changes controlled by the maintainers.
 
