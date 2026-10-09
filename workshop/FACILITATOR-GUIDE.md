@@ -48,13 +48,14 @@ prompting workshop.
 **Six teams, one mission each.** Do not give two teams the same mission — the
 breadth across the room is what makes the show-and-tell worth sitting through.
 
-Teams pick their therapeutic area from `data/`: oncology (multiple myeloma),
+Teams pick their therapeutic area from `Data-Sources/synthetic/` (the
+[Data-Sources](https://github.com/Open-Medical-Affairs/Data-Sources) repository): oncology (multiple myeloma),
 immunology (atopic dermatitis), or cardiometabolic (obesity). The missions are
 TA-agnostic; the data packs are not.
 
 For workshops focused on a specific function, or for a second day beyond the
-six introductory missions, use the expanded 32-file packs and the skill-by-skill
-jobs in [`data/SKILL-COVERAGE.md`](data/SKILL-COVERAGE.md). The same file schema
+six introductory missions, use the expanded 31-file packs and the skill-by-skill
+jobs in [`SKILL-COVERAGE.md`](https://github.com/Open-Medical-Affairs/Data-Sources/blob/main/synthetic/SKILL-COVERAGE.md). The same file schema
 is available in every therapeutic area, which makes cross-team comparisons
 possible without giving teams identical clinical problems.
 

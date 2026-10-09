@@ -18,7 +18,7 @@ metadata:
 Read [connections.md](../../docs/connections.md) for the platform-specific route.
 
 1. Determine whether this is a workshop or real work. Workshop mode immediately
-   uses [connected practice data](../../workshop/data/connected/README.md).
+   uses [connected practice data](https://github.com/Open-Medical-Affairs/Data-Sources/blob/main/synthetic/connected/README.md).
 2. Inspect the host tools. Prefer an authorized existing connector. Otherwise use
    an approved export or local read-only query. Do not claim a connector is installed.
 3. For Veeva, identify Vault CRM, Salesforce-based CRM, or another Vault application
@@ -33,8 +33,8 @@ Read [connections.md](../../docs/connections.md) for the platform-specific route
 The local practice database requires Python only:
 
 ```bash
-python3 scripts/query_database.py --db workshop/data/connected/medical-affairs.sqlite --schema
-python3 scripts/query_database.py --db workshop/data/connected/medical-affairs.sqlite --sql 'SELECT * FROM hcps LIMIT 5'
+python3 scripts/query_database.py --db Data-Sources/synthetic/connected/medical-affairs.sqlite --schema
+python3 scripts/query_database.py --db Data-Sources/synthetic/connected/medical-affairs.sqlite --sql 'SELECT * FROM hcps LIMIT 5'
 ```
 
 A cloud agent cannot see a laptop database automatically. Use an authorized local

@@ -9,6 +9,8 @@ import json
 from pathlib import Path
 import re
 
+import data_sources
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -55,7 +57,7 @@ essential reference is missing, name that limitation and ask for it.
 
 '''
     for rel in paths:
-        text += '\n\n---\n\n## Included file: '+rel+'\n\n'+(ROOT/rel).read_text()
+        text += '\n\n---\n\n## Included file: '+rel+'\n\n'+data_sources.resolve(rel).read_text()
     return text
 
 

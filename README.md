@@ -124,9 +124,24 @@ python3 scripts/public_evidence.py pubmed --query 'multiple myeloma' --limit 5
 
 ## A fictional organization you can actually work with
 
-The oncology, immunology and cardiometabolic packs contain **32 source files each**:
-profiles, field notes, enquiries, trial summaries, congress abstracts, manuscripts,
-budgets, study concepts, readiness trackers, review comments and more.
+The practice data lives in its own repository,
+**[Open-Medical-Affairs/Data-Sources](https://github.com/Open-Medical-Affairs/Data-Sources)**, which keeps two clearly separated halves:
+**synthetic** workshop datasets (fictional, marked `SYNTHETIC`) and a catalog of
+**52 real public data sources** grouped by Medical Affairs job. Clone it into this
+repository's root so paths such as `Data-Sources/synthetic/oncology-mm/product-profile.md`
+resolve (the folder is git-ignored here):
+
+```bash
+git clone https://github.com/Open-Medical-Affairs/Data-Sources.git Data-Sources   # or: python3 scripts/data_sources.py --fetch
+```
+
+A sibling checkout (`../Data-Sources`) or `MA_DATA_SOURCES=/path` also works. Agents
+without a shell can read every file through the raw links in
+[`synthetic/index.json`](https://github.com/Open-Medical-Affairs/Data-Sources/blob/main/synthetic/index.json).
+
+The oncology, immunology and cardiometabolic packs contain **31 source files each,
+plus a README**: profiles, field notes, enquiries, trial summaries, congress abstracts,
+manuscripts, budgets, study concepts, readiness trackers, review comments and more.
 
 The connected practice organization adds **24 accounts, 90 clinicians, 163 field
 interactions, 18 enquiries, 36 content assets, 90 engagement records, 12 patient
@@ -135,11 +150,13 @@ Use its CSV files or the included SQLite database. No server or login is needed.
 
 All products, people and clinical results in these packs are fictional. Their
 inconsistencies are deliberate exercises in judgment. Real bibliographic examples
-are stored [separately](workshop/public-evidence/README.md), never as evidence for
+are stored [separately](https://github.com/Open-Medical-Affairs/Data-Sources/blob/main/public/evidence-snapshots/README.md), never as evidence for
 fictional product claims.
 
-[Practice organization](workshop/data/connected/README.md) ·
-[Original skill coverage](workshop/data/SKILL-COVERAGE.md) ·
+[Synthetic datasets](https://github.com/Open-Medical-Affairs/Data-Sources/blob/main/synthetic/README.md) ·
+[Public data sources](https://github.com/Open-Medical-Affairs/Data-Sources/blob/main/public/catalog.md) ·
+[Practice organization](https://github.com/Open-Medical-Affairs/Data-Sources/blob/main/synthetic/connected/README.md) ·
+[Original skill coverage](https://github.com/Open-Medical-Affairs/Data-Sources/blob/main/synthetic/SKILL-COVERAGE.md) ·
 [Complete mission and input catalog](workshop/catalog.json)
 
 ## The October workshop

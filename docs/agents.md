@@ -21,6 +21,7 @@ If it has a shell, the agent can clone the repository itself:
 ```bash
 git clone https://github.com/Open-Medical-Affairs/Medical-Affairs-Skills.git
 cd Medical-Affairs-Skills
+git clone https://github.com/Open-Medical-Affairs/Data-Sources.git Data-Sources
 python3 scripts/workshop.py check --live
 ```
 

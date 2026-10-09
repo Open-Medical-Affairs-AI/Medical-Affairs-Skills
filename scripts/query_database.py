@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Query an existing local SQLite file read-only. No remote access or drivers.
 
-python3 scripts/query_database.py --db workshop/data/connected/medical-affairs.sqlite --schema
-python3 scripts/query_database.py --db workshop/data/connected/medical-affairs.sqlite --sql 'SELECT * FROM hcps LIMIT 5'
+python3 scripts/query_database.py --db Data-Sources/synthetic/connected/medical-affairs.sqlite --schema
+python3 scripts/query_database.py --db Data-Sources/synthetic/connected/medical-affairs.sqlite --sql 'SELECT * FROM hcps LIMIT 5'
 """
 import argparse
 import json
@@ -49,6 +49,9 @@ def main():
     args = ap.parse_args()
     if not 1 <= args.limit <= 1000:
         ap.error('limit must be 1..1000')
+    if not args.db.exists() and str(args.db).startswith('Data-Sources/'):
+        import data_sources  # a sibling or $MA_DATA_SOURCES checkout
+        args.db = data_sources.resolve(str(args.db))
     sql = "SELECT name, sql FROM sqlite_master WHERE type IN ('table','view') ORDER BY name" if args.schema else args.sql
     try:
         print(json.dumps(query(args.db, sql, args.limit), indent=2))

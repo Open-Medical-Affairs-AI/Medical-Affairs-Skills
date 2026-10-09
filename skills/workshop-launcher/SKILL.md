@@ -23,6 +23,9 @@ execute and save; do not assume a browser chat has a terminal or background jobs
    invite a therapeutic-area change while continuing. Do not ask for a skill name.
 3. Read [catalog.json](../../workshop/catalog.json), selecting only the relevant
    mission and inputs. For a named skill use its `skill_inputs` entry.
+   Inputs read `Data-Sources/...`: if `python3 scripts/data_sources.py` finds no
+   checkout, run it with `--fetch`, or read the raw links in the Data-Sources
+   repository's `synthetic/index.json`.
 4. With Python, run `python3 scripts/workshop.py start --mission field-insights
    --ta oncology-mm` as one command from the repository root. Without Python,
    read the same input files directly using available file tools.

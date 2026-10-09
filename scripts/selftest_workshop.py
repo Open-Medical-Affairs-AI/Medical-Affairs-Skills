@@ -21,9 +21,12 @@ import query_database
 import workshop
 import msl_admin
 from build_starter_bundle import build
+import data_sources
 
 ROOT = Path(__file__).resolve().parents[1]
-DB = ROOT / 'workshop/data/connected/medical-affairs.sqlite'
+DB = data_sources.resolve(data_sources.CONNECTED_DB)
+if not DB.is_file():
+    sys.exit('Workshop tests need the datasets. ' + data_sources.HINT)
 
 
 def load(name, path):
@@ -80,7 +83,7 @@ class WorkshopTests(unittest.TestCase):
             self.assertTrue(inputs, name)
             for ta in workshop.TAS:
                 for p in inputs:
-                    self.assertTrue((ROOT/p.replace('{ta}',ta)).is_file(), (name,p))
+                    self.assertTrue(workshop.source_path(p.replace('{ta}',ta)).is_file(), (name,p))
 
     def test_resume_detects_changed_source(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -121,7 +124,7 @@ class WorkshopTests(unittest.TestCase):
     def test_transcript_import_needs_no_audio_engine(self):
         with tempfile.TemporaryDirectory() as tmp:
             out=Path(tmp)/'transcript.md'
-            source=ROOT/'workshop/data/oncology-mm/advisory-board-transcript.md'
+            source=data_sources.resolve('Data-Sources/synthetic/oncology-mm/advisory-board-transcript.md')
             result=cli('scripts/transcribe.py','--input',str(source),'--out',str(out))
             self.assertEqual(result.returncode,0,result.stderr)
             self.assertIn(source.read_text(),out.read_text())
