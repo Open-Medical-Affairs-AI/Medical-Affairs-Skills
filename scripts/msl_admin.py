@@ -13,8 +13,10 @@ from pathlib import Path
 import sqlite3
 import uuid
 
+import data_sources
+
 ROOT = Path(__file__).resolve().parents[1]
-DB = ROOT / 'workshop/data/connected/medical-affairs.sqlite'
+DB = data_sources.resolve(data_sources.CONNECTED_DB)
 TAS = ('oncology-mm', 'immunology-ad', 'cardiometabolic-obesity')
 
 
@@ -49,7 +51,7 @@ def assemble(ta, hcp, out):
     run = Path(out) / ('msl-' + ta + '-' + hcp.split(':')[-1] + '-' + uuid.uuid4().hex[:6])
     run.mkdir(parents=True, exist_ok=False)
     packet = {'label': 'SYNTHETIC WORKSHOP DRAFT', 'status': 'source_context_prepared',
-              'source_db': 'workshop/data/connected/medical-affairs.sqlite',
+              'source_db': 'Data-Sources/synthetic/connected/medical-affairs.sqlite',
               'source_sha256': hashlib.sha256(DB.read_bytes()).hexdigest(),
               'scenario_date': '2026-10-01', 'hcp': person, 'account': account,
               'historical_interactions': interactions, 'task_register': tasks, 'access_context': access,

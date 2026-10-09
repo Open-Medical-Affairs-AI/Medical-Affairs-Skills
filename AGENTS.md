@@ -14,9 +14,15 @@ workflow skills. Read detailed references only when the actual task needs them.
   [medical-affairs-orchestrator](skills/medical-affairs-orchestrator/SKILL.md).
 - **A named skill:** read its SKILL.md and required dependencies.
 - **Data or connector question:** load [data-connection](skills/data-connection/SKILL.md).
+- **Where the data is:** practice inputs live in
+  [Open-Medical-Affairs/Data-Sources](https://github.com/Open-Medical-Affairs/Data-Sources). Paths that start with
+  `Data-Sources/` resolve to a checkout at `./Data-Sources` (run
+  `python3 scripts/data_sources.py --fetch`), `../Data-Sources` or `$MA_DATA_SOURCES`;
+  without a shell, read them by raw link from its `synthetic/index.json`. Real public
+  sources are cataloged in its `public/catalog.json` (respect `data_policy`).
 
-The [catalog](workshop/catalog.json) maps all 62 skills to bundled practice inputs
-and offers 16 missions. Default: field-insights, oncology-mm. Select only the task
+The [catalog](workshop/catalog.json) maps all 65 skills to bundled practice inputs
+and offers 17 missions. Default: field-insights, oncology-mm. Select only the task
 and therapeutic area needed; do not load the whole repository into context.
 The [skills index](SKILLS-INDEX.md) is generated from frontmatter.
 

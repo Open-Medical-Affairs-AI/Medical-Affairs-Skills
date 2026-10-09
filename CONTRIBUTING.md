@@ -132,7 +132,9 @@ without forking it.
 
 ## Sample data rules
 
-All data in `workshop/data/` must be **fictional**: fictional company, fictional
+Sample data lives in [Open-Medical-Affairs/Data-Sources](https://github.com/Open-Medical-Affairs/Data-Sources), not in this
+repository; `scripts/validate_skills.py` fails if dataset files reappear under
+`workshop/data/`. All data in `Data-Sources/synthetic/` must be **fictional**: fictional company, fictional
 products, fictional KOLs, fictional institutions. Every file carries a
 `SYNTHETIC DATA` banner in its first eight lines and the validator fails without
 it.

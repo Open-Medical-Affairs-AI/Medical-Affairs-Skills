@@ -12,7 +12,7 @@ description: >-
 license: Apache-2.0
 allowed-tools: Read, Write, Edit, Bash
 metadata:
-  version: "1.2.0"
+  version: "1.3.0"
   tier: orchestrator
   maturity: stable
   requires:
@@ -82,6 +82,8 @@ have to hold them in permanently resident context.
 | What should we publish; publication plan; "what are we over-communicating" | `scientific-communication-strategy` |
 | The core narrative, scientific statements, lexicon; "what is our scientific story" | `scientific-platform` |
 | Territory and MSL planning; field objectives; "is this field plan realistic" | `field-medical-planning` |
+| Build the launch plan; plan the medical launch; launch agent swarm | `medical-launch-plan` |
+| Launch timeline, workback, gate criteria, launch RACI | `launch-timeline-and-governance` |
 | Are we ready for launch; readiness gate; label expansion preparation | `launch-medical-readiness` |
 | Guideline inclusion or positioning; a guideline just updated | `guideline-engagement` |
 | Scorecard, KPIs, "how do we show medical's value", choosing success measures | `medical-affairs-metrics` |
@@ -99,6 +101,7 @@ have to hold them in permanently resident context.
 | MSL open tasks, duplicate records and weekly administration | `msl-administrative-operations` |
 | Prepare for a meeting with a named expert; KOL profile; "brief me before this call" | `kol-engagement-brief` |
 | Medical education, IME grant, curriculum, speaker programme, symposium, preceptorship | `medical-education-program` |
+| Launch training for MSLs, scenario bank, field certification | `launch-field-training` |
 | An IIS, ISR or IIT proposal to review; governing the IIS programme | `investigator-initiated-study-review` |
 | Design an RWE study, external control arm, choosing a data source | `real-world-evidence-design` |
 
@@ -154,6 +157,7 @@ own material for review; `promotional-material-medical-review` is the reviewer
 of someone else's. `kol-engagement-brief` is one meeting;
 `field-medical-planning` is the cycle. `evidence-gap-analysis` finds the gaps;
 `integrated-evidence-plan` sequences the studies that close them.
+`medical-launch-plan` builds the launch plan; `launch-medical-readiness` judges it.
 `real-world-evidence-design` designs a study; `evidence-appraisal` judges one.
 
 **When the job maps to more than one workflow**, that is normal — see the

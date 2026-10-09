@@ -21,7 +21,7 @@ use the local helper; it never calls a hosted transcription API.
 
 ```bash
 python3 scripts/transcribe.py --input meeting.wav --out outputs/transcript.md --language en
-python3 scripts/transcribe.py --input workshop/data/oncology-mm/advisory-board-transcript.md --out outputs/transcript.md
+python3 scripts/transcribe.py --input Data-Sources/synthetic/oncology-mm/advisory-board-transcript.md --out outputs/transcript.md
 ```
 
 Local audio requires installed `openai-whisper` and `ffmpeg`; the first run may

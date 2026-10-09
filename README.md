@@ -1,8 +1,65 @@
 # Medical Affairs Agent Skills
 
+![Medical Affairs colleagues working alongside AI agents that use a shelf of ready-made skills](assets/readme/skills-hero.jpg)
+
+**A free library of 65 ready-made "skills" that teach any AI agent how to do real Medical Affairs work: field insights, KOL preparation, medical information, congress readouts, launch plans and more.**
+
+## New to GitHub? Start here
+
+You don't need to install anything, write code or even have a GitHub account. This page is just a link you hand to your AI agent.
+
+![Three steps: 1 copy the repository link, 2 give it to your AI agent, 3 the agent does the job and you review it](assets/readme/how-it-works.jpg)
+
+1. **Copy this page's link.** It's the address in your browser's address bar:
+   `https://github.com/Open-Medical-Affairs/Medical-Affairs-Skills`.
+   (You can also click the green **Code** button near the top right of this page and copy the link shown under **HTTPS**.)
+2. **Give it to your AI agent.** Open Grok Bot, ChatGPT, Claude, Microsoft Copilot or the agent you use, start a new conversation and paste a sentence like this:
+
+   ```
+   Read https://github.com/Open-Medical-Affairs/Medical-Affairs-Skills and use its skills to tell me the three field insights leadership should act on this quarter, using the synthetic oncology data.
+   ```
+
+   Swap the last part for your own job, for example *"…to prepare me for a difficult KOL meeting"* or *"…to build a medical launch plan for our upcoming asset"*.
+3. **Let it work, then review.** The agent picks the right skills and the practice data, does the work and hands back a draft (Word, PowerPoint or PDF where it can). **You are the final judge.** Check it the way you'd check a new colleague's work.
+
+**Agent can't open links?** Click the green **Code** button → **Download ZIP**, then upload the ZIP (or one of the small [starter files](workshop/bundles/)) to your agent.
+
+## What's inside
+
+| What | In plain words | Where |
+|---|---|---|
+| 🧠 **65 skills** | Step-by-step know-how for one Medical Affairs job each (an MSL brief, an MI response, a publication plan…) | [`skills/`](skills/) · [list of all skills](SKILLS-INDEX.md) |
+| 🎯 **17 missions** | Ready-made assignments with a clear goal, the right files and the deliverables to expect | [`workshop/catalog.json`](workshop/catalog.json) · [team missions](workshop/missions/) |
+| 📝 **House rules** | One page per skill where your team writes "how we do it here"; the agent follows your rules over its defaults | [`house-rules/`](house-rules/) |
+| 🧪 **Practice data** | A fictional company with three fictional products, plus a catalog of 52 real public data sources, kept in a separate repository | [Open-Medical-Affairs/Data-Sources](https://github.com/Open-Medical-Affairs/Data-Sources) |
+| 🌐 **Event website** | Copy-ready prompts, missions, datasets and a prompt optimizer for the AI in Action event | [Open-Medical-Affairs/AI-in-Action-Website](https://github.com/Open-Medical-Affairs/AI-in-Action-Website) |
+| 🤖 **For agents** | The agent's own instructions | [`AGENTS.md`](AGENTS.md) |
+
+![A shelf of skill cards that an AI agent can load](assets/readme/skills-shelf.jpg)
+
+## Meet the launch swarm
+
+![An org chart of AI digital workers coordinated by a human lead](assets/readme/swarm-orgchart.jpg)
+
+The newest skill, [`medical-launch-plan`](skills/medical-launch-plan/SKILL.md), builds an entire medical launch plan for any upcoming asset. Instead of one chatbot, it runs an **org chart of digital workers** (strategy, evidence, publications and congress, field, training, medical information, safety, content review, metrics and more). Each worker gets its own context, they work in waves, and **a human decides at every gate**. Ask your agent:
+
+```
+Read https://github.com/Open-Medical-Affairs/Medical-Affairs-Skills and use the medical-launch-plan skill to build a launch plan for the fictional product NORVANTIB, using the synthetic oncology data. Stop at each decision gate for my review.
+```
+
+The practice data it uses lives in **[Open-Medical-Affairs/Data-Sources](https://github.com/Open-Medical-Affairs/Data-Sources)**.
+
+![A Medical Affairs leader reviewing the agents' work: the human is always the final judge](assets/readme/human-judge.jpg)
+
+<sub>Illustrations generated for Open Medical Affairs.</sub>
+
+---
+
+# For builders
+
 **Give your agent a Medical Affairs objective. Get a traceable draft you can review.**
 
-62 skills · 16 workshop missions · 3 therapeutic areas · public scientific APIs · synthetic data included
+65 skills · 17 workshop missions · 3 therapeutic areas · public scientific APIs · synthetic data included
 
 ![How Medical Affairs Agent Skills works: give an objective, use synthetic data or public evidence, let the agent analyze and check, then review the deliverables.](assets/how-it-works.png)
 
@@ -124,9 +181,24 @@ python3 scripts/public_evidence.py pubmed --query 'multiple myeloma' --limit 5
 
 ## A fictional organization you can actually work with
 
-The oncology, immunology and cardiometabolic packs contain **32 source files each**:
-profiles, field notes, enquiries, trial summaries, congress abstracts, manuscripts,
-budgets, study concepts, readiness trackers, review comments and more.
+The practice data lives in its own repository,
+**[Open-Medical-Affairs/Data-Sources](https://github.com/Open-Medical-Affairs/Data-Sources)**, which keeps two clearly separated halves:
+**synthetic** workshop datasets (fictional, marked `SYNTHETIC`) and a catalog of
+**52 real public data sources** grouped by Medical Affairs job. Clone it into this
+repository's root so paths such as `Data-Sources/synthetic/oncology-mm/product-profile.md`
+resolve (the folder is git-ignored here):
+
+```bash
+git clone https://github.com/Open-Medical-Affairs/Data-Sources.git Data-Sources   # or: python3 scripts/data_sources.py --fetch
+```
+
+A sibling checkout (`../Data-Sources`) or `MA_DATA_SOURCES=/path` also works. Agents
+without a shell can read every file through the raw links in
+[`synthetic/index.json`](https://github.com/Open-Medical-Affairs/Data-Sources/blob/main/synthetic/index.json).
+
+The oncology, immunology and cardiometabolic packs contain **31 source files each,
+plus a README**: profiles, field notes, enquiries, trial summaries, congress abstracts,
+manuscripts, budgets, study concepts, readiness trackers, review comments and more.
 
 The connected practice organization adds **24 accounts, 90 clinicians, 163 field
 interactions, 18 enquiries, 36 content assets, 90 engagement records, 12 patient
@@ -135,11 +207,13 @@ Use its CSV files or the included SQLite database. No server or login is needed.
 
 All products, people and clinical results in these packs are fictional. Their
 inconsistencies are deliberate exercises in judgment. Real bibliographic examples
-are stored [separately](workshop/public-evidence/README.md), never as evidence for
+are stored [separately](https://github.com/Open-Medical-Affairs/Data-Sources/blob/main/public/evidence-snapshots/README.md), never as evidence for
 fictional product claims.
 
-[Practice organization](workshop/data/connected/README.md) ·
-[Original skill coverage](workshop/data/SKILL-COVERAGE.md) ·
+[Synthetic datasets](https://github.com/Open-Medical-Affairs/Data-Sources/blob/main/synthetic/README.md) ·
+[Public data sources](https://github.com/Open-Medical-Affairs/Data-Sources/blob/main/public/catalog.md) ·
+[Practice organization](https://github.com/Open-Medical-Affairs/Data-Sources/blob/main/synthetic/connected/README.md) ·
+[Original skill coverage](https://github.com/Open-Medical-Affairs/Data-Sources/blob/main/synthetic/SKILL-COVERAGE.md) ·
 [Complete mission and input catalog](workshop/catalog.json)
 
 ## The October workshop
@@ -174,7 +248,7 @@ include presentations, documents, spreadsheets, PDFs and interactive HTML.
 Actual formats depend on the agent environment; supported content remains available
 when a preferred renderer is missing.
 
-[All 62 skills](SKILLS-INDEX.md) · [Capability menu](assets/menu-card.svg)
+[All 65 skills](SKILLS-INDEX.md) · [Capability menu](assets/menu-card.svg)
 
 ## Open to use. Official changes controlled by the maintainers.
 

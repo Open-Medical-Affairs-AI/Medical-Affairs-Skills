@@ -18,6 +18,32 @@
 
 ## Unreleased
 
+- **Datasets moved to [Open-Medical-Affairs/Data-Sources](https://github.com/Open-Medical-Affairs/Data-Sources).**
+  `workshop/data/` (three 31-file synthetic packs, the connected practice
+  organization and their generators) now lives in its `synthetic/` folder and
+  `workshop/public-evidence/` in `public/evidence-snapshots/`;
+  `scripts/build_workshop_data.py` became its `tools/build_connected.py`. Every
+  catalog input, mission, skill, doc and starter bundle now reads
+  `Data-Sources/...`, resolved by the new `scripts/data_sources.py`
+  (`./Data-Sources`, `../Data-Sources` or `$MA_DATA_SOURCES`; `--fetch` clones it).
+  CI checks the repository out alongside; `validate_skills.py` still enforces
+  the SYNTHETIC banner there and fails if dataset files reappear here. Data-Sources
+  also catalogs 52 real public sources with licence flags. Fixed the README's
+  "32 source files" (31 plus a README).
+- **Launch planning as an agent swarm.** Added `medical-launch-plan`, a
+  coordinator that builds the entire medical launch plan by running an org
+  chart of digital workers (strategy, evidence, narrative, publications and
+  congress, field, training, expert input, education, patients, medical
+  information, safety, content/MLR, PMO, metrics) with a context packet each,
+  in waves separated by human decision gates, ending with an independent
+  readiness verdict. Worker briefs live in its `references/digital-workers.md`.
+- Added `launch-timeline-and-governance` (critical path, gate criteria written
+  before the gate, named RACI) and `launch-field-training` (curriculum,
+  scenario bank and application-based certification).
+- Added the `launch-plan-swarm` workshop mission; routed the new skills from the
+  orchestrator; `launch-medical-readiness` now points to `medical-launch-plan`
+  for the plan itself. Regenerated the index, roster and capability menu.
+
 - **Deliverables are designed files, never Markdown.** Added `ma_render`, a
   standalone engine (`shared/ma_render/ma_render.py`) copied byte-for-byte into
   every skill's `scripts/` by `scripts/sync_renderer.py`. It builds PowerPoint

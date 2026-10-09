@@ -85,8 +85,11 @@ actual live preflight above.
 
 ## Source rights and provenance
 
-Real public snapshots live in `workshop/public-evidence/`; synthetic sources live
-in `workshop/data/`. Never merge their truth status. Bibliographic metadata does not
+Both now live in the [Data-Sources](https://github.com/Open-Medical-Affairs/Data-Sources) repository. Real public snapshots
+live in `Data-Sources/public/evidence-snapshots/`; synthetic sources live in
+`Data-Sources/synthetic/`. Beyond the six gateway sources, `Data-Sources/public/catalog.json`
+lists 52 public sources by Medical Affairs job with access, rate limits, licences and
+a `data_policy` (`link-only` sources must never be copied). Never merge their truth status. Bibliographic metadata does not
 license publisher full text. Retrieve permitted full text through supported APIs
 and inspect each article license before redistribution. No paywall bypass is included.
 

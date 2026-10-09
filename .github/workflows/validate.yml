@@ -16,6 +16,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Datasets live in their own repository; check them out where
+      # scripts/data_sources.py looks first (./Data-Sources, git-ignored).
+      - name: Check out Open-Medical-Affairs/Data-Sources
+        uses: actions/checkout@v4
+        with:
+          repository: Open-Medical-Affairs/Data-Sources
+          path: Data-Sources
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -93,6 +101,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # Datasets live in their own repository; check them out where
+      # scripts/data_sources.py looks first (./Data-Sources, git-ignored).
+      - name: Check out Open-Medical-Affairs/Data-Sources
+        uses: actions/checkout@v4
+        with:
+          repository: Open-Medical-Affairs/Data-Sources
+          path: Data-Sources
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"

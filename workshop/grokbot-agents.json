@@ -25,9 +25,9 @@
       ],
       "upload": "dist/grokbot/agents/field-insights.zip",
       "inputs": [
-        "workshop/data/{ta}/field-observations.csv",
-        "workshop/data/{ta}/medical-plan.md",
-        "workshop/data/{ta}/product-profile.md"
+        "Data-Sources/synthetic/{ta}/field-observations.csv",
+        "Data-Sources/synthetic/{ta}/medical-plan.md",
+        "Data-Sources/synthetic/{ta}/product-profile.md"
       ],
       "install": "python3 skills/field-insight-synthesis/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'What should leadership know?' Medical Affairs agent. Objective: Find the three most consequential field insights. Preserve safety findings, contradictions and source IDs. Recommend a concrete next action for each.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, insight-generation, field-insight-synthesis, strategic-analysis, executive-briefing. The workflow skills for this agent are: field-insight-synthesis, executive-briefing.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf, pptx. Run `python3 skills/field-insight-synthesis/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
@@ -51,10 +51,10 @@
       ],
       "upload": "dist/grokbot/agents/kol-meeting.zip",
       "inputs": [
-        "workshop/data/{ta}/kol-dossiers.md",
-        "workshop/data/{ta}/interaction-notes.md",
-        "workshop/data/{ta}/product-profile.md",
-        "workshop/data/{ta}/evidence-landscape.md"
+        "Data-Sources/synthetic/{ta}/kol-dossiers.md",
+        "Data-Sources/synthetic/{ta}/interaction-notes.md",
+        "Data-Sources/synthetic/{ta}/product-profile.md",
+        "Data-Sources/synthetic/{ta}/evidence-landscape.md"
       ],
       "install": "python3 skills/kol-engagement-brief/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'Prepare for the difficult meeting' Medical Affairs agent. Objective: Prepare for the first expert in the supplied KOL dossiers. Address unresolved questions honestly and propose useful questions for scientific exchange.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, citation-integrity, kol-engagement-brief. The workflow skills for this agent are: kol-engagement-brief.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf. Run `python3 skills/kol-engagement-brief/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
@@ -82,10 +82,10 @@
       ],
       "upload": "dist/grokbot/agents/congress.zip",
       "inputs": [
-        "workshop/data/{ta}/congress-abstracts.md",
-        "workshop/data/{ta}/competitor-announcements.md",
-        "workshop/data/{ta}/medical-plan.md",
-        "workshop/data/{ta}/product-profile.md"
+        "Data-Sources/synthetic/{ta}/congress-abstracts.md",
+        "Data-Sources/synthetic/{ta}/competitor-announcements.md",
+        "Data-Sources/synthetic/{ta}/medical-plan.md",
+        "Data-Sources/synthetic/{ta}/product-profile.md"
       ],
       "install": "python3 skills/congress-intelligence/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'What changed after congress?' Medical Affairs agent. Objective: Compare the congress findings to the existing medical plan. Explain what changes, what does not, and why.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, evidence-appraisal, strategic-analysis, congress-intelligence, competitive-intelligence. The workflow skills for this agent are: congress-intelligence, competitive-intelligence.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf, pptx. Run `python3 skills/congress-intelligence/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
@@ -110,9 +110,9 @@
       ],
       "upload": "dist/grokbot/agents/medical-information.zip",
       "inputs": [
-        "workshop/data/{ta}/medical-information-enquiries.csv",
-        "workshop/data/{ta}/product-profile.md",
-        "workshop/data/{ta}/structured-evidence-table.csv"
+        "Data-Sources/synthetic/{ta}/medical-information-enquiries.csv",
+        "Data-Sources/synthetic/{ta}/product-profile.md",
+        "Data-Sources/synthetic/{ta}/structured-evidence-table.csv"
       ],
       "install": "python3 skills/medical-information-response/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'Handle the enquiry queue' Medical Affairs agent. Objective: Triage the enquiries, surface potential safety issues and draft responses supported by the fictional sources. Do not infer other-country approval or send responses.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, citation-integrity, regulatory-label-intelligence, medical-information-response. The workflow skills for this agent are: medical-information-response.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf. Run `python3 skills/medical-information-response/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
@@ -142,11 +142,11 @@
       ],
       "upload": "dist/grokbot/agents/evidence-investment.zip",
       "inputs": [
-        "workshop/data/{ta}/iis-proposal.md",
-        "workshop/data/{ta}/rwe-study-concept.md",
-        "workshop/data/{ta}/integrated-evidence-plan.csv",
-        "workshop/data/{ta}/payer-hta-brief.md",
-        "workshop/data/{ta}/evidence-landscape.md"
+        "Data-Sources/synthetic/{ta}/iis-proposal.md",
+        "Data-Sources/synthetic/{ta}/rwe-study-concept.md",
+        "Data-Sources/synthetic/{ta}/integrated-evidence-plan.csv",
+        "Data-Sources/synthetic/{ta}/payer-hta-brief.md",
+        "Data-Sources/synthetic/{ta}/evidence-landscape.md"
       ],
       "install": "python3 skills/integrated-evidence-plan/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'Choose what to fund' Medical Affairs agent. Objective: Choose an evidence portfolio within a GBP 2 million ceiling. Evaluate duplication, dependencies and what must be declined or deferred.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, strategic-analysis, evidence-appraisal, integrated-evidence-plan, investigator-initiated-study-review, real-world-evidence-design. The workflow skills for this agent are: integrated-evidence-plan, investigator-initiated-study-review, real-world-evidence-design.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf, pptx. Run `python3 skills/integrated-evidence-plan/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
@@ -180,12 +180,12 @@
       ],
       "upload": "dist/grokbot/agents/publication.zip",
       "inputs": [
-        "workshop/data/{ta}/manuscript-draft.md",
-        "workshop/data/{ta}/structured-evidence-table.csv",
-        "workshop/data/{ta}/patient-level-analysis.csv",
-        "workshop/data/{ta}/abstract-poster-brief.md",
-        "workshop/data/{ta}/plain-language-source.md",
-        "workshop/data/{ta}/product-profile.md"
+        "Data-Sources/synthetic/{ta}/manuscript-draft.md",
+        "Data-Sources/synthetic/{ta}/structured-evidence-table.csv",
+        "Data-Sources/synthetic/{ta}/patient-level-analysis.csv",
+        "Data-Sources/synthetic/{ta}/abstract-poster-brief.md",
+        "Data-Sources/synthetic/{ta}/plain-language-source.md",
+        "Data-Sources/synthetic/{ta}/product-profile.md"
       ],
       "install": "python3 skills/scientific-manuscript/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'Keep every scientific output consistent' Medical Affairs agent. Objective: Review the manuscript and reconcile reported values with the supplied study sources. Create an abstract, one honest figure and a plain-language summary with a discrepancy log.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, citation-integrity, scientific-manuscript, congress-abstract-and-poster, evidence-appraisal, data-visualization-for-medical, plain-language-summary. The workflow skills for this agent are: scientific-manuscript, congress-abstract-and-poster, data-visualization-for-medical, plain-language-summary.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf, pptx, png, svg. Run `python3 skills/scientific-manuscript/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
@@ -216,11 +216,11 @@
       ],
       "upload": "dist/grokbot/agents/advisory-board.zip",
       "inputs": [
-        "workshop/data/{ta}/advisory-board-transcript.md",
-        "workshop/data/{ta}/field-observations.csv",
-        "workshop/data/{ta}/evidence-landscape.md",
-        "workshop/data/{ta}/kol-dossiers.md",
-        "workshop/data/{ta}/product-profile.md"
+        "Data-Sources/synthetic/{ta}/advisory-board-transcript.md",
+        "Data-Sources/synthetic/{ta}/field-observations.csv",
+        "Data-Sources/synthetic/{ta}/evidence-landscape.md",
+        "Data-Sources/synthetic/{ta}/kol-dossiers.md",
+        "Data-Sources/synthetic/{ta}/product-profile.md"
       ],
       "install": "python3 skills/advisory-board-design/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'Design an advisory board worth holding' Medical Affairs agent. Objective: Identify five unanswered questions that justify an advisory board and prepare the briefing materials. Explain if the evidence does not justify a proposed question.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, strategic-analysis, advisory-board-design, evidence-appraisal, evidence-gap-analysis, citation-integrity, medical-slide-deck. The workflow skills for this agent are: advisory-board-design, evidence-gap-analysis, medical-slide-deck.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf, pptx. Run `python3 skills/advisory-board-design/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
@@ -248,11 +248,11 @@
       ],
       "upload": "dist/grokbot/agents/launch-readiness.zip",
       "inputs": [
-        "workshop/data/{ta}/launch-readiness-register.md",
-        "workshop/data/{ta}/medical-information-enquiries.csv",
-        "workshop/data/{ta}/mlr-review-comments.md",
-        "workshop/data/{ta}/scientific-platform-draft.md",
-        "workshop/data/{ta}/integrated-evidence-plan.csv"
+        "Data-Sources/synthetic/{ta}/launch-readiness-register.md",
+        "Data-Sources/synthetic/{ta}/medical-information-enquiries.csv",
+        "Data-Sources/synthetic/{ta}/mlr-review-comments.md",
+        "Data-Sources/synthetic/{ta}/scientific-platform-draft.md",
+        "Data-Sources/synthetic/{ta}/integrated-evidence-plan.csv"
       ],
       "install": "python3 skills/launch-medical-readiness/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'Can the medical team launch?' Medical Affairs agent. Objective: Assess launch readiness without averaging a critical dependency into a green score. Prepare a remediation plan and leadership readout.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, strategic-analysis, launch-medical-readiness, citation-integrity, mlr-review-readiness. The workflow skills for this agent are: launch-medical-readiness, mlr-review-readiness.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf, pptx. Run `python3 skills/launch-medical-readiness/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
@@ -280,13 +280,13 @@
       ],
       "upload": "dist/grokbot/agents/connected-planning.zip",
       "inputs": [
-        "workshop/data/connected/hcps.csv",
-        "workshop/data/connected/accounts.csv",
-        "workshop/data/connected/interactions.csv",
-        "workshop/data/connected/content_assets.csv",
-        "workshop/data/connected/engagement.csv",
-        "workshop/data/connected/data-dictionary.json",
-        "workshop/data/{ta}/product-profile.md"
+        "Data-Sources/synthetic/connected/hcps.csv",
+        "Data-Sources/synthetic/connected/accounts.csv",
+        "Data-Sources/synthetic/connected/interactions.csv",
+        "Data-Sources/synthetic/connected/content_assets.csv",
+        "Data-Sources/synthetic/connected/engagement.csv",
+        "Data-Sources/synthetic/connected/data-dictionary.json",
+        "Data-Sources/synthetic/{ta}/product-profile.md"
       ],
       "install": "python3 skills/data-connection/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'Work across a practice CRM and content library' Medical Affairs agent. Objective: Use the linked records to prioritize account coverage and content needs for the selected therapeutic area. Respect channel preferences, capacity, evidence and review status.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, data-connection, strategic-analysis, field-medical-planning, medical-content-operations. The workflow skills for this agent are: data-connection, field-medical-planning, medical-content-operations.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf. Run `python3 skills/data-connection/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
@@ -312,10 +312,10 @@
       ],
       "upload": "dist/grokbot/agents/patient-partnership.zip",
       "inputs": [
-        "workshop/data/connected/patient_partnerships.csv",
-        "workshop/data/{ta}/plain-language-source.md",
-        "workshop/data/{ta}/medical-education-needs.md",
-        "workshop/data/{ta}/evidence-landscape.md"
+        "Data-Sources/synthetic/connected/patient_partnerships.csv",
+        "Data-Sources/synthetic/{ta}/plain-language-source.md",
+        "Data-Sources/synthetic/{ta}/medical-education-needs.md",
+        "Data-Sources/synthetic/{ta}/evidence-landscape.md"
       ],
       "install": "python3 skills/patient-engagement-planning/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'Bring patient priorities into the plan' Medical Affairs agent. Objective: Design an accessible listening and co-creation activity for the selected therapeutic area. Link patient priorities to decisions and respect quotation permissions.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, patient-engagement-planning, evidence-appraisal, plain-language-summary. The workflow skills for this agent are: patient-engagement-planning, plain-language-summary.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf. Run `python3 skills/patient-engagement-planning/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
@@ -342,8 +342,8 @@
       ],
       "upload": "dist/grokbot/agents/transcript.zip",
       "inputs": [
-        "workshop/data/{ta}/advisory-board-transcript.md",
-        "workshop/data/{ta}/product-profile.md"
+        "Data-Sources/synthetic/{ta}/advisory-board-transcript.md",
+        "Data-Sources/synthetic/{ta}/product-profile.md"
       ],
       "install": "python3 skills/meeting-transcription/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'Turn a meeting transcript into action' Medical Affairs agent. Objective: Review the supplied transcript, preserve uncertain medical terms and safety verbatims, then identify decisions and unanswered questions. Clearly state that audio was not supplied.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, meeting-transcription, insight-generation, field-insight-synthesis. The workflow skills for this agent are: meeting-transcription, field-insight-synthesis.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf, pptx. Run `python3 skills/meeting-transcription/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
@@ -381,14 +381,14 @@
       ],
       "upload": "dist/grokbot/agents/thirty-day-capstone.zip",
       "inputs": [
-        "workshop/data/{ta}/medical-plan.md",
-        "workshop/data/{ta}/product-profile.md",
-        "workshop/data/{ta}/field-observations.csv",
-        "workshop/data/{ta}/evidence-landscape.md",
-        "workshop/data/{ta}/integrated-evidence-plan.csv",
-        "workshop/data/{ta}/launch-readiness-register.md",
-        "workshop/data/connected/content_assets.csv",
-        "workshop/data/connected/projects.csv"
+        "Data-Sources/synthetic/{ta}/medical-plan.md",
+        "Data-Sources/synthetic/{ta}/product-profile.md",
+        "Data-Sources/synthetic/{ta}/field-observations.csv",
+        "Data-Sources/synthetic/{ta}/evidence-landscape.md",
+        "Data-Sources/synthetic/{ta}/integrated-evidence-plan.csv",
+        "Data-Sources/synthetic/{ta}/launch-readiness-register.md",
+        "Data-Sources/synthetic/connected/content_assets.csv",
+        "Data-Sources/synthetic/connected/projects.csv"
       ],
       "install": "python3 skills/medical-strategy-plan/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'Run the next 30 days of Medical Affairs' Medical Affairs agent. Objective: Prepare a coordinated 30-day draft plan for the selected fictional product. Prioritize evidence, field actions and content within the supplied constraints. Deliver a leadership brief, action tracker and scientific briefing, with source dependencies so new evidence can update affected work.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, strategic-analysis, medical-strategy-plan, insight-generation, field-insight-synthesis, evidence-appraisal, integrated-evidence-plan, medical-content-operations, executive-briefing, citation-integrity, medical-slide-deck. The workflow skills for this agent are: medical-strategy-plan, field-insight-synthesis, integrated-evidence-plan, medical-content-operations, executive-briefing, medical-slide-deck.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf, pptx. Run `python3 skills/medical-strategy-plan/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
@@ -411,12 +411,12 @@
       ],
       "upload": "dist/grokbot/agents/msl-pre-call.zip",
       "inputs": [
-        "workshop/data/connected/hcps.csv",
-        "workshop/data/connected/interactions.csv",
-        "workshop/data/connected/access_log.csv",
-        "workshop/data/connected/msl_tasks.csv",
-        "workshop/data/connected/data-dictionary.json",
-        "workshop/data/{ta}/product-profile.md"
+        "Data-Sources/synthetic/connected/hcps.csv",
+        "Data-Sources/synthetic/connected/interactions.csv",
+        "Data-Sources/synthetic/connected/access_log.csv",
+        "Data-Sources/synthetic/connected/msl_tasks.csv",
+        "Data-Sources/synthetic/connected/data-dictionary.json",
+        "Data-Sources/synthetic/{ta}/product-profile.md"
       ],
       "install": "python3 skills/msl-pre-call-planning/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'Prepare the MSL pre-call brief' Medical Affairs agent. Objective: Select an HCP with existing interactions in the selected therapeutic area. Gather prior scientific questions, open tasks and access context, then prepare a one-page pre-call brief. Do not invent meeting facts.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, msl-pre-call-planning. The workflow skills for this agent are: msl-pre-call-planning.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf. Run `python3 skills/msl-pre-call-planning/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
@@ -442,12 +442,12 @@
       ],
       "upload": "dist/grokbot/agents/hcp-access.zip",
       "inputs": [
-        "workshop/data/connected/hcps.csv",
-        "workshop/data/connected/interactions.csv",
-        "workshop/data/connected/access_log.csv",
-        "workshop/data/connected/msl_tasks.csv",
-        "workshop/data/connected/data-dictionary.json",
-        "workshop/data/connected/accounts.csv"
+        "Data-Sources/synthetic/connected/hcps.csv",
+        "Data-Sources/synthetic/connected/interactions.csv",
+        "Data-Sources/synthetic/connected/access_log.csv",
+        "Data-Sources/synthetic/connected/msl_tasks.csv",
+        "Data-Sources/synthetic/connected/data-dictionary.json",
+        "Data-Sources/synthetic/connected/accounts.csv"
       ],
       "install": "python3 skills/hcp-discovery-and-access/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'Identify scientific coverage and access gaps' Medical Affairs agent. Objective: Use the fictional professional and account records to identify scientific coverage gaps and appropriate access routes. Respect declined contact and distinguish unverified access. Do not search for fictional people online.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, hcp-discovery-and-access, strategic-analysis, field-medical-planning. The workflow skills for this agent are: hcp-discovery-and-access, field-medical-planning.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf. Run `python3 skills/hcp-discovery-and-access/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
@@ -470,9 +470,9 @@
       ],
       "upload": "dist/grokbot/agents/msl-post-call.zip",
       "inputs": [
-        "workshop/data/{ta}/interaction-notes.md",
-        "workshop/data/{ta}/product-profile.md",
-        "workshop/data/connected/msl_tasks.csv"
+        "Data-Sources/synthetic/{ta}/interaction-notes.md",
+        "Data-Sources/synthetic/{ta}/product-profile.md",
+        "Data-Sources/synthetic/connected/msl_tasks.csv"
       ],
       "install": "python3 skills/msl-post-call-follow-up/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'Turn the call notes into useful follow-up' Medical Affairs agent. Objective: Use the actual supplied historical notes to create a factual CRM draft and follow-up queue. Separate statements from inferences, preserve unresolved fields and identify simulated safety intake. Do not invent a new meeting.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, msl-post-call-follow-up. The workflow skills for this agent are: msl-post-call-follow-up.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf. Run `python3 skills/msl-post-call-follow-up/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
@@ -495,14 +495,58 @@
       ],
       "upload": "dist/grokbot/agents/msl-admin.zip",
       "inputs": [
-        "workshop/data/connected/hcps.csv",
-        "workshop/data/connected/interactions.csv",
-        "workshop/data/connected/access_log.csv",
-        "workshop/data/connected/msl_tasks.csv",
-        "workshop/data/connected/data-dictionary.json"
+        "Data-Sources/synthetic/connected/hcps.csv",
+        "Data-Sources/synthetic/connected/interactions.csv",
+        "Data-Sources/synthetic/connected/access_log.csv",
+        "Data-Sources/synthetic/connected/msl_tasks.csv",
+        "Data-Sources/synthetic/connected/data-dictionary.json"
       ],
       "install": "python3 skills/msl-administrative-operations/scripts/ma_render.py bootstrap",
       "instructions": "You are the 'Clear the administrative queue' Medical Affairs agent. Objective: Prepare a source-backed MSL administrative queue for the selected therapeutic area: open tasks, overdue items, access checks and next pre-call preparation. Use the scenario date of 1 October 2026. Do not claim tasks were completed or CRM records updated.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, msl-administrative-operations. The workflow skills for this agent are: msl-administrative-operations.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf. Run `python3 skills/msl-administrative-operations/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
+    },
+    {
+      "id": "launch-plan-swarm",
+      "title": "Build the whole medical launch plan",
+      "skills": [
+        "medical-launch-plan",
+        "launch-timeline-and-governance",
+        "launch-field-training",
+        "launch-medical-readiness"
+      ],
+      "load_order": [
+        "medical-affairs-foundations",
+        "deliverable-quality-review",
+        "capability-detection",
+        "strategic-analysis",
+        "medical-launch-plan",
+        "launch-timeline-and-governance",
+        "evidence-appraisal",
+        "launch-field-training",
+        "launch-medical-readiness"
+      ],
+      "deliverables": [
+        "docx",
+        "pdf",
+        "pptx"
+      ],
+      "upload": "dist/grokbot/agents/launch-plan-swarm.zip",
+      "inputs": [
+        "Data-Sources/synthetic/{ta}/product-profile.md",
+        "Data-Sources/synthetic/{ta}/medical-plan.md",
+        "Data-Sources/synthetic/{ta}/evidence-landscape.md",
+        "Data-Sources/synthetic/{ta}/launch-readiness-register.md",
+        "Data-Sources/synthetic/{ta}/integrated-evidence-plan.csv",
+        "Data-Sources/synthetic/{ta}/scientific-platform-draft.md",
+        "Data-Sources/synthetic/{ta}/publication-plan.md",
+        "Data-Sources/synthetic/{ta}/field-account-plan.csv",
+        "Data-Sources/synthetic/{ta}/medical-information-enquiries.csv",
+        "Data-Sources/synthetic/{ta}/safety-case-series.md",
+        "Data-Sources/synthetic/{ta}/payer-hta-brief.md",
+        "Data-Sources/synthetic/{ta}/guideline-landscape.md",
+        "Data-Sources/synthetic/{ta}/medical-education-needs.md"
+      ],
+      "install": "python3 skills/medical-launch-plan/scripts/ma_render.py bootstrap",
+      "instructions": "You are the 'Build the whole medical launch plan' Medical Affairs agent. Objective: Act as the Launch Lead for the selected fictional product's proposed label expansion. Build the launch facts sheet and six-month question list, staff an org chart of digital workers (one per launch workstream, each with its own context packet), run them in waves with human decision gates, integrate the joins, and finish with an independent readiness verdict that is allowed to be 'not ready'. Every gap carries a named human owner and a date.\n\nBefore working, read AGENTS.md and docs/execution.md, then load these skills in order: medical-affairs-foundations, deliverable-quality-review, capability-detection, strategic-analysis, medical-launch-plan, launch-timeline-and-governance, evidence-appraisal, launch-field-training, launch-medical-readiness. The workflow skills for this agent are: medical-launch-plan, launch-timeline-and-governance, launch-field-training, launch-medical-readiness.\n\nDeliverables are files, not chat text and never Markdown files: docx, pdf, pptx. Run `python3 skills/medical-launch-plan/scripts/ma_render.py bootstrap` once, write the content as a JSON spec or markdown draft, render with `ma_render.py report ... --out outputs/<name>.docx` (Word + PDF) or `ma_render.py deck ... --out outputs/<name>.pptx` (PowerPoint + PDF) using --preview, inspect the contact sheet, fix every 'check' line, and re-render. Never write your own python-pptx or python-docx code in place of the engine.\n\nUse synthetic workshop inputs as SYN: sources; keep real public evidence separate; treat safety findings in workshop data as simulated escalations. Mark every file DRAFT and say what was not verified."
     }
   ],
   "skills": [
@@ -830,6 +874,19 @@
       "upload": "dist/grokbot/skills/kol-engagement-brief.zip"
     },
     {
+      "skill": "launch-field-training",
+      "requires": [
+        "medical-affairs-foundations",
+        "evidence-appraisal"
+      ],
+      "deliverables": [
+        "docx",
+        "pdf",
+        "pptx"
+      ],
+      "upload": "dist/grokbot/skills/launch-field-training.zip"
+    },
+    {
       "skill": "launch-medical-readiness",
       "requires": [
         "medical-affairs-foundations",
@@ -841,6 +898,19 @@
         "pptx"
       ],
       "upload": "dist/grokbot/skills/launch-medical-readiness.zip"
+    },
+    {
+      "skill": "launch-timeline-and-governance",
+      "requires": [
+        "medical-affairs-foundations",
+        "strategic-analysis"
+      ],
+      "deliverables": [
+        "docx",
+        "pdf",
+        "pptx"
+      ],
+      "upload": "dist/grokbot/skills/launch-timeline-and-governance.zip"
     },
     {
       "skill": "library-menu",
@@ -949,6 +1019,19 @@
         "pdf"
       ],
       "upload": "dist/grokbot/skills/medical-information-response.zip"
+    },
+    {
+      "skill": "medical-launch-plan",
+      "requires": [
+        "medical-affairs-foundations",
+        "strategic-analysis"
+      ],
+      "deliverables": [
+        "docx",
+        "pdf",
+        "pptx"
+      ],
+      "upload": "dist/grokbot/skills/medical-launch-plan.zip"
     },
     {
       "skill": "medical-slide-deck",

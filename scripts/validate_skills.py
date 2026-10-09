@@ -36,7 +36,14 @@ except ImportError:  # pragma: no cover
 REPO = Path(__file__).resolve().parent.parent
 SKILLS_DIR = REPO / "skills"
 HOUSE_RULES_DIR = REPO / "house-rules"
-WORKSHOP_DATA = REPO / "workshop" / "data"
+# Synthetic workshop data lives in github.com/Open-Medical-Affairs/Data-Sources.
+# It is checked here when a checkout is present (./Data-Sources, ../Data-Sources
+# or $MA_DATA_SOURCES); CI checks it out alongside.
+sys.path.insert(0, str(REPO / "scripts"))
+import data_sources  # noqa: E402
+
+WORKSHOP_DATA = data_sources.data_root() / "synthetic"
+LEGACY_DATA_DIRS = (REPO / "workshop" / "data", REPO / "workshop" / "public-evidence")
 
 VALID_TIERS = {
     "foundation",
@@ -387,13 +394,26 @@ def check_synthetic_data(rep: Report) -> None:
     This is the check that stops someone dropping a real field-insight export
     into the workshop pack.
     """
+    for legacy in LEGACY_DATA_DIRS:
+        stray = [f for f in legacy.rglob("*") if f.is_file() and "__pycache__" not in f.parts] if legacy.exists() else []
+        if stray:
+            rep.error(
+                str(legacy.relative_to(REPO)),
+                f"holds {len(stray)} dataset file(s); datasets live in "
+                "Open-Medical-Affairs/Data-Sources, not in this repository",
+            )
     if not WORKSHOP_DATA.exists():
+        rep.warn(
+            "Data-Sources",
+            "checkout not found, so synthetic-data banner checks were skipped. "
+            + data_sources.HINT.replace("\n", " "),
+        )
         return
     exts = {".md", ".csv", ".json", ".jsonl", ".txt", ".yaml", ".yml"}
     for f in sorted(WORKSHOP_DATA.rglob("*")):
         if not f.is_file() or f.suffix.lower() not in exts:
             continue
-        rel = f.relative_to(REPO)
+        rel = data_sources.PREFIX + str(f.relative_to(WORKSHOP_DATA.parent))
         try:
             head = "".join(
                 f.read_text(encoding="utf-8").splitlines(keepends=True)[

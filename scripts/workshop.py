@@ -19,9 +19,16 @@ import subprocess
 import sys
 import uuid
 
+import data_sources
+
 ROOT = Path(__file__).resolve().parents[1]
 TAS = ('oncology-mm', 'immunology-ad', 'cardiometabolic-obesity')
 MANIFEST = ROOT / 'workshop/catalog.json'
+
+
+def source_path(rel):
+    """Catalog inputs read 'Data-Sources/...'; resolve them to the Data-Sources checkout."""
+    return data_sources.resolve(rel) if rel.startswith(data_sources.PREFIX) else ROOT / rel
 
 
 def catalog():
@@ -35,7 +42,9 @@ def start(mission, ta, out):
     inputs = []
     for rel in spec['inputs']:
         rel = rel.replace('{ta}', ta)
-        path = ROOT / rel
+        path = source_path(rel)
+        if not path.is_file():
+            raise FileNotFoundError(f'{rel} not found. ' + data_sources.HINT)
         inputs.append({'path': rel, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(), 'source_kind': 'synthetic'})
     manifest = {'version': 1, 'mode': 'workshop', 'mission': mission, 'therapeutic_area': ta,
                 'objective': spec['objective'], 'status': 'prepared', 'inputs': inputs,
@@ -61,8 +70,8 @@ def start(mission, ta, out):
 
 def inspect_run(run):
     state = json.loads((Path(run) / 'run.json').read_text())
-    changed = [r['path'] for r in state['inputs'] if not (ROOT / r['path']).exists()
-               or hashlib.sha256((ROOT / r['path']).read_bytes()).hexdigest() != r['sha256']]
+    changed = [r['path'] for r in state['inputs'] if not source_path(r['path']).exists()
+               or hashlib.sha256(source_path(r['path']).read_bytes()).hexdigest() != r['sha256']]
     return {'run': str(run), 'state': state, 'changed_inputs': changed,
             'instruction': 'Review changed sources and dependent outputs before continuing.' if changed else
                            'Read actual saved outputs; continue from next_step without repeating completed work.'}
@@ -72,12 +81,13 @@ def preflight(live=False):
     missing = []
     for m in catalog()['missions']:
         for ta in TAS:
-            missing += [p.replace('{ta}', ta) for p in m['inputs'] if not (ROOT / p.replace('{ta}', ta)).is_file()]
+            missing += [p.replace('{ta}', ta) for p in m['inputs'] if not source_path(p.replace('{ta}', ta)).is_file()]
     result = {'python': sys.version.split()[0], 'mission_count': len(catalog()['missions']),
               'missing_inputs': sorted(set(missing)), 'company_connectors_required': False,
               'workshop_ready': not missing, 'live_apis': 'not tested',
               'audio': 'local whisper available' if shutil.which('whisper') and shutil.which('ffmpeg') else 'use supplied transcripts',
-              'agent_execution': 'requires an agent that can read repository files; this check is not a GrokBot test'}
+              'agent_execution': 'requires an agent that can read repository files; this check is not a GrokBot test',
+              'data_sources': str(data_sources.data_root()) if (data_sources.data_root() / 'synthetic').is_dir() else 'missing. ' + data_sources.HINT}
     if live:
         from public_evidence import SOURCES, search
         result['live_apis'] = {}

@@ -2,7 +2,7 @@
 
 ## Select the data mode
 
-**Workshop:** use bundled synthetic sources without asking for company connections.
+**Workshop:** use the synthetic sources from [Data-Sources](https://github.com/Open-Medical-Affairs/Data-Sources) (`Data-Sources/synthetic/`) without asking for company connections.
 Internet access enables optional real-disease searches. Never substitute a real drug
 for a fictional product or claim a fictional study was verified online. Cite local
 files and record IDs as `SYN:` sources; use real identifiers only for real sources.

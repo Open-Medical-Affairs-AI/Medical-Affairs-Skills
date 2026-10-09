@@ -32,7 +32,8 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--ta',choices=list(SEEDS))
     args=parser.parse_args()
-    out = ROOT / 'workshop/public-evidence'
+    import data_sources
+    out = data_sources.data_root(required=True) / 'public/evidence-snapshots'
     out.mkdir(exist_ok=True)
     failures = []
     for ta, seeds in SEEDS.items():

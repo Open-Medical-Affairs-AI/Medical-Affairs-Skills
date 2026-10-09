@@ -29,7 +29,7 @@ essential reference is missing, name that limitation and ask for it.
 
 ## Select the data mode
 
-**Workshop:** use bundled synthetic sources without asking for company connections.
+**Workshop:** use the synthetic sources from [Data-Sources](https://github.com/Open-Medical-Affairs/Data-Sources) (`Data-Sources/synthetic/`) without asking for company connections.
 Internet access enables optional real-disease searches. Never substitute a real drug
 for a fictional product or claim a fictional study was verified online. Cite local
 files and record IDs as `SYN:` sources; use real identifiers only for real sources.
@@ -1434,7 +1434,7 @@ for a document that must survive a leadership review.
 
 ---
 
-## Included file: workshop/data/immunology-ad/field-observations.csv
+## Included file: Data-Sources/synthetic/immunology-ad/field-observations.csv
 
 # SYNTHETIC DATA - WORKSHOP USE ONLY. Fictional company, products, experts
 # and institutions. Contains deliberately seeded adverse events, a product
@@ -1498,7 +1498,7 @@ OBS-054,2026-04-16,MSL-05,HCP-125,Academic,IT,Face-to-face,Says her department c
 
 ---
 
-## Included file: workshop/data/immunology-ad/medical-plan.md
+## Included file: Data-Sources/synthetic/immunology-ad/medical-plan.md
 
 <!-- SYNTHETIC DATA — WORKSHOP USE ONLY
      Fictional company, products, experts and institutions. Written to behave
@@ -1549,7 +1549,7 @@ that at least one measure cannot come back negative.*
 
 ---
 
-## Included file: workshop/data/immunology-ad/product-profile.md
+## Included file: Data-Sources/synthetic/immunology-ad/product-profile.md
 
 <!-- SYNTHETIC DATA — WORKSHOP USE ONLY
      Fictional company, products, experts and institutions. Written to behave
