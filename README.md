@@ -1,5 +1,62 @@
 # Medical Affairs Agent Skills
 
+![Medical Affairs colleagues working alongside AI agents that use a shelf of ready-made skills](assets/readme/skills-hero.jpg)
+
+**A free library of 65 ready-made "skills" that teach any AI agent how to do real Medical Affairs work: field insights, KOL preparation, medical information, congress readouts, launch plans and more.**
+
+## New to GitHub? Start here
+
+You don't need to install anything, write code or even have a GitHub account. This page is just a link you hand to your AI agent.
+
+![Three steps: 1 copy the repository link, 2 give it to your AI agent, 3 the agent does the job and you review it](assets/readme/how-it-works.jpg)
+
+1. **Copy this page's link.** It's the address in your browser's address bar:
+   `https://github.com/Open-Medical-Affairs/Medical-Affairs-Skills`.
+   (You can also click the green **Code** button near the top right of this page and copy the link shown under **HTTPS**.)
+2. **Give it to your AI agent.** Open Grok Bot, ChatGPT, Claude, Microsoft Copilot or the agent you use, start a new conversation and paste a sentence like this:
+
+   ```
+   Read https://github.com/Open-Medical-Affairs/Medical-Affairs-Skills and use its skills to tell me the three field insights leadership should act on this quarter, using the synthetic oncology data.
+   ```
+
+   Swap the last part for your own job, for example *"…to prepare me for a difficult KOL meeting"* or *"…to build a medical launch plan for our upcoming asset"*.
+3. **Let it work, then review.** The agent picks the right skills and the practice data, does the work and hands back a draft (Word, PowerPoint or PDF where it can). **You are the final judge.** Check it the way you'd check a new colleague's work.
+
+**Agent can't open links?** Click the green **Code** button → **Download ZIP**, then upload the ZIP (or one of the small [starter files](workshop/bundles/)) to your agent.
+
+## What's inside
+
+| What | In plain words | Where |
+|---|---|---|
+| 🧠 **65 skills** | Step-by-step know-how for one Medical Affairs job each (an MSL brief, an MI response, a publication plan…) | [`skills/`](skills/) · [list of all skills](SKILLS-INDEX.md) |
+| 🎯 **17 missions** | Ready-made assignments with a clear goal, the right files and the deliverables to expect | [`workshop/catalog.json`](workshop/catalog.json) · [team missions](workshop/missions/) |
+| 📝 **House rules** | One page per skill where your team writes "how we do it here"; the agent follows your rules over its defaults | [`house-rules/`](house-rules/) |
+| 🧪 **Practice data** | A fictional company with three fictional products, plus a catalog of 52 real public data sources, kept in a separate repository | [Open-Medical-Affairs/Data-Sources](https://github.com/Open-Medical-Affairs/Data-Sources) |
+| 🌐 **Event website** | Copy-ready prompts, missions, datasets and a prompt optimizer for the AI in Action event | [Open-Medical-Affairs/AI-in-Action-Website](https://github.com/Open-Medical-Affairs/AI-in-Action-Website) |
+| 🤖 **For agents** | The agent's own instructions | [`AGENTS.md`](AGENTS.md) |
+
+![A shelf of skill cards that an AI agent can load](assets/readme/skills-shelf.jpg)
+
+## Meet the launch swarm
+
+![An org chart of AI digital workers coordinated by a human lead](assets/readme/swarm-orgchart.jpg)
+
+The newest skill, [`medical-launch-plan`](skills/medical-launch-plan/SKILL.md), builds an entire medical launch plan for any upcoming asset. Instead of one chatbot, it runs an **org chart of digital workers** (strategy, evidence, publications and congress, field, training, medical information, safety, content review, metrics and more). Each worker gets its own context, they work in waves, and **a human decides at every gate**. Ask your agent:
+
+```
+Read https://github.com/Open-Medical-Affairs/Medical-Affairs-Skills and use the medical-launch-plan skill to build a launch plan for the fictional product NORVANTIB, using the synthetic oncology data. Stop at each decision gate for my review.
+```
+
+The practice data it uses lives in **[Open-Medical-Affairs/Data-Sources](https://github.com/Open-Medical-Affairs/Data-Sources)**.
+
+![A Medical Affairs leader reviewing the agents' work: the human is always the final judge](assets/readme/human-judge.jpg)
+
+<sub>Illustrations generated for Open Medical Affairs.</sub>
+
+---
+
+# For builders
+
 **Give your agent a Medical Affairs objective. Get a traceable draft you can review.**
 
 65 skills · 17 workshop missions · 3 therapeutic areas · public scientific APIs · synthetic data included
