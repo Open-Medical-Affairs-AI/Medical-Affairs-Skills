@@ -30,6 +30,9 @@ import sys
 import zipfile
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import data_sources  # noqa: E402
+
 REPO = Path(__file__).resolve().parent.parent
 SKILLS = REPO / "skills"
 DIST = REPO / "dist" / "grokbot"
@@ -98,7 +101,10 @@ def write_zip(out: Path, skills: list[str], extra: list[Path], readme: str) -> i
                 if rel not in seen:
                     z.write(f, rel); seen.add(rel)
         for f in extra:
-            rel = str(f.relative_to(REPO))
+            try:
+                rel = str(f.relative_to(REPO))
+            except ValueError:  # a sibling or $MA_DATA_SOURCES checkout
+                rel = data_sources.PREFIX + str(f.relative_to(data_sources.data_root()))
             if f.exists() and rel not in seen:
                 z.write(f, rel); seen.add(rel)
     return len(seen) + 1
@@ -201,7 +207,7 @@ def main() -> int:
         inputs = []
         for rel in a["inputs"]:
             for ta in tas:
-                inputs.append(REPO / rel.replace("{ta}", ta))
+                inputs.append(data_sources.resolve(rel.replace("{ta}", ta)))
         readme = f"# Agent: {a['title']}\n\n## Instructions\n\n{a['instructions']}\n"
         n = write_zip(DIST / "agents" / f"{a['id']}.zip", a["load_order"], inputs, readme)
         print(f"  wrote    {a['upload']}  ({n} files)")

@@ -44,7 +44,7 @@ def main():
             method = f'Local Whisper {args.model}; language={data.get("language")}; speaker identities not inferred'
     else:
         print('Audio transcription unavailable. Use a native transcription tool, install openai-whisper plus ffmpeg, '
-              'or supply TXT/MD/SRT/VTT. Workshop fallback: workshop/data/oncology-mm/advisory-board-transcript.md', file=sys.stderr)
+              'or supply TXT/MD/SRT/VTT. Workshop fallback: Data-Sources/synthetic/oncology-mm/advisory-board-transcript.md', file=sys.stderr)
         return 1
     args.out.parent.mkdir(parents=True, exist_ok=True)
     with args.out.open('x', encoding='utf-8') as stream:

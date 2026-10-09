@@ -80,11 +80,13 @@ Official source: [Microsoft Graph selected permissions](https://learn.microsoft.
 
 ## Local databases
 
-The workshop database is already built:
+The workshop database is already built and lives in the
+[Data-Sources](https://github.com/Open-Medical-Affairs/Data-Sources) repository. Clone it into `Data-Sources/` at the
+repository root (or run `python3 scripts/data_sources.py --fetch`):
 
 ```bash
-python3 scripts/query_database.py --db workshop/data/connected/medical-affairs.sqlite --schema
-python3 scripts/query_database.py --db workshop/data/connected/medical-affairs.sqlite --sql "SELECT h.country, COUNT(*) AS records FROM interactions i JOIN hcps h ON i.hcp_id=h.hcp_id GROUP BY h.country"
+python3 scripts/query_database.py --db Data-Sources/synthetic/connected/medical-affairs.sqlite --schema
+python3 scripts/query_database.py --db Data-Sources/synthetic/connected/medical-affairs.sqlite --sql "SELECT h.country, COUNT(*) AS records FROM interactions i JOIN hcps h ON i.hcp_id=h.hcp_id GROUP BY h.country"
 ```
 
 This helper uses SQLite read-only mode, blocks attachments and writes, limits

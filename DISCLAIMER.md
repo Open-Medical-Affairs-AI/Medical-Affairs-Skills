@@ -46,7 +46,7 @@ review step is where the value is protected, not where it is slowed down.
 ## 3. Data handling — your responsibility
 
 - **Use synthetic, de-identified, or aggregate data.** All sample data shipped in
-  `workshop/data/` is entirely fictional and marked `SYNTHETIC DATA`.
+  `Data-Sources/synthetic/` is entirely fictional and marked `SYNTHETIC DATA`.
 - **Do not submit PHI or personal data** to any AI system without a lawful basis,
   a completed DPIA where required, and an executed data processing agreement
   covering that specific system. HIPAA, GDPR, and equivalent regimes apply to

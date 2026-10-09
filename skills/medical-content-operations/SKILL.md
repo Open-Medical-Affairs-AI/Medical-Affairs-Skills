@@ -16,7 +16,7 @@ metadata:
 # Medical Content Operations
 
 Start with the scientific question and audience need, not a campaign volume target.
-Use [connected practice assets](../../workshop/data/connected/README.md) in workshop
+Use [connected practice assets](https://github.com/Open-Medical-Affairs/Data-Sources/blob/main/synthetic/connected/README.md) in workshop
 mode; real work needs the permitted inventory, channel rules and approved sources.
 
 1. Inventory each asset: ID, owner, version, audience, jurisdiction, language,

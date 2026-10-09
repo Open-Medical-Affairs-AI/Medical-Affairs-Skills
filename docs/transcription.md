@@ -9,7 +9,7 @@ The agent can read MD, TXT, SRT or VTT directly. With Python it can preserve a
 review copy and provenance:
 
 ```bash
-python3 scripts/transcribe.py --input workshop/data/oncology-mm/advisory-board-transcript.md --out outputs/transcript.md
+python3 scripts/transcribe.py --input Data-Sources/synthetic/oncology-mm/advisory-board-transcript.md --out outputs/transcript.md
 ```
 
 This imports text; it does not claim audio was transcribed or checked.
